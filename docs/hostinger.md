@@ -10,4 +10,5 @@ Notas de la prueba de humo (tarea 0.2). Se llenan al hacer el despliegue.
 ## URLs
 
 - Sitio: _pendiente_
-- Studio: _pendiente_ (tarea 0.7)
+- Studio: https://twsu.sanity.studio
+- Proyecto Sanity: 9a1cr0st (dataset production)
