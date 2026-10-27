@@ -17,7 +17,7 @@ interface ArticleDraft {
   _id?: string;
   year?: number;
   categories?: string[];
-  atlasCategories?: string[];
+  inAtlas?: boolean;
 }
 
 export const article = defineType({
@@ -77,8 +77,8 @@ export const article = defineType({
       description: "Obligatorio si el artículo ocupa un lugar en el atlas.",
       validation: (rule) =>
         rule.custom((value, context) => {
-          const { atlasCategories } = (context.document ?? {}) as ArticleDraft;
-          if (atlasCategories && atlasCategories.length > 0 && !value) {
+          const { inAtlas } = (context.document ?? {}) as ArticleDraft;
+          if (inAtlas && !value) {
             return "El lugar es obligatorio si el artículo aparece en el atlas.";
           }
           return true;
@@ -93,32 +93,22 @@ export const article = defineType({
       validation: (rule) => rule.required().min(1).unique(),
     }),
     defineField({
-      name: "atlasCategories",
-      title: "Llaves del atlas",
-      description: "Las llaves en las que el artículo ocupa un lugar del atlas. Deben estar en categorías.",
-      type: "array",
-      of: [{ type: "string" }],
-      options: categoryOptions,
-      validation: (rule) => [
-        rule.unique(),
-        rule.custom((value, context) => {
-          const { categories = [] } = (context.document ?? {}) as ArticleDraft;
-          const outside = ((value ?? []) as string[]).filter((key) => !categories.includes(key));
-          return outside.length === 0
-            ? true
-            : `Estas llaves no están en categorías: ${outside.join(", ")}`;
-        }),
+      name: "inAtlas",
+      title: "Aparece en el atlas",
+      description: "Ocupa un lugar del atlas en cada una de sus categorías. Requiere lugar.",
+      type: "boolean",
+      initialValue: false,
+      validation: (rule) =>
         rule
           .custom(async (value, context) => {
-            const { _id, year } = (context.document ?? {}) as ArticleDraft;
-            const keys = (value ?? []) as string[];
-            if (keys.length === 0 || typeof year !== "number") return true;
+            const { _id, year, categories = [] } = (context.document ?? {}) as ArticleDraft;
+            if (!value || typeof year !== "number") return true;
             const client = context.getClient({ apiVersion: "2025-01-01" });
-            const publishedId = (_id ?? "").replace(/^drafts\./, "");
+            const publishedId = (_id ?? "").replace(/^drafts./, "");
             const full: string[] = [];
-            for (const key of keys) {
+            for (const key of categories) {
               const count = await client.fetch<number>(
-                `count(*[_type == "article" && !(_id in path("drafts.**")) && _id != $id && year == $year && $key in atlasCategories])`,
+                `count(*[_type == "article" && !(_id in path("drafts.**")) && _id != $id && year == $year && inAtlas == true && $key in categories])`,
                 { id: publishedId, year, key },
               );
               if (count >= ATLAS_SLOTS_PER_CATEGORY) full.push(key);
@@ -128,7 +118,6 @@ export const article = defineType({
               : `El año ${year} ya tiene ${ATLAS_SLOTS_PER_CATEGORY} lugares en: ${full.join(", ")}`;
           })
           .warning(),
-      ],
     }),
     defineField({
       name: "year",

@@ -10,6 +10,7 @@ Al terminar la Fase 0 existe un sitio desplegado en Hostinger con todas las ruta
 
 Estos cambios salen de la revisión del plan y aplican desde ya.
 
+- **Cambio posterior (decidido con el cliente): `atlasCategories` se descarta y vuelve `inAtlas: boolean`.** Un artículo con `inAtlas` ocupa un lugar en cada una de sus `categories` y es un punto; el tooltip enciende sus `categories`. Donde este archivo diga `atlasCategories`, léase `inAtlas` (el aviso de cupo cuenta, por cada categoría del artículo, los artículos con `inAtlas` del mismo año).
 - **Atlas por llave.** `inAtlas: boolean` se reemplaza por `atlasCategories: Category[]`, que debe ser un subconjunto de `categories`. Un artículo puede ocupar un lugar en varias llaves. Las 50 menciones son 50 espacios (10 por llave y año), no necesariamente 50 puntos.
 - **Un punto es un artículo.** Cada artículo con `atlasCategories` es un punto. En hover y en foco de teclado muestra un tooltip con título, descripción y la miniatura de las 5 llaves. Las llaves encendidas son las de `atlasCategories`, pendiente de confirmar con el cliente.
 - **Lugar.** `place` es opcional, pero obligatorio si el artículo tiene `atlasCategories`.
