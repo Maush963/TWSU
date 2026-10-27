@@ -104,7 +104,7 @@ export const article = defineType({
             const { _id, year, categories = [] } = (context.document ?? {}) as ArticleDraft;
             if (!value || typeof year !== "number") return true;
             const client = context.getClient({ apiVersion: "2025-01-01" });
-            const publishedId = (_id ?? "").replace(/^drafts./, "");
+            const publishedId = (_id ?? "").replace(/^drafts\./, "");
             const full: string[] = [];
             for (const key of categories) {
               const count = await client.fetch<number>(
