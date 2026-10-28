@@ -15,12 +15,33 @@ const categories = CATEGORIES.map(({ value }) => value);
 const continents = CONTINENTS.map(({ value }) => value);
 const countries = places.filter((place) => place.kind === "country");
 
+// Países de prueba, por continente y en este orden. Son grandes y repartidos, para que el atlas
+// de prueba se parezca a uno real. Sin esto, los países salían por orden alfabético y todos los
+// puntos eran islas pequeñas. Se evitan los que quedan fuera del dibujo del atlas (oeste de -161°).
+const SEED_COUNTRY_ORDER = [
+  // américa
+  "US", "MX", "BR", "AR", "CO", "PE", "CL", "CA", "CU", "CR", "EC", "UY",
+  // europa
+  "ES", "FR", "IT", "DE", "GB", "PT", "GR", "SE", "PL", "NO", "IS", "HR",
+  // asia
+  "JP", "CN", "IN", "TH", "ID", "VN", "KR", "AE", "TR", "PH", "MY", "NP",
+  // áfrica
+  "EG", "ZA", "MA", "KE", "NG", "ET", "TZ", "SN", "GH", "NA", "TN", "MG",
+  // oceanía
+  "AU", "NZ", "PG", "FJ", "VU",
+];
+
+function seedRank(place: Place): number {
+  const rank = SEED_COUNTRY_ORDER.indexOf(place.countryCode);
+  return rank === -1 ? SEED_COUNTRY_ORDER.length : rank;
+}
+
 function daysAgo(days: number): string {
   return new Date(Date.now() - days * DAY_MS).toISOString();
 }
 
 function pickPlace(continent: Continent, index: number): Place {
-  const pool = countries.filter((place) => place.continent === continent);
+  const pool = countries.filter((place) => place.continent === continent).sort((a, b) => seedRank(a) - seedRank(b));
   const place = pool[index % pool.length];
   if (!place) throw new Error(`No hay lugares de prueba para ${continent}.`);
   return place;
