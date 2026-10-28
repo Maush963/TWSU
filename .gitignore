@@ -44,3 +44,6 @@ next-env.d.ts
 # sanity
 /dist
 /.sanity
+
+# generado por npm run typegen
+/sanity-schema.json
