@@ -1,3 +1,4 @@
+import { ATLAS_CALIBRATION } from "@/lib/atlas/map-calibration";
 import type { FittedMapConfig } from "@/lib/atlas/project";
 
 // Imagen del atlas. Está en public/atlas; el tamaño debe coincidir con el archivo real.
@@ -7,13 +8,11 @@ export const ATLAS_MAP_IMAGE = {
   height: 941,
 } as const;
 
-// Calibración del dibujo contra los contornos de Natural Earth 110m (coincidencia de
-// tierra 0.75). El dibujo es estilizado, así que no sigue una proyección estándar.
-// Se recalcula con scripts/calibrate-atlas.ts si cambia el PNG.
+// El dibujo es estilizado y no sigue una proyección estándar, así que se calibra contra los
+// contornos de Natural Earth 110m. Los valores salen de map-calibration.ts, que genera
+// `npm run calibrate:atlas`. Si cambia el PNG, hay que volver a correrlo.
 export const ATLAS_MAP_CONFIG: FittedMapConfig = {
   projection: "fitted",
   image: { width: ATLAS_MAP_IMAGE.width, height: ATLAS_MAP_IMAGE.height },
-  origin: { x: 757.8593, y: 575.3455 },
-  scale: { x: 4.5969, y: 305.3594 },
-  curve: { a: -0.0899, b: -0.017, e: 0.0832, c: 0.1276, d: -0.0172 },
+  ...ATLAS_CALIBRATION,
 };

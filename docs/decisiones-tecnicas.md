@@ -44,8 +44,14 @@ Un artículo con `inAtlas` activo ocupa un lugar del atlas en cada una de sus ca
 
 **Dónde vive.** `public/atlas/mapa.png` (1672 por 941 px, fondo transparente, 2.3 MB). `next/image` entrega al navegador una versión optimizada (WebP o AVIF) y del tamaño de la pantalla, así que el peso del original no llega a los visitantes. No se usa un repo aparte: el mapa y su calibración (`src/lib/atlas/map-config.ts`) dependen del archivo exacto, y separarlos permitiría que dejen de coincidir. Si el diseño entrega otro PNG, se reemplaza el archivo, se ajusta el tamaño en `ATLAS_MAP_IMAGE` y se corre `npm run calibrate:atlas`. Los archivos originales del diseño quedan fuera del repo. Cada versión nueva de un binario grande se queda para siempre en el historial de git; conviene no reemplazarlo muchas veces.
 
-**Por qué el ajuste es empírico.** El dibujo es estilizado y no sigue una proyección estándar. Se probaron equirectangular, Miller, Mercator, Gall estereográfica, equivalente cilíndrica, Natural Earth y Robinson, comparando la tierra de cada una con los contornos de Natural Earth 110m. La mejor coincidencia fue de 0.71 (Gall). El modelo de `project()` tipo `fitted` agrega curvas por latitud y longitud y llega a 0.75.
+**Por qué el ajuste es empírico.** El dibujo es estilizado y no sigue una proyección estándar. Se probaron equirectangular, Miller, Mercator, Gall estereográfica, equivalente cilíndrica, Natural Earth y Robinson, comparando la tierra de cada una con los contornos de Natural Earth 110m. La mejor coincidencia fue de 0.71 (Gall).
 
-**Precisión.** Los errores típicos son de 5 a 25 px (hasta 1.5% del ancho). El peor caso medido es el sur de Tasmania, con 2.7%. Las pruebas de `project.test.ts` usan un margen del 3%. Las Islas Cook y otros lugares al oeste de -161° de longitud quedan fuera del dibujo y `project()` los pega al borde.
+**Cómo se calibra (`npm run calibrate:atlas`).** Dos pasos:
+1. Un modelo suave (`fitted`, con curvas por latitud y longitud) llega a 0.75 de coincidencia de tierra. Deja errores de hasta 40 px en Norteamérica, Sudamérica y el este de Asia.
+2. Una malla de desplazamientos de 16 por 9 celdas corrige lo que el modelo no alcanza. Empuja cada costa real hacia la costa más cercana del PNG, de lo grueso a lo fino y con suavidad (registro por deformación de forma libre). Baja la distancia media a la costa de 10.5 a 3.4 px y el percentil 90 de 22.7 a 4.9 px.
 
-**Si el error molesta.** Antes de agregar campos al modelo de Sanity, probar `d3-geo` con una proyección parecida. Como último recurso, un ajuste manual opcional por lugar en `place`.
+El resultado se escribe en `src/lib/atlas/map-calibration.ts` (generado, no se edita a mano) y `project()` lo aplica.
+
+**Precisión.** Las pruebas de `project.test.ts` miden puntos de costa contra el PNG con un margen del 1.5% del ancho y del alto. Las Islas Cook y otros lugares al oeste de -161° de longitud quedan fuera del dibujo y `project()` los pega al borde. Las islas pequeñas lejos de cualquier costa (Pacífico) quedan solo con la corrección suave de la zona, así que pueden caer algo corridas en el agua.
+
+**Si cambia el PNG.** Reemplazar el archivo, ajustar el tamaño en `ATLAS_MAP_IMAGE` y correr `npm run calibrate:atlas`. Después revisar `/atlas` a ojo.

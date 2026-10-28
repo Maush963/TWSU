@@ -28,16 +28,15 @@ describe("project, calibrado con el PNG del atlas", () => {
     { name: "norte de Groenlandia", lat: 83.67, lng: -30.7, px: 640, py: 42 },
     { name: "cabo Farewell, Groenlandia", lat: 59.77, lng: -43.9, px: 577, py: 216 },
     { name: "sur de Madagascar", lat: -25.6, lng: 45.2, px: 949, py: 712 },
-    { name: "sur de Tasmania", lat: -43.64, lng: 146.5, px: 1431, py: 798 },
+    { name: "cabo Wilsons, sur de Australia", lat: -39.13, lng: 146.37, px: 1431, py: 798 },
     { name: "oeste de Islandia", lat: 65.5, lng: -24.53, px: 654, py: 181 },
   ];
 
-  // El dibujo es estilizado y el ajuste no es exacto: el peor caso medido es el sur de
-  // Tasmania, con 2.7% de desvío. El margen es del 3% del ancho y del alto.
+  // Con la malla de corrección, el margen es del 1.5% del ancho y del alto (unos 25 px).
   it.each(landmarks)("$name cae donde está en el dibujo", ({ lat, lng, px, py }) => {
     const { x, y } = project(lat, lng);
-    expect(Math.abs(x - (px / width) * 100)).toBeLessThan(3);
-    expect(Math.abs(y - (py / height) * 100)).toBeLessThan(3);
+    expect(Math.abs(x - (px / width) * 100)).toBeLessThan(1.5);
+    expect(Math.abs(y - (py / height) * 100)).toBeLessThan(1.5);
   });
 
   it("el norte queda arriba y el este a la derecha", () => {
