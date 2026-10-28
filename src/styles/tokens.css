@@ -22,4 +22,7 @@
   --space-4: 1rem;
   --space-8: 2rem;
   --radius: 0.5rem;
+
+  /* atlas, temporales */
+  --atlas-pin-size: 0.75rem;
 }

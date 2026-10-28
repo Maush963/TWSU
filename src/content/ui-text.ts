@@ -41,6 +41,19 @@ export const uiText = {
   atlas: {
     title: "Atlas",
     empty: "No hay puntos con estos filtros.",
+    mapAlt: "Mapamundi con los casos del atlas",
+    filters: {
+      label: "Filtros del atlas",
+      category: "Categoría",
+      region: "Región",
+      year: "Año",
+      clear: "Quitar filtros",
+    },
+    keys: {
+      label: "Llaves",
+      on: "encendida",
+      off: "apagada",
+    },
   },
   perspectives: {
     title: "Perspectives",
