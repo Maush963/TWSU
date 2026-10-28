@@ -167,8 +167,10 @@ function score(params) {
   return both / either;
 }
 
-// ox, kx, oy, ky, a, b, c, d, e. Parte de un mapa de mundo completo centrado.
-const start = [width * 0.45, (width * 0.97) / 360, height * 0.61, 300, -0.05, -0.03, 0.07, 0.01, -0.1];
+// ox, kx, oy, ky, a, b, c, d, e. Parte del ajuste vigente de map-config.ts; la búsqueda cae en
+// máximos locales (0.743 desde un mapa de mundo centrado, 0.748 desde este punto).
+// Si cambia el PNG por uno muy distinto, conviene probar con otros puntos de partida.
+const start = [757.8593, 4.5969, 575.3455, 305.3594, -0.0899, -0.017, 0.1276, -0.0172, 0.0832];
 const steps = [8, 0.1, 8, 10, 0.03, 0.02, 0.03, 0.02, 0.06];
 
 let best = null;
