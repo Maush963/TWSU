@@ -39,3 +39,13 @@ En Sanity, un `_id` con punto (`place.mx`, `article.seed-01`) se trata como docu
 ## `atlasCategories` se descartó, vuelve `inAtlas`
 
 Un artículo con `inAtlas` activo ocupa un lugar del atlas en cada una de sus categorías, y es un solo punto. El aviso de cupo cuenta, por categoría, los artículos con `inAtlas` del mismo año.
+
+## El mapa del atlas se versiona en el repo y se calibra con un ajuste empírico
+
+**Dónde vive.** `public/atlas/mapa.png` (1672 por 941 px, fondo transparente, 2.3 MB). `next/image` entrega al navegador una versión optimizada (WebP o AVIF) y del tamaño de la pantalla, así que el peso del original no llega a los visitantes. No se usa un repo aparte: el mapa y su calibración (`src/lib/atlas/map-config.ts`) dependen del archivo exacto, y separarlos permitiría que dejen de coincidir. Si el diseño entrega otro PNG, se reemplaza el archivo, se ajusta el tamaño en `ATLAS_MAP_IMAGE` y se corre `npm run calibrate:atlas`. Los archivos originales del diseño quedan fuera del repo. Cada versión nueva de un binario grande se queda para siempre en el historial de git; conviene no reemplazarlo muchas veces.
+
+**Por qué el ajuste es empírico.** El dibujo es estilizado y no sigue una proyección estándar. Se probaron equirectangular, Miller, Mercator, Gall estereográfica, equivalente cilíndrica, Natural Earth y Robinson, comparando la tierra de cada una con los contornos de Natural Earth 110m. La mejor coincidencia fue de 0.71 (Gall). El modelo de `project()` tipo `fitted` agrega curvas por latitud y longitud y llega a 0.75.
+
+**Precisión.** Los errores típicos son de 5 a 25 px (hasta 1.5% del ancho). El peor caso medido es el sur de Tasmania, con 2.7%. Las pruebas de `project.test.ts` usan un margen del 3%. Las Islas Cook y otros lugares al oeste de -161° de longitud quedan fuera del dibujo y `project()` los pega al borde.
+
+**Si el error molesta.** Antes de agregar campos al modelo de Sanity, probar `d3-geo` con una proyección parecida. Como último recurso, un ajuste manual opcional por lugar en `place`.

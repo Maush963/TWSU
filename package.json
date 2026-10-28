@@ -10,6 +10,7 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "check:tokens": "node scripts/check-tokens.mjs",
+    "calibrate:atlas": "node scripts/calibrate-atlas.mjs",
     "seed": "sanity exec scripts/seed.ts --with-user-token",
     "seed:clean": "sanity exec scripts/seed-clean.ts --with-user-token",
     "typegen": "sanity schema extract --force --path sanity-schema.json && sanity typegen generate"
