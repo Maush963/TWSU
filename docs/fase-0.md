@@ -10,10 +10,9 @@ Al terminar la Fase 0 existe un sitio desplegado en Hostinger con todas las ruta
 
 Estos cambios salen de la revisión del plan y aplican desde ya.
 
-- **Cambio posterior (decidido con el cliente): `atlasCategories` se descarta y vuelve `inAtlas: boolean`.** Un artículo con `inAtlas` ocupa un lugar en cada una de sus `categories` y es un punto; el tooltip enciende sus `categories`. Donde este archivo diga `atlasCategories`, léase `inAtlas` (el aviso de cupo cuenta, por cada categoría del artículo, los artículos con `inAtlas` del mismo año).
-- **Atlas por llave.** `inAtlas: boolean` se reemplaza por `atlasCategories: Category[]`, que debe ser un subconjunto de `categories`. Un artículo puede ocupar un lugar en varias llaves. Las 50 menciones son 50 espacios (10 por llave y año), no necesariamente 50 puntos.
-- **Un punto es un artículo.** Cada artículo con `atlasCategories` es un punto. En hover y en foco de teclado muestra un tooltip con título, descripción y la miniatura de las 5 llaves. Las llaves encendidas son las de `atlasCategories`, pendiente de confirmar con el cliente.
-- **Lugar.** `place` es opcional, pero obligatorio si el artículo tiene `atlasCategories`.
+- **Cambio posterior (decidido con el cliente): `inAtlas: boolean`.** Un artículo con `inAtlas` ocupa un lugar en cada una de sus `categories` y es un punto; el tooltip enciende sus `categories`.
+- **Un punto es un artículo.** Cada artículo con `inAtlas` es un punto. En hover y en foco de teclado muestra un tooltip con título, descripción y la miniatura de las 5 llaves.
+- **Lugar.** `place` es opcional, pero obligatorio si el artículo tiene `inAtlas`.
 - **Paginación.** `page` aplica solo a Perspectives. El Atlas no pagina.
 - **Nombres de tipos.** Los tipos cambian de nombre para no chocar con los componentes.
   - `ArticleCard` pasa a `ArticleSummary`
@@ -247,7 +246,7 @@ Estos cambios salen de la revisión del plan y aplican desde ya.
 
 ## 0.7 Sanity, proyecto, modelo y Studio
 
-**Contexto.** Sección 5, con los ajustes de `atlasCategories` y `place`.
+**Contexto.** Sección 5, con los ajustes de `inAtlas` y `place`.
 
 **Objetivo.** El Studio desplegado con el modelo final y sus validaciones.
 
@@ -268,16 +267,15 @@ Estos cambios salen de la revisión del plan y aplican desde ya.
    - **`categories`**
      - Es un arreglo de strings con `options.list` de `CATEGORIES` y `layout: 'grid'`.
      - Lleva mínimo 1 y no se repiten.
-   - **`atlasCategories`**
-     - Usa las mismas opciones que `categories`.
-     - Con una validación `custom`, cada valor debe estar en `categories`.
+   - **`inAtlas`**
+     - Es un booleano con valor inicial `false`.
    - **Aviso de cupo**
-     - Es una validación asíncrona de nivel `warning` sobre `atlasCategories`.
-     - Usa `context.getClient` para contar los artículos publicados del mismo `year` con esa llave, sin contar el documento actual.
-     - Si alguna llave pasa de `ATLAS_SLOTS_PER_CATEGORY`, el aviso dice cuál.
+     - Es una validación asíncrona de nivel `warning` sobre `inAtlas`.
+     - Usa `context.getClient` para contar, por cada categoría del artículo, los artículos publicados del mismo `year` con `inAtlas`, sin contar el documento actual.
+     - Si alguna categoría pasa de `ATLAS_SLOTS_PER_CATEGORY`, el aviso dice cuál.
    - **`place`**
      - Es una referencia a `place` con búsqueda.
-     - Una validación `custom` lo vuelve obligatorio si `atlasCategories` tiene elementos.
+     - Una validación `custom` lo vuelve obligatorio si `inAtlas` está activo.
    - **Campos simples**
      - `excerpt` tiene máximo 200 caracteres.
      - `year` tiene como valor inicial el año actual.
@@ -295,8 +293,7 @@ Estos cambios salen de la revisión del plan y aplican desde ya.
 **Criterio de aceptación**
 - El Studio abre en su URL pública.
 - Al crear un artículo:
-  - Poner en `atlasCategories` una llave que no está en `categories` marca error.
-  - Tener `atlasCategories` sin `place` marca error.
+  - Tener `inAtlas` activo sin `place` marca error.
   - Un `excerpt` de 201 caracteres marca error.
 - No hay botón para crear `place`.
 
@@ -315,14 +312,14 @@ Estos cambios salen de la revisión del plan y aplican desde ya.
    - Se agregan unas 10 ciudades clave con `kind: city`.
    - Antes de cargar, revisar a mano 5 o 6 coordenadas.
 2. Crear `scripts/seed.ts`, que corre con `npx sanity exec scripts/seed.ts --with-user-token` para no necesitar un token de escritura en el `.env`.
-   - Usa `createOrReplace` con ids fijos: lugares `place.<iso2>` o `place.city-<slug>`, y artículos `article.seed-01` en adelante.
+   - Usa `createOrReplace` con ids fijos: lugares `place-<iso2>` o `place-city-<slug>`, y artículos `article-seed-01` en adelante (sin puntos: en Sanity un id con punto es privado y la API pública no lo ve).
    - Sube unas 5 imágenes de portada de prueba y las reutiliza.
    - Genera 3 o 4 bloques de texto de relleno en `body`.
    - Todos los artículos llevan `isSeed: true`. Los lugares no, porque son datos reales.
 3. Distribución de artículos:
    - **Año actual:** exactamente 10 espacios por llave (50 en total). Unos 8 artículos ocupan 2 llaves, así que hay unos 42 puntos. Los puntos se reparten en los 5 continentes, con al menos 2 en el mismo país para probar puntos encimados.
    - **Año anterior:** unos 6 artículos en el atlas, para probar el filtro de año.
-   - **Fuera del atlas:** unos 6 artículos sin `atlasCategories`, de los cuales 3 no tienen `place`.
+   - **Fuera del atlas:** unos 6 artículos con `inAtlas: false`, de los cuales 3 no tienen `place`.
    - **Destacados:** uno con `featured: true` y otro marcado pero con `publishedAt` más antiguo, para probar que gana el más reciente.
    - **Fechas:** `publishedAt` repartidos en varios meses.
 4. Crear `scripts/seed-clean.ts`, que borra todos los documentos con `isSeed == true` y las imágenes que suba el seed.
@@ -334,7 +331,7 @@ Estos cambios salen de la revisión del plan y aplican desde ya.
 
 **Criterio de aceptación**
 - Correr `npm run seed` dos veces deja el mismo número de documentos.
-- En Vision, `count(*[_type=="article" && "branding" in atlasCategories && year == <año actual>])` da 10, y lo mismo para cada llave.
+- En Vision, `count(*[_type=="article" && inAtlas == true && "branding" in categories && year == <año actual>])` da 10, y lo mismo para cada llave.
 - `npm run seed:clean` deja 0 artículos y conserva los lugares.
 
 ---
@@ -364,7 +361,7 @@ Estos cambios salen de la revisión del plan y aplican desde ya.
      placeName: string
      continent: Continent
      categories: Category[]
-     atlasCategories: Category[]
+     inAtlas: boolean
      lat: number
      lng: number
      x: number
@@ -386,7 +383,7 @@ Estos cambios salen de la revisión del plan y aplican desde ya.
    - Comportamiento de cada función:
      - **`getFeaturedArticle`** devuelve el de `featured` con `publishedAt` más reciente, o `null`.
      - **`getRelatedArticles`** ordena por categorías en común y luego por fecha, y excluye el artículo actual.
-     - **`getAtlasPins`** toma como año por defecto el más reciente de `getAtlasYears` y filtra la categoría contra `atlasCategories` y la región contra `place->continent`.
+     - **`getAtlasPins`** toma como año por defecto el más reciente de `getAtlasYears` y filtra la categoría contra `categories` entre artículos con `inAtlas` y la región contra `place->continent`.
 6. Crear `src/lib/atlas/project.ts` con la función `project` de la sección 10 y una `DEFAULT_MAP_CONFIG` equirectangular de mundo completo. La calibración con el PNG real queda para la Fase 1.
 7. Crear `src/lib/atlas/project.test.ts` con estos casos para la configuración equirectangular:
    - (0,0) da 50/50

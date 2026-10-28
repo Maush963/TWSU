@@ -1,0 +1,2288 @@
+[
+  {
+    "id": "place-af",
+    "countryCode": "AF",
+    "name": "Afganistán",
+    "continent": "asia",
+    "lat": 34.5281,
+    "lng": 69.1723,
+    "kind": "country"
+  },
+  {
+    "id": "place-ax",
+    "countryCode": "AX",
+    "name": "Alandia",
+    "continent": "europa",
+    "lat": 60.0973,
+    "lng": 19.9348,
+    "kind": "country"
+  },
+  {
+    "id": "place-al",
+    "countryCode": "AL",
+    "name": "Albania",
+    "continent": "europa",
+    "lat": 41.3275,
+    "lng": 19.8189,
+    "kind": "country"
+  },
+  {
+    "id": "place-de",
+    "countryCode": "DE",
+    "name": "Alemania",
+    "continent": "europa",
+    "lat": 52.5244,
+    "lng": 13.4105,
+    "kind": "country"
+  },
+  {
+    "id": "place-ad",
+    "countryCode": "AD",
+    "name": "Andorra",
+    "continent": "europa",
+    "lat": 42.5078,
+    "lng": 1.5211,
+    "kind": "country"
+  },
+  {
+    "id": "place-ao",
+    "countryCode": "AO",
+    "name": "Angola",
+    "continent": "africa",
+    "lat": -8.8368,
+    "lng": 13.2343,
+    "kind": "country"
+  },
+  {
+    "id": "place-ai",
+    "countryCode": "AI",
+    "name": "Anguilla",
+    "continent": "america",
+    "lat": 18.217,
+    "lng": -63.0578,
+    "kind": "country"
+  },
+  {
+    "id": "place-ag",
+    "countryCode": "AG",
+    "name": "Antigua y Barbuda",
+    "continent": "america",
+    "lat": 17.121,
+    "lng": -61.8433,
+    "kind": "country"
+  },
+  {
+    "id": "place-sa",
+    "countryCode": "SA",
+    "name": "Arabia Saudí",
+    "continent": "asia",
+    "lat": 24.6877,
+    "lng": 46.7219,
+    "kind": "country"
+  },
+  {
+    "id": "place-dz",
+    "countryCode": "DZ",
+    "name": "Argelia",
+    "continent": "africa",
+    "lat": 36.7323,
+    "lng": 3.0875,
+    "kind": "country"
+  },
+  {
+    "id": "place-ar",
+    "countryCode": "AR",
+    "name": "Argentina",
+    "continent": "america",
+    "lat": -34.6131,
+    "lng": -58.3772,
+    "kind": "country"
+  },
+  {
+    "id": "place-am",
+    "countryCode": "AM",
+    "name": "Armenia",
+    "continent": "asia",
+    "lat": 40.1811,
+    "lng": 44.5136,
+    "kind": "country"
+  },
+  {
+    "id": "place-aw",
+    "countryCode": "AW",
+    "name": "Aruba",
+    "continent": "america",
+    "lat": 12.524,
+    "lng": -70.027,
+    "kind": "country"
+  },
+  {
+    "id": "place-au",
+    "countryCode": "AU",
+    "name": "Australia",
+    "continent": "oceania",
+    "lat": -35.2835,
+    "lng": 149.1281,
+    "kind": "country"
+  },
+  {
+    "id": "place-at",
+    "countryCode": "AT",
+    "name": "Austria",
+    "continent": "europa",
+    "lat": 48.2085,
+    "lng": 16.3721,
+    "kind": "country"
+  },
+  {
+    "id": "place-az",
+    "countryCode": "AZ",
+    "name": "Azerbaiyán",
+    "continent": "asia",
+    "lat": 40.3777,
+    "lng": 49.892,
+    "kind": "country"
+  },
+  {
+    "id": "place-bs",
+    "countryCode": "BS",
+    "name": "Bahamas",
+    "continent": "america",
+    "lat": 25.0582,
+    "lng": -77.3431,
+    "kind": "country"
+  },
+  {
+    "id": "place-bh",
+    "countryCode": "BH",
+    "name": "Bahrein",
+    "continent": "asia",
+    "lat": 26.2279,
+    "lng": 50.5857,
+    "kind": "country"
+  },
+  {
+    "id": "place-bd",
+    "countryCode": "BD",
+    "name": "Bangladesh",
+    "continent": "asia",
+    "lat": 23.7104,
+    "lng": 90.4074,
+    "kind": "country"
+  },
+  {
+    "id": "place-bb",
+    "countryCode": "BB",
+    "name": "Barbados",
+    "continent": "america",
+    "lat": 13.1073,
+    "lng": -59.6202,
+    "kind": "country"
+  },
+  {
+    "id": "place-be",
+    "countryCode": "BE",
+    "name": "Bélgica",
+    "continent": "europa",
+    "lat": 50.8505,
+    "lng": 4.3488,
+    "kind": "country"
+  },
+  {
+    "id": "place-bz",
+    "countryCode": "BZ",
+    "name": "Belice",
+    "continent": "america",
+    "lat": 17.25,
+    "lng": -88.7667,
+    "kind": "country"
+  },
+  {
+    "id": "place-bj",
+    "countryCode": "BJ",
+    "name": "Benín",
+    "continent": "africa",
+    "lat": 6.4965,
+    "lng": 2.6036,
+    "kind": "country"
+  },
+  {
+    "id": "place-bm",
+    "countryCode": "BM",
+    "name": "Bermudas",
+    "continent": "america",
+    "lat": 32.2949,
+    "lng": -64.783,
+    "kind": "country"
+  },
+  {
+    "id": "place-by",
+    "countryCode": "BY",
+    "name": "Bielorrusia",
+    "continent": "europa",
+    "lat": 53.9,
+    "lng": 27.5667,
+    "kind": "country"
+  },
+  {
+    "id": "place-bo",
+    "countryCode": "BO",
+    "name": "Bolivia",
+    "continent": "america",
+    "lat": -19.0333,
+    "lng": -65.2627,
+    "kind": "country"
+  },
+  {
+    "id": "place-ba",
+    "countryCode": "BA",
+    "name": "Bosnia y Herzegovina",
+    "continent": "europa",
+    "lat": 43.8486,
+    "lng": 18.3564,
+    "kind": "country"
+  },
+  {
+    "id": "place-bw",
+    "countryCode": "BW",
+    "name": "Botswana",
+    "continent": "africa",
+    "lat": -24.6545,
+    "lng": 25.9086,
+    "kind": "country"
+  },
+  {
+    "id": "place-br",
+    "countryCode": "BR",
+    "name": "Brasil",
+    "continent": "america",
+    "lat": -15.7797,
+    "lng": -47.9297,
+    "kind": "country"
+  },
+  {
+    "id": "place-bn",
+    "countryCode": "BN",
+    "name": "Brunei",
+    "continent": "asia",
+    "lat": 4.8904,
+    "lng": 114.9401,
+    "kind": "country"
+  },
+  {
+    "id": "place-bg",
+    "countryCode": "BG",
+    "name": "Bulgaria",
+    "continent": "europa",
+    "lat": 42.6975,
+    "lng": 23.3242,
+    "kind": "country"
+  },
+  {
+    "id": "place-bf",
+    "countryCode": "BF",
+    "name": "Burkina Faso",
+    "continent": "africa",
+    "lat": 12.3657,
+    "lng": -1.5339,
+    "kind": "country"
+  },
+  {
+    "id": "place-bi",
+    "countryCode": "BI",
+    "name": "Burundi",
+    "continent": "africa",
+    "lat": -3.4271,
+    "lng": 29.9246,
+    "kind": "country"
+  },
+  {
+    "id": "place-bt",
+    "countryCode": "BT",
+    "name": "Bután",
+    "continent": "asia",
+    "lat": 27.4661,
+    "lng": 89.6419,
+    "kind": "country"
+  },
+  {
+    "id": "place-cv",
+    "countryCode": "CV",
+    "name": "Cabo Verde",
+    "continent": "africa",
+    "lat": 14.9315,
+    "lng": -23.5125,
+    "kind": "country"
+  },
+  {
+    "id": "place-kh",
+    "countryCode": "KH",
+    "name": "Camboya",
+    "continent": "asia",
+    "lat": 11.5625,
+    "lng": 104.916,
+    "kind": "country"
+  },
+  {
+    "id": "place-cm",
+    "countryCode": "CM",
+    "name": "Camerún",
+    "continent": "africa",
+    "lat": 3.8667,
+    "lng": 11.5167,
+    "kind": "country"
+  },
+  {
+    "id": "place-ca",
+    "countryCode": "CA",
+    "name": "Canadá",
+    "continent": "america",
+    "lat": 45.4112,
+    "lng": -75.6981,
+    "kind": "country"
+  },
+  {
+    "id": "place-bq",
+    "countryCode": "BQ",
+    "name": "Caribe Neerlandés",
+    "continent": "america",
+    "lat": 12.15,
+    "lng": -68.2667,
+    "kind": "country"
+  },
+  {
+    "id": "place-qa",
+    "countryCode": "QA",
+    "name": "Catar",
+    "continent": "asia",
+    "lat": 25.2855,
+    "lng": 51.531,
+    "kind": "country"
+  },
+  {
+    "id": "place-td",
+    "countryCode": "TD",
+    "name": "Chad",
+    "continent": "africa",
+    "lat": 12.1067,
+    "lng": 15.0444,
+    "kind": "country"
+  },
+  {
+    "id": "place-cz",
+    "countryCode": "CZ",
+    "name": "Chequia",
+    "continent": "europa",
+    "lat": 50.088,
+    "lng": 14.4208,
+    "kind": "country"
+  },
+  {
+    "id": "place-cl",
+    "countryCode": "CL",
+    "name": "Chile",
+    "continent": "america",
+    "lat": -33.4569,
+    "lng": -70.6483,
+    "kind": "country"
+  },
+  {
+    "id": "place-cn",
+    "countryCode": "CN",
+    "name": "China",
+    "continent": "asia",
+    "lat": 39.9075,
+    "lng": 116.3972,
+    "kind": "country"
+  },
+  {
+    "id": "place-cy",
+    "countryCode": "CY",
+    "name": "Chipre",
+    "continent": "europa",
+    "lat": 35.1753,
+    "lng": 33.3642,
+    "kind": "country"
+  },
+  {
+    "id": "place-va",
+    "countryCode": "VA",
+    "name": "Ciudad del Vaticano",
+    "continent": "europa",
+    "lat": 41.9027,
+    "lng": 12.4541,
+    "kind": "country"
+  },
+  {
+    "id": "place-co",
+    "countryCode": "CO",
+    "name": "Colombia",
+    "continent": "america",
+    "lat": 4.6097,
+    "lng": -74.0817,
+    "kind": "country"
+  },
+  {
+    "id": "place-km",
+    "countryCode": "KM",
+    "name": "Comoras",
+    "continent": "africa",
+    "lat": -11.7022,
+    "lng": 43.2551,
+    "kind": "country"
+  },
+  {
+    "id": "place-cg",
+    "countryCode": "CG",
+    "name": "Congo",
+    "continent": "africa",
+    "lat": -4.2661,
+    "lng": 15.2832,
+    "kind": "country"
+  },
+  {
+    "id": "place-cd",
+    "countryCode": "CD",
+    "name": "Congo (Rep. Dem.)",
+    "continent": "africa",
+    "lat": -4.3276,
+    "lng": 15.3136,
+    "kind": "country"
+  },
+  {
+    "id": "place-kp",
+    "countryCode": "KP",
+    "name": "Corea del Norte",
+    "continent": "asia",
+    "lat": 39.0339,
+    "lng": 125.7543,
+    "kind": "country"
+  },
+  {
+    "id": "place-kr",
+    "countryCode": "KR",
+    "name": "Corea del Sur",
+    "continent": "asia",
+    "lat": 37.566,
+    "lng": 126.9784,
+    "kind": "country"
+  },
+  {
+    "id": "place-ci",
+    "countryCode": "CI",
+    "name": "Costa de Marfil",
+    "continent": "africa",
+    "lat": 6.8206,
+    "lng": -5.2767,
+    "kind": "country"
+  },
+  {
+    "id": "place-cr",
+    "countryCode": "CR",
+    "name": "Costa Rica",
+    "continent": "america",
+    "lat": 9.9333,
+    "lng": -84.0833,
+    "kind": "country"
+  },
+  {
+    "id": "place-hr",
+    "countryCode": "HR",
+    "name": "Croacia",
+    "continent": "europa",
+    "lat": 45.8144,
+    "lng": 15.978,
+    "kind": "country"
+  },
+  {
+    "id": "place-cu",
+    "countryCode": "CU",
+    "name": "Cuba",
+    "continent": "america",
+    "lat": 23.133,
+    "lng": -82.383,
+    "kind": "country"
+  },
+  {
+    "id": "place-cw",
+    "countryCode": "CW",
+    "name": "Curazao",
+    "continent": "america",
+    "lat": 12.1084,
+    "lng": -68.9335,
+    "kind": "country"
+  },
+  {
+    "id": "place-dk",
+    "countryCode": "DK",
+    "name": "Dinamarca",
+    "continent": "europa",
+    "lat": 55.6759,
+    "lng": 12.5655,
+    "kind": "country"
+  },
+  {
+    "id": "place-dj",
+    "countryCode": "DJ",
+    "name": "Djibouti",
+    "continent": "africa",
+    "lat": 11.589,
+    "lng": 43.145,
+    "kind": "country"
+  },
+  {
+    "id": "place-dm",
+    "countryCode": "DM",
+    "name": "Dominica",
+    "continent": "america",
+    "lat": 15.3017,
+    "lng": -61.3881,
+    "kind": "country"
+  },
+  {
+    "id": "place-ec",
+    "countryCode": "EC",
+    "name": "Ecuador",
+    "continent": "america",
+    "lat": -0.2298,
+    "lng": -78.5249,
+    "kind": "country"
+  },
+  {
+    "id": "place-eg",
+    "countryCode": "EG",
+    "name": "Egipto",
+    "continent": "africa",
+    "lat": 30.0626,
+    "lng": 31.2497,
+    "kind": "country"
+  },
+  {
+    "id": "place-sv",
+    "countryCode": "SV",
+    "name": "El Salvador",
+    "continent": "america",
+    "lat": 13.6894,
+    "lng": -89.1872,
+    "kind": "country"
+  },
+  {
+    "id": "place-ae",
+    "countryCode": "AE",
+    "name": "Emiratos Árabes Unidos",
+    "continent": "asia",
+    "lat": 24.4512,
+    "lng": 54.397,
+    "kind": "country"
+  },
+  {
+    "id": "place-er",
+    "countryCode": "ER",
+    "name": "Eritrea",
+    "continent": "africa",
+    "lat": 15.3381,
+    "lng": 38.9318,
+    "kind": "country"
+  },
+  {
+    "id": "place-sk",
+    "countryCode": "SK",
+    "name": "Eslovaquia",
+    "continent": "europa",
+    "lat": 48.1482,
+    "lng": 17.1067,
+    "kind": "country"
+  },
+  {
+    "id": "place-si",
+    "countryCode": "SI",
+    "name": "Eslovenia",
+    "continent": "europa",
+    "lat": 46.0511,
+    "lng": 14.5051,
+    "kind": "country"
+  },
+  {
+    "id": "place-es",
+    "countryCode": "ES",
+    "name": "España",
+    "continent": "europa",
+    "lat": 40.4165,
+    "lng": -3.7026,
+    "kind": "country"
+  },
+  {
+    "id": "place-us",
+    "countryCode": "US",
+    "name": "Estados Unidos",
+    "continent": "america",
+    "lat": 38.8951,
+    "lng": -77.0364,
+    "kind": "country"
+  },
+  {
+    "id": "place-ee",
+    "countryCode": "EE",
+    "name": "Estonia",
+    "continent": "europa",
+    "lat": 59.437,
+    "lng": 24.7535,
+    "kind": "country"
+  },
+  {
+    "id": "place-et",
+    "countryCode": "ET",
+    "name": "Etiopía",
+    "continent": "africa",
+    "lat": 9.025,
+    "lng": 38.7469,
+    "kind": "country"
+  },
+  {
+    "id": "place-ph",
+    "countryCode": "PH",
+    "name": "Filipinas",
+    "continent": "asia",
+    "lat": 14.6042,
+    "lng": 120.9822,
+    "kind": "country"
+  },
+  {
+    "id": "place-fi",
+    "countryCode": "FI",
+    "name": "Finlandia",
+    "continent": "europa",
+    "lat": 60.1695,
+    "lng": 24.9355,
+    "kind": "country"
+  },
+  {
+    "id": "place-fj",
+    "countryCode": "FJ",
+    "name": "Fiyi",
+    "continent": "oceania",
+    "lat": -18.1416,
+    "lng": 178.4415,
+    "kind": "country"
+  },
+  {
+    "id": "place-fr",
+    "countryCode": "FR",
+    "name": "Francia",
+    "continent": "europa",
+    "lat": 48.8534,
+    "lng": 2.3488,
+    "kind": "country"
+  },
+  {
+    "id": "place-ga",
+    "countryCode": "GA",
+    "name": "Gabón",
+    "continent": "africa",
+    "lat": 0.3924,
+    "lng": 9.4536,
+    "kind": "country"
+  },
+  {
+    "id": "place-gm",
+    "countryCode": "GM",
+    "name": "Gambia",
+    "continent": "africa",
+    "lat": 13.4527,
+    "lng": -16.578,
+    "kind": "country"
+  },
+  {
+    "id": "place-ge",
+    "countryCode": "GE",
+    "name": "Georgia",
+    "continent": "asia",
+    "lat": 41.6941,
+    "lng": 44.8337,
+    "kind": "country"
+  },
+  {
+    "id": "place-gh",
+    "countryCode": "GH",
+    "name": "Ghana",
+    "continent": "africa",
+    "lat": 5.556,
+    "lng": -0.1969,
+    "kind": "country"
+  },
+  {
+    "id": "place-gi",
+    "countryCode": "GI",
+    "name": "Gibraltar",
+    "continent": "europa",
+    "lat": 36.1447,
+    "lng": -5.3526,
+    "kind": "country"
+  },
+  {
+    "id": "place-gr",
+    "countryCode": "GR",
+    "name": "Grecia",
+    "continent": "europa",
+    "lat": 37.9838,
+    "lng": 23.7278,
+    "kind": "country"
+  },
+  {
+    "id": "place-gd",
+    "countryCode": "GD",
+    "name": "Grenada",
+    "continent": "america",
+    "lat": 12.0529,
+    "lng": -61.7523,
+    "kind": "country"
+  },
+  {
+    "id": "place-gl",
+    "countryCode": "GL",
+    "name": "Groenlandia",
+    "continent": "america",
+    "lat": 64.1835,
+    "lng": -51.7216,
+    "kind": "country"
+  },
+  {
+    "id": "place-gp",
+    "countryCode": "GP",
+    "name": "Guadalupe",
+    "continent": "america",
+    "lat": 15.9971,
+    "lng": -61.7321,
+    "kind": "country"
+  },
+  {
+    "id": "place-gu",
+    "countryCode": "GU",
+    "name": "Guam",
+    "continent": "oceania",
+    "lat": 13.4757,
+    "lng": 144.7489,
+    "kind": "country"
+  },
+  {
+    "id": "place-gt",
+    "countryCode": "GT",
+    "name": "Guatemala",
+    "continent": "america",
+    "lat": 14.6407,
+    "lng": -90.5133,
+    "kind": "country"
+  },
+  {
+    "id": "place-gf",
+    "countryCode": "GF",
+    "name": "Guayana Francesa",
+    "continent": "america",
+    "lat": 4.9333,
+    "lng": -52.3333,
+    "kind": "country"
+  },
+  {
+    "id": "place-gg",
+    "countryCode": "GG",
+    "name": "Guernsey",
+    "continent": "europa",
+    "lat": 49.4598,
+    "lng": -2.5353,
+    "kind": "country"
+  },
+  {
+    "id": "place-gn",
+    "countryCode": "GN",
+    "name": "Guinea",
+    "continent": "africa",
+    "lat": 9.538,
+    "lng": -13.6773,
+    "kind": "country"
+  },
+  {
+    "id": "place-gq",
+    "countryCode": "GQ",
+    "name": "Guinea Ecuatorial",
+    "continent": "africa",
+    "lat": 3.7558,
+    "lng": 8.7817,
+    "kind": "country"
+  },
+  {
+    "id": "place-gw",
+    "countryCode": "GW",
+    "name": "Guinea-Bisáu",
+    "continent": "africa",
+    "lat": 11.8636,
+    "lng": -15.5977,
+    "kind": "country"
+  },
+  {
+    "id": "place-gy",
+    "countryCode": "GY",
+    "name": "Guyana",
+    "continent": "america",
+    "lat": 6.8045,
+    "lng": -58.1553,
+    "kind": "country"
+  },
+  {
+    "id": "place-ht",
+    "countryCode": "HT",
+    "name": "Haití",
+    "continent": "america",
+    "lat": 18.5435,
+    "lng": -72.3388,
+    "kind": "country"
+  },
+  {
+    "id": "place-hn",
+    "countryCode": "HN",
+    "name": "Honduras",
+    "continent": "america",
+    "lat": 14.0818,
+    "lng": -87.2068,
+    "kind": "country"
+  },
+  {
+    "id": "place-hk",
+    "countryCode": "HK",
+    "name": "Hong Kong",
+    "continent": "asia",
+    "lat": 22.2783,
+    "lng": 114.1747,
+    "kind": "country"
+  },
+  {
+    "id": "place-hu",
+    "countryCode": "HU",
+    "name": "Hungría",
+    "continent": "europa",
+    "lat": 47.4984,
+    "lng": 19.0405,
+    "kind": "country"
+  },
+  {
+    "id": "place-in",
+    "countryCode": "IN",
+    "name": "India",
+    "continent": "asia",
+    "lat": 28.6358,
+    "lng": 77.2245,
+    "kind": "country"
+  },
+  {
+    "id": "place-id",
+    "countryCode": "ID",
+    "name": "Indonesia",
+    "continent": "asia",
+    "lat": -6.2146,
+    "lng": 106.8451,
+    "kind": "country"
+  },
+  {
+    "id": "place-iq",
+    "countryCode": "IQ",
+    "name": "Irak",
+    "continent": "asia",
+    "lat": 33.3406,
+    "lng": 44.4009,
+    "kind": "country"
+  },
+  {
+    "id": "place-ir",
+    "countryCode": "IR",
+    "name": "Iran",
+    "continent": "asia",
+    "lat": 35.6944,
+    "lng": 51.4215,
+    "kind": "country"
+  },
+  {
+    "id": "place-ie",
+    "countryCode": "IE",
+    "name": "Irlanda",
+    "continent": "europa",
+    "lat": 53.3331,
+    "lng": -6.2489,
+    "kind": "country"
+  },
+  {
+    "id": "place-im",
+    "countryCode": "IM",
+    "name": "Isla de Man",
+    "continent": "europa",
+    "lat": 54.15,
+    "lng": -4.4833,
+    "kind": "country"
+  },
+  {
+    "id": "place-cx",
+    "countryCode": "CX",
+    "name": "Isla de Navidad",
+    "continent": "oceania",
+    "lat": -10.4217,
+    "lng": 105.6791,
+    "kind": "country"
+  },
+  {
+    "id": "place-nf",
+    "countryCode": "NF",
+    "name": "Isla de Norfolk",
+    "continent": "oceania",
+    "lat": -29.0546,
+    "lng": 167.9663,
+    "kind": "country"
+  },
+  {
+    "id": "place-is",
+    "countryCode": "IS",
+    "name": "Islandia",
+    "continent": "europa",
+    "lat": 64.1355,
+    "lng": -21.8954,
+    "kind": "country"
+  },
+  {
+    "id": "place-ky",
+    "countryCode": "KY",
+    "name": "Islas Caimán",
+    "continent": "america",
+    "lat": 19.2866,
+    "lng": -81.3744,
+    "kind": "country"
+  },
+  {
+    "id": "place-cc",
+    "countryCode": "CC",
+    "name": "Islas Cocos o Islas Keeling",
+    "continent": "oceania",
+    "lat": -12.1568,
+    "lng": 96.8225,
+    "kind": "country"
+  },
+  {
+    "id": "place-ck",
+    "countryCode": "CK",
+    "name": "Islas Cook",
+    "continent": "oceania",
+    "lat": -21.2075,
+    "lng": -159.7754,
+    "kind": "country"
+  },
+  {
+    "id": "place-fo",
+    "countryCode": "FO",
+    "name": "Islas Faroe",
+    "continent": "europa",
+    "lat": 62.0097,
+    "lng": -6.7716,
+    "kind": "country"
+  },
+  {
+    "id": "place-fk",
+    "countryCode": "FK",
+    "name": "Islas Malvinas",
+    "continent": "america",
+    "lat": -51.6938,
+    "lng": -57.857,
+    "kind": "country"
+  },
+  {
+    "id": "place-mp",
+    "countryCode": "MP",
+    "name": "Islas Marianas del Norte",
+    "continent": "oceania",
+    "lat": 15.2123,
+    "lng": 145.7545,
+    "kind": "country"
+  },
+  {
+    "id": "place-mh",
+    "countryCode": "MH",
+    "name": "Islas Marshall",
+    "continent": "oceania",
+    "lat": 7.0897,
+    "lng": 171.3803,
+    "kind": "country"
+  },
+  {
+    "id": "place-pn",
+    "countryCode": "PN",
+    "name": "Islas Pitcairn",
+    "continent": "oceania",
+    "lat": -25.066,
+    "lng": -130.1015,
+    "kind": "country"
+  },
+  {
+    "id": "place-sb",
+    "countryCode": "SB",
+    "name": "Islas Salomón",
+    "continent": "oceania",
+    "lat": -9.4333,
+    "lng": 159.95,
+    "kind": "country"
+  },
+  {
+    "id": "place-sj",
+    "countryCode": "SJ",
+    "name": "Islas Svalbard y Jan Mayen",
+    "continent": "europa",
+    "lat": 78.2233,
+    "lng": 15.6469,
+    "kind": "country"
+  },
+  {
+    "id": "place-tk",
+    "countryCode": "TK",
+    "name": "Islas Tokelau",
+    "continent": "oceania",
+    "lat": -8.5421,
+    "lng": -172.5159,
+    "kind": "country"
+  },
+  {
+    "id": "place-tc",
+    "countryCode": "TC",
+    "name": "Islas Turks y Caicos",
+    "continent": "america",
+    "lat": 21.4612,
+    "lng": -71.1419,
+    "kind": "country"
+  },
+  {
+    "id": "place-vi",
+    "countryCode": "VI",
+    "name": "Islas Vírgenes de los Estados Unidos",
+    "continent": "america",
+    "lat": 18.3419,
+    "lng": -64.9307,
+    "kind": "country"
+  },
+  {
+    "id": "place-vg",
+    "countryCode": "VG",
+    "name": "Islas Vírgenes del Reino Unido",
+    "continent": "america",
+    "lat": 18.4269,
+    "lng": -64.6208,
+    "kind": "country"
+  },
+  {
+    "id": "place-il",
+    "countryCode": "IL",
+    "name": "Israel",
+    "continent": "asia",
+    "lat": 31.769,
+    "lng": 35.2163,
+    "kind": "country"
+  },
+  {
+    "id": "place-it",
+    "countryCode": "IT",
+    "name": "Italia",
+    "continent": "europa",
+    "lat": 41.8919,
+    "lng": 12.5113,
+    "kind": "country"
+  },
+  {
+    "id": "place-jm",
+    "countryCode": "JM",
+    "name": "Jamaica",
+    "continent": "america",
+    "lat": 17.997,
+    "lng": -76.7936,
+    "kind": "country"
+  },
+  {
+    "id": "place-jp",
+    "countryCode": "JP",
+    "name": "Japón",
+    "continent": "asia",
+    "lat": 35.6895,
+    "lng": 139.6917,
+    "kind": "country"
+  },
+  {
+    "id": "place-je",
+    "countryCode": "JE",
+    "name": "Jersey",
+    "continent": "europa",
+    "lat": 49.188,
+    "lng": -2.1049,
+    "kind": "country"
+  },
+  {
+    "id": "place-jo",
+    "countryCode": "JO",
+    "name": "Jordania",
+    "continent": "asia",
+    "lat": 31.9552,
+    "lng": 35.945,
+    "kind": "country"
+  },
+  {
+    "id": "place-kz",
+    "countryCode": "KZ",
+    "name": "Kazajistán",
+    "continent": "asia",
+    "lat": 51.1801,
+    "lng": 71.446,
+    "kind": "country"
+  },
+  {
+    "id": "place-ke",
+    "countryCode": "KE",
+    "name": "Kenia",
+    "continent": "africa",
+    "lat": -1.2833,
+    "lng": 36.8167,
+    "kind": "country"
+  },
+  {
+    "id": "place-kg",
+    "countryCode": "KG",
+    "name": "Kirguizistán",
+    "continent": "asia",
+    "lat": 42.87,
+    "lng": 74.59,
+    "kind": "country"
+  },
+  {
+    "id": "place-ki",
+    "countryCode": "KI",
+    "name": "Kiribati",
+    "continent": "oceania",
+    "lat": 1.3278,
+    "lng": 172.977,
+    "kind": "country"
+  },
+  {
+    "id": "place-xk",
+    "countryCode": "XK",
+    "name": "Kosovo",
+    "continent": "europa",
+    "lat": 42.6727,
+    "lng": 21.1669,
+    "kind": "country"
+  },
+  {
+    "id": "place-kw",
+    "countryCode": "KW",
+    "name": "Kuwait",
+    "continent": "asia",
+    "lat": 29.3697,
+    "lng": 47.9783,
+    "kind": "country"
+  },
+  {
+    "id": "place-la",
+    "countryCode": "LA",
+    "name": "Laos",
+    "continent": "asia",
+    "lat": 17.9667,
+    "lng": 102.6,
+    "kind": "country"
+  },
+  {
+    "id": "place-ls",
+    "countryCode": "LS",
+    "name": "Lesotho",
+    "continent": "africa",
+    "lat": -29.3167,
+    "lng": 27.4833,
+    "kind": "country"
+  },
+  {
+    "id": "place-lv",
+    "countryCode": "LV",
+    "name": "Letonia",
+    "continent": "europa",
+    "lat": 56.946,
+    "lng": 24.1059,
+    "kind": "country"
+  },
+  {
+    "id": "place-lb",
+    "countryCode": "LB",
+    "name": "Líbano",
+    "continent": "asia",
+    "lat": 33.8933,
+    "lng": 35.5016,
+    "kind": "country"
+  },
+  {
+    "id": "place-lr",
+    "countryCode": "LR",
+    "name": "Liberia",
+    "continent": "africa",
+    "lat": 6.3005,
+    "lng": -10.7969,
+    "kind": "country"
+  },
+  {
+    "id": "place-ly",
+    "countryCode": "LY",
+    "name": "Libia",
+    "continent": "africa",
+    "lat": 32.8874,
+    "lng": 13.1873,
+    "kind": "country"
+  },
+  {
+    "id": "place-li",
+    "countryCode": "LI",
+    "name": "Liechtenstein",
+    "continent": "europa",
+    "lat": 47.1415,
+    "lng": 9.5215,
+    "kind": "country"
+  },
+  {
+    "id": "place-lt",
+    "countryCode": "LT",
+    "name": "Lituania",
+    "continent": "europa",
+    "lat": 54.6892,
+    "lng": 25.2798,
+    "kind": "country"
+  },
+  {
+    "id": "place-lu",
+    "countryCode": "LU",
+    "name": "Luxemburgo",
+    "continent": "europa",
+    "lat": 49.6117,
+    "lng": 6.13,
+    "kind": "country"
+  },
+  {
+    "id": "place-mo",
+    "countryCode": "MO",
+    "name": "Macao",
+    "continent": "asia",
+    "lat": 22.2006,
+    "lng": 113.5461,
+    "kind": "country"
+  },
+  {
+    "id": "place-mk",
+    "countryCode": "MK",
+    "name": "Macedonia del Norte",
+    "continent": "europa",
+    "lat": 41.9965,
+    "lng": 21.4314,
+    "kind": "country"
+  },
+  {
+    "id": "place-mg",
+    "countryCode": "MG",
+    "name": "Madagascar",
+    "continent": "africa",
+    "lat": -18.9137,
+    "lng": 47.5361,
+    "kind": "country"
+  },
+  {
+    "id": "place-my",
+    "countryCode": "MY",
+    "name": "Malasia",
+    "continent": "asia",
+    "lat": 3.1412,
+    "lng": 101.6865,
+    "kind": "country"
+  },
+  {
+    "id": "place-mw",
+    "countryCode": "MW",
+    "name": "Malawi",
+    "continent": "africa",
+    "lat": -13.9669,
+    "lng": 33.7873,
+    "kind": "country"
+  },
+  {
+    "id": "place-mv",
+    "countryCode": "MV",
+    "name": "Maldivas",
+    "continent": "asia",
+    "lat": 4.1752,
+    "lng": 73.5092,
+    "kind": "country"
+  },
+  {
+    "id": "place-ml",
+    "countryCode": "ML",
+    "name": "Mali",
+    "continent": "africa",
+    "lat": 12.65,
+    "lng": -8,
+    "kind": "country"
+  },
+  {
+    "id": "place-mt",
+    "countryCode": "MT",
+    "name": "Malta",
+    "continent": "europa",
+    "lat": 35.8997,
+    "lng": 14.5148,
+    "kind": "country"
+  },
+  {
+    "id": "place-ma",
+    "countryCode": "MA",
+    "name": "Marruecos",
+    "continent": "africa",
+    "lat": 34.0133,
+    "lng": -6.8325,
+    "kind": "country"
+  },
+  {
+    "id": "place-mq",
+    "countryCode": "MQ",
+    "name": "Martinica",
+    "continent": "america",
+    "lat": 14.6037,
+    "lng": -61.0742,
+    "kind": "country"
+  },
+  {
+    "id": "place-mu",
+    "countryCode": "MU",
+    "name": "Mauricio",
+    "continent": "africa",
+    "lat": -20.1619,
+    "lng": 57.4989,
+    "kind": "country"
+  },
+  {
+    "id": "place-mr",
+    "countryCode": "MR",
+    "name": "Mauritania",
+    "continent": "africa",
+    "lat": 18.0858,
+    "lng": -15.9785,
+    "kind": "country"
+  },
+  {
+    "id": "place-yt",
+    "countryCode": "YT",
+    "name": "Mayotte",
+    "continent": "africa",
+    "lat": -12.7823,
+    "lng": 45.2288,
+    "kind": "country"
+  },
+  {
+    "id": "place-mx",
+    "countryCode": "MX",
+    "name": "México",
+    "continent": "america",
+    "lat": 19.4285,
+    "lng": -99.1277,
+    "kind": "country"
+  },
+  {
+    "id": "place-fm",
+    "countryCode": "FM",
+    "name": "Micronesia",
+    "continent": "oceania",
+    "lat": 6.9248,
+    "lng": 158.1611,
+    "kind": "country"
+  },
+  {
+    "id": "place-md",
+    "countryCode": "MD",
+    "name": "Moldavia",
+    "continent": "europa",
+    "lat": 47.0056,
+    "lng": 28.8575,
+    "kind": "country"
+  },
+  {
+    "id": "place-mc",
+    "countryCode": "MC",
+    "name": "Mónaco",
+    "continent": "europa",
+    "lat": 43.7333,
+    "lng": 7.4167,
+    "kind": "country"
+  },
+  {
+    "id": "place-mn",
+    "countryCode": "MN",
+    "name": "Mongolia",
+    "continent": "asia",
+    "lat": 47.9077,
+    "lng": 106.8832,
+    "kind": "country"
+  },
+  {
+    "id": "place-me",
+    "countryCode": "ME",
+    "name": "Montenegro",
+    "continent": "europa",
+    "lat": 42.4411,
+    "lng": 19.2636,
+    "kind": "country"
+  },
+  {
+    "id": "place-ms",
+    "countryCode": "MS",
+    "name": "Montserrat",
+    "continent": "america",
+    "lat": 16.7056,
+    "lng": -62.2129,
+    "kind": "country"
+  },
+  {
+    "id": "place-mz",
+    "countryCode": "MZ",
+    "name": "Mozambique",
+    "continent": "africa",
+    "lat": -25.9655,
+    "lng": 32.5832,
+    "kind": "country"
+  },
+  {
+    "id": "place-mm",
+    "countryCode": "MM",
+    "name": "Myanmar",
+    "continent": "asia",
+    "lat": 19.745,
+    "lng": 96.1297,
+    "kind": "country"
+  },
+  {
+    "id": "place-na",
+    "countryCode": "NA",
+    "name": "Namibia",
+    "continent": "africa",
+    "lat": -22.5594,
+    "lng": 17.0832,
+    "kind": "country"
+  },
+  {
+    "id": "place-nr",
+    "countryCode": "NR",
+    "name": "Nauru",
+    "continent": "oceania",
+    "lat": -0.5508,
+    "lng": 166.9252,
+    "kind": "country"
+  },
+  {
+    "id": "place-np",
+    "countryCode": "NP",
+    "name": "Nepal",
+    "continent": "asia",
+    "lat": 27.7017,
+    "lng": 85.3206,
+    "kind": "country"
+  },
+  {
+    "id": "place-ni",
+    "countryCode": "NI",
+    "name": "Nicaragua",
+    "continent": "america",
+    "lat": 12.1328,
+    "lng": -86.2504,
+    "kind": "country"
+  },
+  {
+    "id": "place-ne",
+    "countryCode": "NE",
+    "name": "Níger",
+    "continent": "africa",
+    "lat": 13.5137,
+    "lng": 2.1098,
+    "kind": "country"
+  },
+  {
+    "id": "place-ng",
+    "countryCode": "NG",
+    "name": "Nigeria",
+    "continent": "africa",
+    "lat": 9.0579,
+    "lng": 7.4951,
+    "kind": "country"
+  },
+  {
+    "id": "place-nu",
+    "countryCode": "NU",
+    "name": "Niue",
+    "continent": "oceania",
+    "lat": -19.0545,
+    "lng": -169.9177,
+    "kind": "country"
+  },
+  {
+    "id": "place-no",
+    "countryCode": "NO",
+    "name": "Noruega",
+    "continent": "europa",
+    "lat": 59.9127,
+    "lng": 10.7461,
+    "kind": "country"
+  },
+  {
+    "id": "place-nc",
+    "countryCode": "NC",
+    "name": "Nueva Caledonia",
+    "continent": "oceania",
+    "lat": -22.2741,
+    "lng": 166.4488,
+    "kind": "country"
+  },
+  {
+    "id": "place-nz",
+    "countryCode": "NZ",
+    "name": "Nueva Zelanda",
+    "continent": "oceania",
+    "lat": -41.2866,
+    "lng": 174.7756,
+    "kind": "country"
+  },
+  {
+    "id": "place-om",
+    "countryCode": "OM",
+    "name": "Omán",
+    "continent": "asia",
+    "lat": 23.5841,
+    "lng": 58.4078,
+    "kind": "country"
+  },
+  {
+    "id": "place-nl",
+    "countryCode": "NL",
+    "name": "Países Bajos",
+    "continent": "europa",
+    "lat": 52.374,
+    "lng": 4.8897,
+    "kind": "country"
+  },
+  {
+    "id": "place-pk",
+    "countryCode": "PK",
+    "name": "Pakistán",
+    "continent": "asia",
+    "lat": 33.7215,
+    "lng": 73.0433,
+    "kind": "country"
+  },
+  {
+    "id": "place-pw",
+    "countryCode": "PW",
+    "name": "Palau",
+    "continent": "oceania",
+    "lat": 7.5008,
+    "lng": 134.6238,
+    "kind": "country"
+  },
+  {
+    "id": "place-ps",
+    "countryCode": "PS",
+    "name": "Palestina",
+    "continent": "asia",
+    "lat": 31.8996,
+    "lng": 35.2042,
+    "kind": "country"
+  },
+  {
+    "id": "place-pa",
+    "countryCode": "PA",
+    "name": "Panamá",
+    "continent": "america",
+    "lat": 8.9936,
+    "lng": -79.5197,
+    "kind": "country"
+  },
+  {
+    "id": "place-pg",
+    "countryCode": "PG",
+    "name": "Papúa Nueva Guinea",
+    "continent": "oceania",
+    "lat": -9.4772,
+    "lng": 147.1509,
+    "kind": "country"
+  },
+  {
+    "id": "place-py",
+    "countryCode": "PY",
+    "name": "Paraguay",
+    "continent": "america",
+    "lat": -25.2865,
+    "lng": -57.647,
+    "kind": "country"
+  },
+  {
+    "id": "place-pe",
+    "countryCode": "PE",
+    "name": "Perú",
+    "continent": "america",
+    "lat": -12.0432,
+    "lng": -77.0282,
+    "kind": "country"
+  },
+  {
+    "id": "place-pf",
+    "countryCode": "PF",
+    "name": "Polinesia Francesa",
+    "continent": "oceania",
+    "lat": -17.5373,
+    "lng": -149.5665,
+    "kind": "country"
+  },
+  {
+    "id": "place-pl",
+    "countryCode": "PL",
+    "name": "Polonia",
+    "continent": "europa",
+    "lat": 52.2298,
+    "lng": 21.0118,
+    "kind": "country"
+  },
+  {
+    "id": "place-pt",
+    "countryCode": "PT",
+    "name": "Portugal",
+    "continent": "europa",
+    "lat": 38.7167,
+    "lng": -9.1333,
+    "kind": "country"
+  },
+  {
+    "id": "place-pr",
+    "countryCode": "PR",
+    "name": "Puerto Rico",
+    "continent": "america",
+    "lat": 18.4663,
+    "lng": -66.1057,
+    "kind": "country"
+  },
+  {
+    "id": "place-gb",
+    "countryCode": "GB",
+    "name": "Reino Unido",
+    "continent": "europa",
+    "lat": 51.5085,
+    "lng": -0.1257,
+    "kind": "country"
+  },
+  {
+    "id": "place-cf",
+    "countryCode": "CF",
+    "name": "República Centroafricana",
+    "continent": "africa",
+    "lat": 4.3612,
+    "lng": 18.555,
+    "kind": "country"
+  },
+  {
+    "id": "place-do",
+    "countryCode": "DO",
+    "name": "República Dominicana",
+    "continent": "america",
+    "lat": 18.4719,
+    "lng": -69.8923,
+    "kind": "country"
+  },
+  {
+    "id": "place-re",
+    "countryCode": "RE",
+    "name": "Reunión",
+    "continent": "africa",
+    "lat": -20.8823,
+    "lng": 55.4504,
+    "kind": "country"
+  },
+  {
+    "id": "place-rw",
+    "countryCode": "RW",
+    "name": "Ruanda",
+    "continent": "africa",
+    "lat": -1.9499,
+    "lng": 30.0589,
+    "kind": "country"
+  },
+  {
+    "id": "place-ro",
+    "countryCode": "RO",
+    "name": "Rumania",
+    "continent": "europa",
+    "lat": 44.4323,
+    "lng": 26.1063,
+    "kind": "country"
+  },
+  {
+    "id": "place-ru",
+    "countryCode": "RU",
+    "name": "Rusia",
+    "continent": "europa",
+    "lat": 55.7522,
+    "lng": 37.6156,
+    "kind": "country"
+  },
+  {
+    "id": "place-eh",
+    "countryCode": "EH",
+    "name": "Sahara Occidental",
+    "continent": "africa",
+    "lat": 27.1418,
+    "lng": -13.188,
+    "kind": "country"
+  },
+  {
+    "id": "place-mf",
+    "countryCode": "MF",
+    "name": "Saint Martin",
+    "continent": "america",
+    "lat": 18.0682,
+    "lng": -63.083,
+    "kind": "country"
+  },
+  {
+    "id": "place-ws",
+    "countryCode": "WS",
+    "name": "Samoa",
+    "continent": "oceania",
+    "lat": -13.8333,
+    "lng": -171.7667,
+    "kind": "country"
+  },
+  {
+    "id": "place-as",
+    "countryCode": "AS",
+    "name": "Samoa Americana",
+    "continent": "oceania",
+    "lat": -14.2781,
+    "lng": -170.7025,
+    "kind": "country"
+  },
+  {
+    "id": "place-bl",
+    "countryCode": "BL",
+    "name": "San Bartolomé",
+    "continent": "america",
+    "lat": 17.8962,
+    "lng": -62.8498,
+    "kind": "country"
+  },
+  {
+    "id": "place-kn",
+    "countryCode": "KN",
+    "name": "San Cristóbal y Nieves",
+    "continent": "america",
+    "lat": 17.2955,
+    "lng": -62.725,
+    "kind": "country"
+  },
+  {
+    "id": "place-sm",
+    "countryCode": "SM",
+    "name": "San Marino",
+    "continent": "europa",
+    "lat": 43.9367,
+    "lng": 12.4464,
+    "kind": "country"
+  },
+  {
+    "id": "place-pm",
+    "countryCode": "PM",
+    "name": "San Pedro y Miquelón",
+    "continent": "america",
+    "lat": 46.7791,
+    "lng": -56.1773,
+    "kind": "country"
+  },
+  {
+    "id": "place-vc",
+    "countryCode": "VC",
+    "name": "San Vicente y Granadinas",
+    "continent": "america",
+    "lat": 13.1553,
+    "lng": -61.2274,
+    "kind": "country"
+  },
+  {
+    "id": "place-sh",
+    "countryCode": "SH",
+    "name": "Santa Elena, Ascensión y Tristán de Acuña",
+    "continent": "africa",
+    "lat": -15.9387,
+    "lng": -5.7167,
+    "kind": "country"
+  },
+  {
+    "id": "place-lc",
+    "countryCode": "LC",
+    "name": "Santa Lucía",
+    "continent": "america",
+    "lat": 13.9957,
+    "lng": -61.0061,
+    "kind": "country"
+  },
+  {
+    "id": "place-st",
+    "countryCode": "ST",
+    "name": "Santo Tomé y Príncipe",
+    "continent": "africa",
+    "lat": 0.3365,
+    "lng": 6.7273,
+    "kind": "country"
+  },
+  {
+    "id": "place-sn",
+    "countryCode": "SN",
+    "name": "Senegal",
+    "continent": "africa",
+    "lat": 14.6937,
+    "lng": -17.4441,
+    "kind": "country"
+  },
+  {
+    "id": "place-rs",
+    "countryCode": "RS",
+    "name": "Serbia",
+    "continent": "europa",
+    "lat": 44.804,
+    "lng": 20.4651,
+    "kind": "country"
+  },
+  {
+    "id": "place-sc",
+    "countryCode": "SC",
+    "name": "Seychelles",
+    "continent": "africa",
+    "lat": -4.62,
+    "lng": 55.455,
+    "kind": "country"
+  },
+  {
+    "id": "place-sl",
+    "countryCode": "SL",
+    "name": "Sierra Leone",
+    "continent": "africa",
+    "lat": 8.4871,
+    "lng": -13.2356,
+    "kind": "country"
+  },
+  {
+    "id": "place-sg",
+    "countryCode": "SG",
+    "name": "Singapur",
+    "continent": "asia",
+    "lat": 1.2897,
+    "lng": 103.8501,
+    "kind": "country"
+  },
+  {
+    "id": "place-sx",
+    "countryCode": "SX",
+    "name": "Sint Maarten",
+    "continent": "america",
+    "lat": 18.026,
+    "lng": -63.0458,
+    "kind": "country"
+  },
+  {
+    "id": "place-sy",
+    "countryCode": "SY",
+    "name": "Siria",
+    "continent": "asia",
+    "lat": 33.5102,
+    "lng": 36.2913,
+    "kind": "country"
+  },
+  {
+    "id": "place-so",
+    "countryCode": "SO",
+    "name": "Somalia",
+    "continent": "africa",
+    "lat": 2.0371,
+    "lng": 45.3438,
+    "kind": "country"
+  },
+  {
+    "id": "place-lk",
+    "countryCode": "LK",
+    "name": "Sri Lanka",
+    "continent": "asia",
+    "lat": 6.9355,
+    "lng": 79.8487,
+    "kind": "country"
+  },
+  {
+    "id": "place-sz",
+    "countryCode": "SZ",
+    "name": "Suazilandia",
+    "continent": "africa",
+    "lat": -26.3167,
+    "lng": 31.1333,
+    "kind": "country"
+  },
+  {
+    "id": "place-za",
+    "countryCode": "ZA",
+    "name": "Sudáfrica",
+    "continent": "africa",
+    "lat": -25.7449,
+    "lng": 28.1878,
+    "kind": "country"
+  },
+  {
+    "id": "place-sd",
+    "countryCode": "SD",
+    "name": "Sudán",
+    "continent": "africa",
+    "lat": 15.5518,
+    "lng": 32.5324,
+    "kind": "country"
+  },
+  {
+    "id": "place-ss",
+    "countryCode": "SS",
+    "name": "Sudán del Sur",
+    "continent": "africa",
+    "lat": 4.8517,
+    "lng": 31.5825,
+    "kind": "country"
+  },
+  {
+    "id": "place-se",
+    "countryCode": "SE",
+    "name": "Suecia",
+    "continent": "europa",
+    "lat": 59.3294,
+    "lng": 18.0687,
+    "kind": "country"
+  },
+  {
+    "id": "place-ch",
+    "countryCode": "CH",
+    "name": "Suiza",
+    "continent": "europa",
+    "lat": 46.9481,
+    "lng": 7.4474,
+    "kind": "country"
+  },
+  {
+    "id": "place-sr",
+    "countryCode": "SR",
+    "name": "Surinam",
+    "continent": "america",
+    "lat": 5.8664,
+    "lng": -55.1668,
+    "kind": "country"
+  },
+  {
+    "id": "place-th",
+    "countryCode": "TH",
+    "name": "Tailandia",
+    "continent": "asia",
+    "lat": 13.754,
+    "lng": 100.5014,
+    "kind": "country"
+  },
+  {
+    "id": "place-tw",
+    "countryCode": "TW",
+    "name": "Taiwán",
+    "continent": "asia",
+    "lat": 25.0478,
+    "lng": 121.5319,
+    "kind": "country"
+  },
+  {
+    "id": "place-tz",
+    "countryCode": "TZ",
+    "name": "Tanzania",
+    "continent": "africa",
+    "lat": -6.1722,
+    "lng": 35.7395,
+    "kind": "country"
+  },
+  {
+    "id": "place-tj",
+    "countryCode": "TJ",
+    "name": "Tayikistán",
+    "continent": "asia",
+    "lat": 38.5358,
+    "lng": 68.7791,
+    "kind": "country"
+  },
+  {
+    "id": "place-io",
+    "countryCode": "IO",
+    "name": "Territorio Británico del Océano Índico",
+    "continent": "africa",
+    "lat": -6,
+    "lng": 71.5,
+    "kind": "country"
+  },
+  {
+    "id": "place-tl",
+    "countryCode": "TL",
+    "name": "Timor Oriental",
+    "continent": "asia",
+    "lat": -8.5586,
+    "lng": 125.5736,
+    "kind": "country"
+  },
+  {
+    "id": "place-tg",
+    "countryCode": "TG",
+    "name": "Togo",
+    "continent": "africa",
+    "lat": 6.1287,
+    "lng": 1.2215,
+    "kind": "country"
+  },
+  {
+    "id": "place-to",
+    "countryCode": "TO",
+    "name": "Tonga",
+    "continent": "oceania",
+    "lat": -21.1394,
+    "lng": -175.2018,
+    "kind": "country"
+  },
+  {
+    "id": "place-tt",
+    "countryCode": "TT",
+    "name": "Trinidad y Tobago",
+    "continent": "america",
+    "lat": 10.6667,
+    "lng": -61.5189,
+    "kind": "country"
+  },
+  {
+    "id": "place-tn",
+    "countryCode": "TN",
+    "name": "Túnez",
+    "continent": "africa",
+    "lat": 36.819,
+    "lng": 10.1658,
+    "kind": "country"
+  },
+  {
+    "id": "place-tm",
+    "countryCode": "TM",
+    "name": "Turkmenistán",
+    "continent": "asia",
+    "lat": 37.95,
+    "lng": 58.3833,
+    "kind": "country"
+  },
+  {
+    "id": "place-tr",
+    "countryCode": "TR",
+    "name": "Turquía",
+    "continent": "asia",
+    "lat": 39.9199,
+    "lng": 32.8543,
+    "kind": "country"
+  },
+  {
+    "id": "place-tv",
+    "countryCode": "TV",
+    "name": "Tuvalu",
+    "continent": "oceania",
+    "lat": -8.5242,
+    "lng": 179.1942,
+    "kind": "country"
+  },
+  {
+    "id": "place-ua",
+    "countryCode": "UA",
+    "name": "Ucrania",
+    "continent": "europa",
+    "lat": 50.4547,
+    "lng": 30.5238,
+    "kind": "country"
+  },
+  {
+    "id": "place-ug",
+    "countryCode": "UG",
+    "name": "Uganda",
+    "continent": "africa",
+    "lat": 0.3163,
+    "lng": 32.5822,
+    "kind": "country"
+  },
+  {
+    "id": "place-uy",
+    "countryCode": "UY",
+    "name": "Uruguay",
+    "continent": "america",
+    "lat": -34.9033,
+    "lng": -56.1882,
+    "kind": "country"
+  },
+  {
+    "id": "place-uz",
+    "countryCode": "UZ",
+    "name": "Uzbekistán",
+    "continent": "asia",
+    "lat": 41.2647,
+    "lng": 69.2163,
+    "kind": "country"
+  },
+  {
+    "id": "place-vu",
+    "countryCode": "VU",
+    "name": "Vanuatu",
+    "continent": "oceania",
+    "lat": -17.7365,
+    "lng": 168.3137,
+    "kind": "country"
+  },
+  {
+    "id": "place-ve",
+    "countryCode": "VE",
+    "name": "Venezuela",
+    "continent": "america",
+    "lat": 10.488,
+    "lng": -66.8792,
+    "kind": "country"
+  },
+  {
+    "id": "place-vn",
+    "countryCode": "VN",
+    "name": "Vietnam",
+    "continent": "asia",
+    "lat": 21.0245,
+    "lng": 105.8412,
+    "kind": "country"
+  },
+  {
+    "id": "place-wf",
+    "countryCode": "WF",
+    "name": "Wallis y Futuna",
+    "continent": "oceania",
+    "lat": -13.2816,
+    "lng": -176.1745,
+    "kind": "country"
+  },
+  {
+    "id": "place-ye",
+    "countryCode": "YE",
+    "name": "Yemen",
+    "continent": "asia",
+    "lat": 15.3547,
+    "lng": 44.2067,
+    "kind": "country"
+  },
+  {
+    "id": "place-zm",
+    "countryCode": "ZM",
+    "name": "Zambia",
+    "continent": "africa",
+    "lat": -15.4067,
+    "lng": 28.2871,
+    "kind": "country"
+  },
+  {
+    "id": "place-zw",
+    "countryCode": "ZW",
+    "name": "Zimbabue",
+    "continent": "africa",
+    "lat": -17.8277,
+    "lng": 31.0534,
+    "kind": "country"
+  },
+  {
+    "id": "place-city-ciudad-de-mexico",
+    "countryCode": "MX",
+    "name": "Ciudad de México",
+    "continent": "america",
+    "lat": 19.4326,
+    "lng": -99.1332,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-nueva-york",
+    "countryCode": "US",
+    "name": "Nueva York",
+    "continent": "america",
+    "lat": 40.7128,
+    "lng": -74.006,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-sao-paulo",
+    "countryCode": "BR",
+    "name": "São Paulo",
+    "continent": "america",
+    "lat": -23.5505,
+    "lng": -46.6333,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-buenos-aires",
+    "countryCode": "AR",
+    "name": "Buenos Aires",
+    "continent": "america",
+    "lat": -34.6037,
+    "lng": -58.3816,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-madrid",
+    "countryCode": "ES",
+    "name": "Madrid",
+    "continent": "europa",
+    "lat": 40.4168,
+    "lng": -3.7038,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-paris",
+    "countryCode": "FR",
+    "name": "París",
+    "continent": "europa",
+    "lat": 48.8566,
+    "lng": 2.3522,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-estambul",
+    "countryCode": "TR",
+    "name": "Estambul",
+    "continent": "asia",
+    "lat": 41.0082,
+    "lng": 28.9784,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-tokio",
+    "countryCode": "JP",
+    "name": "Tokio",
+    "continent": "asia",
+    "lat": 35.6762,
+    "lng": 139.6503,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-el-cairo",
+    "countryCode": "EG",
+    "name": "El Cairo",
+    "continent": "africa",
+    "lat": 30.0444,
+    "lng": 31.2357,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-sidney",
+    "countryCode": "AU",
+    "name": "Sídney",
+    "continent": "oceania",
+    "lat": -33.8688,
+    "lng": 151.2093,
+    "kind": "city"
+  }
+]
