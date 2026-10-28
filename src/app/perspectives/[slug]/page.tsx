@@ -5,9 +5,13 @@ import { RELATED_ARTICLES_LIMIT } from "@/lib/constants";
 import { uiText } from "@/content/ui-text";
 import { getArticleBySlug, getArticleSlugs, getRelatedArticles } from "@/lib/data/articles";
 
+// Con Cache Components, generateStaticParams no puede devolver una lista vacía. Si no hay
+// artículos publicados se prerenderiza este slug, que no existe y termina en 404.
+const EMPTY_FALLBACK_SLUG = "sin-articulos";
+
 export async function generateStaticParams() {
   const slugs = await getArticleSlugs();
-  return slugs.map((slug) => ({ slug }));
+  return (slugs.length > 0 ? slugs : [EMPTY_FALLBACK_SLUG]).map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: PageProps<"/perspectives/[slug]">): Promise<Metadata> {
