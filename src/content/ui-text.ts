@@ -41,13 +41,15 @@ export const uiText = {
   atlas: {
     title: "Atlas",
     empty: "No hay puntos con estos filtros.",
-    debugParams: "Parámetros",
   },
   perspectives: {
     title: "Perspectives",
     empty: "No hay artículos con estos filtros.",
-    emptyPage: "Esta página no tiene artículos.",
-    debugParams: "Parámetros",
+    pagination: "Paginación",
+    previous: "Anterior",
+    next: "Siguiente",
+    page: "Página",
+    of: "de",
   },
   article: {
     related: "Lecturas relacionadas",
