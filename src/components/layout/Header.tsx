@@ -1,28 +1,36 @@
 import Link from "next/link";
 import { uiText } from "@/content/ui-text";
+import { Logo } from "@/components/layout/Logo";
+import { ArrowRightIcon } from "@/components/ui/icons";
 
 const LINKS = [
-  { href: "/atlas", label: uiText.nav.atlas },
+  { href: "/", label: uiText.nav.home },
   { href: "/perspectives", label: uiText.nav.perspectives },
   { href: "/about", label: uiText.nav.about },
-  { href: "/join", label: uiText.nav.join },
 ] as const;
 
 export function Header() {
   return (
-    <header className="flex items-center justify-between gap-4 p-4">
-      <Link href="/" className="font-display text-xl">
-        {uiText.nav.logo}
-      </Link>
+    <header className="flex flex-wrap items-center justify-between gap-4 bg-surface px-8 py-4">
+      <Logo />
       <nav aria-label={uiText.nav.label}>
-        <ul className="flex gap-4">
+        <ul className="flex gap-8 font-body uppercase tracking-caps">
           {LINKS.map((link) => (
             <li key={link.href}>
-              <Link href={link.href}>{link.label}</Link>
+              <Link href={link.href} className="hover:text-accent">
+                {link.label}
+              </Link>
             </li>
           ))}
         </ul>
       </nav>
+      <Link
+        href="/atlas"
+        className="flex items-center gap-4 bg-accent px-8 py-4 font-body uppercase tracking-caps text-surface"
+      >
+        {uiText.nav.exploreAtlas}
+        <ArrowRightIcon className="size-4" />
+      </Link>
     </header>
   );
 }

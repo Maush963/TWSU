@@ -72,6 +72,7 @@ export const ATLAS_PINS_QUERY = defineQuery(`
   && ($region == null || place->continent == $region)]
   | order(publishedAt desc){
     _id, title, "slug": slug.current, excerpt, categories,
+    "cover": cover{ alt, asset, crop, hotspot },
     "placeName": place->name,
     "continent": place->continent,
     "lat": place->lat,

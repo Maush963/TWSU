@@ -3,34 +3,15 @@ import Link from "next/link";
 import { Suspense } from "react";
 import { uiText } from "@/content/ui-text";
 import { AtlasMap } from "@/components/atlas/AtlasMap";
-import { resolveAtlasYear, type FilterLink } from "@/lib/atlas/filter-links";
+import { CategorySelect } from "@/components/atlas/CategorySelect";
+import { resolveAtlasYear } from "@/lib/atlas/filter-links";
 import { buildAtlasView } from "@/lib/atlas/view-model";
 import { getAtlasPins, getAtlasYears } from "@/lib/data/atlas";
 import { parseAtlasFilters } from "@/lib/filters";
 
 export const metadata: Metadata = { title: uiText.atlas.title };
 
-function FilterGroup<T extends string | number>({ label, links }: { label: string; links: FilterLink<T>[] }) {
-  if (links.length === 0) return null;
-  return (
-    <li>
-      <span className="text-muted">{label}: </span>
-      {links.map((link) => (
-        <Link
-          key={link.value}
-          href={link.href}
-          aria-current={link.active ? "true" : undefined}
-          className={link.active ? "font-bold mr-2" : "mr-2"}
-        >
-          {link.title}
-        </Link>
-      ))}
-    </li>
-  );
-}
-
-// Temporal: mapa básico con puntos. Tooltip, llaves, móvil y diseño son de la Parte B.
-async function AtlasPoints({ searchParams }: { searchParams: PageProps<"/atlas">["searchParams"] }) {
+async function AtlasContent({ searchParams }: { searchParams: PageProps<"/atlas">["searchParams"] }) {
   const parsed = parseAtlasFilters(await searchParams);
   const years = await getAtlasYears();
   const year = resolveAtlasYear(parsed.year, years);
@@ -38,29 +19,49 @@ async function AtlasPoints({ searchParams }: { searchParams: PageProps<"/atlas">
   const view = buildAtlasView(await getAtlasPins(filters), filters, years);
   const { links } = view;
 
+  // Región y año no tienen control en el diseño, pero siguen funcionando desde la URL.
+  const hiddenFields: Record<string, string> = {};
+  if (parsed.region) hiddenFields.region = parsed.region;
+  if (year !== undefined && year !== years[0]) hiddenFields.year = String(year);
+
   return (
     <>
-      <ul aria-label={uiText.atlas.filters.label}>
-        <FilterGroup label={uiText.atlas.filters.category} links={links.categories} />
-        <FilterGroup label={uiText.atlas.filters.region} links={links.regions} />
-        <FilterGroup label={uiText.atlas.filters.year} links={links.years} />
-        {links.hasActiveFilters && (
-          <li>
-            <Link href={links.clearHref}>{uiText.atlas.filters.clear}</Link>
-          </li>
-        )}
-      </ul>
-      {view.isEmpty ? <p className="text-muted">{uiText.atlas.empty}</p> : <AtlasMap pins={view.positioned} />}
+      <div className="flex flex-wrap items-end justify-between gap-8 py-8">
+        <div className="border-l-2 border-gold pl-4">
+          <h1 className="font-display text-3xl uppercase leading-none text-accent">{uiText.atlas.title}</h1>
+          <p className="mt-2 font-body uppercase tracking-caps">{uiText.atlas.tagline}</p>
+        </div>
+        <CategorySelect
+          label={uiText.atlas.exploreBy}
+          allLabel={uiText.atlas.allCategories}
+          applyLabel={uiText.atlas.applyFilter}
+          options={links.categories.map(({ value, title, href }) => ({ value, title, href }))}
+          allHref={links.allCategoriesHref}
+          selected={filters.category}
+          hiddenFields={hiddenFields}
+        />
+      </div>
+      {view.isEmpty ? (
+        <p className="py-8 text-muted">
+          {uiText.atlas.empty}{" "}
+          {links.hasActiveFilters && (
+            <Link href={links.clearHref} className="text-accent underline">
+              {uiText.atlas.clearFilters}
+            </Link>
+          )}
+        </p>
+      ) : (
+        <AtlasMap pins={view.positioned} year={year} />
+      )}
     </>
   );
 }
 
 export default function AtlasPage({ searchParams }: PageProps<"/atlas">) {
   return (
-    <main className="p-4">
-      <h1 className="font-display text-2xl">{uiText.atlas.title}</h1>
+    <main className="px-8 pb-8">
       <Suspense>
-        <AtlasPoints searchParams={searchParams} />
+        <AtlasContent searchParams={searchParams} />
       </Suspense>
     </main>
   );

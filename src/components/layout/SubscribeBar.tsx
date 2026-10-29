@@ -37,8 +37,8 @@ export function SubscribeBar() {
   }
 
   return (
-    <section aria-labelledby="subscribe-title" className="flex flex-col gap-2 p-4">
-      <h2 id="subscribe-title" className="text-lg">
+    <section aria-labelledby="subscribe-title" className="flex flex-col gap-2 px-8 py-4">
+      <h2 id="subscribe-title" className="font-display text-lg uppercase tracking-caps text-accent">
         {uiText.subscribe.title}
       </h2>
       <form onSubmit={onSubmit} className="flex flex-wrap gap-2">

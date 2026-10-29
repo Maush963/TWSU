@@ -1,28 +1,44 @@
 @import "tailwindcss";
 @import "../styles/tokens.css";
+@import "../styles/atlas.css";
 
 /* Tailwind lee los tokens de tokens.css; los valores no se repiten aquí. */
 @theme inline {
   --color-*: initial;
   --color-bg: var(--color-bg);
+  --color-surface: var(--color-surface);
   --color-text: var(--color-text);
   --color-accent: var(--color-accent);
+  --color-gold: var(--color-gold);
+  --color-gold-soft: var(--color-gold-soft);
   --color-muted: var(--color-muted);
+  --color-pin: var(--color-pin);
+  --color-grid: var(--color-grid);
+  --color-placeholder: var(--color-placeholder);
 
   --font-sans: var(--font-body);
   --font-display: var(--font-display);
 
+  --text-xs: var(--text-xs);
   --text-sm: var(--text-sm);
   --text-base: var(--text-base);
   --text-lg: var(--text-lg);
   --text-xl: var(--text-xl);
   --text-2xl: var(--text-2xl);
+  --text-3xl: var(--text-3xl);
+
+  --tracking-caps: var(--tracking-caps);
+  --tracking-caps-wide: var(--tracking-caps-wide);
 
   --spacing-1: var(--space-1);
   --spacing-2: var(--space-2);
   --spacing-4: var(--space-4);
   --spacing-8: var(--space-8);
   --spacing-pin: var(--atlas-pin-size);
+  --spacing-tooltip: var(--atlas-tooltip-width);
+  --spacing-thumb: var(--atlas-thumb-size);
+  --spacing-compass: var(--atlas-compass-size);
+  --spacing-key: var(--atlas-key-size);
 
   --radius: var(--radius);
 }

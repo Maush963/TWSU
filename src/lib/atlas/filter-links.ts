@@ -13,6 +13,8 @@ export interface FilterLink<T> {
 
 export interface AtlasFilterLinks {
   categories: FilterLink<Category>[];
+  /** Enlace que quita solo la categoría y conserva región y año. */
+  allCategoriesHref: string;
   regions: FilterLink<Continent>[];
   years: FilterLink<number>[];
   clearHref: string;
@@ -48,6 +50,12 @@ function toggled<K extends keyof AtlasFilterParams>(
   return previous === value ? others : { ...others, [key]: value };
 }
 
+function withoutCategory(filters: AtlasFilterParams): AtlasFilterParams {
+  const copy = { ...filters };
+  delete copy.category;
+  return copy;
+}
+
 export function buildAtlasFilterLinks(
   current: AtlasFilterParams,
   years: readonly number[],
@@ -68,6 +76,7 @@ export function buildAtlasFilterLinks(
       href: buildHref(toggled(resolved, "category", value), defaultYear),
       active: resolved.category === value,
     })),
+    allCategoriesHref: buildHref(withoutCategory(resolved), defaultYear),
     regions: CONTINENTS.map(({ value, title }) => ({
       value,
       title,

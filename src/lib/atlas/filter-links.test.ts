@@ -50,6 +50,12 @@ describe("buildAtlasFilterLinks", () => {
     expect(link.href).toBe("/atlas?region=europa");
   });
 
+  it("allCategoriesHref quita la categoría y conserva región y año", () => {
+    const links = buildAtlasFilterLinks({ category: "branding", region: "europa", year: 2025 }, YEARS);
+    expect(links.allCategoriesHref).toBe("/atlas?region=europa&year=2025");
+    expect(buildAtlasFilterLinks({}, YEARS).allCategoriesHref).toBe("/atlas");
+  });
+
   it("elegir la región activa genera un enlace que la quita", () => {
     const links = buildAtlasFilterLinks({ region: "asia" }, YEARS);
     expect(find(links.regions, "asia").href).toBe("/atlas");

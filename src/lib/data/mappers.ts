@@ -69,6 +69,7 @@ export function toAtlasPin(raw: RawPin): AtlasPinData | null {
   if (!raw.title || !raw.slug || !raw.placeName || !continent) return null;
   if (typeof raw.lat !== "number" || typeof raw.lng !== "number") return null;
   const { x, y } = project(raw.lat, raw.lng);
+  const cover = toCover(raw.cover);
   return {
     id: raw._id,
     slug: raw.slug,
@@ -77,6 +78,7 @@ export function toAtlasPin(raw: RawPin): AtlasPinData | null {
     placeName: raw.placeName,
     continent,
     categories: toCategories(raw.categories),
+    ...(cover ? { cover } : {}),
     lat: raw.lat,
     lng: raw.lng,
     x,

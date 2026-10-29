@@ -417,13 +417,19 @@ export type ATLAS_YEARS_QUERY_RESULT = Array<number | null>;
 
 // Source: src/lib/sanity/queries.ts
 // Variable: ATLAS_PINS_QUERY
-// Query: *[_type == "article" && inAtlas == true && defined(place) && year == $year && publishedAt <= now()  && ($category == null || $category in categories)  && ($region == null || place->continent == $region)]  | order(publishedAt desc){    _id, title, "slug": slug.current, excerpt, categories,    "placeName": place->name,    "continent": place->continent,    "lat": place->lat,    "lng": place->lng  }
+// Query: *[_type == "article" && inAtlas == true && defined(place) && year == $year && publishedAt <= now()  && ($category == null || $category in categories)  && ($region == null || place->continent == $region)]  | order(publishedAt desc){    _id, title, "slug": slug.current, excerpt, categories,    "cover": cover{ alt, asset, crop, hotspot },    "placeName": place->name,    "continent": place->continent,    "lat": place->lat,    "lng": place->lng  }
 export type ATLAS_PINS_QUERY_RESULT = Array<{
   _id: string;
   title: string | null;
   slug: string | null;
   excerpt: string | null;
   categories: Array<string> | null;
+  cover: {
+    alt: string | null;
+    asset: SanityImageAssetReference | null;
+    crop: SanityImageCrop | null;
+    hotspot: SanityImageHotspot | null;
+  } | null;
   placeName: string | null;
   continent: "africa" | "america" | "asia" | "europa" | "oceania" | null;
   lat: number | null;
@@ -440,7 +446,7 @@ declare global {
     '\n*[_type == "article" && _id != $id && publishedAt <= now()]{\n  _id, title, "slug": slug.current, excerpt, publishedAt, year, categories,\n  "cover": cover{ alt, asset, crop, hotspot },\n  "placeName": place->name,\n  "continent": place->continent,\n  "shared": count(categories[@ in $categories])\n} | order(shared desc, publishedAt desc)[0...$limit]\n': RELATED_ARTICLES_QUERY_RESULT;
     '\n{\n  "items": *[_type == "article" && publishedAt <= now() && ($category == null || $category in categories)]\n    | order(publishedAt desc)[$from...$to]{\n      _id, title, "slug": slug.current, excerpt, publishedAt, year, categories,\n      "cover": cover{ alt, asset, crop, hotspot },\n      "placeName": place->name,\n      "continent": place->continent\n    },\n  "total": count(*[_type == "article" && publishedAt <= now() && ($category == null || $category in categories)])\n}\n': ARTICLES_PAGE_QUERY_RESULT;
     '\narray::unique(*[_type == "article" && inAtlas == true && defined(place) && publishedAt <= now()].year)\n': ATLAS_YEARS_QUERY_RESULT;
-    '\n*[_type == "article" && inAtlas == true && defined(place) && year == $year && publishedAt <= now()\n  && ($category == null || $category in categories)\n  && ($region == null || place->continent == $region)]\n  | order(publishedAt desc){\n    _id, title, "slug": slug.current, excerpt, categories,\n    "placeName": place->name,\n    "continent": place->continent,\n    "lat": place->lat,\n    "lng": place->lng\n  }\n': ATLAS_PINS_QUERY_RESULT;
+    '\n*[_type == "article" && inAtlas == true && defined(place) && year == $year && publishedAt <= now()\n  && ($category == null || $category in categories)\n  && ($region == null || place->continent == $region)]\n  | order(publishedAt desc){\n    _id, title, "slug": slug.current, excerpt, categories,\n    "cover": cover{ alt, asset, crop, hotspot },\n    "placeName": place->name,\n    "continent": place->continent,\n    "lat": place->lat,\n    "lng": place->lng\n  }\n': ATLAS_PINS_QUERY_RESULT;
   }
 }
 // Lets @sanity/client releases that predate the global registry read it too

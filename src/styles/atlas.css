@@ -1,0 +1,16 @@
+/* Piezas del Atlas que Tailwind no cubre con clases sueltas. Solo usa tokens. */
+
+/* Panel del mapa: papel con rejilla fina, como en el diseño. */
+.atlas-grid {
+  background-color: var(--color-bg);
+  background-image:
+    linear-gradient(to right, var(--color-grid) var(--border-hairline), transparent var(--border-hairline)),
+    linear-gradient(to bottom, var(--color-grid) var(--border-hairline), transparent var(--border-hairline));
+  background-size: var(--atlas-grid-size) var(--atlas-grid-size);
+  border: var(--border-hairline) solid var(--color-grid);
+}
+
+/* Escape descarta los tooltips hasta que el usuario vuelve a mover el cursor o el foco. */
+.atlas-map[data-tooltips-dismissed="true"] .atlas-tooltip {
+  display: none !important;
+}

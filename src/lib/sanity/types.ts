@@ -37,6 +37,8 @@ export interface AtlasPinData {
   placeName: string;
   continent: Continent;
   categories: Category[];
+  /** Portada para la miniatura del tooltip. Si falta, el punto se muestra igual. */
+  cover?: CoverImage;
   lat: number;
   lng: number;
   x: number;

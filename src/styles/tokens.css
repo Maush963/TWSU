@@ -1,20 +1,33 @@
 :root {
-  /* colores, temporales */
-  --color-bg: #ffffff;
-  --color-text: #111111;
-  --color-accent: #0a5cff;
-  --color-muted: #6b6b6b;
+  /* colores, tomados del diseño del cliente */
+  --color-bg: #f5eee6;
+  --color-surface: #f6f1eb;
+  --color-text: #17221d;
+  --color-accent: #053122;
+  --color-gold: #e2b47c;
+  --color-gold-soft: #e6c294;
+  --color-muted: #6f6a60;
+  --color-pin: #1c2722;
+  --color-grid: #ece0cc;
+  --color-placeholder: #afafaf;
 
-  /* tipografía, temporal */
-  --font-body: system-ui, sans-serif;
-  --font-display: system-ui, sans-serif;
+  /* tipografía. Albra Sans (TRIAL) e Iowan Old Style todavía no están en el proyecto:
+     mientras tanto se usan las de respaldo. Ver docs/decisiones-tecnicas.md. */
+  --font-body: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --font-display: "Albra Sans", "Avenir Next", "Trebuchet MS", system-ui, sans-serif;
 
-  /* escala de tipografía, temporal */
+  /* escala de tipografía */
+  --text-xs: 0.75rem;
   --text-sm: 0.875rem;
   --text-base: 1rem;
   --text-lg: 1.125rem;
   --text-xl: 1.5rem;
   --text-2xl: 2.25rem;
+  --text-3xl: 3.5rem;
+
+  /* espaciado entre letras de los textos en mayúsculas */
+  --tracking-caps: 0.14em;
+  --tracking-caps-wide: 0.22em;
 
   /* espacio y forma */
   --space-1: 0.25rem;
@@ -22,7 +35,13 @@
   --space-4: 1rem;
   --space-8: 2rem;
   --radius: 0.5rem;
+  --border-hairline: 1px;
 
-  /* atlas, temporales */
-  --atlas-pin-size: 0.75rem;
+  /* atlas */
+  --atlas-pin-size: 1.75rem;
+  --atlas-grid-size: 1.75rem;
+  --atlas-tooltip-width: 20rem;
+  --atlas-thumb-size: 6rem;
+  --atlas-compass-size: 5rem;
+  --atlas-key-size: 1.25rem;
 }
