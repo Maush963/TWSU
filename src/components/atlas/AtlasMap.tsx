@@ -13,7 +13,7 @@ const MAP_ID = "atlas-map";
 export function AtlasMap({ pins, year }: { pins: PositionedPin[]; year?: number | undefined }) {
   const ratio = ATLAS_MAP_IMAGE.width / ATLAS_MAP_IMAGE.height;
   return (
-    <div className="atlas-grid atlas-stage relative">
+    <div className="atlas-grid atlas-stage relative max-lg:hidden">
       <section
         id={MAP_ID}
         className="atlas-map atlas-sheet relative"

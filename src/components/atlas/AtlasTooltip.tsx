@@ -2,13 +2,13 @@ import Image from "next/image";
 import { uiText } from "@/content/ui-text";
 import { ArrowRightIcon } from "@/components/ui/icons";
 import { getKeyStates } from "@/lib/atlas/keys";
-import type { PositionedPin } from "@/lib/atlas/collisions";
+import type { AtlasPinData } from "@/lib/sanity/types";
 import { urlFor } from "@/lib/sanity/image";
 import { CategoryKeys } from "./CategoryKeys";
 
-// Contenido de la tarjeta flotante (TooltipCard). Solo se monta cuando la tarjeta se abre,
-// así la miniatura no se descarga hasta que alguien la ve.
-export function AtlasTooltip({ pin }: { pin: PositionedPin }) {
+// Contenido de la tarjeta flotante (TooltipCard) y de cada caso en la lista móvil. En la tarjeta
+// solo se monta al abrirla, así la miniatura no se descarga hasta que alguien la ve.
+export function AtlasTooltip({ pin }: { pin: Pick<AtlasPinData, "title" | "excerpt" | "cover" | "categories"> }) {
   const keys = getKeyStates(pin.categories);
 
   return (

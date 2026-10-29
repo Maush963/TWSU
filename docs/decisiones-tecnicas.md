@@ -77,3 +77,5 @@ El resultado se escribe en `src/lib/atlas/map-calibration.ts` (generado, no se e
 - En pantallas táctiles el primer toque abre la tarjeta y el segundo sigue el enlace; el original bloqueaba siempre el clic, lo que habría impedido entrar al artículo.
 - Los eventos de ratón se ignoran si el dispositivo no tiene hover, para que el toque no abra y navegue a la vez.
 - La tarjeta solo existe en el DOM mientras está abierta (así la miniatura no se descarga antes) y no funciona sin JavaScript; el punto sigue siendo un enlace al artículo, con su descripción para lectores de pantalla en un texto oculto.
+
+**Atlas en móvil.** Abajo de 64rem (`lg`) el mapa se oculta con CSS (`max-lg:hidden`, sin JavaScript, así no hay parpadeo) y se muestra `AtlasMobileList`: chips de región (enlaces que cambian `?region=`) y una tarjeta por caso, con lugar, miniatura, título, descripción, llaves y categorías, igual que el tooltip de escritorio. Sin región en la URL se muestra la primera con casos. Sigue disponible el selector "Explore by best". Pendiente del cliente: el gráfico de cada región (imágenes aparte o recortes del PNG); mientras tanto no se muestra ninguno.

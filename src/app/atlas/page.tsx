@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
 import { uiText } from "@/content/ui-text";
+import { AtlasMobileList } from "@/components/atlas/AtlasMobileList";
 import { AtlasMap } from "@/components/atlas/AtlasMap";
 import { CategorySelect } from "@/components/atlas/CategorySelect";
 import { resolveAtlasYear } from "@/lib/atlas/filter-links";
@@ -51,7 +52,14 @@ async function AtlasContent({ searchParams }: { searchParams: PageProps<"/atlas"
           )}
         </p>
       ) : (
-        <AtlasMap pins={view.positioned} year={year} />
+        <>
+          <AtlasMap pins={view.positioned} year={year} />
+          <AtlasMobileList
+            regions={links.regions}
+            groups={view.byRegion}
+            activeRegion={parsed.region ?? view.byRegion[0]?.continent}
+          />
+        </>
       )}
     </>
   );

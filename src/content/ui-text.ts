@@ -39,7 +39,8 @@ export const uiText = {
     submit: "Suscribirme",
     sending: "Enviando",
     success: "Gracias, revisa tu correo.",
-    error: "No pudimos registrar tu correo. Revisa que sea válido e inténtalo de nuevo.",
+    error:
+      "No pudimos registrar tu correo. Revisa que sea válido e inténtalo de nuevo.",
   },
   home: {
     title: "Inicio",
@@ -56,7 +57,7 @@ export const uiText = {
     exploreBy: "Explore by best",
     allCategories: "All",
     applyFilter: "Apply",
-    edition: "edition",
+    edition: "EDITION",
     readMore: "Read more",
     compass: "Brújula",
     filters: {
