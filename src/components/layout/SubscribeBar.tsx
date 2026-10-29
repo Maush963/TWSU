@@ -37,11 +37,11 @@ export function SubscribeBar() {
   }
 
   return (
-    <section aria-labelledby="subscribe-title" className="flex flex-col gap-2 px-8 py-4">
-      <h2 id="subscribe-title" className="font-display text-lg uppercase tracking-caps text-accent">
+    <section aria-labelledby="subscribe-title" className="flex flex-wrap items-center gap-x-4 gap-y-1">
+      <h2 id="subscribe-title" className="font-ui text-sm uppercase tracking-caps text-accent">
         {uiText.subscribe.title}
       </h2>
-      <form onSubmit={onSubmit} className="flex flex-wrap gap-2">
+      <form onSubmit={onSubmit} className="flex gap-2">
         <label htmlFor="subscribe-email" className="sr-only">
           {uiText.subscribe.emailLabel}
         </label>
@@ -52,16 +52,17 @@ export function SubscribeBar() {
           required
           autoComplete="email"
           placeholder={uiText.subscribe.emailPlaceholder}
+          className="py-1 text-sm"
         />
         {/* Campo trampa: las personas no lo ven ni lo llenan. */}
         <div aria-hidden="true" className="absolute left-0 top-0 h-0 w-0 overflow-hidden opacity-0">
           <input name="website" type="text" tabIndex={-1} autoComplete="off" />
         </div>
-        <Button type="submit" disabled={status === "sending"}>
+        <Button type="submit" className="py-1 text-sm" disabled={status === "sending"}>
           {status === "sending" ? uiText.subscribe.sending : uiText.subscribe.submit}
         </Button>
       </form>
-      <p role="status" className="text-sm">
+      <p role="status" className="w-full text-sm">
         {status === "success" && uiText.subscribe.success}
         {status === "error" && uiText.subscribe.error}
       </p>

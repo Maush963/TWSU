@@ -26,7 +26,7 @@ async function AtlasContent({ searchParams }: { searchParams: PageProps<"/atlas"
 
   return (
     <>
-      <div className="flex flex-wrap items-end justify-between gap-8 py-8">
+      <div className="flex flex-wrap items-end justify-between gap-4 py-2">
         <div className="border-l-2 border-gold pl-4">
           <h1 className="font-display text-3xl uppercase leading-none text-accent">{uiText.atlas.title}</h1>
           <p className="mt-2 font-body uppercase tracking-caps">{uiText.atlas.tagline}</p>
@@ -59,7 +59,7 @@ async function AtlasContent({ searchParams }: { searchParams: PageProps<"/atlas"
 
 export default function AtlasPage({ searchParams }: PageProps<"/atlas">) {
   return (
-    <main className="px-8 pb-8">
+    <main className="atlas-page flex min-h-0 flex-1 flex-col px-8 pb-4">
       <Suspense>
         <AtlasContent searchParams={searchParams} />
       </Suspense>

@@ -31,6 +31,7 @@ export const uiText = {
     privacy: "Privacy",
     brand: "Tourism Will Save Us",
     rights: "TWSU. Todos los derechos reservados.",
+    social: "Redes sociales",
   },
   subscribe: {
     title: "Suscríbete",

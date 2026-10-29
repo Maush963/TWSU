@@ -5,7 +5,6 @@ import { uiText } from "@/content/ui-text";
 import { publicEnv } from "@/lib/env";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { SubscribeBar } from "@/components/layout/SubscribeBar";
 
 export const metadata: Metadata = {
   metadataBase: new URL(publicEnv.NEXT_PUBLIC_SITE_URL),
@@ -24,10 +23,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {uiText.common.skipToContent}
         </a>
         <Header />
-        <div id="contenido" className="flex-1">
+        <div id="contenido" className="flex min-h-0 flex-1 flex-col">
           {children}
         </div>
-        <SubscribeBar />
         <Footer />
       </body>
     </html>

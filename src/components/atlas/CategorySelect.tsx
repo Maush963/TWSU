@@ -43,7 +43,7 @@ export function CategorySelect({
             const href = value === "" ? allHref : options.find((option) => option.value === value)?.href;
             if (href) router.push(href, { scroll: false });
           }}
-          className="min-w-48 appearance-none border border-gold bg-bg py-2 pl-4 pr-8 font-body text-base"
+          className="min-w-48 appearance-none border border-gold bg-bg py-1 pl-4 pr-8 font-body text-base"
         >
           <option value="">{allLabel}</option>
           {options.map((option) => (

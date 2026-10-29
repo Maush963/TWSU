@@ -14,3 +14,28 @@
 .atlas-map[data-tooltips-dismissed="true"] .atlas-tooltip {
   display: none !important;
 }
+
+/* En pantallas grandes la página del Atlas mide exactamente el alto de la ventana: cabecera,
+   título, mapa y pie caben sin scroll. El mapa toma el espacio que sobra y se ajusta dentro
+   conservando su proporción. En pantallas chicas sigue el flujo normal. */
+.atlas-sheet {
+  width: 100%;
+}
+
+@media (min-width: 64rem) {
+  body:has(.atlas-page) {
+    height: 100dvh;
+  }
+
+  .atlas-stage {
+    flex: 1 1 0;
+    min-height: 0;
+    container-type: size;
+    display: grid;
+    place-items: center;
+  }
+
+  .atlas-sheet {
+    width: min(100cqw, calc(100cqh * var(--atlas-ratio)));
+  }
+}

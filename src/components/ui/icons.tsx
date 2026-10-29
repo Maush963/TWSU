@@ -63,3 +63,40 @@ export function OrnamentIcon(props: IconProps) {
     </svg>
   );
 }
+
+// Redes sociales: trazos simples, también marcadores hasta tener los logos oficiales.
+export function InstagramIcon(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17" cy="7" r="0.5" />
+    </svg>
+  );
+}
+
+export function TikTokIcon(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M14 4v10.5a3.5 3.5 0 1 1-3.5-3.5M14 4c.3 2.5 2 4 4.5 4.2" />
+    </svg>
+  );
+}
+
+export function LinkedInIcon(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <rect x="3.5" y="3.5" width="17" height="17" rx="2" />
+      <path d="M8 10.5V16M8 8v.01M12 16v-5.5M12 13c0-1.7 1-2.5 2.2-2.5S16 11.3 16 13v3" />
+    </svg>
+  );
+}
+
+export function YouTubeIcon(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <rect x="3" y="6" width="18" height="12" rx="3.5" />
+      <path d="M10.5 9.5v5l4-2.5z" />
+    </svg>
+  );
+}

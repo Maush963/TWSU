@@ -11,7 +11,7 @@ const LINKS = [
 
 export function Header() {
   return (
-    <header className="flex flex-wrap items-center justify-between gap-4 bg-surface px-8 py-4">
+    <header className="flex flex-wrap items-center justify-between gap-4 bg-surface px-8 py-2">
       <Logo />
       <nav aria-label={uiText.nav.label}>
         <ul className="flex gap-8 font-ui uppercase tracking-caps">
@@ -26,7 +26,7 @@ export function Header() {
       </nav>
       <Link
         href="/atlas"
-        className="flex items-center gap-4 bg-accent px-8 py-4 font-ui uppercase tracking-caps text-surface"
+        className="flex items-center gap-4 bg-accent px-6 py-2 font-ui uppercase tracking-caps text-surface"
       >
         {uiText.nav.exploreAtlas}
         <ArrowRightIcon className="size-4" />
