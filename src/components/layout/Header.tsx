@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { uiText } from "@/content/ui-text";
 import { Logo } from "@/components/layout/Logo";
-import { ArrowRightIcon } from "@/components/ui/icons";
 
 const LINKS = [
   { href: "/", label: uiText.nav.home },
@@ -24,13 +23,6 @@ export function Header() {
           ))}
         </ul>
       </nav>
-      <Link
-        href="/atlas"
-        className="flex items-center gap-4 bg-accent px-6 py-2 font-ui uppercase tracking-caps text-surface"
-      >
-        {uiText.nav.exploreAtlas}
-        <ArrowRightIcon className="size-4" />
-      </Link>
     </header>
   );
 }

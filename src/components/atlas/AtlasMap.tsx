@@ -5,7 +5,6 @@ import { CompassIcon } from "@/components/ui/icons";
 import type { PositionedPin } from "@/lib/atlas/collisions";
 import { ATLAS_MAP_IMAGE } from "@/lib/atlas/map-config";
 import { AtlasPin } from "./AtlasPin";
-import { AtlasTooltipDismiss } from "./AtlasTooltipDismiss";
 
 const MAP_ID = "atlas-map";
 
@@ -32,7 +31,6 @@ export function AtlasMap({ pins, year }: { pins: PositionedPin[]; year?: number 
         {pins.map((pin) => (
           <AtlasPin key={pin.id} pin={pin} />
         ))}
-        <AtlasTooltipDismiss targetId={MAP_ID} />
       </section>
       <div className="pointer-events-none absolute bottom-4 left-4 flex flex-col items-center gap-2 text-accent">
         <CompassIcon className="size-compass" />

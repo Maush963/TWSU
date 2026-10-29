@@ -22,7 +22,6 @@ export const uiText = {
     perspectives: "Perspectives",
     about: "About",
     join: "Join",
-    exploreAtlas: "Explore the atlas",
   },
   footer: {
     label: "Pie de página",

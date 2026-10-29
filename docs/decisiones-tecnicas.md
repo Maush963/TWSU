@@ -69,3 +69,11 @@ El resultado se escribe en `src/lib/atlas/map-calibration.ts` (generado, no se e
 **Piezas que son marcadores.** El logo con las llaves, la brújula, el adorno del pie y la forma de los puntos son SVG simples de `src/components/ui/icons.tsx`. Se reemplazan cuando el cliente entregue sus ilustraciones. Los iconos de redes del pie (Instagram, TikTok, LinkedIn, YouTube; la lista y las direcciones están en `src/content/social.ts`) apuntan a la página principal de cada red hasta que el cliente entregue sus perfiles y confirme cuáles usa. El buscador del mockup no se incluyó porque no hay búsqueda en el alcance.
 
 **Atlas sin scroll.** En pantallas de 64rem o más la página del Atlas mide el alto de la ventana (`body:has(.atlas-page)` en `src/styles/atlas.css`): el panel con rejilla toma el espacio que dejan cabecera, título y pie, y el mapa se ajusta dentro con su proporción usando container queries, así los puntos siguen alineados. En pantallas más chicas el flujo es normal; se revisa en 1.11. La suscripción vive ahora en el pie.
+
+**Tooltip del Atlas (TooltipCard).** La tarjeta flotante viene de Tooltip Card de Aceternity UI y vive en `src/components/ui/TooltipCard.tsx`; usa `motion` (animación de resorte en la altura). Diferencias con el original:
+- Sin `clsx`/`tailwind-merge` ni helper `cn`: el proyecto no los usa y el componente solo concatena clases.
+- Colores, ancho (`w-tooltip`) y sombra salen de los tokens del proyecto, no de `neutral-*` ni valores arbitrarios (`check:tokens` los prohíbe). El ancho real de la tarjeta se mide en vez de fijarlo en 240 px.
+- Se abre también con el foco del teclado, Escape la cierra, y con `prefers-reduced-motion` no hay animación.
+- En pantallas táctiles el primer toque abre la tarjeta y el segundo sigue el enlace; el original bloqueaba siempre el clic, lo que habría impedido entrar al artículo.
+- Los eventos de ratón se ignoran si el dispositivo no tiene hover, para que el toque no abra y navegue a la vez.
+- La tarjeta solo existe en el DOM mientras está abierta (así la miniatura no se descarga antes) y no funciona sin JavaScript; el punto sigue siendo un enlace al artículo, con su descripción para lectores de pantalla en un texto oculto.

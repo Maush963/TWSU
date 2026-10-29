@@ -10,11 +10,6 @@
   border: var(--border-hairline) solid var(--color-grid);
 }
 
-/* Escape descarta los tooltips hasta que el usuario vuelve a mover el cursor o el foco. */
-.atlas-map[data-tooltips-dismissed="true"] .atlas-tooltip {
-  display: none !important;
-}
-
 /* En pantallas grandes la página del Atlas mide exactamente el alto de la ventana: cabecera,
    título, mapa y pie caben sin scroll. El mapa toma el espacio que sobra y se ajusta dentro
    conservando su proporción. En pantallas chicas sigue el flujo normal. */
