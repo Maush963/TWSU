@@ -58,11 +58,11 @@ El resultado se escribe en `src/lib/atlas/map-calibration.ts` (generado, no se e
 
 ## Diseño del cliente: tipografías, textos en inglés y piezas pendientes
 
-**Fuentes.** El diseño usa Albra Sans (títulos) e Iowan Old Style (texto), más Myriad Pro. Los archivos todavía no están en el proyecto, así que `src/styles/tokens.css` define pilas de respaldo (`--font-display` y `--font-body`).
-- **Albra Sans es una versión TRIAL.** Su licencia de prueba normalmente no permite usarla en producción; hay que comprar la licencia web o pedirle al cliente el archivo con licencia.
-- **Iowan Old Style** viene en los dispositivos de Apple, donde la pila ya la usa sin cargar nada. Para Windows y Android hace falta una licencia web si el cliente quiere verla igual en todos lados.
-- **Cómo agregarlas.** Convertir a `woff2`, guardarlas en `src/app/fonts/` y cargarlas con `next/font/local` en `layout.tsx`, usando `variable` para que alimenten `--font-display` y `--font-body`. La guía está en `node_modules/next/dist/docs/01-app/01-getting-started/13-fonts.md`, sección *Local fonts*.
-- Myriad Pro no se usa en el mockup recibido; falta saber dónde va.
+**Fuentes.** Albra Sans (títulos), Iowan Old Style (texto) y Myriad Pro (navegación, botones y etiquetas) se cargan con `next/font/local` desde `src/app/fonts.ts`; los archivos están en `src/app/fonts/` y alimentan `--font-display`, `--font-body` y `--font-ui`.
+- **Albra Sans es una versión TRIAL.** Su licencia de prueba normalmente no permite usarla en producción; hay que comprar la licencia web o pedirle al cliente el archivo con licencia antes de publicar.
+- **Iowan Old Style** llegó como `.ttc`, formato que los navegadores no leen. Se extrajeron Roman, Italic y Bold a `.ttf` con fontTools. Tiene licencia de Apple: confirmar que se pueda servir en la web.
+- **Myriad Pro** (Adobe) tampoco tiene licencia web garantizada; confirmar con el cliente.
+- Dónde va Myriad Pro no estaba en el mockup: la puse en nav, botón del header y etiqueta del selector. Es un cambio de una clase (`font-ui`).
 
 **Idioma.** Los textos del mockup (cabecera, título del Atlas, "Explore by best", "Read more", pie) están en inglés en `ui-text`, como el diseño. El resto de la interfaz sigue en español. Falta confirmar con el cliente si todo el sitio va en inglés; cambiar es editar `ui-text.ts`.
 

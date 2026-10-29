@@ -30,7 +30,7 @@ export function CategorySelect({
 
   return (
     <form action="/atlas" method="get" className="flex items-center gap-4">
-      <label htmlFor="atlas-category" className="font-body text-sm uppercase tracking-caps-wide">
+      <label htmlFor="atlas-category" className="font-ui text-sm uppercase tracking-caps-wide">
         {label}
       </label>
       <div className="relative">

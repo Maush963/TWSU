@@ -18,6 +18,7 @@
 
   --font-sans: var(--font-body);
   --font-display: var(--font-display);
+  --font-ui: var(--font-ui);
 
   --text-xs: var(--text-xs);
   --text-sm: var(--text-sm);

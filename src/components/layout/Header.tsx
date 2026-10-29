@@ -14,7 +14,7 @@ export function Header() {
     <header className="flex flex-wrap items-center justify-between gap-4 bg-surface px-8 py-4">
       <Logo />
       <nav aria-label={uiText.nav.label}>
-        <ul className="flex gap-8 font-body uppercase tracking-caps">
+        <ul className="flex gap-8 font-ui uppercase tracking-caps">
           {LINKS.map((link) => (
             <li key={link.href}>
               <Link href={link.href} className="hover:text-accent">
@@ -26,7 +26,7 @@ export function Header() {
       </nav>
       <Link
         href="/atlas"
-        className="flex items-center gap-4 bg-accent px-8 py-4 font-body uppercase tracking-caps text-surface"
+        className="flex items-center gap-4 bg-accent px-8 py-4 font-ui uppercase tracking-caps text-surface"
       >
         {uiText.nav.exploreAtlas}
         <ArrowRightIcon className="size-4" />
