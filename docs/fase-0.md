@@ -470,14 +470,14 @@ Estos cambios salen de la revisión del plan y aplican desde ya.
 
 **Objetivo.** Confirmar en producción que la base aguanta antes de empezar la Fase 1.
 
-**Checklist**
-- [ ] El sitio en Hostinger muestra Home con el destacado y los recientes del seed
-- [ ] Al cambiar el título de un artículo en Studio y publicar, el cambio aparece en el sitio en menos de un minuto sin desplegar
-- [ ] Al quitar `featured` del destacado, Home pasa al siguiente
-- [ ] `/api/health` marca presentes todas las variables obligatorias
-- [ ] `/atlas?year=<año anterior>` muestra los puntos de ese año
-- [ ] El build en Hostinger no tiene avisos de variables faltantes
-- [ ] `docs/hostinger.md` tiene las URLs del sitio y el Studio, cómo se despliega y dónde están las variables
+**Checklist** (verificado en Vercel, https://twsu-two.vercel.app; el despliegue en Hostinger queda pendiente si el cliente lo elige)
+- [x] El sitio muestra Home con el destacado y los recientes del seed
+- [x] Al cambiar el título de un artículo en Studio y publicar, el cambio aparece en el sitio en menos de un minuto sin desplegar
+- [x] Al quitar `featured` del destacado, Home pasa al siguiente
+- [x] `/api/health` marca presentes todas las variables obligatorias
+- [x] `/atlas?year=<año anterior>` muestra los puntos de ese año
+- [x] El build no tiene avisos de variables faltantes
+- [x] `docs/hostinger.md` tiene las URLs del sitio y el Studio, cómo se despliega y dónde están las variables
 
 ---
 

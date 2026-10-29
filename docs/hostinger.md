@@ -2,20 +2,22 @@
 
 Notas de la prueba de humo (tarea 0.2). Se llenan al hacer el despliegue.
 
-- Versión de Node: _pendiente_
-- Dónde se configuran las variables: _pendiente_
+La prueba de humo se hizo en Vercel. Falta repetirla en Hostinger si el cliente va a alojar ahí.
+
+- Versión de Node: v24.21.0 en Vercel (según `/api/health`)
+- Dónde se configuran las variables: Vercel, proyecto → Settings → Environment Variables
 - Duración de un despliegue: _pendiente_
-- ¿Un push a `main` despliega solo?: _pendiente_
+- ¿Un push a `main` despliega solo?: sí en Vercel (el push de la Fase 1 lanzó un despliegue)
 
 ## URLs
 
-- Sitio: _pendiente_
+- Sitio (Vercel, producción): https://twsu-two.vercel.app
 - Studio: https://twsu.sanity.studio
 - Proyecto Sanity: 9a1cr0st (dataset production)
 
 ## Webhook de Sanity (tarea 0.11)
 
-La ruta `/api/revalidate` ya está lista. El webhook se crea en sanity.io/manage → proyecto TWSU → API → Webhooks, cuando exista la URL pública (Vercel de prueba o Hostinger).
+El webhook ya está creado y probado contra https://twsu-two.vercel.app. Si el sitio cambia de dominio (por ejemplo a Hostinger), hay que actualizar la URL del webhook y el origen de CORS en sanity.io/manage → proyecto TWSU → API.
 
 - Nombre: `Revalidar sitio`
 - URL: `https://<dominio>/api/revalidate`
