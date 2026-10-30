@@ -74,6 +74,12 @@ export type Article = {
         _type: "image";
         _key: string;
       }
+    | {
+        url?: string;
+        caption?: string;
+        _type: "videoEmbed";
+        _key: string;
+      }
   >;
   place?: PlaceReference;
   categories?: Array<string>;
@@ -283,6 +289,12 @@ export type FEATURED_ARTICLE_QUERY_RESULT = {
         _type: "image";
         _key: string;
       }
+    | {
+        url?: string;
+        caption?: string;
+        _type: "videoEmbed";
+        _key: string;
+      }
   > | null;
 } | null;
 
@@ -354,6 +366,12 @@ export type ARTICLE_BY_SLUG_QUERY_RESULT = {
         crop?: SanityImageCrop;
         alt?: string;
         _type: "image";
+        _key: string;
+      }
+    | {
+        url?: string;
+        caption?: string;
+        _type: "videoEmbed";
         _key: string;
       }
   > | null;

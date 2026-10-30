@@ -1,4 +1,5 @@
 import { defineArrayMember, defineField, defineType } from "sanity";
+import { parseVideoUrl } from "../../src/lib/articles/video";
 import { ATLAS_SLOTS_PER_CATEGORY, CATEGORIES } from "../../src/lib/constants";
 
 const categoryOptions = {
@@ -67,6 +68,25 @@ export const article = defineType({
           ],
         }),
         defineArrayMember({ type: "image", fields: [altField] }),
+        defineArrayMember({
+          type: "object",
+          name: "videoEmbed",
+          title: "Video",
+          fields: [
+            defineField({
+              name: "url",
+              title: "Enlace del video",
+              type: "url",
+              description: "Enlace de YouTube o Vimeo.",
+              validation: (rule) =>
+                rule.required().custom((value) =>
+                  !value || parseVideoUrl(value) ? true : "Pega un enlace de YouTube o Vimeo.",
+                ),
+            }),
+            defineField({ name: "caption", title: "Pie del video (opcional)", type: "string" }),
+          ],
+          preview: { select: { title: "caption", subtitle: "url" }, prepare: ({ title, subtitle }) => ({ title: title || "Video", subtitle }) },
+        }),
       ],
     }),
     defineField({

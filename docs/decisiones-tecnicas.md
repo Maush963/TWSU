@@ -101,3 +101,15 @@ El resultado se escribe en `src/lib/atlas/map-calibration.ts` (generado, no se e
 **Idioma.** Los textos de estas páginas y las fechas (`meta.locale = "en"`) van en inglés, como el mockup. Falta confirmar con el cliente el idioma de todo el sitio.
 
 **Piezas que el diseño trae y no están.** Subtítulo en cursiva sobre el banner (no hay campo en Sanity; sería un cambio de esquema, por ejemplo `coverCaption`), autor por artículo (hoy "TWSU Team" fijo en `ui-text`), y buscador y botón "Explore the Atlas" de la cabecera.
+
+## Videos dentro de los artículos
+
+**Qué hay.** El cuerpo del artículo admite videos de YouTube y Vimeo de dos formas, y las dos se dibujan con `VideoEmbed` (un `iframe` con proporción reservada):
+- **Bloque "Video" en Studio** (`videoEmbed` en `sanity/schemas/article.ts`): enlace obligatorio, validado con `parseVideoUrl`, y pie opcional. Cambiar el esquema exige volver a desplegar el Studio (`npx sanity deploy`).
+- **Párrafo que es solo un enlace** de video: se muestra incrustado sin tocar Studio, así que funciona con artículos ya publicados. Un enlace dentro de una frase se queda como texto (`getStandaloneVideo`).
+
+**Seguridad.** `src/lib/articles/video.ts` solo acepta los dominios de YouTube y Vimeo, con id válido, y arma la dirección del reproductor él mismo; nunca incrusta la URL que escribió el editor. YouTube va por `youtube-nocookie.com`. Un bloque con enlace inválido se ignora en lugar de romper el artículo.
+
+**Pendiente.** No se aceptan archivos de video subidos a Sanity (pesan y Sanity no los transmite bien; la alternativa de pago es Mux). Si el cliente necesita banner de consentimiento de cookies, conviene cargar el reproductor solo al hacer clic.
+
+**Para que aparezca en producción** hacen falta las dos partes: el sitio desplegado con el render y el Studio desplegado con el esquema. Con solo el Studio actualizado, el bloque se guarda pero el sitio no lo muestra.

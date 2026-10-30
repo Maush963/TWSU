@@ -1,7 +1,9 @@
 import { PortableText, type PortableTextComponents } from "@portabletext/react";
 import type { PortableTextBlock } from "@portabletext/types";
 import Image from "next/image";
+import { VideoEmbed } from "@/components/articles/VideoEmbed";
 import { parseImageRef } from "@/lib/articles/body-image";
+import { getStandaloneVideo, parseVideoUrl } from "@/lib/articles/video";
 import { urlFor } from "@/lib/sanity/image";
 
 interface BodyImage {
@@ -14,7 +16,11 @@ const FALLBACK_SIZE = { width: 1200, height: 800 };
 
 const components: PortableTextComponents = {
   block: {
-    normal: ({ children }) => <p className="font-body leading-relaxed">{children}</p>,
+    // Un párrafo que es solo un enlace de YouTube o Vimeo se muestra como video.
+    normal: ({ children, value }) => {
+      const video = getStandaloneVideo(value);
+      return video ? <VideoEmbed video={video} /> : <p className="font-body leading-relaxed">{children}</p>;
+    },
     h2: ({ children }) => <h2 className="font-display text-xl text-accent">{children}</h2>,
     h3: ({ children }) => <h3 className="font-display text-lg text-accent">{children}</h3>,
   },
@@ -52,6 +58,11 @@ const components: PortableTextComponents = {
           className="h-auto w-full"
         />
       );
+    },
+    // Bloque "Video" del Studio. Si el enlace no es válido se ignora en lugar de romper el artículo.
+    videoEmbed: ({ value }: { value: { url?: string; caption?: string } }) => {
+      const video = value.url ? parseVideoUrl(value.url) : null;
+      return video ? <VideoEmbed video={video} {...(value.caption ? { caption: value.caption } : {})} /> : null;
     },
   },
   // Un tipo de bloque que el render no conoce se ignora en lugar de romper el artículo.

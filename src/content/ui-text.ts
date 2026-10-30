@@ -99,6 +99,7 @@ export const uiText = {
   article: {
     author: "TWSU Team",
     related: "Lecturas relacionadas",
+    videoTitle: "Video",
   },
   about: {
     title: "About",
