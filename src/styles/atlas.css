@@ -39,7 +39,7 @@
    El globo es "sticky" dentro de su contenedor, así al llegar al final de la lista se va con ella
    y deja ver el pie. Su alto es la media esfera más un degradado que desvanece las tarjetas. */
 .atlas-mobile {
-  --atlas-globe-dock-height: calc(var(--atlas-globe-height) + var(--atlas-globe-fade));
+  --atlas-globe-dock-height: calc(var(--atlas-globe-height) + var(--atlas-globe-fade) * 1.5);
 }
 
 .atlas-mobile-list {
@@ -55,11 +55,17 @@
   overflow: hidden;
 }
 
-.atlas-globe-fade {
+/* Resplandor con la forma del globo (no un rectángulo): copia su recorte semicircular y se
+   difumina hacia arriba, así las tarjetas se desvanecen siguiendo la curva. */
+.atlas-globe-halo {
   position: absolute;
-  inset: 0 0 auto;
-  height: var(--atlas-globe-fade);
-  background: linear-gradient(to bottom, transparent, var(--color-bg));
+  bottom: 0;
+  left: -5%;
+  width: 110%;
+  height: var(--atlas-globe-height);
+  border-radius: 50% 50% 0 0 / 92% 92% 0 0;
+  background: var(--color-bg);
+  box-shadow: 0 0 var(--atlas-globe-fade) calc(var(--atlas-globe-fade) / 2) var(--color-bg);
 }
 
 /* Un poco más ancho que la pantalla, como en el diseño. El recorte semicircular deja que la
@@ -72,4 +78,11 @@
   height: var(--atlas-globe-height);
   overflow: hidden;
   border-radius: 50% 50% 0 0 / 92% 92% 0 0;
+}
+
+/* En el Atlas móvil no hay pie de página: la pantalla es la lista y el globo (ver el diseño). */
+@media (max-width: 63.999rem) {
+  body:has(.atlas-page) footer {
+    display: none;
+  }
 }

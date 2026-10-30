@@ -36,7 +36,7 @@ export function AtlasGlobe({ region }: { region: Continent }) {
 
   return (
     <div aria-hidden="true" className="atlas-globe-dock">
-      <div className="atlas-globe-fade" />
+      <div className="atlas-globe-halo" />
       <div className="atlas-globe-stage">
         <AnimatePresence initial={false} custom={shown.direction}>
           <motion.div

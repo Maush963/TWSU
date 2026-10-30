@@ -30,9 +30,9 @@ async function AtlasContent({ searchParams }: { searchParams: PageProps<"/atlas"
   return (
     <>
       <div className="flex items-center gap-4 px-4 py-4 max-lg:bg-surface lg:flex-wrap lg:items-end lg:justify-between lg:px-0 lg:py-2">
-        <div className="max-lg:w-2/5 max-lg:border-r-2 max-lg:border-gold max-lg:pr-4 max-lg:text-right lg:border-l-2 lg:border-gold lg:pl-4">
+        <div className="max-lg:w-1/2 max-lg:border-r-2 max-lg:border-gold max-lg:pr-4 max-lg:text-right lg:border-l-2 lg:border-gold lg:pl-4">
           <h1 className="font-display text-2xl uppercase leading-none text-accent lg:text-3xl">{uiText.atlas.title}</h1>
-          <p className="mt-2 font-body text-xs uppercase tracking-caps lg:text-base">{uiText.atlas.tagline}</p>
+          <p className="mt-2 font-body text-xs uppercase leading-snug max-lg:tracking-normal lg:text-base lg:tracking-caps">{uiText.atlas.tagline}</p>
         </div>
         <AtlasMobileFilters
           regions={links.regions}
