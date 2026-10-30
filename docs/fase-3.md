@@ -4,7 +4,7 @@ Instrucciones para construir `/about`, `/join`, la conexión real con la herrami
 
 ## Estado
 
-- **Parte A (3.1 a 3.5): pendiente.** Lógica pura y probada, sin diseño y sin proveedor de correo.
+- **Parte A (3.1 a 3.5): en curso.** 3.1 y 3.2 hechas (validación y antispam, con pruebas). Faltan 3.3 (adaptador), 3.4 (medición) y 3.5 (About). Lógica pura y probada, sin diseño y sin proveedor de correo.
 - **Parte B (3.6 a 3.8): bloqueada por diseño.** Falta el diseño del cliente de About y de Join (ver bloqueos).
 - **Parte C (3.9 a 3.11): bloqueada por datos del cliente.** Proveedor de correo y códigos de medición.
 

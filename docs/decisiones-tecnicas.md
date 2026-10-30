@@ -136,3 +136,11 @@ El resultado se escribe en `src/lib/atlas/map-calibration.ts` (generado, no se e
 - El encabezado "Keep on reading" de las lecturas relacionadas queda solo para lectores de pantalla en escritorio (`lg:sr-only`), para que el `aside` tenga nombre y la jerarquía `h2` a `h3` no se rompa.
 - Contrastes medidos con los tokens: texto 14.2, acento 12.4, texto atenuado 4.7 (AA). El dorado (1.65) solo se usa en bordes, nunca en texto.
 - Sin JavaScript: el filtro es un formulario GET con botón dentro de `noscript`, y la paginación y las tarjetas son enlaces.
+
+## Formularios y antispam (3.1 y 3.2)
+
+- Los esquemas de `src/lib/forms/schemas.ts` devuelven **claves** de error (`required`, `invalid`, `tooLong`), no textos. Los textos saldrán de `ui-text` cuando exista el formulario de Join.
+- El contacto pide nombre, teléfono, empresa y correo; el mensaje es opcional. Todos los largos máximos y el mínimo de dígitos del teléfono están en `constants.ts`.
+- `/api/subscribe` usa el esquema compartido, el antispam y el límite por IP. Un envío descartado por campo trampa o por rapidez responde igual que uno normal; uno que pasa el límite responde 429, que no revela nada sobre el correo.
+- Límite por IP: 5 intentos cada 10 minutos, en memoria de cada instancia. En Vercel las instancias no comparten el contador, así que frena abusos simples pero no un ataque repartido. El almacén se puede cambiar sin tocar `checkRateLimit`.
+- La IP sale de `x-forwarded-for` (primer valor). Sin cabecera, todos los envíos comparten la clave `unknown`.

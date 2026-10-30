@@ -1,31 +1,27 @@
 import { NextResponse } from "next/server";
-import { z } from "zod";
+import { isSpam } from "@/lib/forms/antispam";
+import { getClientKey } from "@/lib/forms/client-ip";
+import { createRateLimiter } from "@/lib/forms/rate-limit";
+import { subscribeSchema } from "@/lib/forms/schemas";
 
-const MIN_FILL_MS = 3000;
-
-const bodySchema = z.object({
-  email: z.email(),
-  // Campo trampa: debe llegar vacío.
-  website: z.string().optional().nullable(),
-  startedAt: z.number().optional(),
-});
+const limiter = createRateLimiter();
 
 export async function POST(request: Request) {
+  if (!limiter.allow(getClientKey(request.headers))) {
+    return NextResponse.json({ ok: false }, { status: 429 });
+  }
+
   const body: unknown = await request.json().catch(() => null);
-  const parsed = bodySchema.safeParse(body);
+  const parsed = subscribeSchema.safeParse(body);
   if (!parsed.success) {
     return NextResponse.json({ ok: false }, { status: 400 });
   }
 
-  const { website, startedAt } = parsed.data;
-  const isBot = Boolean(website);
-  const isTooFast = typeof startedAt !== "number" || Date.now() - startedAt < MIN_FILL_MS;
-
   // Respuesta genérica: un envío descartado se ve igual que uno normal.
-  if (isBot || isTooFast) {
+  if (isSpam(parsed.data, Date.now())) {
     return NextResponse.json({ ok: true });
   }
 
-  // TODO Fase 3: enviar el correo al proveedor (Mailchimp o Brevo).
+  // TODO 3.3: enviar el correo al proveedor (Mailchimp o Brevo).
   return NextResponse.json({ ok: true });
 }
