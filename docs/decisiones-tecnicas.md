@@ -85,3 +85,19 @@ El resultado se escribe en `src/lib/atlas/map-calibration.ts` (generado, no se e
 - **Giro.** Al cambiar de región, la textura saliente se desliza y se achica hacia un lado y la entrante llega del otro, dentro del recorte circular; el sentido depende del orden de las regiones. Con `prefers-reduced-motion` el cambio es instantáneo. Las otras cuatro imágenes se precargan para que el giro no espere.
 - **Posición del globo.** `position: sticky` al pie de la lista, con un degradado que desvanece las tarjetas: se queda al fondo de la ventana mientras se hace scroll y, al llegar al final, se va con la lista y deja ver el pie.
 - **Lo que el mockup no tiene y no puse:** buscador (ícono de lupa), llaves y lugar en las tarjetas. Las tarjetas móviles siguen el mockup al pie de la letra.
+
+## Perspectives y artículo según el diseño del cliente (escritorio)
+
+**Layout.** Igual que el Atlas, en pantallas de 64rem o más la página mide el alto de la ventana (`body:has(.panel-page)` en `src/styles/perspectives.css`) y cada panel se desplaza por su cuenta (`.panel-scroll`) con un desvanecido al pie (`--panel-fade`, hecho con `mask-image`). El relleno inferior deja que el final del contenido salga por encima del desvanecido. Las proporciones de columnas (`--perspectives-columns`, `--article-columns`), el banner (`--article-cover-ratio`) y el ancho de lectura (`--article-measure`) son tokens. Abajo de 64rem el flujo es normal; la versión móvil está pendiente del diseño.
+
+**Destacado por categoría.** `getFeaturedArticle(category?)` usa una sola consulta (`FEATURED_ARTICLE_QUERY`). Sin categoría devuelve el `featured` más reciente (lo que usa Home). Con categoría ordena por `featured desc, publishedAt desc` dentro de ella: el marcado más reciente o, si ninguno lo está, el artículo más reciente de la categoría. El destacado se muestra en todas las páginas y se excluye del listado y del total (`listArticles(filters, excludeId)`), así la paginación cuenta bien. No hay cambio de esquema.
+
+**Nueve artículos por página.** `PERSPECTIVES_PAGE_SIZE = 9`, para que la rejilla de 3 columnas no deje tarjetas huérfanas.
+
+**Una sola enlace por tarjeta.** `ArticleCard` y `FeaturedArticle` estiran el enlace del título sobre toda la tarjeta (`after:absolute after:inset-0`); el "Read more" es decorativo (`aria-hidden`). Así un lector de pantalla oye cada artículo una vez.
+
+**Cuerpo del artículo.** `ArticleBody` usa `@portabletext/react` (dependencia directa nueva). Soporta `normal`, `h2`, `h3`, listas, enlaces (los externos con `rel="noopener noreferrer"`) e imágenes con `alt`. Los tipos de bloque desconocidos se ignoran. El tamaño de las imágenes se lee de la referencia del asset (`parseImageRef`) para reservar espacio sin saltos.
+
+**Idioma.** Los textos de estas páginas y las fechas (`meta.locale = "en"`) van en inglés, como el mockup. Falta confirmar con el cliente el idioma de todo el sitio.
+
+**Piezas que el diseño trae y no están.** Subtítulo en cursiva sobre el banner (no hay campo en Sanity; sería un cambio de esquema, por ejemplo `coverCaption`), autor por artículo (hoy "TWSU Team" fijo en `ui-text`), y buscador y botón "Explore the Atlas" de la cabecera.

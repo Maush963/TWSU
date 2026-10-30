@@ -1,53 +1,75 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
-import type { Category } from "@/lib/constants";
+import { ArticleCard } from "@/components/articles/ArticleCard";
+import { FeaturedArticle } from "@/components/articles/FeaturedArticle";
+import { Pagination } from "@/components/articles/Pagination";
+import { CategorySelect } from "@/components/ui/CategorySelect";
 import { uiText } from "@/content/ui-text";
-import { listArticles } from "@/lib/data/articles";
-import { parsePerspectivesFilters, toSearchParams } from "@/lib/filters";
+import { getFeaturedArticle, listArticles } from "@/lib/data/articles";
+import { parsePerspectivesFilters } from "@/lib/filters";
+import { PERSPECTIVES_PATH } from "@/lib/perspectives/filter-links";
+import { buildPerspectivesView } from "@/lib/perspectives/view-model";
 
 export const metadata: Metadata = { title: uiText.perspectives.title };
 
-function pageHref(category: Category | undefined, page: number) {
-  const query = toSearchParams({ category, page }).toString();
-  return query ? `/perspectives?${query}` : "/perspectives";
-}
-
-// Temporal: lista simple de títulos paginada. El diseño es de la Fase 1.
-async function ArticleList({ searchParams }: { searchParams: PageProps<"/perspectives">["searchParams"] }) {
+async function PerspectivesContent({ searchParams }: { searchParams: PageProps<"/perspectives">["searchParams"] }) {
   const filters = parsePerspectivesFilters(await searchParams);
-  const result = await listArticles(filters);
-  if (result.items.length === 0) return <p className="text-muted">{uiText.perspectives.empty}</p>;
+  // Cada categoría tiene su destacado, que se pinta aparte y no se repite en el listado.
+  const featured = await getFeaturedArticle(filters.category);
+  const result = await listArticles(filters, featured?.id);
+  const { links, items, pagination, isEmpty } = buildPerspectivesView(featured, result, filters);
+
   return (
-    <>
-      <ul>
-        {result.items.map((article) => (
-          <li key={article.id}>
-            <Link href={`/perspectives/${article.slug}`}>{article.title}</Link>
-          </li>
-        ))}
-      </ul>
-      <nav aria-label={uiText.perspectives.pagination} className="flex gap-4">
-        {result.page > 1 && (
-          <Link href={pageHref(filters.category, result.page - 1)}>{uiText.perspectives.previous}</Link>
+    <div className="panel-layout perspectives-layout">
+      <section className="panel-scroll border-gold p-4 lg:border-r lg:px-8">
+        {featured && <FeaturedArticle article={featured} />}
+      </section>
+      <section className="panel-scroll p-4 lg:px-8">
+        <div className="flex flex-wrap items-center justify-between gap-4 pb-6">
+          <h2 className="font-ui text-xs uppercase tracking-caps-wide">{uiText.perspectives.ideas}</h2>
+          <CategorySelect
+            action={PERSPECTIVES_PATH}
+            id="perspectives-category"
+            label={uiText.perspectives.exploreBy}
+            allLabel={uiText.perspectives.allTopics}
+            applyLabel={uiText.perspectives.applyFilter}
+            options={links.categories.map(({ value, title, href }) => ({ value, title, href }))}
+            allHref={links.allHref}
+            selected={filters.category}
+            hiddenFields={{}}
+          />
+        </div>
+        {isEmpty ? (
+          <p className="text-muted">
+            {uiText.perspectives.empty}{" "}
+            {links.hasActiveFilters && (
+              <Link href={links.allHref} className="text-accent underline">
+                {uiText.perspectives.clearFilters}
+              </Link>
+            )}
+          </p>
+        ) : (
+          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {items.map((article) => (
+              <li key={article.id} className="flex flex-col *:flex-1">
+                <ArticleCard article={article} sizes="(min-width: 64rem) 22vw, (min-width: 40rem) 50vw, 100vw" />
+              </li>
+            ))}
+          </ul>
         )}
-        <span>
-          {uiText.perspectives.page} {result.page} {uiText.perspectives.of} {result.totalPages}
-        </span>
-        {result.page < result.totalPages && (
-          <Link href={pageHref(filters.category, result.page + 1)}>{uiText.perspectives.next}</Link>
-        )}
-      </nav>
-    </>
+        <Pagination pagination={pagination} />
+      </section>
+    </div>
   );
 }
 
 export default function PerspectivesPage({ searchParams }: PageProps<"/perspectives">) {
   return (
-    <main className="p-4">
-      <h1 className="font-display text-2xl">{uiText.perspectives.title}</h1>
+    <main className="panel-page flex min-h-0 flex-1 flex-col">
+      <h1 className="sr-only">{uiText.perspectives.title}</h1>
       <Suspense>
-        <ArticleList searchParams={searchParams} />
+        <PerspectivesContent searchParams={searchParams} />
       </Suspense>
     </main>
   );

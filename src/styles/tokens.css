@@ -47,4 +47,11 @@
   --atlas-key-size: 1.25rem;
   --atlas-globe-height: 59.4vw;
   --atlas-globe-fade: 4rem;
+
+  /* perspectives y artículo */
+  --perspectives-columns: 5fr 8fr;
+  --article-columns: 10fr 3fr;
+  --article-cover-ratio: 3.6;
+  --article-measure: 46rem;
+  --panel-fade: 4rem;
 }

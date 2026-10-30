@@ -6,6 +6,8 @@ export const uiText = {
     title: "TWSU",
     description: "TWSU, atlas de casos y perspectivas de marca por el mundo.",
     titleTemplate: "%s | TWSU",
+    // Idioma de las fechas. Sigue el diseño del cliente (October 21, 2026).
+    locale: "en",
   },
   common: {
     skipToContent: "Saltar al contenido",
@@ -76,16 +78,26 @@ export const uiText = {
       off: "apagada",
     },
   },
+  // Los textos de Perspectives y del artículo siguen el diseño del cliente, en inglés.
   perspectives: {
     title: "Perspectives",
+    latest: "Latest saving",
+    about: "About",
+    readFull: "Read the full thing",
+    readMore: "Read more",
+    ideas: "Ideas making us travel",
+    exploreBy: "Explore by topic",
+    allTopics: "All",
+    applyFilter: "Apply",
     empty: "No hay artículos con estos filtros.",
+    clearFilters: "Quitar filtros",
     pagination: "Paginación",
     previous: "Anterior",
     next: "Siguiente",
     page: "Página",
-    of: "de",
   },
   article: {
+    author: "TWSU Team",
     related: "Lecturas relacionadas",
   },
   about: {

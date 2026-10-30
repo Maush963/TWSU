@@ -5,6 +5,9 @@ import { ChevronDownIcon } from "@/components/ui/icons";
 import type { Category } from "@/lib/constants";
 
 interface CategorySelectProps {
+  /** Ruta del formulario sin JavaScript y base del `id` del campo. */
+  action: string;
+  id: string;
   label: string;
   allLabel: string;
   applyLabel: string;
@@ -19,6 +22,8 @@ interface CategorySelectProps {
 
 // Con JavaScript navega al elegir; sin él, el formulario GET con su botón hace lo mismo.
 export function CategorySelect({
+  action,
+  id,
   label,
   allLabel,
   applyLabel,
@@ -31,13 +36,13 @@ export function CategorySelect({
   const router = useRouter();
 
   return (
-    <form action="/atlas" method="get" className={`flex items-center gap-4 ${className}`}>
-      <label htmlFor="atlas-category" className="font-ui text-sm uppercase tracking-caps-wide">
+    <form action={action} method="get" className={`flex items-center gap-4 ${className}`}>
+      <label htmlFor={id} className="font-ui text-sm uppercase tracking-caps-wide">
         {label}
       </label>
       <div className="relative">
         <select
-          id="atlas-category"
+          id={id}
           name="category"
           value={selected ?? ""}
           onChange={(event) => {

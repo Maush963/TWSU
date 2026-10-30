@@ -5,7 +5,7 @@ import { uiText } from "@/content/ui-text";
 import { AtlasMobileList } from "@/components/atlas/AtlasMobileList";
 import { AtlasMap } from "@/components/atlas/AtlasMap";
 import { AtlasMobileFilters } from "@/components/atlas/AtlasMobileFilters";
-import { CategorySelect } from "@/components/atlas/CategorySelect";
+import { CategorySelect } from "@/components/ui/CategorySelect";
 import { resolveAtlasYear } from "@/lib/atlas/filter-links";
 import { buildAtlasView } from "@/lib/atlas/view-model";
 import { getAtlasPins, getAtlasYears } from "@/lib/data/atlas";
@@ -43,6 +43,8 @@ async function AtlasContent({ searchParams }: { searchParams: PageProps<"/atlas"
           hiddenFields={hiddenFields}
         />
         <CategorySelect
+          action="/atlas"
+          id="atlas-category"
           label={uiText.atlas.exploreBy}
           allLabel={uiText.atlas.allCategories}
           applyLabel={uiText.atlas.applyFilter}

@@ -20,7 +20,7 @@ export type Category = (typeof CATEGORIES)[number]["value"];
 export type Continent = (typeof CONTINENTS)[number]["value"];
 
 export const ATLAS_SLOTS_PER_CATEGORY = 10;
-export const PERSPECTIVES_PAGE_SIZE = 10;
+export const PERSPECTIVES_PAGE_SIZE = 9;
 export const RELATED_ARTICLES_LIMIT = 3;
 export const HOME_RECENT_LIMIT = 3;
 

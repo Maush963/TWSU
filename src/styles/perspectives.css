@@ -1,0 +1,46 @@
+/* Paneles de Perspectives y del artículo. Solo usa tokens. */
+
+/* Banner del artículo, mucho más ancho que alto, como en el diseño. */
+.article-cover {
+  aspect-ratio: var(--article-cover-ratio);
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Texto de lectura: con su ancho máximo. */
+.article-body {
+  max-width: var(--article-measure);
+}
+
+/* En pantallas grandes la página mide el alto de la ventana y cada panel se desplaza por su
+   cuenta, con un desvanecido al pie. El relleno inferior deja que el final del contenido
+   salga por encima del desvanecido. En pantallas chicas sigue el flujo normal. */
+@media (min-width: 64rem) {
+  body:has(.panel-page) {
+    height: 100dvh;
+  }
+
+  .panel-layout {
+    display: grid;
+    flex: 1 1 0;
+    min-height: 0;
+    grid-template-rows: minmax(0, 1fr);
+  }
+
+  .perspectives-layout {
+    grid-template-columns: var(--perspectives-columns);
+  }
+
+  .article-layout {
+    grid-template-columns: var(--article-columns);
+  }
+
+  .panel-scroll {
+    min-height: 0;
+    overflow-y: auto;
+    padding-bottom: var(--panel-fade);
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-gold) transparent;
+    mask-image: linear-gradient(to bottom, var(--color-text) calc(100% - var(--panel-fade)), transparent);
+  }
+}

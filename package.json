@@ -16,6 +16,7 @@
     "typegen": "sanity schema extract --force --path sanity-schema.json && sanity typegen generate"
   },
   "dependencies": {
+    "@portabletext/react": "^8.0.1",
     "@portabletext/types": "^4.0.2",
     "@sanity/client": "^8.13.0",
     "@sanity/image-url": "^2.1.1",

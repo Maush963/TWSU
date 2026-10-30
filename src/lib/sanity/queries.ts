@@ -3,9 +3,12 @@ import { defineQuery } from "next-sanity";
 // Todas filtran publishedAt <= now(). Los parámetros opcionales llegan como null.
 // Las proyecciones se repiten a propósito: TypeGen necesita consultas sin interpolar.
 
+// Sin categoría, el de `featured` más reciente. Con categoría, el de `featured` más reciente de
+// esa categoría y, si ninguno lo está, el más reciente de ella (el panel nunca queda vacío).
 export const FEATURED_ARTICLE_QUERY = defineQuery(`
-*[_type == "article" && featured == true && publishedAt <= now()]
-  | order(publishedAt desc)[0]{
+*[_type == "article" && publishedAt <= now()
+  && (($category == null && featured == true) || ($category != null && $category in categories))]
+  | order(featured desc, publishedAt desc)[0]{
     _id, title, "slug": slug.current, excerpt, publishedAt, year, categories, featured, inAtlas,
     "cover": cover{ alt, asset, crop, hotspot },
     "placeName": place->name,
@@ -51,14 +54,14 @@ export const RELATED_ARTICLES_QUERY = defineQuery(`
 
 export const ARTICLES_PAGE_QUERY = defineQuery(`
 {
-  "items": *[_type == "article" && publishedAt <= now() && ($category == null || $category in categories)]
+  "items": *[_type == "article" && publishedAt <= now() && ($category == null || $category in categories) && ($excludeId == null || _id != $excludeId)]
     | order(publishedAt desc)[$from...$to]{
       _id, title, "slug": slug.current, excerpt, publishedAt, year, categories,
       "cover": cover{ alt, asset, crop, hotspot },
       "placeName": place->name,
       "continent": place->continent
     },
-  "total": count(*[_type == "article" && publishedAt <= now() && ($category == null || $category in categories)])
+  "total": count(*[_type == "article" && publishedAt <= now() && ($category == null || $category in categories) && ($excludeId == null || _id != $excludeId)])
 }
 `);
 
