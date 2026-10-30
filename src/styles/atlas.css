@@ -42,8 +42,14 @@
   --atlas-globe-dock-height: calc(var(--atlas-globe-height) + var(--atlas-globe-fade) * 1.5);
 }
 
+/* Solo queda a la vista el 80 % del globo (se baja un 20 %), y el relleno alcanza justo para que la
+   última tarjeta salga completa por encima de él. */
+.atlas-mobile {
+  --atlas-globe-drop: calc(var(--atlas-globe-height) * -0.2);
+}
+
 .atlas-mobile-list {
-  padding-bottom: var(--atlas-globe-dock-height);
+  padding-bottom: calc(var(--atlas-globe-height) * 0.8 + var(--atlas-globe-fade) / 2);
 }
 
 .atlas-globe-dock {
@@ -59,7 +65,7 @@
    difumina hacia arriba, así las tarjetas se desvanecen siguiendo la curva. */
 .atlas-globe-halo {
   position: absolute;
-  bottom: 0;
+  bottom: var(--atlas-globe-drop);
   left: -5%;
   width: 110%;
   height: var(--atlas-globe-height);
@@ -72,7 +78,7 @@
    textura entrante y la saliente deslicen dentro del círculo. */
 .atlas-globe-stage {
   position: absolute;
-  bottom: 0;
+  bottom: var(--atlas-globe-drop);
   left: -5%;
   width: 110%;
   height: var(--atlas-globe-height);
