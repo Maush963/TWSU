@@ -2,7 +2,7 @@
 
 /* Banner del artículo, mucho más ancho que alto, como en el diseño. */
 .article-cover {
-  aspect-ratio: var(--article-cover-ratio);
+  aspect-ratio: var(--article-cover-ratio-mobile);
   width: 100%;
   object-fit: cover;
 }
@@ -33,6 +33,10 @@
 
   .article-layout {
     grid-template-columns: var(--article-columns);
+  }
+
+  .article-cover {
+    aspect-ratio: var(--article-cover-ratio);
   }
 
   .panel-scroll {

@@ -116,3 +116,27 @@ export function CloseIcon(props: IconProps) {
     </svg>
   );
 }
+
+export function FacebookIcon(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M14 21v-8h3l.5-3.5H14V7.5c0-1 .5-1.8 1.9-1.8h1.7V2.7C17.2 2.6 16.3 2.5 15.3 2.5 12.9 2.5 10.5 4 10.5 7v2.5H7.5V13h3v8z" />
+    </svg>
+  );
+}
+
+export function XIcon(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M4 4l16 16M20 4L4 20" />
+    </svg>
+  );
+}
+
+export function LinkIcon(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" />
+    </svg>
+  );
+}

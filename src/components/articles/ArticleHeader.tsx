@@ -14,10 +14,10 @@ export function ArticleHeader({ article }: { article: ArticleSummary }) {
       </p>
       <h1 className="font-display text-2xl uppercase leading-none text-accent lg:text-3xl">{article.title}</h1>
       <Image
-        src={urlFor(article.cover).width(2000).height(556).fit("crop").url()}
+        src={urlFor(article.cover).width(2000).height(833).fit("crop").url()}
         alt={article.cover.alt}
         width={2000}
-        height={556}
+        height={833}
         sizes="(min-width: 64rem) 75vw, 100vw"
         priority
         className="article-cover"

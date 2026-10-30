@@ -8,9 +8,9 @@ import type { ArticleSummary } from "@/lib/sanity/types";
 // Un solo enlace: el del título se estira sobre todo el bloque.
 export function FeaturedArticle({ article }: { article: ArticleSummary }) {
   return (
-    <article className="relative flex flex-col gap-6 focus-within:outline-2 focus-within:outline-accent">
-      <p className="font-ui text-xs uppercase tracking-caps-wide">{uiText.perspectives.latest}</p>
-      <h2 className="font-display text-3xl uppercase leading-none text-accent">
+    <article className="relative flex flex-col gap-4 focus-within:outline-2 focus-within:outline-accent">
+      <p className="font-ui text-xs uppercase tracking-caps-wide max-lg:hidden">{uiText.perspectives.latest}</p>
+      <h2 className="font-display text-2xl uppercase leading-none text-accent lg:text-3xl">
         <Link href={`/perspectives/${article.slug}`} className="outline-none after:absolute after:inset-0">
           {article.title}
         </Link>
@@ -24,7 +24,7 @@ export function FeaturedArticle({ article }: { article: ArticleSummary }) {
         priority
         className="aspect-video w-full object-cover"
       />
-      <div className="flex flex-col gap-4 border-l border-gold pl-6">
+      <div className="flex flex-col gap-4 border-l border-gold pl-4 lg:pl-6">
         <p className="font-ui text-xs uppercase tracking-caps">{uiText.perspectives.about}</p>
         <p className="font-body">{article.excerpt}</p>
         <span className="flex items-center gap-2 self-end border-b border-gold text-accent" aria-hidden>

@@ -72,7 +72,7 @@ const components: PortableTextComponents = {
 
 export function ArticleBody({ body }: { body: PortableTextBlock[] }) {
   return (
-    <div className="article-body flex flex-col gap-6 border-l border-gold pl-8 lg:pl-16">
+    <div className="article-body flex flex-col gap-6 border-l border-gold pl-4 lg:pl-16">
       <PortableText value={body} components={components} />
     </div>
   );

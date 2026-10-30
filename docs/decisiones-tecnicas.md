@@ -113,3 +113,15 @@ El resultado se escribe en `src/lib/atlas/map-calibration.ts` (generado, no se e
 **Pendiente.** No se aceptan archivos de video subidos a Sanity (pesan y Sanity no los transmite bien; la alternativa de pago es Mux). Si el cliente necesita banner de consentimiento de cookies, conviene cargar el reproductor solo al hacer clic.
 
 **Para que aparezca en producción** hacen falta las dos partes: el sitio desplegado con el render y el Studio desplegado con el esquema. Con solo el Studio actualizado, el bloque se guarda pero el sitio no lo muestra.
+
+## Perspectives y artículo en móvil
+
+**Cómo se divide.** Abajo de 64rem (`lg`) no hay paneles con scroll: el flujo es normal y los cambios son con clases responsivas, sin JavaScript. Los paneles solo existen desde `lg` (ver la sección de escritorio).
+
+**Listado.** Fila con el título "Perspectives" (línea dorada a la izquierda) y el selector "Explore by topic" con la etiqueta encima (`stacked` en `CategorySelect`). El selector aparece dos veces en el DOM con `id` distinto, uno por tamaño, igual que en el Atlas; en escritorio el título es solo para lectores de pantalla (`lg:sr-only`). Después el destacado (sin la etiqueta "Latest saving"), una línea dorada y una rejilla de 2 columnas, con tarjetas de tipografía y relleno menores.
+
+**Artículo.** Banner más alto en móvil (`--article-cover-ratio-mobile`, 2.4) y de 3.6 desde `lg`; la portada se pide a 2.4 y en escritorio se recorta con `object-cover`. Después del cuerpo, fila "Share" (Facebook, X, LinkedIn y copiar enlace) que solo se ve en móvil, porque el diseño de escritorio no la tiene; luego línea dorada y "Keep on reading" con 2 lecturas relacionadas en 2 columnas. En escritorio siguen siendo 3 en el panel derecho.
+
+**Compartir.** Los enlaces se arman con `buildShareLinks` (con pruebas) y son enlaces normales, que funcionan sin JavaScript. Solo "copiar enlace" necesita JavaScript (`CopyLinkButton`, usa el portapapeles del navegador). La URL completa sale de `NEXT_PUBLIC_SITE_URL`.
+
+**Pendiente.** El buscador de la cabecera móvil del diseño no se incluyó (no hay búsqueda en el alcance). Los iconos de Facebook y X son trazos simples, marcadores hasta tener los oficiales. Para probar en un navegador de escritorio hay que reducir la ventana: Chrome sin interfaz no baja de unos 500 px.

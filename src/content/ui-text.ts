@@ -98,8 +98,12 @@ export const uiText = {
   },
   article: {
     author: "TWSU Team",
-    related: "Lecturas relacionadas",
+    related: "Keep on reading",
     videoTitle: "Video",
+    share: "Share",
+    shareOn: { facebook: "Share on Facebook", x: "Share on X", linkedin: "Share on LinkedIn" },
+    copyLink: "Copy link",
+    linkCopied: "Link copied",
   },
   about: {
     title: "About",

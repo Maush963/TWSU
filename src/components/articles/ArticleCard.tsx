@@ -23,14 +23,14 @@ export function ArticleCard({ article, sizes }: ArticleCardProps) {
         sizes={sizes}
         className="aspect-video w-full object-cover"
       />
-      <div className="flex flex-1 flex-col gap-4 p-4">
-        <h3 className="font-display text-xl leading-tight text-accent">
+      <div className="flex flex-1 flex-col gap-2 p-2 lg:gap-4 lg:p-4">
+        <h3 className="font-display text-base leading-tight text-accent lg:text-xl">
           <Link href={`/perspectives/${article.slug}`} className="outline-none after:absolute after:inset-0">
             {article.title}
           </Link>
         </h3>
-        <p className="line-clamp-3 font-body">{article.excerpt}</p>
-        <span className="mt-auto flex items-center gap-2 self-end border-b border-gold text-sm text-accent" aria-hidden>
+        <p className="line-clamp-3 font-body text-sm lg:text-base">{article.excerpt}</p>
+        <span className="mt-auto flex items-center gap-2 self-end border-b border-gold text-xs text-accent lg:text-sm" aria-hidden>
           {uiText.perspectives.readMore}
           <ArrowRightIcon className="size-4" />
         </span>

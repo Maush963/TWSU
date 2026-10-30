@@ -52,6 +52,7 @@
   --perspectives-columns: 5fr 8fr;
   --article-columns: 10fr 3fr;
   --article-cover-ratio: 3.6;
+  --article-cover-ratio-mobile: 2.4;
   --article-measure: 46rem;
   --panel-fade: 4rem;
 }

@@ -17,6 +17,8 @@ interface CategorySelectProps {
   selected: Category | undefined;
   /** Filtros que el formulario sin JavaScript debe conservar (región y año). */
   hiddenFields: Record<string, string>;
+  /** Etiqueta encima del selector, como en móvil. */
+  stacked?: boolean;
   className?: string;
 }
 
@@ -31,13 +33,14 @@ export function CategorySelect({
   allHref,
   selected,
   hiddenFields,
+  stacked = false,
   className = "",
 }: CategorySelectProps) {
   const router = useRouter();
 
   return (
-    <form action={action} method="get" className={`flex items-center gap-4 ${className}`}>
-      <label htmlFor={id} className="font-ui text-sm uppercase tracking-caps-wide">
+    <form action={action} method="get" className={`flex ${stacked ? "flex-col items-start gap-1" : "items-center gap-4"} ${className}`}>
+      <label htmlFor={id} className={`font-ui uppercase tracking-caps-wide ${stacked ? "text-xs" : "text-sm"}`}>
         {label}
       </label>
       <div className="relative">
@@ -50,7 +53,7 @@ export function CategorySelect({
             const href = value === "" ? allHref : options.find((option) => option.value === value)?.href;
             if (href) router.push(href, { scroll: false });
           }}
-          className="min-w-48 appearance-none border border-gold bg-bg py-1 pl-4 pr-8 font-body text-base"
+          className={`${stacked ? "min-w-36" : "min-w-48"} appearance-none border border-gold bg-bg py-1 pl-4 pr-8 font-body text-base`}
         >
           <option value="">{allLabel}</option>
           {options.map((option) => (
