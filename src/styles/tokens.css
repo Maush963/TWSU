@@ -45,4 +45,6 @@
   --atlas-thumb-size: 6rem;
   --atlas-compass-size: 4rem;
   --atlas-key-size: 1.25rem;
+  --atlas-globe-height: 59.4vw;
+  --atlas-globe-fade: 4rem;
 }

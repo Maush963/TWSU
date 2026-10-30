@@ -1,67 +1,61 @@
+import Image from "next/image";
 import Link from "next/link";
 import { uiText } from "@/content/ui-text";
+import { ArrowRightIcon } from "@/components/ui/icons";
+import { urlFor } from "@/lib/sanity/image";
 import type { AtlasRegionGroup } from "@/lib/atlas/view-model";
-import type { FilterLink } from "@/lib/atlas/filter-links";
 import type { Continent } from "@/lib/constants";
-import { AtlasTooltip } from "./AtlasTooltip";
+import { AtlasGlobe } from "./AtlasGlobe";
 
 interface AtlasMobileListProps {
-  regions: FilterLink<Continent>[];
   groups: AtlasRegionGroup[];
   activeRegion: Continent | undefined;
 }
 
-// En pantallas chicas el mapa se sustituye por un selector de región y la lista de casos de la
-// región elegida. Cada caso muestra lo mismo que el tooltip del escritorio y enlaza al artículo.
-export function AtlasMobileList({ regions, groups, activeRegion }: AtlasMobileListProps) {
+// En pantallas chicas el mapa se sustituye por la lista de casos de la región elegida, sobre el
+// panel con rejilla, y el globo de la región al pie. Cada caso enlaza al artículo.
+export function AtlasMobileList({ groups, activeRegion }: AtlasMobileListProps) {
   const pins = groups.find((group) => group.continent === activeRegion)?.pins ?? [];
 
   return (
-    <div className="flex flex-col gap-4 lg:hidden">
-      <nav aria-label={uiText.atlas.filters.region}>
-        <ul className="flex gap-2 overflow-x-auto pb-1">
-          {regions.map(({ value, title, href }) => {
-            const active = value === activeRegion;
-            return (
-              <li key={value} className="shrink-0">
-                {active ? (
-                  <span
-                    aria-current="true"
-                    className="block border border-accent bg-accent px-4 py-2 font-ui text-sm uppercase tracking-caps text-surface"
-                  >
-                    {title}
+    <div className="atlas-mobile flex flex-1 flex-col lg:hidden">
+      <div className="atlas-grid atlas-mobile-list flex-1 p-2">
+        {pins.length === 0 ? (
+          <p className="p-4 text-muted">{uiText.atlas.empty}</p>
+        ) : (
+          <ul className="flex flex-col gap-4">
+            {pins.map((pin) => (
+              <li key={pin.id}>
+                <Link
+                  href={`/perspectives/${pin.slug}`}
+                  className="flex gap-4 bg-surface p-2 shadow-sm ring-1 ring-gold-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                >
+                  <span className="block aspect-square w-2/5 shrink-0 bg-placeholder">
+                    {pin.cover && (
+                      <Image
+                        src={urlFor(pin.cover).width(320).height(320).fit("crop").url()}
+                        alt=""
+                        width={160}
+                        height={160}
+                        className="size-full object-cover"
+                      />
+                    )}
                   </span>
-                ) : (
-                  <Link
-                    href={href}
-                    scroll={false}
-                    className="block border border-gold px-4 py-2 font-ui text-sm uppercase tracking-caps text-accent"
-                  >
-                    {title}
-                  </Link>
-                )}
+                  <span className="flex min-w-0 flex-1 flex-col gap-2">
+                    <span className="font-display text-xl uppercase leading-tight text-accent">{pin.title}</span>
+                    <span className="line-clamp-4 font-body">{pin.excerpt}</span>
+                    <span className="mt-auto flex items-center gap-2 self-end border-b border-gold text-sm text-accent">
+                      {uiText.atlas.readMore}
+                      <ArrowRightIcon className="size-4" />
+                    </span>
+                  </span>
+                </Link>
               </li>
-            );
-          })}
-        </ul>
-      </nav>
-      {pins.length === 0 ? (
-        <p className="py-4 text-muted">{uiText.atlas.empty}</p>
-      ) : (
-        <ul className="flex flex-col gap-4">
-          {pins.map((pin) => (
-            <li key={pin.id}>
-              <Link
-                href={`/perspectives/${pin.slug}`}
-                className="block bg-surface p-4 ring-1 ring-gold-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-              >
-                <span className="mb-2 block text-xs uppercase tracking-caps text-muted">{pin.placeName}</span>
-                <AtlasTooltip pin={pin} />
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
+            ))}
+          </ul>
+        )}
+      </div>
+      {activeRegion && <AtlasGlobe region={activeRegion} />}
     </div>
   );
 }

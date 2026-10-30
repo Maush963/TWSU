@@ -22,6 +22,8 @@ export const uiText = {
     perspectives: "Perspectives",
     about: "About",
     join: "Join",
+    menuOpen: "Abrir menú",
+    menuClose: "Cerrar menú",
   },
   footer: {
     label: "Pie de página",
@@ -55,6 +57,7 @@ export const uiText = {
     clearFilters: "Quitar filtros",
     mapAlt: "Mapamundi con los casos del atlas",
     exploreBy: "Explore by best",
+    mobile: { explore: "Explore", byBest: "by best" },
     allCategories: "All",
     applyFilter: "Apply",
     edition: "EDITION",

@@ -14,6 +14,7 @@ interface CategorySelectProps {
   selected: Category | undefined;
   /** Filtros que el formulario sin JavaScript debe conservar (región y año). */
   hiddenFields: Record<string, string>;
+  className?: string;
 }
 
 // Con JavaScript navega al elegir; sin él, el formulario GET con su botón hace lo mismo.
@@ -25,11 +26,12 @@ export function CategorySelect({
   allHref,
   selected,
   hiddenFields,
+  className = "",
 }: CategorySelectProps) {
   const router = useRouter();
 
   return (
-    <form action="/atlas" method="get" className="flex items-center gap-4">
+    <form action="/atlas" method="get" className={`flex items-center gap-4 ${className}`}>
       <label htmlFor="atlas-category" className="font-ui text-sm uppercase tracking-caps-wide">
         {label}
       </label>

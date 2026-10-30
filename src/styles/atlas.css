@@ -34,3 +34,42 @@
     width: min(100cqw, calc(100cqh * var(--atlas-ratio)));
   }
 }
+
+/* Versión móvil: lista sobre el panel con rejilla y media esfera pegada al pie de la ventana.
+   El globo es "sticky" dentro de su contenedor, así al llegar al final de la lista se va con ella
+   y deja ver el pie. Su alto es la media esfera más un degradado que desvanece las tarjetas. */
+.atlas-mobile {
+  --atlas-globe-dock-height: calc(var(--atlas-globe-height) + var(--atlas-globe-fade));
+}
+
+.atlas-mobile-list {
+  padding-bottom: var(--atlas-globe-dock-height);
+}
+
+.atlas-globe-dock {
+  position: sticky;
+  bottom: 0;
+  height: var(--atlas-globe-dock-height);
+  margin-top: calc(-1 * var(--atlas-globe-dock-height));
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.atlas-globe-fade {
+  position: absolute;
+  inset: 0 0 auto;
+  height: var(--atlas-globe-fade);
+  background: linear-gradient(to bottom, transparent, var(--color-bg));
+}
+
+/* Un poco más ancho que la pantalla, como en el diseño. El recorte semicircular deja que la
+   textura entrante y la saliente deslicen dentro del círculo. */
+.atlas-globe-stage {
+  position: absolute;
+  bottom: 0;
+  left: -5%;
+  width: 110%;
+  height: var(--atlas-globe-height);
+  overflow: hidden;
+  border-radius: 50% 50% 0 0 / 92% 92% 0 0;
+}

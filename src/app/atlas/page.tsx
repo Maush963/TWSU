@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import { uiText } from "@/content/ui-text";
 import { AtlasMobileList } from "@/components/atlas/AtlasMobileList";
 import { AtlasMap } from "@/components/atlas/AtlasMap";
+import { AtlasMobileFilters } from "@/components/atlas/AtlasMobileFilters";
 import { CategorySelect } from "@/components/atlas/CategorySelect";
 import { resolveAtlasYear } from "@/lib/atlas/filter-links";
 import { buildAtlasView } from "@/lib/atlas/view-model";
@@ -19,6 +20,7 @@ async function AtlasContent({ searchParams }: { searchParams: PageProps<"/atlas"
   const filters = { ...parsed, ...(year !== undefined ? { year } : {}) };
   const view = buildAtlasView(await getAtlasPins(filters), filters, years);
   const { links } = view;
+  const activeRegion = parsed.region ?? view.byRegion[0]?.continent;
 
   // Región y año no tienen control en el diseño, pero siguen funcionando desde la URL.
   const hiddenFields: Record<string, string> = {};
@@ -27,11 +29,19 @@ async function AtlasContent({ searchParams }: { searchParams: PageProps<"/atlas"
 
   return (
     <>
-      <div className="flex flex-wrap items-end justify-between gap-4 py-2">
-        <div className="border-l-2 border-gold pl-4">
-          <h1 className="font-display text-3xl uppercase leading-none text-accent">{uiText.atlas.title}</h1>
-          <p className="mt-2 font-body uppercase tracking-caps">{uiText.atlas.tagline}</p>
+      <div className="flex items-center gap-4 px-4 py-4 max-lg:bg-surface lg:flex-wrap lg:items-end lg:justify-between lg:px-0 lg:py-2">
+        <div className="max-lg:w-2/5 max-lg:border-r-2 max-lg:border-gold max-lg:pr-4 max-lg:text-right lg:border-l-2 lg:border-gold lg:pl-4">
+          <h1 className="font-display text-2xl uppercase leading-none text-accent lg:text-3xl">{uiText.atlas.title}</h1>
+          <p className="mt-2 font-body text-xs uppercase tracking-caps lg:text-base">{uiText.atlas.tagline}</p>
         </div>
+        <AtlasMobileFilters
+          regions={links.regions}
+          activeRegion={activeRegion}
+          categories={links.categories}
+          allCategoriesHref={links.allCategoriesHref}
+          selectedCategory={filters.category}
+          hiddenFields={hiddenFields}
+        />
         <CategorySelect
           label={uiText.atlas.exploreBy}
           allLabel={uiText.atlas.allCategories}
@@ -40,10 +50,11 @@ async function AtlasContent({ searchParams }: { searchParams: PageProps<"/atlas"
           allHref={links.allCategoriesHref}
           selected={filters.category}
           hiddenFields={hiddenFields}
+          className="max-lg:hidden"
         />
       </div>
       {view.isEmpty ? (
-        <p className="py-8 text-muted">
+        <p className="px-4 py-8 text-muted">
           {uiText.atlas.empty}{" "}
           {links.hasActiveFilters && (
             <Link href={links.clearHref} className="text-accent underline">
@@ -54,11 +65,7 @@ async function AtlasContent({ searchParams }: { searchParams: PageProps<"/atlas"
       ) : (
         <>
           <AtlasMap pins={view.positioned} year={year} />
-          <AtlasMobileList
-            regions={links.regions}
-            groups={view.byRegion}
-            activeRegion={parsed.region ?? view.byRegion[0]?.continent}
-          />
+          <AtlasMobileList groups={view.byRegion} activeRegion={activeRegion} />
         </>
       )}
     </>
@@ -67,7 +74,7 @@ async function AtlasContent({ searchParams }: { searchParams: PageProps<"/atlas"
 
 export default function AtlasPage({ searchParams }: PageProps<"/atlas">) {
   return (
-    <main className="atlas-page flex min-h-0 flex-1 flex-col px-8 pb-4">
+    <main className="atlas-page flex min-h-0 flex-1 flex-col lg:px-8 lg:pb-4">
       <Suspense>
         <AtlasContent searchParams={searchParams} />
       </Suspense>

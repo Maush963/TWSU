@@ -20,7 +20,7 @@ const SOCIAL_ICONS = {
 
 export function Footer() {
   return (
-    <footer aria-label={uiText.footer.label} className="px-8 pb-4 font-body text-sm text-muted">
+    <footer aria-label={uiText.footer.label} className="px-4 pb-4 font-body lg:px-8 text-sm text-muted">
       <div aria-hidden="true" className="flex items-center gap-4 py-2 text-gold">
         <hr className="flex-1 border-gold-soft" />
         <OrnamentIcon className="size-6" />

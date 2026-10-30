@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { uiText } from "@/content/ui-text";
 import { Logo } from "@/components/layout/Logo";
+import { MobileMenu } from "@/components/layout/MobileMenu";
 
 const LINKS = [
   { href: "/", label: uiText.nav.home },
@@ -10,9 +11,9 @@ const LINKS = [
 
 export function Header() {
   return (
-    <header className="flex flex-wrap items-center justify-between gap-4 bg-surface px-8 py-2">
+    <header className="relative flex items-center justify-between gap-4 bg-surface px-4 py-2 lg:px-8">
       <Logo />
-      <nav aria-label={uiText.nav.label}>
+      <nav aria-label={uiText.nav.label} className="max-lg:hidden">
         <ul className="flex gap-8 font-ui uppercase tracking-caps">
           {LINKS.map((link) => (
             <li key={link.href}>
@@ -23,6 +24,7 @@ export function Header() {
           ))}
         </ul>
       </nav>
+      <MobileMenu links={LINKS} />
     </header>
   );
 }
