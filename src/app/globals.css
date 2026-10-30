@@ -45,6 +45,24 @@
   --radius: var(--radius);
 }
 
+/* Foco visible en todo elemento interactivo; los componentes con foco propio lo sobrescriben. */
+@layer base {
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
 body {
   background: var(--color-bg);
   color: var(--color-text);

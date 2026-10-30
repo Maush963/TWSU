@@ -76,7 +76,7 @@ async function PerspectivesContent({ searchParams }: { searchParams: PageProps<"
 
 export default function PerspectivesPage({ searchParams }: PageProps<"/perspectives">) {
   return (
-    <main className="panel-page flex min-h-0 flex-1 flex-col">
+    <main lang={uiText.meta.locale} className="panel-page flex min-h-0 flex-1 flex-col">
       <Suspense>
         <PerspectivesContent searchParams={searchParams} />
       </Suspense>

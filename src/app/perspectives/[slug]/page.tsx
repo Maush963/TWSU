@@ -4,6 +4,7 @@ import { ArticleBody } from "@/components/articles/ArticleBody";
 import { ArticleHeader } from "@/components/articles/ArticleHeader";
 import { RelatedArticles } from "@/components/articles/RelatedArticles";
 import { ShareLinks } from "@/components/articles/ShareLinks";
+import { uiText } from "@/content/ui-text";
 import { RELATED_ARTICLES_LIMIT } from "@/lib/constants";
 import { buildArticleMetadata } from "@/lib/articles/metadata";
 import { getArticleBySlug, getArticleSlugs, getRelatedArticles } from "@/lib/data/articles";
@@ -34,7 +35,7 @@ export default async function ArticlePage({ params }: PageProps<"/perspectives/[
   const url = new URL(`/perspectives/${article.slug}`, publicEnv.NEXT_PUBLIC_SITE_URL).toString();
 
   return (
-    <main className="panel-page flex min-h-0 flex-1 flex-col">
+    <main lang={uiText.meta.locale} className="panel-page flex min-h-0 flex-1 flex-col">
       <div className="panel-layout article-layout">
         <article className="panel-scroll flex flex-col gap-8 p-4 lg:px-8">
           <ArticleHeader article={article} />

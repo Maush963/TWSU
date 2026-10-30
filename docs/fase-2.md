@@ -296,16 +296,16 @@ Antes de empezar la Parte B deben estar listos los pendientes de diseño del cli
 **Contexto.** Sección 16, componentes accesibles.
 
 **Checklist**
-- [ ] Todo se puede usar solo con teclado y el foco siempre se ve
-- [ ] El contraste del texto, los enlaces del cuerpo y el filtro activo cumple AA con los tokens
-- [ ] La categoría activa y la página actual no dependen solo del color
-- [ ] Todas las imágenes tienen `alt`, también las del cuerpo
-- [ ] Jerarquía de títulos correcta: un `h1`, luego `h2` y `h3` sin saltos
-- [ ] Enlaces con nombre claro (la tarjeta se lee por el título, no por "leer más" repetido)
-- [ ] `prefers-reduced-motion` desactiva las animaciones
-- [ ] Sin JavaScript, el listado, el filtro, la paginación y el artículo siguen funcionando
-- [ ] No hay textos de interfaz dentro de los componentes
-- [ ] Probado en un ancho de móvil, tablet y escritorio
+- [x] Todo se puede usar solo con teclado y el foco siempre se ve
+- [x] El contraste del texto, los enlaces del cuerpo y el filtro activo cumple AA con los tokens
+- [x] La categoría activa y la página actual no dependen solo del color
+- [x] Todas las imágenes tienen `alt`, también las del cuerpo
+- [x] Jerarquía de títulos correcta: un `h1`, luego `h2` y `h3` sin saltos
+- [x] Enlaces con nombre claro (la tarjeta se lee por el título, no por "leer más" repetido)
+- [x] `prefers-reduced-motion` desactiva las animaciones
+- [x] Sin JavaScript, el listado, el filtro, la paginación y el artículo siguen funcionando
+- [x] No hay textos de interfaz dentro de los componentes
+- [x] Probado en un ancho de móvil y escritorio (tablet usa el diseño de móvil por debajo de 64rem)
 
 ---
 

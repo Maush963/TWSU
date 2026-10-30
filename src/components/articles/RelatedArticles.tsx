@@ -10,7 +10,7 @@ export function RelatedArticles({ articles }: { articles: ArticleSummary[] }) {
   if (articles.length === 0) return null;
   return (
     <aside aria-labelledby="related-heading">
-      <h2 id="related-heading" className="pb-4 font-ui text-xs uppercase tracking-caps-wide lg:hidden">
+      <h2 id="related-heading" className="pb-4 font-ui text-xs uppercase tracking-caps-wide lg:sr-only">
         {uiText.article.related}
       </h2>
       <div className="grid grid-cols-2 gap-4 lg:grid-cols-1 lg:gap-6">

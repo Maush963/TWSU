@@ -127,3 +127,12 @@ El resultado se escribe en `src/lib/atlas/map-calibration.ts` (generado, no se e
 **Pendiente.** El buscador de la cabecera móvil del diseño no se incluyó (no hay búsqueda en el alcance). Los iconos de Facebook y X son trazos simples, marcadores hasta tener los oficiales. Para probar en un navegador de escritorio hay que reducir la ventana: Chrome sin interfaz no baja de unos 500 px.
 
 **Sin pie en móvil.** En Perspectives y en el artículo el pie (con la suscripción) se oculta abajo de 64rem con `body:has(.panel-page) > footer` en `src/styles/perspectives.css`, porque el diseño móvil no lo tiene. En escritorio y en el resto de las páginas sigue. Como la suscripción vive en el pie, estas dos páginas no ofrecen suscribirse en móvil; si el cliente lo quiere, hay que ponerla en otro lugar.
+
+## Accesibilidad de Perspectives y el artículo (2.10)
+
+- Foco visible global en `globals.css` (`:focus-visible` con el color de acento); las tarjetas siguen con su propio contorno por `focus-within`.
+- `prefers-reduced-motion: reduce` apaga transiciones y animaciones CSS en todo el sitio; las animaciones de Atlas ya lo respetaban.
+- Las dos páginas llevan `lang` según `uiText.meta.locale` (inglés), porque su texto de interfaz está en inglés y el resto del sitio sigue en español.
+- El encabezado "Keep on reading" de las lecturas relacionadas queda solo para lectores de pantalla en escritorio (`lg:sr-only`), para que el `aside` tenga nombre y la jerarquía `h2` a `h3` no se rompa.
+- Contrastes medidos con los tokens: texto 14.2, acento 12.4, texto atenuado 4.7 (AA). El dorado (1.65) solo se usa en bordes, nunca en texto.
+- Sin JavaScript: el filtro es un formulario GET con botón dentro de `noscript`, y la paginación y las tarjetas son enlaces.
