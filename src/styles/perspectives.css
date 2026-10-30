@@ -48,3 +48,10 @@
     mask-image: linear-gradient(to bottom, var(--color-text) calc(100% - var(--panel-fade)), transparent);
   }
 }
+
+/* En móvil, Perspectives y el artículo no llevan pie (el diseño no lo tiene). */
+@media not (min-width: 64rem) {
+  body:has(.panel-page) > footer {
+    display: none;
+  }
+}

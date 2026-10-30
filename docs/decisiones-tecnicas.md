@@ -125,3 +125,5 @@ El resultado se escribe en `src/lib/atlas/map-calibration.ts` (generado, no se e
 **Compartir.** Los enlaces se arman con `buildShareLinks` (con pruebas) y son enlaces normales, que funcionan sin JavaScript. Solo "copiar enlace" necesita JavaScript (`CopyLinkButton`, usa el portapapeles del navegador). La URL completa sale de `NEXT_PUBLIC_SITE_URL`.
 
 **Pendiente.** El buscador de la cabecera móvil del diseño no se incluyó (no hay búsqueda en el alcance). Los iconos de Facebook y X son trazos simples, marcadores hasta tener los oficiales. Para probar en un navegador de escritorio hay que reducir la ventana: Chrome sin interfaz no baja de unos 500 px.
+
+**Sin pie en móvil.** En Perspectives y en el artículo el pie (con la suscripción) se oculta abajo de 64rem con `body:has(.panel-page) > footer` en `src/styles/perspectives.css`, porque el diseño móvil no lo tiene. En escritorio y en el resto de las páginas sigue. Como la suscripción vive en el pie, estas dos páginas no ofrecen suscribirse en móvil; si el cliente lo quiere, hay que ponerla en otro lugar.
