@@ -5,8 +5,9 @@ Instrucciones para construir el listado de Perspectives y la página de artícul
 ## Estado
 
 - **Parte A (2.1 a 2.6): hecha.** Con pruebas.
-- **Parte B (2.7 a 2.9): hecha para escritorio**, según el diseño del cliente (ver `docs/decisiones-tecnicas.md`). Falta la versión móvil, la revisión de accesibilidad (2.10) y el estado de carga (`loading.tsx`).
-- **Parte C (2.11): pendiente.** Se hace en producción, en Vercel (https://twsu-two.vercel.app), igual que 0.12.
+- **Parte B (2.7 a 2.10): hecha**, en escritorio y móvil según el diseño del cliente, con la revisión de accesibilidad (ver `docs/decisiones-tecnicas.md`). No se hizo `loading.tsx`: la página ya usa `Suspense` y prerenderiza en parte.
+- **Parte C (2.11): hecha.** Comprobada en producción en Vercel (https://twsu-two.vercel.app) por el cliente: publicar, editar y despublicar en Studio se refleja sin desplegar.
+- **Fase 2 cerrada.** Siguen abiertas las preguntas de abajo (subtítulo de portada, autor, cabecera) y la Home, que sigue provisional.
 
 ## Objetivo de la fase
 
@@ -318,20 +319,20 @@ Antes de empezar la Parte B deben estar listos los pendientes de diseño del cli
 **Objetivo.** Confirmar en producción que Perspectives y el artículo aguantan antes de empezar la Fase 3.
 
 **Checklist**
-- [ ] `/perspectives` muestra el destacado y 10 artículos; la página 2 no repite el destacado
-- [ ] `/perspectives?category=branding` filtra, y cambiar de categoría vuelve a la página 1
-- [ ] `/perspectives?page=99` y `?category=xxx` no rompen la página
-- [ ] Cada tarjeta abre su artículo, que muestra portada, texto y 3 relacionadas
-- [ ] Publicar un artículo nuevo en Studio hace que aparezca en el listado en menos de un minuto, sin desplegar
-- [ ] Ese artículo nuevo, publicado después del último build, abre con 200 en `/perspectives/<slug>`
-- [ ] Editar el título o el texto de un artículo publicado se refleja en el listado y en su página, sin desplegar
-- [ ] Quitar `featured` cambia el destacado de Perspectives y de Home
-- [ ] Despublicar un artículo hace que desaparezca del listado, y su URL da 404
-- [ ] Un artículo con `publishedAt` futuro no aparece (y se confirma la limitación de `docs/decisiones-tecnicas.md`: aparece hasta la siguiente invalidación)
-- [ ] `/perspectives/no-existe` da 404 real (`curl -s -o /dev/null -w "%{http_code}"`)
-- [ ] Compartir un artículo muestra su portada y resumen
-- [ ] Lighthouse de `/perspectives` y de un artículo sin problemas graves de accesibilidad y con un LCP razonable
-- [ ] El build no tiene avisos y la lógica nueva de `lib/perspectives` y `lib/articles` tiene pruebas
+- [x] `/perspectives` muestra el destacado y 10 artículos; la página 2 no repite el destacado
+- [x] `/perspectives?category=branding` filtra, y cambiar de categoría vuelve a la página 1
+- [x] `/perspectives?page=99` y `?category=xxx` no rompen la página
+- [x] Cada tarjeta abre su artículo, que muestra portada, texto y 3 relacionadas
+- [x] Publicar un artículo nuevo en Studio hace que aparezca en el listado en menos de un minuto, sin desplegar
+- [x] Ese artículo nuevo, publicado después del último build, abre con 200 en `/perspectives/<slug>`
+- [x] Editar el título o el texto de un artículo publicado se refleja en el listado y en su página, sin desplegar
+- [x] Quitar `featured` cambia el destacado de Perspectives y de Home
+- [x] Despublicar un artículo hace que desaparezca del listado, y su URL da 404
+- [x] Un artículo con `publishedAt` futuro no aparece (y se confirma la limitación de `docs/decisiones-tecnicas.md`: aparece hasta la siguiente invalidación)
+- [x] `/perspectives/no-existe` da 404 real (`curl -s -o /dev/null -w "%{http_code}"`)
+- [x] Compartir un artículo muestra su portada y resumen
+- [x] Lighthouse de `/perspectives` y de un artículo sin problemas graves de accesibilidad y con un LCP razonable
+- [x] El build no tiene avisos y la lógica nueva de `lib/perspectives` y `lib/articles` tiene pruebas
 
 ---
 
