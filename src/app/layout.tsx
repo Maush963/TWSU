@@ -5,6 +5,7 @@ import { uiText } from "@/content/ui-text";
 import { publicEnv } from "@/lib/env";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { Tracking } from "@/components/layout/Tracking";
 
 export const metadata: Metadata = {
   metadataBase: new URL(publicEnv.NEXT_PUBLIC_SITE_URL),
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </div>
         <Footer />
+        <Tracking />
       </body>
     </html>
   );

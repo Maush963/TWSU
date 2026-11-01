@@ -144,3 +144,11 @@ El resultado se escribe en `src/lib/atlas/map-calibration.ts` (generado, no se e
 - `/api/subscribe` usa el esquema compartido, el antispam y el límite por IP. Un envío descartado por campo trampa o por rapidez responde igual que uno normal; uno que pasa el límite responde 429, que no revela nada sobre el correo.
 - Límite por IP: 5 intentos cada 10 minutos, en memoria de cada instancia. En Vercel las instancias no comparten el contador, así que frena abusos simples pero no un ataque repartido. El almacén se puede cambiar sin tocar `checkRateLimit`.
 - La IP sale de `x-forwarded-for` (primer valor). Sin cabecera, todos los envíos comparten la clave `unknown`.
+
+## Medición (3.4)
+
+- `buildTrackingScripts` (`src/lib/tracking/scripts.ts`) recibe los tres identificadores y devuelve los scripts a cargar. Cada identificador se valida con un formato estricto (Google `G-`, `GT-`, `AW-` o `GTM-`; Meta solo dígitos; TikTok mayúsculas y números). Uno que no coincide se descarta, así que un valor mal pegado o con comillas nunca entra en el código de la página.
+- Un identificador `GTM-` carga Tag Manager; los demás de Google cargan `gtag.js`. Meta y TikTok usan el fragmento oficial con `PageView` y `page`. No hay eventos propios (sección 13).
+- `Tracking` (en el layout) los pinta con `next/script` y `afterInteractive`. Sin identificadores no pinta nada, así que hoy el sitio no carga ningún script de medición.
+- Comprobado con identificadores de prueba: aparecen en el HTML los scripts de Google y de Meta, y sin variables no aparece ninguno.
+- **Antes de cargar los códigos reales en producción hay que decidir el banner de consentimiento de cookies.** Hoy los scripts se cargan siempre que existan los identificadores.
