@@ -101,11 +101,11 @@ export function LinkedInIcon(props: IconProps) {
   );
 }
 
-export function YouTubeIcon(props: IconProps) {
+export function MailIcon(props: IconProps) {
   return (
     <svg {...base} {...props}>
-      <rect x="3" y="6" width="18" height="12" rx="3.5" />
-      <path d="M10.5 9.5v5l4-2.5z" />
+      <rect x="3" y="5.5" width="18" height="13" rx="2" />
+      <path d="M3.5 7l8.5 6 8.5-6" />
     </svg>
   );
 }

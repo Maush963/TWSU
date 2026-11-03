@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { uiText } from "@/content/ui-text";
 import { SOCIAL_LINKS } from "@/content/social";
-import { InstagramIcon, LinkedInIcon, OrnamentIcon, TikTokIcon, YouTubeIcon } from "@/components/ui/icons";
+import { InstagramIcon, MailIcon, OrnamentIcon, TikTokIcon } from "@/components/ui/icons";
 import { SubscribeBar } from "./SubscribeBar";
 
 // Privacy todavía no tiene página (pendiente del cliente): se muestra como texto, sin enlace.
@@ -14,8 +14,7 @@ const LINKS = [
 const SOCIAL_ICONS = {
   instagram: InstagramIcon,
   tiktok: TikTokIcon,
-  linkedin: LinkedInIcon,
-  youtube: YouTubeIcon,
+  email: MailIcon,
 } as const;
 
 export function Footer() {
@@ -48,19 +47,20 @@ export function Footer() {
         <SubscribeBar />
         <div className="flex items-center gap-4">
           <ul aria-label={uiText.footer.social} className="flex items-center gap-2">
-            {SOCIAL_LINKS.map(({ id, label, href }) => {
+            {SOCIAL_LINKS.map(({ id, label, href, external }) => {
               const Icon = SOCIAL_ICONS[id];
+              const className = "text-accent hover:text-gold";
               return (
                 <li key={id}>
-                  <a
-                    href={href}
-                    aria-label={label}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-accent hover:text-gold"
-                  >
-                    <Icon className="size-6" />
-                  </a>
+                  {external ? (
+                    <a href={href} aria-label={label} target="_blank" rel="noopener noreferrer" className={className}>
+                      <Icon className="size-6" />
+                    </a>
+                  ) : (
+                    <Link href={href} aria-label={label} className={className}>
+                      <Icon className="size-6" />
+                    </Link>
+                  )}
                 </li>
               );
             })}
