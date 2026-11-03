@@ -23,6 +23,8 @@ export const uiText = {
     atlas: "Atlas",
     perspectives: "Perspectives",
     about: "About",
+    search: "Search",
+    exploreAtlas: "Explore the atlas",
     join: "Join",
     menuOpen: "Abrir menú",
     menuClose: "Cerrar menú",
@@ -48,6 +50,33 @@ export const uiText = {
   },
   home: {
     title: "Inicio",
+    heroTitle: "We explore",
+    heroDescription:
+      "The creative forces behind the way we travel. We discover, analyze, and celebrate the ideas and people shaping how the world sees itself, and experiences places.",
+    heroBelief:
+      "Because we know tourism is a transformative force — one that inspires, connects, and expands what human creativity can make possible.",
+    values: [
+      {
+        title: "Who",
+        description:
+          "We are an independent tourism standards organization celebrating the people, places and ideas moving tourism forward.",
+      },
+      {
+        title: "What",
+        description:
+          "We discover, recognize and amplify the forces shaping a better way to travel.",
+      },
+      {
+        title: "Why",
+        description:
+          "Because when tourism moves in the right direction, it has the power to save the world.",
+      },
+      {
+        title: "How",
+        description:
+          "We research, evaluate and recognize tourism through independent standards designed to spotlight meaningful work and measurable impact.",
+      },
+    ],
     featured: "Destacado",
     recent: "Recientes",
     empty: "Todavía no hay artículos.",

@@ -55,4 +55,14 @@
   --article-cover-ratio-mobile: 2.4;
   --article-measure: 46rem;
   --panel-fade: 4rem;
+
+  /* home hero */
+  --home-hero-height: 21.4rem;
+  --home-hero-mobile-height: 36rem;
+  --home-hero-mobile-art-height: 48%;
+  --home-hero-tablet-art-height: 55%;
+  --home-hero-art-width: 62%;
+  --home-hero-copy-width: 24rem;
+  --home-hero-side-padding: 9vw;
+  --home-overview-side-padding: 6.7vw;
 }

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { uiText } from "@/content/ui-text";
-import { CloseIcon, MenuIcon } from "@/components/ui/icons";
+import { ArrowRightIcon, CloseIcon, MenuIcon, SearchIcon } from "@/components/ui/icons";
 
 interface MobileMenuProps {
   links: readonly { href: string; label: string }[];
@@ -50,6 +50,26 @@ export function MobileMenu({ links }: MobileMenuProps) {
                 </Link>
               </li>
             ))}
+            <li className="border-t border-gold-soft">
+              <Link
+                href="/perspectives"
+                onClick={() => setOpen(false)}
+                className="flex items-center gap-2 px-4 py-4 font-ui uppercase tracking-caps text-accent"
+              >
+                <SearchIcon className="size-4" />
+                {uiText.nav.search}
+              </Link>
+            </li>
+            <li className="border-t border-gold-soft p-4">
+              <Link
+                href="/atlas"
+                onClick={() => setOpen(false)}
+                className="flex items-center justify-between gap-3 bg-accent px-5 py-4 font-ui uppercase tracking-caps text-surface"
+              >
+                {uiText.nav.exploreAtlas}
+                <ArrowRightIcon className="size-4" />
+              </Link>
+            </li>
           </ul>
         </nav>
       )}
