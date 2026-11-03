@@ -10,7 +10,7 @@ export const metadata: Metadata = { title: uiText.about.title };
 export default function AboutPage() {
   return (
     <main lang={uiText.meta.locale} className="panel-page panel-page-footer flex min-h-0 flex-1 flex-col">
-      <div className="panel-scroll flex-1">
+      <div className="panel-scroll about-scroll flex-1">
         <AboutIntro />
         <CouncilOfFive />
       </div>

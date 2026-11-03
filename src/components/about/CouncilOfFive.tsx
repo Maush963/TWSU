@@ -5,16 +5,17 @@ import { uiText } from "@/content/ui-text";
 
 export function CouncilOfFive() {
   return (
-    <section aria-labelledby="council-title" className="about-council">
-      {/* Fondo decorativo: un cielo suave que se funde con el color de la página. */}
-      <Image
-        src="/about/fondo-consejo.webp"
-        alt={uiText.about.councilBackgroundAlt}
-        fill
-        sizes="100vw"
-        className="-z-20 object-cover object-bottom opacity-40"
-      />
-      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-b from-bg via-bg/60 to-transparent" />
+    <section aria-labelledby="council-title" className="about-council bg-surface">
+      {/* Fondo decorativo: un cielo que se funde con el color de la página y llega de borde a borde. */}
+      <div aria-hidden="true" className="about-council-bg">
+        <Image
+          src="/about/fondo-consejo.webp"
+          alt={uiText.about.councilBackgroundAlt}
+          fill
+          sizes="100vw"
+          className="origin-bottom scale-125 object-cover object-bottom opacity-60"
+        />
+      </div>
 
       <div className="flex flex-wrap items-end justify-between gap-x-8 gap-y-2 pb-8">
         <h2 id="council-title" className="font-display text-2xl uppercase leading-none text-accent">

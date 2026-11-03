@@ -3,7 +3,25 @@
 .about-council {
   position: relative;
   isolation: isolate;
+  overflow: hidden;
   padding: calc(var(--space-8) * 2) var(--space-4);
+}
+
+/* Fondo del consejo: se funde con el color de la página en una subida larga y suave, sin corte. */
+.about-council-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    color-mix(in srgb, var(--color-text) 6%, transparent) 12%,
+    color-mix(in srgb, var(--color-text) 20%, transparent) 26%,
+    color-mix(in srgb, var(--color-text) 45%, transparent) 42%,
+    color-mix(in srgb, var(--color-text) 72%, transparent) 58%,
+    color-mix(in srgb, var(--color-text) 92%, transparent) 74%,
+    var(--color-text)
+  );
 }
 
 .about-card-image {
@@ -21,5 +39,12 @@
 @media (min-width: 64rem) {
   .about-council {
     padding: calc(var(--space-8) * 2) var(--home-overview-side-padding) calc(var(--space-8) * 3);
+  }
+}
+
+/* La página termina donde termina el fondo del consejo: sin espacio extra al desplazar. */
+@media (min-width: 64rem) {
+  .panel-scroll.about-scroll {
+    padding-bottom: 0;
   }
 }
