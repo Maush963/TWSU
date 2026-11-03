@@ -152,3 +152,12 @@ El resultado se escribe en `src/lib/atlas/map-calibration.ts` (generado, no se e
 - `Tracking` (en el layout) los pinta con `next/script` y `afterInteractive`. Sin identificadores no pinta nada, así que hoy el sitio no carga ningún script de medición.
 - Comprobado con identificadores de prueba: aparecen en el HTML los scripts de Google y de Meta, y sin variables no aparece ninguno.
 - **Antes de cargar los códigos reales en producción hay que decidir el banner de consentimiento de cookies.** Hoy los scripts se cargan siempre que existan los identificadores.
+
+## Página About (3.6)
+
+- **Estructura.** `AboutIntro` (hero y los bloques Who, What, Why y How, con los mismos textos y estilos de la Home) y `CouncilOfFive` (cinco personajes sobre un fondo de cielo). En escritorio la página mide el alto de la ventana y el contenido se desplaza dentro, con el pie siempre a la vista, como en Perspectives. `panel-page-footer` hace que About conserve el pie en móvil, a diferencia de Perspectives y el artículo.
+- **Imágenes.** Los originales (PNG de unos 2 MB cada uno) están en `scripts/data/about-source/`, fuera del repo (`.gitignore`). `npm run prepare:about` recorta cada personaje a busto (640 por 600, la proporción de la tarjeta) y los convierte a WebP en `public/about/` (de 24 a 109 KB cada uno). El encuadre de cada uno está en el script. `retrato-mediterraneo.png` (los cinco juntos) quedó sin usar.
+- **Contenido fijo.** Nombre, categoría, texto e imagen de cada personaje viven en `src/content/characters.ts`; se pasan a Studio si se decide así en 3.5. El texto de Camille se copió tal cual del diseño ("Trends never stands still"), con el error de concordancia. Los `alt` están en inglés porque la página declara `lang="en"`.
+- **Cabecera y Home.** El hero y los cuatro bloques de About son los mismos que construyó Sebastián para la Home; `AboutIntro` los repite en lugar de compartirlos para no tocar su archivo. Si la Home cambia de diseño, no hay que desarmar nada.
+- **Móvil.** No hay diseño de móvil de About. Se adaptó con las mismas reglas del resto: personajes en 2 columnas y flujo normal con el pie visible.
+- **Diferencia con el diseño.** El mockup muestra el contenido desvaneciéndose también bajo la cabecera al desplazar; aquí solo hay desvanecido al pie, como en las otras páginas con paneles.

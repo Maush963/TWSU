@@ -47,3 +47,6 @@ next-env.d.ts
 
 # generado por npm run typegen
 /sanity-schema.json
+
+# originales de About, pesan mucho; ver npm run prepare:about
+/scripts/data/about-source/

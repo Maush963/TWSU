@@ -65,4 +65,8 @@
   --home-hero-copy-width: 24rem;
   --home-hero-side-padding: 9vw;
   --home-overview-side-padding: 6.7vw;
+
+  /* about */
+  --about-card-ratio: 1.067;
+  --about-card-gap: 1.5rem;
 }

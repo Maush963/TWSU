@@ -5,7 +5,7 @@ Instrucciones para construir `/about`, `/join`, la conexión real con la herrami
 ## Estado
 
 - **Parte A (3.1 a 3.5): en curso.** 3.1, 3.2 y 3.4 hechas (validación, antispam y scripts de medición, con pruebas). Faltan 3.3 (adaptador) y 3.5 (About). Lógica pura y probada, sin diseño y sin proveedor de correo.
-- **Parte B (3.6 a 3.8): bloqueada por diseño.** Falta el diseño del cliente de About y de Join (ver bloqueos).
+- **Parte B (3.6 a 3.9): en curso.** 3.6 (About) hecha en escritorio y con una adaptación propia para móvil, con contenido fijo en `src/content/characters.ts`. Falta el diseño de Join (3.7 y 3.8) y la revisión de accesibilidad (3.9).
 - **Parte C (3.9 a 3.11): bloqueada por datos del cliente.** Proveedor de correo y códigos de medición.
 
 ## Objetivo de la fase

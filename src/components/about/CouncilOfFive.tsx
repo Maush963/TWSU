@@ -1,0 +1,54 @@
+import Image from "next/image";
+import { KeyIcon } from "@/components/ui/icons";
+import { CHARACTERS } from "@/content/characters";
+import { uiText } from "@/content/ui-text";
+
+export function CouncilOfFive() {
+  return (
+    <section aria-labelledby="council-title" className="about-council">
+      {/* Fondo decorativo: un cielo suave que se funde con el color de la página. */}
+      <Image
+        src="/about/fondo-consejo.webp"
+        alt={uiText.about.councilBackgroundAlt}
+        fill
+        sizes="100vw"
+        className="-z-20 object-cover object-bottom opacity-40"
+      />
+      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-b from-bg via-bg/60 to-transparent" />
+
+      <div className="flex flex-wrap items-end justify-between gap-x-8 gap-y-2 pb-8">
+        <h2 id="council-title" className="font-display text-2xl uppercase leading-none text-accent">
+          {uiText.about.councilTitle}
+        </h2>
+        <p className="font-body text-xs uppercase tracking-caps-wide">{uiText.about.councilSubtitle}</p>
+      </div>
+
+      <ul className="grid grid-cols-2 gap-x-4 gap-y-8 lg:grid-cols-5 lg:gap-x-6">
+        {CHARACTERS.map((character) => (
+          <li key={character.id} className="flex flex-col gap-4">
+            <Image
+              src={character.image}
+              alt={character.alt}
+              width={720}
+              height={675}
+              sizes="(min-width: 64rem) 17vw, 50vw"
+              className="about-card-image"
+            />
+            <div className="flex items-start justify-between gap-2 border-b border-gold pb-4">
+              <h3 className="font-display text-xl uppercase leading-none text-accent">
+                {character.nameLines.map((line) => (
+                  <span key={line} className="block">
+                    {line}
+                  </span>
+                ))}
+              </h3>
+              <KeyIcon className="mt-1 size-10 shrink-0 rotate-90 text-gold" />
+            </div>
+            <p className="font-body text-sm italic uppercase tracking-caps">{character.category}</p>
+            <p className="font-body">{character.text}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}

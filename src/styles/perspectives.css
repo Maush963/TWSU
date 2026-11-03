@@ -49,9 +49,10 @@
   }
 }
 
-/* En móvil, Perspectives y el artículo no llevan pie (el diseño no lo tiene). */
+/* En móvil, Perspectives y el artículo no llevan pie (el diseño no lo tiene). About lo conserva
+   con `panel-page-footer`. */
 @media not (min-width: 64rem) {
-  body:has(.panel-page) > footer {
+  body:has(.panel-page:not(.panel-page-footer)) > footer {
     display: none;
   }
 }

@@ -1,0 +1,25 @@
+/* Página About: "The Council of Five". Solo usa tokens. */
+
+.about-council {
+  position: relative;
+  isolation: isolate;
+  padding: calc(var(--space-8) * 2) var(--space-4);
+}
+
+.about-card-image {
+  aspect-ratio: var(--about-card-ratio);
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 40rem) {
+  .about-council {
+    padding-inline: var(--space-8);
+  }
+}
+
+@media (min-width: 64rem) {
+  .about-council {
+    padding: calc(var(--space-8) * 2) var(--home-overview-side-padding) calc(var(--space-8) * 3);
+  }
+}

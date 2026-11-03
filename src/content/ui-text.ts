@@ -136,6 +136,10 @@ export const uiText = {
   },
   about: {
     title: "About",
+    overviewLabel: "Who we are, what we do, why and how",
+    councilTitle: "The Council of Five",
+    councilSubtitle: "The icons that shape our creative criteria",
+    councilBackgroundAlt: "",
   },
   join: {
     title: "Join",
