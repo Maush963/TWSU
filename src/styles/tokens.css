@@ -69,4 +69,6 @@
   /* about */
   --about-card-ratio: 1.067;
   --about-card-gap: 1.5rem;
+  --about-hero-ratio: 4.06;
+  --about-hero-focus-y: 22%;
 }

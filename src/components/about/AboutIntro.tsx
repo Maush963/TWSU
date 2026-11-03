@@ -5,13 +5,13 @@ import { uiText } from "@/content/ui-text";
 export function AboutIntro() {
   return (
     <>
-      <section aria-labelledby="about-hero-title" className="home-hero bg-bg">
-        <div className="home-hero-image">
+      <section aria-labelledby="about-hero-title" className="home-hero about-hero bg-bg">
+        <div className="home-hero-image about-hero-image">
           <Image
             src="/home/222Characters_ProfilesCOMP.png"
             alt=""
             fill
-            sizes="(max-width: 48rem) 100vw, 62vw"
+            sizes="100vw"
             className="object-contain object-right-bottom"
             priority
           />

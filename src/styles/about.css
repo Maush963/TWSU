@@ -36,6 +36,24 @@
   }
 }
 
+/* Hero de escritorio: la imagen cubre todo el ancho y se recorta por abajo, como en el diseño.
+   El alto sigue al ancho; en pantallas angostas manda el alto mínimo de la Home. */
+@media (min-width: 64rem) {
+  .about-hero {
+    aspect-ratio: var(--about-hero-ratio);
+  }
+
+  .home-hero-image.about-hero-image {
+    inset: 0;
+    width: 100%;
+  }
+
+  .about-hero-image img {
+    object-fit: cover;
+    object-position: 50% var(--about-hero-focus-y);
+  }
+}
+
 @media (min-width: 64rem) {
   .about-council {
     padding: calc(var(--space-8) * 2) var(--home-overview-side-padding) calc(var(--space-8) * 3);
