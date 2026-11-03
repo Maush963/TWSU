@@ -8,7 +8,7 @@ export function AboutIntro() {
       <section aria-labelledby="about-hero-title" className="home-hero about-hero bg-bg">
         <div className="home-hero-image about-hero-image">
           <Image
-            src="/home/222Characters_ProfilesCOMP.png"
+            src="/about/hero-personajes.webp"
             alt=""
             fill
             sizes="100vw"

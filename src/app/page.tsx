@@ -13,7 +13,7 @@ export default function HomePage() {
       >
         <div className="home-hero-image">
           <Image
-            src="/home/222Characters_ProfilesCOMP.png"
+            src="/about/hero-personajes.webp"
             alt=""
             fill
             sizes="(max-width: 48rem) 100vw, 62vw"

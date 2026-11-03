@@ -1,4 +1,4 @@
-// Prepara las imágenes de About: recorta cada personaje a busto y convierte todo a WebP.
+// Prepara las imágenes de About (y el hero que comparte con la Home): recorta cada personaje a busto y convierte todo a WebP.
 //
 // Uso: npm run prepare:about
 //
@@ -35,5 +35,8 @@ for (const { file, left, top } of PORTRAITS) {
 
 // Fondo de "The Council of Five". Es un adorno: va suave y a 1672 px de ancho.
 await sharp(`${SOURCE_DIR}/fondo-consejo.png`).webp({ quality: 70 }).toFile(`${OUTPUT_DIR}/fondo-consejo.webp`);
+
+// Hero de About y de la Home: los cinco personajes sobre la pared. Conserva el tamaño original.
+await sharp(`${SOURCE_DIR}/hero-personajes.png`).webp({ quality: 80 }).toFile(`${OUTPUT_DIR}/hero-personajes.webp`);
 
 console.log("Imágenes de About escritas en", OUTPUT_DIR);
