@@ -18,7 +18,7 @@ interface AtlasMobileFiltersProps {
 
 const SELECT_CLASS = "w-full appearance-none border border-gold bg-bg py-1 pl-2 pr-6 font-body text-sm";
 const LABEL_CLASS = "w-14 shrink-0 text-right font-body text-xs uppercase";
-const CHEVRON_CLASS = "pointer-events-none absolute right-1 top-1/2 size-4 -translate-y-1/2 text-accent";
+const CHEVRON_CLASS = "pointer-events-none absolute right-1 top-1/2 size-4 -translate-y-1/2 text-gold";
 
 // Dos selectores apilados: región y categoría. Cada opción trae el enlace que ya conserva los
 // demás filtros. Sin JavaScript, el formulario GET con su botón hace lo mismo.
