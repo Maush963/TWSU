@@ -42,14 +42,14 @@
   --atlas-globe-dock-height: calc(var(--atlas-globe-height) + var(--atlas-globe-fade) * 1.5);
 }
 
-/* Solo queda a la vista el 80 % del globo (se baja un 20 %), y el relleno alcanza justo para que la
+/* Solo queda a la vista el 55 % del globo (se baja un 45 %), y el relleno alcanza justo para que la
    última tarjeta salga completa por encima de él. */
 .atlas-mobile {
-  --atlas-globe-drop: calc(var(--atlas-globe-height) * -0.2);
+  --atlas-globe-drop: calc(var(--atlas-globe-height) * -0.45);
 }
 
 .atlas-mobile-list {
-  padding-bottom: calc(var(--atlas-globe-height) * 0.8 + var(--atlas-globe-fade) / 2);
+  padding-bottom: calc(var(--atlas-globe-height) * 0.55 + var(--atlas-globe-fade) / 2);
 }
 
 .atlas-globe-dock {

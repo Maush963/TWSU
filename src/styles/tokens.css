@@ -7,6 +7,8 @@
   --color-gold: #e2b47c;
   --color-gold-soft: #e6c294;
   --color-muted: #6f6a60;
+  --color-muted-soft: #8a857b; /* texto del pie, más claro que --color-muted */
+  --color-subtitle: #2f2f2d; /* subtítulo del Atlas: gris neutro oscuro, no el verde del texto */
   --color-pin: #1c2722;
   --color-grid: #ece0cc;
   --color-placeholder: #afafaf;

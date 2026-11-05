@@ -28,7 +28,7 @@ export function AtlasMobileList({ groups, activeRegion }: AtlasMobileListProps) 
               <li key={pin.id}>
                 <Link
                   href={`/perspectives/${pin.slug}`}
-                  className="flex gap-4 bg-surface p-2 shadow-sm ring-1 ring-gold-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                  className="flex gap-4 bg-surface p-2 shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                 >
                   <span className="block aspect-square w-2/5 shrink-0 bg-placeholder">
                     {pin.cover && (
@@ -41,7 +41,7 @@ export function AtlasMobileList({ groups, activeRegion }: AtlasMobileListProps) 
                       />
                     )}
                   </span>
-                  <span className="flex min-w-0 flex-1 flex-col gap-2">
+                  <span className="flex min-w-0 flex-1 flex-col gap-1 pt-3">
                     <span className="font-display text-xl uppercase leading-tight text-accent">{pin.title}</span>
                     <span className="line-clamp-4 font-body">{pin.excerpt}</span>
                     <span className="mt-auto flex items-center gap-2 self-end border-b border-gold text-sm text-accent">

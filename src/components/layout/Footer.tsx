@@ -21,7 +21,7 @@ const SOCIAL_ICONS = {
 
 export function Footer() {
   return (
-    <footer aria-label={uiText.footer.label} className="px-4 pb-4 font-body lg:px-8 text-sm text-muted">
+    <footer aria-label={uiText.footer.label} className="px-4 pb-4 font-body lg:px-8 text-sm text-muted-soft">
       <Image
         src={BRAND_IMAGES.divider.src}
         alt=""

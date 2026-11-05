@@ -13,7 +13,7 @@ export function Logo() {
         width={BRAND_IMAGES.logo.width}
         height={BRAND_IMAGES.logo.height}
         priority
-        className="h-10 w-auto lg:h-[3.68rem]"
+        className="h-12 w-auto lg:h-[3.68rem]"
       />
     </Link>
   );

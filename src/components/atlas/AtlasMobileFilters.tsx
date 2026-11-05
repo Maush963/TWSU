@@ -36,7 +36,7 @@ export function AtlasMobileFilters({
   };
 
   return (
-    <form action="/atlas" method="get" className="flex flex-1 flex-col gap-2 lg:hidden">
+    <form action="/atlas" method="get" className="flex flex-1 flex-col justify-center gap-2 lg:hidden">
       <div className="flex items-center gap-2">
         <label htmlFor="atlas-region" className={LABEL_CLASS}>
           {uiText.atlas.mobile.explore}
