@@ -41,8 +41,7 @@
   /* atlas */
   --atlas-pin-size: 1.75rem;
   --atlas-grid-size: 1.75rem;
-  --atlas-tooltip-width: 20rem;
-  --atlas-thumb-size: 6rem;
+  --atlas-panel-width: 26rem;
   --atlas-compass-size: 4rem;
   --atlas-key-size: 1.25rem;
   --atlas-globe-height: 59.4vw;

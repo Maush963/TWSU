@@ -23,8 +23,6 @@ export const uiText = {
     atlas: "Atlas",
     perspectives: "Perspectives",
     about: "About",
-    search: "Search",
-    exploreAtlas: "Explore the atlas",
     join: "Join",
     menuOpen: "Abrir menú",
     menuClose: "Cerrar menú",
@@ -93,6 +91,7 @@ export const uiText = {
     applyFilter: "Apply",
     edition: "EDITION",
     readMore: "Read more",
+    panelLabel: "Caso seleccionado",
     compass: "Brújula",
     filters: {
       label: "Filtros del atlas",

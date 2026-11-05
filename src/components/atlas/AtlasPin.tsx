@@ -1,37 +1,52 @@
-import Link from "next/link";
-import { TooltipCard } from "@/components/ui/TooltipCard";
-import type { PositionedPin } from "@/lib/atlas/collisions";
-import { AtlasTooltip } from "./AtlasTooltip";
+// Un punto del mapa, posicionado en porcentaje. Al activarlo (clic, Enter o Espacio) su caso
+// pasa al panel derecho. El seleccionado crece y lleva un anillo pulsante para distinguirlo.
+interface AtlasPinProps {
+  pin: {
+    id: string;
+    title: string;
+    placeName: string;
+    displayX: number;
+    displayY: number;
+  };
+  selected: boolean;
+  onSelect: (id: string) => void;
+}
 
-// Un punto es un enlace al artículo, posicionado en porcentaje sobre el mapa. La tarjeta
-// flotante es visual; el nombre y la descripción para lectores de pantalla van en el enlace.
-export function AtlasPin({ pin }: { pin: PositionedPin }) {
-  const label = `${pin.title}, ${pin.placeName}`;
-  const descriptionId = `atlas-pin-${pin.id}`;
-
+export function AtlasPin({ pin, selected, onSelect }: AtlasPinProps) {
   return (
     <div
-      className="absolute -translate-x-1/2 -translate-y-1/2 focus-within:z-20 hover:z-20"
+      className={`absolute -translate-x-1/2 -translate-y-1/2 ${selected ? "z-20" : "hover:z-10"}`}
       style={{ left: `${pin.displayX}%`, top: `${pin.displayY}%` }}
     >
-      <TooltipCard content={<AtlasTooltip pin={pin} />}>
-        <Link
-          href={`/perspectives/${pin.slug}`}
-          aria-label={label}
-          aria-describedby={descriptionId}
-          className="block size-pin rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+      <button
+        type="button"
+        aria-pressed={selected}
+        aria-label={`${pin.title}, ${pin.placeName}`}
+        onClick={() => onSelect(pin.id)}
+        className={`relative block size-pin cursor-pointer rounded-full transition-transform focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${selected ? "scale-150" : "hover:scale-125"}`}
+      >
+        {selected && (
+          <span
+            aria-hidden="true"
+            className="absolute -inset-1 animate-ping rounded-full ring-2 ring-accent"
+          />
+        )}
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          className="relative size-full drop-shadow"
         >
-          <svg viewBox="0 0 24 24" aria-hidden="true" className="size-full drop-shadow">
-            <circle cx="12" cy="12" r="11.5" className="fill-gold" />
-            <circle cx="12" cy="12" r="9" className="fill-pin" />
-            <circle cx="12" cy="12" r="4" className="fill-gold" />
-            <circle cx="12" cy="12" r="2" className="fill-pin" />
-          </svg>
-        </Link>
-      </TooltipCard>
-      <span id={descriptionId} className="sr-only">
-        {pin.excerpt}
-      </span>
+          <circle
+            cx="12"
+            cy="12"
+            r="11.5"
+            className={selected ? "fill-accent" : "fill-gold"}
+          />
+          <circle cx="12" cy="12" r="9" className="fill-pin" />
+          <circle cx="12" cy="12" r="4" className="fill-gold" />
+          <circle cx="12" cy="12" r="2" className="fill-pin" />
+        </svg>
+      </button>
     </div>
   );
 }

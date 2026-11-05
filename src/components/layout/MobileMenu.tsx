@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { uiText } from "@/content/ui-text";
-import { ArrowRightIcon, CloseIcon, MenuIcon, SearchIcon } from "@/components/ui/icons";
+import { CloseIcon, MenuIcon } from "@/components/ui/icons";
 
 interface MobileMenuProps {
   links: readonly { href: string; label: string }[];
@@ -45,31 +45,15 @@ export function MobileMenu({ links }: MobileMenuProps) {
           <ul className="flex flex-col">
             {links.map((link) => (
               <li key={link.href} className="border-t border-gold-soft">
-                <Link href={link.href} onClick={() => setOpen(false)} className="block px-4 py-4 font-ui uppercase tracking-caps text-accent">
+                <Link
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="block px-4 py-4 font-ui uppercase tracking-caps text-accent"
+                >
                   {link.label}
                 </Link>
               </li>
             ))}
-            <li className="border-t border-gold-soft">
-              <Link
-                href="/perspectives"
-                onClick={() => setOpen(false)}
-                className="flex items-center gap-2 px-4 py-4 font-ui uppercase tracking-caps text-accent"
-              >
-                <SearchIcon className="size-4" />
-                {uiText.nav.search}
-              </Link>
-            </li>
-            <li className="border-t border-gold-soft p-4">
-              <Link
-                href="/atlas"
-                onClick={() => setOpen(false)}
-                className="flex items-center justify-between gap-3 bg-accent px-5 py-4 font-ui uppercase tracking-caps text-surface"
-              >
-                {uiText.nav.exploreAtlas}
-                <ArrowRightIcon className="size-4" />
-              </Link>
-            </li>
           </ul>
         </nav>
       )}

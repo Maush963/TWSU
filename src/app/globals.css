@@ -39,8 +39,7 @@
   --spacing-4: var(--space-4);
   --spacing-8: var(--space-8);
   --spacing-pin: var(--atlas-pin-size);
-  --spacing-tooltip: var(--atlas-tooltip-width);
-  --spacing-thumb: var(--atlas-thumb-size);
+  --spacing-panel: var(--atlas-panel-width);
   --spacing-compass: var(--atlas-compass-size);
   --spacing-key: var(--atlas-key-size);
 
