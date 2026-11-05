@@ -58,11 +58,10 @@ El resultado se escribe en `src/lib/atlas/map-calibration.ts` (generado, no se e
 
 ## Diseño del cliente: tipografías, textos en inglés y piezas pendientes
 
-**Fuentes.** Albra Sans (títulos), Iowan Old Style (texto) y Myriad Pro (navegación, botones y etiquetas) se cargan con `next/font/local` desde `src/app/fonts.ts`; los archivos están en `src/app/fonts/` y alimentan `--font-display`, `--font-body` y `--font-ui`.
+**Fuentes.** Albra Sans (títulos) e Iowan Old Style, versión Bitstream (texto, navegación, botones y etiquetas; el mockup del atlas usa Iowan en todo lo que no es título) se cargan con `next/font/local` desde `src/app/fonts.ts`; los archivos están en `src/app/fonts/` y alimentan `--font-display`, `--font-body` y `--font-ui`.
 - **Albra Sans es una versión TRIAL.** Su licencia de prueba normalmente no permite usarla en producción; hay que comprar la licencia web o pedirle al cliente el archivo con licencia antes de publicar.
-- **Iowan Old Style** llegó como `.ttc`, formato que los navegadores no leen. Se extrajeron Roman, Italic y Bold a `.ttf` con fontTools. Tiene licencia de Apple: confirmar que se pueda servir en la web.
-- **Myriad Pro** (Adobe) tampoco tiene licencia web garantizada; confirmar con el cliente.
-- Dónde va Myriad Pro no estaba en el mockup: la puse en nav, botón del header y etiqueta del selector. Es un cambio de una clase (`font-ui`).
+- **Iowan Old Style** es la versión Bitstream (`.ttf` Roman, Italic, Bold, Bold Italic, Black y Black Italic). Sustituyó a las extraídas del `.ttc` de Apple, que se veían con "cuernos" en los remates al reducir el zoom. Confirmar que la licencia permita servirla en la web.
+- Myriad Pro se quitó: no aparece en el mockup. `--font-ui` ahora apunta a Iowan.
 
 **Idioma.** Los textos del mockup (cabecera, título del Atlas, "Explore by best", "Read more", pie) están en inglés en `ui-text`, como el diseño. El resto de la interfaz sigue en español. Falta confirmar con el cliente si todo el sitio va en inglés; cambiar es editar `ui-text.ts`.
 
