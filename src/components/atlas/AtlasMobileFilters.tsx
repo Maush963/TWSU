@@ -17,7 +17,7 @@ interface AtlasMobileFiltersProps {
 }
 
 const SELECT_CLASS = "w-full appearance-none border border-gold bg-bg py-1 pl-2 pr-5 font-body text-xs";
-const LABEL_CLASS = "w-11 shrink-0 text-right font-body text-xs uppercase";
+const LABEL_CLASS = "justify-self-end whitespace-nowrap text-right font-body text-xs uppercase";
 const CHEVRON_CLASS = "pointer-events-none absolute right-1 top-1/2 size-4 -translate-y-1/2 text-gold";
 
 // Dos selectores apilados: región y categoría. Cada opción trae el enlace que ya conserva los
@@ -36,12 +36,12 @@ export function AtlasMobileFilters({
   };
 
   return (
-    <form action="/atlas" method="get" className="flex flex-none flex-col justify-center gap-2 lg:hidden">
-      <div className="flex items-center gap-2">
+    <form action="/atlas" method="get" className="grid flex-none grid-cols-[auto_auto] items-center gap-x-4 gap-y-2 lg:hidden">
+      <div className="contents">
         <label htmlFor="atlas-region" className={LABEL_CLASS}>
           {uiText.atlas.mobile.explore}
         </label>
-        <div className="relative w-24 shrink-0">
+        <div className="relative w-24">
           <select
             id="atlas-region"
             name="region"
@@ -58,11 +58,11 @@ export function AtlasMobileFilters({
           <ChevronDownIcon className={CHEVRON_CLASS} />
         </div>
       </div>
-      <div className="flex items-center gap-2">
+      <div className="contents">
         <label htmlFor="atlas-category-mobile" className={LABEL_CLASS}>
           {uiText.atlas.mobile.byBest}
         </label>
-        <div className="relative w-24 shrink-0">
+        <div className="relative w-24">
           <select
             id="atlas-category-mobile"
             name="category"
