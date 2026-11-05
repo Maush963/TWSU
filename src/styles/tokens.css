@@ -8,7 +8,6 @@
   --color-gold-soft: #e6c294;
   --color-muted: #6f6a60;
   --color-pin: #1c2722;
-  --color-highlight: #c4472f;
   --color-grid: #ece0cc;
   --color-placeholder: #afafaf;
 
@@ -40,7 +39,7 @@
   --border-hairline: 1px;
 
   /* atlas */
-  --atlas-pin-size: 1.75rem;
+  --atlas-pin-size: 1.25rem;
   --atlas-grid-size: 1.75rem;
   --atlas-panel-width: 26rem;
   --atlas-compass-size: 5.5rem;

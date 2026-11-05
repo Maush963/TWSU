@@ -97,3 +97,15 @@
 body:has(.atlas-page) .explore-atlas-link {
   display: none;
 }
+
+/* Al elegir un punto de la insignia se encoge y se agranda una vez. */
+@keyframes atlas-pin-pop {
+  0% { transform: scale(1); }
+  30% { transform: scale(0.55); }
+  65% { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}
+
+.atlas-pin-pop {
+  animation: atlas-pin-pop 0.5s ease-out;
+}

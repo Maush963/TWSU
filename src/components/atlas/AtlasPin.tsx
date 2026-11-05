@@ -1,6 +1,6 @@
 // Un punto del mapa, posicionado en porcentaje. Al activarlo (clic, Enter o Espacio) su caso
-// pasa al panel derecho. El seleccionado cambia al color de resalte y lleva encima un pin de
-// ubicación (gota con punta) cuya punta cae justo sobre el punto.
+// pasa al panel derecho. El seleccionado invierte los colores (insignia dorada con borde y centro verdes)
+// y hace un parpadeo de tamaño al elegirlo (.atlas-pin-pop en atlas.css).
 interface AtlasPinProps {
   pin: {
     id: string;
@@ -33,35 +33,12 @@ export function AtlasPin({ pin, selected, onSelect }: AtlasPinProps) {
         <svg
           viewBox="0 0 24 24"
           aria-hidden="true"
-          className="size-full drop-shadow"
+          className={`size-full drop-shadow ${selected ? "atlas-pin-pop" : ""}`}
         >
-          <path
-            d={BADGE_PATH}
-            className={selected ? "fill-highlight" : "fill-pin"}
-          />
-          <circle
-            cx="12"
-            cy="12"
-            r="6.6"
-            className="fill-none stroke-gold"
-            strokeWidth="1.4"
-          />
-          <circle cx="12" cy="12" r="3.6" className="fill-gold" />
+          <path d={BADGE_PATH} className={selected ? "fill-gold stroke-accent" : "fill-pin"} strokeWidth="2" />
+          <circle cx="12" cy="12" r="6.6" className={`fill-none ${selected ? "stroke-accent" : "stroke-gold"}`} strokeWidth="1.4" />
+          <circle cx="12" cy="12" r="3.6" className={selected ? "fill-accent" : "fill-gold"} />
         </svg>
-        {selected && (
-          <svg
-            viewBox="0 0 24 32"
-            aria-hidden="true"
-            className="pointer-events-none absolute bottom-1/2 left-1/2 h-auto w-pin -translate-x-1/2 drop-shadow"
-          >
-            <path
-              d="M12 31C12 31 1.5 19 1.5 12a10.5 10.5 0 0 1 21 0C22.5 19 12 31 12 31z"
-              className="fill-highlight stroke-gold"
-              strokeWidth="1.2"
-            />
-            <circle cx="12" cy="12" r="4.5" className="fill-gold" />
-          </svg>
-        )}
       </button>
     </div>
   );
