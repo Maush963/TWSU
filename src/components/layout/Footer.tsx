@@ -1,7 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import { uiText } from "@/content/ui-text";
+import { BRAND_IMAGES } from "@/content/brand";
 import { SOCIAL_LINKS } from "@/content/social";
-import { InstagramIcon, MailIcon, OrnamentIcon, TikTokIcon } from "@/components/ui/icons";
+import { InstagramIcon, MailIcon, TikTokIcon } from "@/components/ui/icons";
 import { SubscribeBar } from "./SubscribeBar";
 
 // Privacy todavía no tiene página (pendiente del cliente): se muestra como texto, sin enlace.
@@ -20,11 +22,13 @@ const SOCIAL_ICONS = {
 export function Footer() {
   return (
     <footer aria-label={uiText.footer.label} className="px-4 pb-4 font-body lg:px-8 text-sm text-muted">
-      <div aria-hidden="true" className="flex items-center gap-4 py-2 text-gold">
-        <hr className="flex-1 border-gold-soft" />
-        <OrnamentIcon className="size-6" />
-        <hr className="flex-1 border-gold-soft" />
-      </div>
+      <Image
+        src={BRAND_IMAGES.divider.src}
+        alt=""
+        width={BRAND_IMAGES.divider.width}
+        height={BRAND_IMAGES.divider.height}
+        className="h-auto w-full py-2"
+      />
       <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-2">
         <ul className="flex flex-wrap items-center gap-4">
           {LINKS.map((link, index) => (

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { KeyIcon } from "@/components/ui/icons";
 import { CHARACTERS } from "@/content/characters";
+import { KEY_IMAGES } from "@/content/brand";
 import { uiText } from "@/content/ui-text";
 
 export function CouncilOfFive() {
@@ -43,7 +43,13 @@ export function CouncilOfFive() {
                   </span>
                 ))}
               </h3>
-              <KeyIcon className="mt-1 size-10 shrink-0 rotate-90 text-gold" />
+              <Image
+                src={KEY_IMAGES[character.key].src}
+                alt=""
+                width={KEY_IMAGES[character.key].width}
+                height={KEY_IMAGES[character.key].height}
+                className="mt-1 h-auto w-16 shrink-0"
+              />
             </div>
             <p className="font-body text-sm italic uppercase tracking-caps">{character.category}</p>
             <p className="font-body">{character.text}</p>

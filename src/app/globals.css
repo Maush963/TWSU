@@ -41,7 +41,8 @@
   --spacing-pin: var(--atlas-pin-size);
   --spacing-panel: var(--atlas-panel-width);
   --spacing-compass: var(--atlas-compass-size);
-  --spacing-key: var(--atlas-key-size);
+  --spacing-key-box: var(--atlas-key-box);
+  --spacing-key-step: var(--atlas-key-step);
 
   --radius: var(--radius);
 }

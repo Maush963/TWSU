@@ -3,6 +3,7 @@
 export const CHARACTERS = [
   {
     id: "panda-lu",
+    key: "storytelling",
     nameLines: ["Panda", "Lu"],
     category: "Storytelling",
     text: "The secret is to make them care enough to keep watching. A panda has always known how to hold an audience.",
@@ -11,6 +12,7 @@ export const CHARACTERS = [
   },
   {
     id: "gere-giraffe",
+    key: "campanas",
     nameLines: ["Gere", "Giraffe"],
     category: "Campaigns",
     text: "Strategies that reach far and around. It takes a long neck to see the whole picture from above.",
@@ -19,6 +21,7 @@ export const CHARACTERS = [
   },
   {
     id: "stan-the-stag",
+    key: "branding",
     nameLines: ["Stan", "the Stag"],
     category: "Branding",
     text: "A good brand is as unmistakable as the antlers of a stag in the animal kingdom.",
@@ -27,6 +30,7 @@ export const CHARACTERS = [
   },
   {
     id: "kaia-kangaroo",
+    key: "plataformas",
     nameLines: ["Kaia", "Kangaroo"],
     category: "Platforms",
     text: "Tourism platforms carry destinations further. Kaia was practically born for the job.",
@@ -35,6 +39,7 @@ export const CHARACTERS = [
   },
   {
     id: "cheetah-camille",
+    key: "social-media",
     nameLines: ["Cheetah", "Camille"],
     category: "Social media",
     text: "Trends never stands still. It takes speed, focus and perfect timing to stay ahead.",

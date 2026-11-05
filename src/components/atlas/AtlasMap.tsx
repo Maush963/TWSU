@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState, type CSSProperties } from "react";
 import { uiText } from "@/content/ui-text";
-import { CompassIcon } from "@/components/ui/icons";
+import { BRAND_IMAGES } from "@/content/brand";
 import type { PositionedPin } from "@/lib/atlas/collisions";
 import { ATLAS_MAP_IMAGE } from "@/lib/atlas/map-config";
 import { AtlasPanel } from "./AtlasPanel";
@@ -57,7 +57,13 @@ export function AtlasMap({
           ))}
         </section>
         <div className="pointer-events-none absolute bottom-4 left-4 flex flex-col items-center gap-2 text-accent">
-          <CompassIcon className="size-compass" />
+          <Image
+            src={BRAND_IMAGES.compass.src}
+            alt={uiText.atlas.compass}
+            width={BRAND_IMAGES.compass.width}
+            height={BRAND_IMAGES.compass.height}
+            className="size-compass"
+          />
           {year !== undefined && (
             <p className="font-body text-sm">
               {year} {uiText.atlas.edition}

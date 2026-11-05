@@ -172,3 +172,10 @@ El resultado se escribe en `src/lib/atlas/map-calibration.ts` (generado, no se e
 - **Móvil sin cambios.** El mapa sigue oculto abajo de 64rem; la lista de casos y el globo no se tocaron.
 - **Sin subtítulo.** El diseño muestra una frase bajo el título ("Mexican luxury at its best"). Sanity no tiene ese campo, así que no se muestra; haría falta un cambio de esquema (por ejemplo `tagline`). La línea superior usa `placeName` más las coordenadas de `lat` y `lng`.
 - **Cabecera.** Se quitaron el buscador y el botón "Explore the Atlas", en escritorio y en el menú móvil, y las claves `nav.search` y `nav.exploreAtlas` de `ui-text`. Quedan logo y los tres enlaces, alineados a la izquierda tras el logo (más grande y con llaves más altas desde `lg`), como en el diseño. Esto cierra la pendiente "buscador y botón Explore the Atlas" de la cabecera.
+
+## Imágenes de marca, pin y rosa de los vientos
+
+- **Organización.** Los PNG del cliente (logo, 5 llaves, divisor con borla y rosa de los vientos) están en `scripts/data/brand-source/` con nombre propio, y `npm run prepare:brand` los convierte a WebP con transparencia: `public/brand/` (logo, `llave-<categoría>`, `divisor-borla`) y `public/atlas/rosa-vientos.webp`. Los originales sí van en el repo porque pesan poco (unos 700 KB). `borla.png` (la borla sola) no se usa porque el divisor ya la incluye. Rutas y tamaños en `src/content/brand.ts`.
+- **Llaves por categoría.** Se asignaron según las tarjetas de About: Storytelling 1, Campañas 2, Branding 3, Plataformas 4, Social media 5. La misma llave se usa en el panel del Atlas, en abanico y tenue cuando el caso no tiene esa categoría. Si el cliente quiere otra asignación, se cambia en `KEY_IMAGES`.
+- **Reemplazos.** Logo, llaves, borla del pie y rosa de los vientos ahora son imágenes; se eliminaron los iconos SVG provisionales `KeyIcon`, `CompassIcon` y `OrnamentIcon`. El divisor del pie es una sola imagen con la línea y la borla, así que se estira al ancho del pie.
+- **Punto seleccionado.** Ya no crece ni pulsa: el punto elegido lleva encima un pin de ubicación (gota con punta) cuya punta cae sobre el punto.

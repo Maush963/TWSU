@@ -1,24 +1,20 @@
+import Image from "next/image";
 import Link from "next/link";
+import { BRAND_IMAGES } from "@/content/brand";
 import { uiText } from "@/content/ui-text";
-import { KeyIcon } from "@/components/ui/icons";
 
-// Marcador del logo: llaves y nombre en dos líneas. Se reemplaza por el logo del cliente cuando llegue.
+// Logo del cliente: las llaves y el nombre en una sola imagen.
 export function Logo() {
   return (
-    <Link
-      href="/"
-      aria-label={uiText.nav.logo}
-      className="flex items-center gap-4 text-accent"
-    >
-      <span aria-hidden="true" className="flex items-end text-gold">
-        <KeyIcon className="size-6 -rotate-12 lg:size-10" />
-        <KeyIcon className="-ml-2 size-6 lg:size-10" />
-        <KeyIcon className="-ml-2 size-6 rotate-12 lg:size-10" />
-      </span>
-      <span className="font-display text-lg uppercase leading-none lg:text-xl tracking-caps">
-        <span className="block">{uiText.nav.logoLine1}</span>
-        <span className="block">{uiText.nav.logoLine2}</span>
-      </span>
+    <Link href="/" className="block">
+      <Image
+        src={BRAND_IMAGES.logo.src}
+        alt={uiText.nav.logo}
+        width={BRAND_IMAGES.logo.width}
+        height={BRAND_IMAGES.logo.height}
+        priority
+        className="h-10 w-auto lg:h-16"
+      />
     </Link>
   );
 }

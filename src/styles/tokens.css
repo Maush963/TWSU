@@ -42,8 +42,9 @@
   --atlas-pin-size: 1.75rem;
   --atlas-grid-size: 1.75rem;
   --atlas-panel-width: 26rem;
-  --atlas-compass-size: 4rem;
-  --atlas-key-size: 1.25rem;
+  --atlas-compass-size: 5.5rem;
+  --atlas-key-box: 4.5rem;
+  --atlas-key-step: 1rem;
   --atlas-globe-height: 59.4vw;
   --atlas-globe-fade: 4rem;
 
