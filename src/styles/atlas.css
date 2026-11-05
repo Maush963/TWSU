@@ -98,15 +98,15 @@ body:has(.atlas-page) .explore-atlas-link {
   display: none;
 }
 
-/* Al elegir un punto, la insignia se encoge y vuelve a su tamaño una sola vez, despacio y sin rebote. */
+/* Al elegir un punto, la insignia casi desaparece y vuelve a su tamaño una sola vez, ya con el color de seleccionado. */
 @keyframes atlas-pin-blink {
   0%,
   100% { transform: scale(1); }
-  50% { transform: scale(0.7); }
+  40% { transform: scale(0.1); }
 }
 
 .atlas-pin-blink {
-  animation: atlas-pin-blink 0.9s ease-in-out;
+  animation: atlas-pin-blink 0.4s ease-out;
 }
 
 /* Sin el botón, la navegación del Atlas se centra en el espacio que deja el logo en lugar de quedar pegada a él. */
