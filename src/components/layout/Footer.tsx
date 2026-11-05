@@ -6,6 +6,13 @@ import { SOCIAL_LINKS } from "@/content/social";
 import { InstagramIcon, MailIcon, TikTokIcon } from "@/components/ui/icons";
 import { SubscribeBar } from "./SubscribeBar";
 
+// Privacy todavía no tiene página (pendiente del cliente): se muestra como texto, sin enlace.
+const LINKS = [
+  { label: uiText.footer.tagline, href: null },
+  { label: uiText.footer.contact, href: "/join" },
+  { label: uiText.footer.privacy, href: null },
+] as const;
+
 const SOCIAL_ICONS = {
   instagram: InstagramIcon,
   tiktok: TikTokIcon,
@@ -24,6 +31,24 @@ export function Footer() {
       />
       <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-2">
         <SubscribeBar />
+        <ul className="flex flex-wrap items-center gap-4">
+          {LINKS.map((link, index) => (
+            <li key={link.label} className="flex items-center gap-4">
+              {index > 0 && (
+                <span aria-hidden="true" className="text-gold">
+                  •
+                </span>
+              )}
+              {link.href ? (
+                <Link href={link.href} className="hover:text-accent">
+                  {link.label}
+                </Link>
+              ) : (
+                <span>{link.label}</span>
+              )}
+            </li>
+          ))}
+        </ul>
         <div className="flex items-center gap-4">
           <ul aria-label={uiText.footer.social} className="flex items-center gap-2">
             {SOCIAL_LINKS.map(({ id, label, href, external }) => {
