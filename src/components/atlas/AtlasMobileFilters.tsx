@@ -41,7 +41,7 @@ export function AtlasMobileFilters({
         <label htmlFor="atlas-region" className={LABEL_CLASS}>
           {uiText.atlas.mobile.explore}
         </label>
-        <div className="relative w-24">
+        <div className="relative w-[6.5rem]">
           <select
             id="atlas-region"
             name="region"
@@ -62,7 +62,7 @@ export function AtlasMobileFilters({
         <label htmlFor="atlas-category-mobile" className={LABEL_CLASS}>
           {uiText.atlas.mobile.byBest}
         </label>
-        <div className="relative w-24">
+        <div className="relative w-[6.5rem]">
           <select
             id="atlas-category-mobile"
             name="category"
