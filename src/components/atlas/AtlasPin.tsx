@@ -1,6 +1,6 @@
 // Un punto del mapa, posicionado en porcentaje. Al activarlo (clic, Enter o Espacio) su caso
 // pasa al panel derecho. El seleccionado invierte los colores (insignia dorada con borde y centro verdes)
-// y hace un parpadeo de tamaño al elegirlo (.atlas-pin-pop en atlas.css).
+// y hace un parpadeo suave al elegirlo (.atlas-pin-blink en atlas.css).
 interface AtlasPinProps {
   pin: {
     id: string;
@@ -33,7 +33,7 @@ export function AtlasPin({ pin, selected, onSelect }: AtlasPinProps) {
         <svg
           viewBox="0 0 24 24"
           aria-hidden="true"
-          className={`size-full drop-shadow ${selected ? "atlas-pin-pop" : ""}`}
+          className={`size-full drop-shadow ${selected ? "atlas-pin-blink" : ""}`}
         >
           <path d={BADGE_PATH} className={selected ? "fill-gold stroke-accent" : "fill-pin"} strokeWidth="2" />
           <circle cx="12" cy="12" r="6.6" className={`fill-none ${selected ? "stroke-accent" : "stroke-gold"}`} strokeWidth="1.4" />
