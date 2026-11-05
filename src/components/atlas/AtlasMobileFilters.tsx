@@ -16,8 +16,8 @@ interface AtlasMobileFiltersProps {
   hiddenFields: Record<string, string>;
 }
 
-const SELECT_CLASS = "w-full appearance-none border border-gold bg-bg py-1 pl-2 pr-6 font-body text-sm";
-const LABEL_CLASS = "w-14 shrink-0 text-right font-body text-xs uppercase";
+const SELECT_CLASS = "w-full appearance-none border border-gold bg-bg py-1 pl-2 pr-5 font-body text-xs";
+const LABEL_CLASS = "w-11 shrink-0 text-right font-body text-xs uppercase";
 const CHEVRON_CLASS = "pointer-events-none absolute right-1 top-1/2 size-4 -translate-y-1/2 text-gold";
 
 // Dos selectores apilados: región y categoría. Cada opción trae el enlace que ya conserva los
@@ -41,7 +41,7 @@ export function AtlasMobileFilters({
         <label htmlFor="atlas-region" className={LABEL_CLASS}>
           {uiText.atlas.mobile.explore}
         </label>
-        <div className="relative w-28 shrink-0">
+        <div className="relative w-24 shrink-0">
           <select
             id="atlas-region"
             name="region"
@@ -62,7 +62,7 @@ export function AtlasMobileFilters({
         <label htmlFor="atlas-category-mobile" className={LABEL_CLASS}>
           {uiText.atlas.mobile.byBest}
         </label>
-        <div className="relative w-28 shrink-0">
+        <div className="relative w-24 shrink-0">
           <select
             id="atlas-category-mobile"
             name="category"
