@@ -36,12 +36,12 @@ export function AtlasMobileFilters({
   };
 
   return (
-    <form action="/atlas" method="get" className="flex flex-1 flex-col justify-center gap-2 lg:hidden">
+    <form action="/atlas" method="get" className="flex flex-none flex-col justify-center gap-2 lg:hidden">
       <div className="flex items-center gap-2">
         <label htmlFor="atlas-region" className={LABEL_CLASS}>
           {uiText.atlas.mobile.explore}
         </label>
-        <div className="relative flex-1">
+        <div className="relative w-28 shrink-0">
           <select
             id="atlas-region"
             name="region"
@@ -62,7 +62,7 @@ export function AtlasMobileFilters({
         <label htmlFor="atlas-category-mobile" className={LABEL_CLASS}>
           {uiText.atlas.mobile.byBest}
         </label>
-        <div className="relative flex-1">
+        <div className="relative w-28 shrink-0">
           <select
             id="atlas-category-mobile"
             name="category"
