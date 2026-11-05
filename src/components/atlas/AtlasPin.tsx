@@ -1,6 +1,6 @@
 // Un punto del mapa, posicionado en porcentaje. Al activarlo (clic, Enter o Espacio) su caso
 // pasa al panel derecho. El seleccionado invierte los colores (insignia dorada con borde y centro verdes)
-// y hace un parpadeo suave al elegirlo (.atlas-pin-blink en atlas.css).
+// y hace un parpadeo de tamaño al elegirlo (.atlas-pin-blink en atlas.css).
 interface AtlasPinProps {
   pin: {
     id: string;

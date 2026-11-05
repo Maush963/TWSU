@@ -14,7 +14,7 @@ export function Header() {
   return (
     <header className="relative z-50 flex items-center justify-between gap-4 bg-surface px-4 py-2 lg:px-8 lg:py-4">
       <Logo />
-      <div className="hidden flex-1 items-center lg:flex lg:justify-between lg:pl-24">
+      <div className="header-nav hidden flex-1 items-center lg:flex lg:justify-between lg:pl-24">
         <nav aria-label={uiText.nav.label}>
           <ul className="flex gap-16 font-ui text-lg uppercase tracking-caps">
             {LINKS.map((link) => (

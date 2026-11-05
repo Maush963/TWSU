@@ -98,15 +98,19 @@ body:has(.atlas-page) .explore-atlas-link {
   display: none;
 }
 
-/* Al elegir un punto, la insignia parpadea una vez: baja y vuelve a su opacidad, sin cambiar de tamaño. */
+/* Al elegir un punto, la insignia se encoge y vuelve a su tamaño una sola vez, despacio y sin rebote. */
 @keyframes atlas-pin-blink {
-  0% { opacity: 1; }
-  30% { opacity: 0.25; }
-  60% { opacity: 1; }
-  80% { opacity: 0.6; }
-  100% { opacity: 1; }
+  0%,
+  100% { transform: scale(1); }
+  50% { transform: scale(0.7); }
 }
 
 .atlas-pin-blink {
-  animation: atlas-pin-blink 0.7s ease-in-out;
+  animation: atlas-pin-blink 0.9s ease-in-out;
+}
+
+/* Sin el botón, la navegación del Atlas se centra en el espacio que deja el logo en lugar de quedar pegada a él. */
+body:has(.atlas-page) .header-nav {
+  justify-content: center;
+  padding-left: 0;
 }
