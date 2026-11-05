@@ -92,3 +92,8 @@
     display: none;
   }
 }
+
+/* El botón "Explore the Atlas" de la cabecera no tiene sentido dentro del propio Atlas. */
+body:has(.atlas-page) .explore-atlas-link {
+  display: none;
+}

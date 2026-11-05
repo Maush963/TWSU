@@ -18,13 +18,13 @@ export function AtlasPanel({ pin }: { pin: AtlasPinData }) {
     <aside
       aria-label={uiText.atlas.panelLabel}
       aria-live="polite"
-      className="flex w-panel shrink-0 flex-col gap-4 overflow-y-auto border-l border-gold-soft px-8 py-2"
+      className="flex w-panel shrink-0 flex-col gap-4 overflow-hidden border-l border-gold-soft px-8 py-2"
     >
       <div>
         <p className="font-body text-xs uppercase tracking-caps text-muted">
           {pin.placeName} {formatCoordinates(pin.lat, pin.lng)}
         </p>
-        <h2 className="mt-2 font-display text-2xl uppercase leading-none text-accent">
+        <h2 className="mt-2 line-clamp-2 font-display text-2xl uppercase leading-none text-accent">
           {pin.title}
         </h2>
       </div>
@@ -40,7 +40,7 @@ export function AtlasPanel({ pin }: { pin: AtlasPinData }) {
           />
         )}
       </div>
-      <p className="font-body text-base">{pin.excerpt}</p>
+      <p className="line-clamp-4 font-body text-base">{pin.excerpt}</p>
       <Link
         href={`/perspectives/${pin.slug}`}
         className="flex items-center gap-2 self-end border-b border-gold text-accent hover:text-pin"

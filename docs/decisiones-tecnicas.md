@@ -179,3 +179,10 @@ El resultado se escribe en `src/lib/atlas/map-calibration.ts` (generado, no se e
 - **Llaves por categoría.** Se asignaron según las tarjetas de About: Storytelling 1, Campañas 2, Branding 3, Plataformas 4, Social media 5. La misma llave se usa en el panel del Atlas, en abanico y tenue cuando el caso no tiene esa categoría. Si el cliente quiere otra asignación, se cambia en `KEY_IMAGES`.
 - **Reemplazos.** Logo, llaves, borla del pie y rosa de los vientos ahora son imágenes; se eliminaron los iconos SVG provisionales `KeyIcon`, `CompassIcon` y `OrnamentIcon`. El divisor del pie es una sola imagen con la línea y la borla, así que se estira al ancho del pie.
 - **Punto seleccionado.** Ya no crece ni pulsa: el punto elegido lleva encima un pin de ubicación (gota con punta) cuya punta cae sobre el punto.
+
+## Insignias del mapa, color de resalte y panel sin scroll
+
+- **Insignia.** Los puntos del mapa son una insignia de borde ondulado (8 lóbulos, en `AtlasPin`) con anillo y centro dorados, como en la referencia del cliente.
+- **Resalte.** Nuevo token `--color-highlight` (terracota). El punto seleccionado cambia a ese color y su pin de ubicación también, para que no se confunda con los demás (que son oscuros). Es un color que no está en el diseño del cliente; si prefieren otro, se cambia solo el token.
+- **Panel sin scroll.** El panel derecho del Atlas ya no se desplaza: el título se corta a 2 líneas y el extracto a 4, con puntos suspensivos (`line-clamp`). El corte es por número de líneas, no por el alto disponible, así que en ventanas muy bajas el panel recorta lo que no cabe por abajo.
+- **Explore the Atlas.** El botón vuelve a estar en la cabecera (escritorio y menú móvil) y se oculta solo en la página del Atlas (`body:has(.atlas-page) .explore-atlas-link`, en `atlas.css`). El buscador sigue fuera.

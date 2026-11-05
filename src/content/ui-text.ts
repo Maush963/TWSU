@@ -23,6 +23,7 @@ export const uiText = {
     atlas: "Atlas",
     perspectives: "Perspectives",
     about: "About",
+    exploreAtlas: "Explore the atlas",
     join: "Join",
     menuOpen: "Abrir menú",
     menuClose: "Cerrar menú",
