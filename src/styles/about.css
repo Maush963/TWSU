@@ -30,6 +30,73 @@
   object-fit: cover;
 }
 
+/* Móvil y tablet: título "About", imagen a todo el ancho y debajo el texto, como en el diseño.
+   El título de escritorio no existe (la Home ya lo da el hero), así que la banda solo va en móvil. */
+.about-title-band {
+  padding: var(--space-4);
+}
+
+.about-title {
+  border-left: 1px solid var(--color-gold);
+  padding-left: var(--space-4);
+  font-size: 2.25rem;
+  line-height: 1.2;
+}
+
+/* Desvanecido fijo al pie de la ventana mientras se desplaza; se suelta al llegar al pie de página. */
+.about-mobile-fade {
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  flex: none;
+  height: var(--about-mobile-fade);
+  margin-top: calc(var(--about-mobile-fade) * -1);
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, var(--color-bg));
+}
+
+@media not (min-width: 64rem) {
+  .home-hero.about-hero {
+    min-height: 0;
+    padding: 0;
+  }
+
+  .home-hero-image.about-hero-image {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: var(--about-hero-mobile-ratio);
+  }
+
+  .about-hero-image img {
+    object-fit: cover;
+    object-position: 50% var(--about-hero-focus-y);
+  }
+
+  .about-hero .home-hero-copy {
+    max-width: none;
+    padding: calc(var(--space-8) * 1.5) var(--space-8) var(--space-8);
+  }
+
+  .about-hero .home-hero-copy h2 {
+    font-size: 3rem;
+    margin-bottom: var(--space-4);
+  }
+
+  /* Los bloques Who/What/Why/How van sangrados, como en el diseño. */
+  .about-values {
+    padding-left: var(--space-8);
+  }
+}
+
+@media (min-width: 64rem) {
+  .about-title-band,
+  .about-mobile-fade {
+    display: none;
+  }
+}
+
 @media (min-width: 40rem) {
   .about-council {
     padding-inline: var(--space-8);

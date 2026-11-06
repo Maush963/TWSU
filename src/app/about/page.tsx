@@ -14,6 +14,7 @@ export default function AboutPage() {
         <AboutIntro />
         <CouncilOfFive />
       </div>
+      <div aria-hidden="true" className="about-mobile-fade" />
     </main>
   );
 }
