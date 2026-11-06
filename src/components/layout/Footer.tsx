@@ -28,9 +28,9 @@ export function Footer() {
         height={BRAND_IMAGES.divider.height}
         className="h-auto w-full py-2"
       />
-      <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-2">
+      <div className="flex flex-col items-center gap-6 py-4 text-center lg:flex-row lg:flex-wrap lg:justify-between lg:gap-x-8 lg:gap-y-2 lg:py-0 lg:text-left">
         <SubscribeBar />
-        <ul className="flex flex-wrap items-center gap-4">
+        <ul className="flex flex-wrap items-center justify-center gap-4">
           {LINKS.map((link, index) => (
             <li key={link.label} className="flex items-center gap-4">
               {index > 0 && (
@@ -48,7 +48,7 @@ export function Footer() {
             </li>
           ))}
         </ul>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center justify-center gap-4">
           <ul aria-label={uiText.footer.social} className="flex items-center gap-2">
             {SOCIAL_LINKS.map(({ id, label, href, external }) => {
               const Icon = SOCIAL_ICONS[id];

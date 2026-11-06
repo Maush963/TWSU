@@ -103,12 +103,13 @@
     display: grid;
     grid-template-columns: var(--about-card-mobile-image-width) minmax(0, 1fr);
     column-gap: var(--space-4);
-    align-items: start;
+    align-items: stretch;
   }
 
+  /* La imagen toma el alto del texto de la tarjeta, sin proporción fija. */
   .about-card-image {
-    aspect-ratio: var(--about-card-mobile-ratio);
-    height: auto;
+    aspect-ratio: auto;
+    height: 100%;
     object-position: 50% 0;
   }
 }

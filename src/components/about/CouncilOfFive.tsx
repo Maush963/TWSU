@@ -17,8 +17,8 @@ export function CouncilOfFive() {
         />
       </div>
 
-      <div className="flex flex-col items-center gap-2 pb-8 text-center lg:flex-row lg:flex-wrap lg:items-end lg:justify-between lg:gap-x-8 lg:text-left">
-        <h2 id="council-title" className="font-display text-3xl uppercase leading-none text-accent lg:text-2xl">
+      <div className="flex flex-col items-center gap-3 pb-10 text-center lg:flex-row lg:flex-wrap lg:items-end lg:justify-between lg:gap-x-8 lg:text-left">
+        <h2 id="council-title" className="font-display text-2xl uppercase leading-none text-accent">
           {uiText.about.councilTitle}
         </h2>
         <p className="font-body text-xs uppercase tracking-caps-wide">{uiText.about.councilSubtitle}</p>
@@ -36,8 +36,8 @@ export function CouncilOfFive() {
               className="about-card-image"
             />
             <div className="about-card-body flex flex-col gap-4 lg:contents">
-              <div className="flex items-start justify-between gap-2 border-b border-gold pb-4">
-                <h3 className="font-display text-2xl uppercase leading-none text-accent lg:text-xl">
+              <div className="flex items-start justify-between gap-3 border-b border-gold pb-3 lg:pb-4">
+                <h3 className="min-w-0 font-display text-xl uppercase leading-none text-accent">
                   {character.nameLines.map((line) => (
                     <span key={line} className="block">
                       {line}
@@ -49,7 +49,7 @@ export function CouncilOfFive() {
                   alt=""
                   width={KEY_IMAGES[character.key].width}
                   height={KEY_IMAGES[character.key].height}
-                  className="mt-1 h-auto w-16 shrink-0"
+                  className="mt-1 h-auto w-12 shrink-0 lg:w-16"
                 />
               </div>
               <p className="font-body text-sm italic uppercase tracking-caps">{character.category}</p>

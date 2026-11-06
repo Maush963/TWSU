@@ -31,7 +31,7 @@ export function AboutIntro() {
         <dl className="about-values grid grid-cols-1 gap-y-8 sm:grid-cols-2 sm:gap-x-8 lg:grid-cols-4 lg:gap-x-12">
           {uiText.home.values.map((value) => (
             <div key={value.title} className="border-l border-gold pl-5">
-              <dt className="mb-2 font-body text-3xl uppercase leading-none text-accent">{value.title}</dt>
+              <dt className="mb-2 font-body text-2xl uppercase leading-none text-accent lg:text-3xl">{value.title}</dt>
               <dd className="font-ui leading-tight">{value.description}</dd>
             </div>
           ))}

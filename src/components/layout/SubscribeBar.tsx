@@ -37,7 +37,7 @@ export function SubscribeBar() {
   }
 
   return (
-    <section aria-labelledby="subscribe-title" className="flex flex-wrap items-center gap-x-4 gap-y-1">
+    <section aria-labelledby="subscribe-title" className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 lg:justify-start lg:gap-y-1">
       <h2 id="subscribe-title" className="font-ui text-sm uppercase tracking-caps text-accent">
         {uiText.subscribe.title}
       </h2>
