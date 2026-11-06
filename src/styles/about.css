@@ -97,6 +97,22 @@
   }
 }
 
+/* Móvil y tablet: una tarjeta por fila, con la imagen a la izquierda y el texto a la derecha. */
+@media not (min-width: 64rem) {
+  .about-card {
+    display: grid;
+    grid-template-columns: var(--about-card-mobile-image-width) minmax(0, 1fr);
+    column-gap: var(--space-4);
+    align-items: start;
+  }
+
+  .about-card-image {
+    aspect-ratio: var(--about-card-mobile-ratio);
+    height: auto;
+    object-position: 50% 0;
+  }
+}
+
 @media (min-width: 40rem) {
   .about-council {
     padding-inline: var(--space-8);

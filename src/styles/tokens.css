@@ -71,6 +71,8 @@
   /* about */
   --about-card-ratio: 1.067;
   --about-card-gap: 1.5rem;
+  --about-card-mobile-ratio: 0.79;
+  --about-card-mobile-image-width: 42%;
   --about-hero-ratio: 4.06;
   --about-hero-mobile-ratio: 2.36;
   --about-mobile-fade: 7rem;
