@@ -30,6 +30,7 @@ export const uiText = {
   footer: {
     label: "Pie de página",
     tagline: "Independent Tourism Standard",
+    contact: "Contact",
     privacy: "Privacy",
     brand: "Tourism Will Save Us",
     rights: "TWSU. Todos los derechos reservados.",
