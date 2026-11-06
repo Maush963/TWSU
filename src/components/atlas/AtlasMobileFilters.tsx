@@ -17,7 +17,7 @@ interface AtlasMobileFiltersProps {
 }
 
 const SELECT_CLASS = "w-full appearance-none border border-gold bg-bg py-1 pl-2 pr-5 font-body text-xs";
-const LABEL_CLASS = "justify-self-end whitespace-nowrap text-right font-body text-xs uppercase";
+const LABEL_CLASS = "justify-self-end whitespace-nowrap text-right font-body text-[10px] uppercase";
 const CHEVRON_CLASS = "pointer-events-none absolute right-1 top-1/2 size-4 -translate-y-1/2 text-gold";
 
 // Dos selectores apilados: región y categoría. Cada opción trae el enlace que ya conserva los
@@ -41,7 +41,7 @@ export function AtlasMobileFilters({
         <label htmlFor="atlas-region" className={LABEL_CLASS}>
           {uiText.atlas.mobile.explore}
         </label>
-        <div className="relative w-[6.5rem]">
+        <div className="relative w-28">
           <select
             id="atlas-region"
             name="region"
@@ -62,7 +62,7 @@ export function AtlasMobileFilters({
         <label htmlFor="atlas-category-mobile" className={LABEL_CLASS}>
           {uiText.atlas.mobile.byBest}
         </label>
-        <div className="relative w-[6.5rem]">
+        <div className="relative w-28">
           <select
             id="atlas-category-mobile"
             name="category"
