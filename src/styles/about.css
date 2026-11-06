@@ -110,7 +110,14 @@
   .about-card-image {
     aspect-ratio: auto;
     height: 100%;
-    object-position: 50% 0;
+    object-position: 50% 15%;
+  }
+
+  /* Mismo espacio de "How" al consejo que de "We explore" a "Who": 2rem de abajo del texto del
+     hero + 4rem de arriba de los valores = 6rem. Los valores ya traen 4rem abajo, así que el
+     consejo suma 2rem arriba. */
+  .about-council {
+    padding-top: var(--space-8);
   }
 }
 
