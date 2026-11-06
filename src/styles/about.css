@@ -69,9 +69,16 @@
     aspect-ratio: var(--about-hero-mobile-ratio);
   }
 
+  /* Acercamiento: la imagen crece desde arriba y se recorta por abajo y por los lados. */
+  .home-hero-image.about-hero-image {
+    overflow: hidden;
+  }
+
   .about-hero-image img {
     object-fit: cover;
     object-position: 50% var(--about-hero-focus-y);
+    transform: scale(var(--about-hero-mobile-zoom));
+    transform-origin: 50% 0;
   }
 
   .about-hero .home-hero-copy {
@@ -94,6 +101,20 @@
   .about-title-band,
   .about-mobile-fade {
     display: none;
+  }
+}
+
+/* Llave junto al nombre: el borde de arriba del dibujo (no del archivo, que trae margen
+   transparente distinto en cada llave) queda siempre a la misma altura respecto al texto. */
+.about-key {
+  width: var(--about-key-width);
+  margin-top: calc(var(--about-key-top-offset) - var(--key-ink-top) * var(--about-key-width));
+}
+
+@media (min-width: 64rem) {
+  .about-key {
+    width: var(--about-key-width-lg);
+    margin-top: calc(var(--about-key-top-offset) - var(--key-ink-top) * var(--about-key-width-lg));
   }
 }
 

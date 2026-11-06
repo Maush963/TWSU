@@ -10,23 +10,26 @@ export const BRAND_IMAGES = {
 
 export const KEY_IMAGES: Record<
   Category,
-  { src: string; width: number; height: number }
+  { src: string; width: number; height: number; inkTop: number }
 > = {
   storytelling: {
     src: "/brand/llave-storytelling.webp",
     width: 640,
     height: 186,
+    inkTop: 10,
   },
   plataformas: {
     src: "/brand/llave-plataformas.webp",
     width: 640,
     height: 231,
+    inkTop: 15,
   },
-  campanas: { src: "/brand/llave-campanas.webp", width: 640, height: 120 },
-  branding: { src: "/brand/llave-branding.webp", width: 640, height: 225 },
+  campanas: { src: "/brand/llave-campanas.webp", width: 640, height: 120, inkTop: 5 },
+  branding: { src: "/brand/llave-branding.webp", width: 640, height: 225, inkTop: 12 },
   "social-media": {
     src: "/brand/llave-social-media.webp",
     width: 640,
     height: 187,
+    inkTop: 9,
   },
 };

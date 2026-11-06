@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import Image from "next/image";
 import { CHARACTERS } from "@/content/characters";
 import { KEY_IMAGES } from "@/content/brand";
@@ -49,7 +50,8 @@ export function CouncilOfFive() {
                   alt=""
                   width={KEY_IMAGES[character.key].width}
                   height={KEY_IMAGES[character.key].height}
-                  className="mt-1 h-auto w-12 shrink-0 lg:w-16"
+                  className="about-key h-auto shrink-0"
+                  style={{ "--key-ink-top": KEY_IMAGES[character.key].inkTop / KEY_IMAGES[character.key].width } as CSSProperties}
                 />
               </div>
               <p className="font-body text-sm italic uppercase tracking-caps">{character.category}</p>
