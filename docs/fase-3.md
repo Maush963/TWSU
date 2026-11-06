@@ -4,9 +4,11 @@ Instrucciones para construir `/about`, `/join`, la conexión real con la herrami
 
 ## Estado
 
-- **Parte A (3.1 a 3.5): en curso.** 3.1, 3.2 y 3.4 hechas (validación, antispam y scripts de medición, con pruebas). Faltan 3.3 (adaptador) y 3.5 (About). Lógica pura y probada, sin diseño y sin proveedor de correo.
-- **Parte B (3.6 a 3.9): en curso.** 3.6 (About) hecha en escritorio y con una adaptación propia para móvil, con contenido fijo en `src/content/characters.ts`. Falta el diseño de Join (3.7 y 3.8) y la revisión de accesibilidad (3.9).
-- **Parte C (3.9 a 3.11): bloqueada por datos del cliente.** Proveedor de correo y códigos de medición.
+**Decisiones del cliente (2026-11-06):** no hay página `/join` ni formulario de contacto: el contacto es el formulario de suscripción del pie. Por eso se quitan 3.7 y 3.8 (`/api/contact`, `contactSchema`, `CONTACT_TO_EMAIL`). El contenido de About queda fijo en `src/content/characters.ts` y no pasa a Studio, así que se quita 3.5. El icono de correo del pie lleva al campo de suscripción hasta que haya una dirección.
+
+- **Parte A:** hecha. 3.1, 3.2, 3.3 (adaptador con Brevo y Mailchimp y proveedor vacío, probado con `fetch` simulado) y 3.4. 3.5 queda descartada.
+- **Parte B:** About (3.6) hecha en escritorio y móvil. 3.7 y 3.8 descartadas. Falta la revisión de accesibilidad de About (3.9).
+- **Parte C: bloqueada por datos del cliente.** Proveedor de correo (clave y lista) y códigos de medición. Sin ellos el sitio funciona: no envía y no carga scripts.
 
 ## Objetivo de la fase
 
@@ -108,7 +110,7 @@ Al terminar la Fase 3, `/about` muestra el resumen del proyecto con sus personaj
 
 **Criterio de aceptación.** Un valor con comillas, espacios o etiquetas nunca llega al script.
 
-## 3.5 Contenido de About
+## 3.5 Contenido de About (DESCARTADA: el contenido queda fijo)
 
 **Contexto.** Sección 4: "Resumen, quién qué por qué cómo, personajes".
 
@@ -131,15 +133,15 @@ Al terminar la Fase 3, `/about` muestra el resumen del proyecto con sus personaj
 
 Resumen y los cuatro bloques con sus personajes, según el diseño. Escritorio primero y luego móvil, igual que en la Fase 2. Un `h1`, estructura de títulos sin saltos, imágenes con `alt`.
 
-## 3.7 Formulario de Join
+## 3.7 Formulario de Join (DESCARTADA: el formulario es el del pie)
 
 Formulario con etiquetas visibles, errores asociados a su campo (`aria-describedby`, `aria-invalid`), mensaje de estado con `role="status"`, botón que se desactiva mientras envía y campo trampa. Debe poder enviarse sin JavaScript si el formulario lo permite (`action` a la ruta con redirección) o, si no, dejar la decisión documentada. Componente reutilizable de campo para no duplicar lo que ya hace `SubscribeBar`.
 
-## 3.8 Ruta `/api/contact`
+## 3.8 Ruta `/api/contact` (DESCARTADA)
 
 Valida con `contactSchema`, aplica antispam y límite, llama al adaptador y responde igual en éxito y en descarte. Pruebas de la ruta con el adaptador simulado.
 
-## 3.9 Accesibilidad y revisión de About y Join
+## 3.9 Accesibilidad y revisión de About
 
 Misma lista que la 2.10: teclado, foco, contraste, errores de formulario anunciados, `lang`, un solo `h1`.
 
@@ -156,8 +158,6 @@ Misma lista que la 2.10: teclado, foco, contraste, errores de formulario anuncia
 ## 3.11 Cierre de fase
 
 - [ ] `/about` muestra el contenido y los personajes, en escritorio y móvil
-- [ ] Editar un personaje en Studio se refleja sin desplegar
-- [ ] `/join` envía y el contacto llega al destino
 - [ ] La suscripción del pie llega a la lista
 - [ ] Un envío con el campo trampa lleno o demasiado rápido recibe éxito y no llega a ningún lado
 - [ ] Un correo repetido no revela que ya existe

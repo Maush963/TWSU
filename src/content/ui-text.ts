@@ -24,14 +24,12 @@ export const uiText = {
     perspectives: "Perspectives",
     about: "About",
     exploreAtlas: "Explore the atlas",
-    join: "Join",
     menuOpen: "Abrir menú",
     menuClose: "Cerrar menú",
   },
   footer: {
     label: "Pie de página",
     tagline: "Independent Tourism Standard",
-    contact: "Contact",
     privacy: "Privacy",
     brand: "Tourism Will Save Us",
     rights: "TWSU. Todos los derechos reservados.",
@@ -140,9 +138,6 @@ export const uiText = {
     councilTitle: "The Council of Five",
     councilSubtitle: "The icons that shape our creative criteria",
     councilBackgroundAlt: "",
-  },
-  join: {
-    title: "Join",
   },
   notFound: {
     title: "Página no encontrada",

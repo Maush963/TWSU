@@ -3,6 +3,7 @@ import { isSpam } from "@/lib/forms/antispam";
 import { getClientKey } from "@/lib/forms/client-ip";
 import { createRateLimiter } from "@/lib/forms/rate-limit";
 import { subscribeSchema } from "@/lib/forms/schemas";
+import { getMailProvider } from "@/lib/mail";
 
 const limiter = createRateLimiter();
 
@@ -22,6 +23,9 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true });
   }
 
-  // TODO 3.3: enviar el correo al proveedor (Mailchimp o Brevo).
+  const result = await getMailProvider().subscribe(parsed.data.email);
+  if (!result.ok) {
+    return NextResponse.json({ ok: false }, { status: 502 });
+  }
   return NextResponse.json({ ok: true });
 }

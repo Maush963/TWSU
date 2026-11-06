@@ -9,7 +9,6 @@ import { SubscribeBar } from "./SubscribeBar";
 // Privacy todavía no tiene página (pendiente del cliente): se muestra como texto, sin enlace.
 const LINKS = [
   { label: uiText.footer.tagline, href: null },
-  { label: uiText.footer.contact, href: "/join" },
   { label: uiText.footer.privacy, href: null },
 ] as const;
 

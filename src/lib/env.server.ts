@@ -12,8 +12,6 @@ const serverSchema = z.object({
   MAIL_LIST_ID: optional,
   // Solo hace falta si se elige Mailchimp.
   MAIL_SERVER_PREFIX: optional,
-  // Destino del formulario de Join, por confirmar.
-  CONTACT_TO_EMAIL: optional,
 });
 
 export const serverEnv = parseEnv(serverSchema, process.env, "serverEnv");
