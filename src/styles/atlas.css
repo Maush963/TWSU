@@ -94,7 +94,14 @@
 }
 
 /* El botón "Explore the Atlas" de la cabecera no tiene sentido dentro del propio Atlas. */
-body:has(.atlas-page) .explore-atlas-link {
+/* Se oculta con visibility (no display) para conservar su espacio y que la navegación no cambie de lugar entre páginas. */
+body:has(.atlas-page) .header-nav .explore-atlas-link {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* En el menú móvil sí se quita, ahí no hay distribución que preservar. */
+body:has(.atlas-page) li.explore-atlas-link {
   display: none;
 }
 
@@ -107,10 +114,4 @@ body:has(.atlas-page) .explore-atlas-link {
 
 .atlas-pin-blink {
   animation: atlas-pin-blink 0.4s ease-out;
-}
-
-/* Sin el botón, la navegación del Atlas se centra en el espacio que deja el logo en lugar de quedar pegada a él. */
-body:has(.atlas-page) .header-nav {
-  justify-content: center;
-  padding-left: 0;
 }
