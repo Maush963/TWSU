@@ -15,9 +15,9 @@ import sharp from "sharp";
 const SOURCE = "scripts/data/home-source/hero-home.webp";
 const OUTPUT_DIR = "public/home";
 
-// Franja de la cabeza: desde arriba hasta CUT_Y (justo bajo la boca), y de CUT_LEFT a CUT_LEFT + CUT_WIDTH.
+// Franja de la cabeza: desde arriba hasta CUT_Y (solo los cuernos y la parte alta de las orejas), y de CUT_LEFT a CUT_LEFT + CUT_WIDTH.
 // Si se cambian, actualizar `--home-cutout-*` en tokens.css.
-const CUT_Y = 130;
+const CUT_Y = 50;
 const CUT_LEFT = 620;
 const CUT_WIDTH = 200;
 
