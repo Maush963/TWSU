@@ -24,7 +24,7 @@ export function HomeFeatured({ articles }: { articles: readonly ArticleSummary[]
               className="home-featured-item relative focus-within:outline-2 focus-within:outline-accent"
             >
               <div className="home-featured-text flex flex-col gap-2">
-                <h3 className="shrink-0 font-display text-lg uppercase leading-none text-accent">
+                <h3 className="shrink-0 font-display text-title uppercase leading-none text-accent">
                   <Link href={`/perspectives/${article.slug}`} className="outline-none after:absolute after:inset-0">
                     {article.title}
                   </Link>
