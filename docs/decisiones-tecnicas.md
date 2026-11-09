@@ -218,4 +218,5 @@ La Home usa el mismo esquema que Perspectives y About: el `main` lleva `panel-pa
 - **Botones del banner.** "Explore the atlas" (`lg:hidden`: en escritorio el acceso está en la cabecera) va a la izquierda de "Learn more", en una fila. Abajo de `sm` los dos usan `text-xs` para caber juntos en 360 px; si no caben, se envuelven.
 - **Título.** Menos relleno arriba del banner (`calc(var(--space-8) * 0.75)`), más cerca de la cabecera.
 - **Featured.** El mismo esquema que en escritorio: la portada cuadrada (45% del ancho, `--home-featured-image-width-mobile`) fija el alto de la fila y el texto se estira de arriba del título a "Read the article" (`.home-featured-text`, `height: 0; min-height: 100%`). Título `text-lg` y extracto de 3 líneas; el extracto se acorta antes que perder el enlace. Desde `lg` la portada es el 50%.
+- **Espaciado.** Entre artículos `gap-y-12` (3rem) y la sección Featured sube con 2.5rem de relleno arriba (antes 4rem); abajo sigue en 4rem. Desde `lg` el relleno es el de escritorio.
 - Sin probar en navegador (falta `.env.local`); revisar en 360 y 390 px.

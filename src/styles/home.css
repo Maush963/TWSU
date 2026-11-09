@@ -76,7 +76,7 @@
 }
 
 .home-featured {
-  padding: calc(var(--space-8) * 2) var(--space-4);
+  padding: calc(var(--space-8) * 1.25) var(--space-4) calc(var(--space-8) * 2);
 }
 
 /* Cada artículo: texto a la izquierda y portada cuadrada a la derecha. La portada fija el alto de
