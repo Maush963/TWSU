@@ -16,7 +16,7 @@ export default async function HomePage() {
   const articles = [...(featured ? [featured] : []), ...recent].slice(0, HOME_RECENT_LIMIT);
 
   return (
-    <main lang={uiText.meta.locale} className="flex-1">
+    <main lang={uiText.meta.locale} className="home-page flex-1">
       <section aria-labelledby="home-hero-title" className="home-banner bg-bg">
         <div className="home-banner-art">
           <Image

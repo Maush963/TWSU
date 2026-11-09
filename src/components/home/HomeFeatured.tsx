@@ -5,7 +5,8 @@ import { uiText } from "@/content/ui-text";
 import { urlFor } from "@/lib/sanity/image";
 import type { ArticleSummary } from "@/lib/sanity/types";
 
-// Bloque "Featured" de la Home: el destacado y los recientes, en fila desde `lg`. Un solo enlace
+// Bloque "Featured" de la Home: el destacado y los recientes (tres columnas desde `lg`).
+// Cada uno lleva título y texto a la izquierda y la portada cuadrada a la derecha. Un solo enlace
 // por artículo: el del título se estira sobre todo el bloque.
 export function HomeFeatured({ articles }: { articles: readonly ArticleSummary[] }) {
   return (
@@ -20,16 +21,8 @@ export function HomeFeatured({ articles }: { articles: readonly ArticleSummary[]
           {articles.map((article) => (
             <li
               key={article.id}
-              className="home-featured-item relative flex flex-col gap-4 focus-within:outline-2 focus-within:outline-accent lg:flex-row lg:gap-6"
+              className="home-featured-item relative flex gap-4 focus-within:outline-2 focus-within:outline-accent lg:gap-6"
             >
-              <Image
-                src={urlFor(article.cover).width(640).height(640).fit("crop").url()}
-                alt={article.cover.alt}
-                width={640}
-                height={640}
-                sizes="(min-width: 64rem) 13vw, 100vw"
-                className="home-featured-image aspect-square object-cover max-lg:order-first lg:w-2/5 lg:shrink-0"
-              />
               <div className="flex min-w-0 flex-1 flex-col gap-4">
                 <h3 className="font-display text-xl uppercase leading-none text-accent">
                   <Link href={`/perspectives/${article.slug}`} className="outline-none after:absolute after:inset-0">
@@ -42,6 +35,14 @@ export function HomeFeatured({ articles }: { articles: readonly ArticleSummary[]
                   <ArrowRightIcon className="size-4" />
                 </span>
               </div>
+              <Image
+                src={urlFor(article.cover).width(640).height(640).fit("crop").url()}
+                alt={article.cover.alt}
+                width={640}
+                height={640}
+                sizes="(min-width: 64rem) 13vw, 40vw"
+                className="home-featured-image aspect-square w-2/5 shrink-0 self-start object-cover"
+              />
             </li>
           ))}
         </ul>

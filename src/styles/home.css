@@ -120,3 +120,15 @@
     padding-left: var(--home-featured-gap);
   }
 }
+
+/* El botón "Explore the atlas" de la cabecera sobra en la Home: el banner ya trae uno. Igual que
+   en el Atlas, en escritorio se oculta con visibility para que la navegación no cambie de lugar
+   entre páginas, y en el menú móvil se quita. */
+body:has(.home-page) .header-nav .explore-atlas-link {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+body:has(.home-page) li.explore-atlas-link {
+  display: none;
+}
