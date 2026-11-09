@@ -212,3 +212,10 @@ El resultado se escribe en `src/lib/atlas/map-calibration.ts` (generado, no se e
 ## Home con desvanecido al pie y pie fijo
 
 La Home usa el mismo esquema que Perspectives y About: el `main` lleva `panel-page panel-page-footer` y su contenido va dentro de `.panel-scroll`. Desde `lg` la página mide el alto de la ventana, el contenido se desplaza dentro con el desvanecido al pie (`--panel-fade`, `mask-image`) y el pie queda fijo. Abajo de `lg` sigue el flujo normal con el pie visible, y el desvanecido de móvil no se agregó a la Home (solo About lo tiene). Lleva su `PageMarker`, como las demás páginas con alto de ventana.
+
+## Home en móvil
+
+- **Botones del banner.** "Explore the atlas" (`lg:hidden`: en escritorio el acceso está en la cabecera) va a la izquierda de "Learn more", en una fila. Abajo de `sm` los dos usan `text-xs` para caber juntos en 360 px; si no caben, se envuelven.
+- **Título.** Menos relleno arriba del banner (`calc(var(--space-8) * 0.75)`), más cerca de la cabecera.
+- **Featured.** El mismo esquema que en escritorio: la portada cuadrada (45% del ancho, `--home-featured-image-width-mobile`) fija el alto de la fila y el texto se estira de arriba del título a "Read the article" (`.home-featured-text`, `height: 0; min-height: 100%`). Título `text-lg` y extracto de 3 líneas; el extracto se acorta antes que perder el enlace. Desde `lg` la portada es el 50%.
+- Sin probar en navegador (falta `.env.local`); revisar en 360 y 390 px.

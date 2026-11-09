@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { PageMarker } from "@/components/layout/PageMarker";
+import { ArrowRightIcon } from "@/components/ui/icons";
 import { HomeFeatured } from "@/components/home/HomeFeatured";
 import { uiText } from "@/content/ui-text";
 import { getFeaturedArticle, getRecentArticles } from "@/lib/data/articles";
@@ -38,8 +39,16 @@ export default async function HomePage() {
               {uiText.home.bannerTitle}
             </h1>
             <p className="font-ui leading-tight">{uiText.home.heroDescription}</p>
-            <div className="mt-8">
-              <Link href="/about" className="border-b border-gold py-1 font-ui uppercase tracking-caps hover:text-accent">
+            <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-4 sm:gap-x-8">
+              {/* En escritorio el acceso al Atlas está en la cabecera; en móvil no hay botón ahí. */}
+              <Link
+                href="/atlas"
+                className="flex items-center gap-2 bg-accent px-4 py-3 font-ui text-xs uppercase tracking-caps text-surface hover:bg-pin sm:gap-3 sm:px-5 sm:text-base lg:hidden"
+              >
+                {uiText.nav.exploreAtlas}
+                <ArrowRightIcon className="size-4" />
+              </Link>
+              <Link href="/about" className="border-b border-gold py-1 font-ui text-xs uppercase tracking-caps hover:text-accent sm:text-base">
                 {uiText.home.learnMore}
               </Link>
             </div>
