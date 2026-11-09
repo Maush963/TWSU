@@ -79,6 +79,14 @@
   padding: calc(var(--space-8) * 2) var(--space-4);
 }
 
+/* Cada artículo: texto a la izquierda y portada cuadrada a la derecha. */
+.home-featured-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--home-featured-image-width-mobile);
+  column-gap: var(--space-4);
+  align-items: start;
+}
+
 @media (min-width: 40rem) {
   .home-banner-copy,
   .home-featured {
@@ -114,21 +122,27 @@
     padding: calc(var(--space-8) * 2) var(--home-hero-side-padding);
   }
 
+  /* La portada fija el alto de la fila y el texto se estira de arriba del título a "Read the
+     article". El texto no cuenta para el alto (height 0 + min-height 100%): si no cabe, se corta. */
+  .home-featured-item {
+    grid-template-columns: minmax(0, 1fr) var(--home-featured-image-width);
+    column-gap: var(--space-4);
+    align-items: stretch;
+  }
+
+  .home-featured-text {
+    height: 0;
+    min-height: 100%;
+    overflow: hidden;
+  }
+
+  .home-featured-text > :last-child {
+    margin-top: auto;
+  }
+
   /* Línea dorada entre artículos, como separador. */
   .home-featured-item + .home-featured-item {
     border-left: 1px solid var(--color-gold);
     padding-left: var(--home-featured-gap);
   }
-}
-
-/* El botón "Explore the atlas" de la cabecera sobra en la Home: el banner ya trae uno. Igual que
-   en el Atlas, en escritorio se oculta con visibility para que la navegación no cambie de lugar
-   entre páginas, y en el menú móvil se quita. */
-body:has(.home-page) .header-nav .explore-atlas-link {
-  visibility: hidden;
-  pointer-events: none;
-}
-
-body:has(.home-page) li.explore-atlas-link {
-  display: none;
 }

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { HomeFeatured } from "@/components/home/HomeFeatured";
-import { ArrowRightIcon } from "@/components/ui/icons";
 import { uiText } from "@/content/ui-text";
 import { getFeaturedArticle, getRecentArticles } from "@/lib/data/articles";
 import { HOME_RECENT_LIMIT } from "@/lib/constants";
@@ -36,14 +35,7 @@ export default async function HomePage() {
             {uiText.home.bannerTitle}
           </h1>
           <p className="font-ui leading-tight">{uiText.home.heroDescription}</p>
-          <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
-            <Link
-              href="/atlas"
-              className="flex items-center gap-3 bg-accent px-5 py-3 font-ui uppercase tracking-caps text-surface hover:bg-pin"
-            >
-              {uiText.nav.exploreAtlas}
-              <ArrowRightIcon className="size-4" />
-            </Link>
+          <div className="mt-8">
             <Link href="/about" className="border-b border-gold py-1 font-ui uppercase tracking-caps hover:text-accent">
               {uiText.home.learnMore}
             </Link>

@@ -74,6 +74,8 @@
   --home-banner-copy-width: 34rem;
   --home-banner-fade: 40%;
   --home-featured-gap: 2rem;
+  --home-featured-image-width: 50%;
+  --home-featured-image-width-mobile: 40%;
 
   /* about */
   --about-card-ratio: 1.067;

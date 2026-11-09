@@ -21,15 +21,15 @@ export function HomeFeatured({ articles }: { articles: readonly ArticleSummary[]
           {articles.map((article) => (
             <li
               key={article.id}
-              className="home-featured-item relative flex gap-4 focus-within:outline-2 focus-within:outline-accent lg:gap-6"
+              className="home-featured-item relative focus-within:outline-2 focus-within:outline-accent"
             >
-              <div className="flex min-w-0 flex-1 flex-col gap-4">
-                <h3 className="font-display text-xl uppercase leading-none text-accent">
+              <div className="home-featured-text flex flex-col gap-3 lg:gap-2">
+                <h3 className="font-display text-xl uppercase leading-none text-accent lg:text-lg">
                   <Link href={`/perspectives/${article.slug}`} className="outline-none after:absolute after:inset-0">
                     {article.title}
                   </Link>
                 </h3>
-                <p className="line-clamp-4 font-body text-sm lg:text-base">{article.excerpt}</p>
+                <p className="line-clamp-3 font-body text-sm lg:text-base">{article.excerpt}</p>
                 <span className="mt-auto flex items-center gap-2 self-start border-b border-gold text-accent" aria-hidden>
                   {uiText.home.readArticle}
                   <ArrowRightIcon className="size-4" />
@@ -40,8 +40,8 @@ export function HomeFeatured({ articles }: { articles: readonly ArticleSummary[]
                 alt={article.cover.alt}
                 width={640}
                 height={640}
-                sizes="(min-width: 64rem) 13vw, 40vw"
-                className="home-featured-image aspect-square w-2/5 shrink-0 self-start object-cover"
+                sizes="(min-width: 64rem) 16vw, 40vw"
+                className="home-featured-image aspect-square w-full object-cover"
               />
             </li>
           ))}
