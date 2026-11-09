@@ -120,7 +120,7 @@
   .home-banner {
     display: flex;
     align-items: center;
-    min-height: var(--home-banner-height);
+    height: var(--home-banner-height);
   }
 
   .home-banner-copy {
@@ -132,12 +132,14 @@
     box-sizing: content-box;
   }
 
+  /* La foto de escritorio mide el alto del banner y su ancho sale de su proporción, pegada a la
+     derecha, así la cabeza de la jirafa (que va aparte) siempre cae sobre su cuello. */
   .home-banner-art {
     position: absolute;
     inset: 0 0 0 auto;
     z-index: -1;
-    width: var(--home-banner-art-width);
-    aspect-ratio: auto;
+    width: auto;
+    aspect-ratio: var(--home-photo-ratio);
     mask-image: linear-gradient(to right, transparent, var(--color-text) var(--home-banner-fade));
   }
 
@@ -162,4 +164,30 @@
    páginas sigue. Solo cuenta la Home visible (`:not([data-hidden])`, ver PageMarker). */
 body:has(.home-page:not([data-hidden])) li.explore-atlas-link {
   display: none;
+}
+
+/* Cabeza de la jirafa sobre la cabecera (escritorio). Su ancho y su distancia al borde derecho
+   salen del tamaño de la foto: alto del banner por proporción de la foto, por la parte que ocupa
+   la cabeza (ver scripts/prepare-home.mjs). Su base queda en el borde de arriba del banner. */
+.home-cutout {
+  display: none;
+}
+
+@media (min-width: 64rem) {
+  .home-cutout {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: calc(var(--home-banner-height) * var(--home-photo-ratio) * var(--home-cutout-right-share));
+    z-index: 60;
+    width: calc(var(--home-banner-height) * var(--home-photo-ratio) * var(--home-cutout-width-share));
+    transform: translateY(calc(-100% - var(--home-scroll, 0px)));
+    pointer-events: none;
+  }
+
+  /* Sin barra de desplazamiento visible, para que el ancho del banner sea el de la página y la
+     cabeza caiga en su sitio. Se sigue desplazando con rueda, teclado y táctil. */
+  .home-page .panel-scroll {
+    scrollbar-width: none;
+  }
 }

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { getImageProps } from "next/image";
 import Link from "next/link";
 import { PageMarker } from "@/components/layout/PageMarker";
 import { ArrowRightIcon } from "@/components/ui/icons";
 import { HomeFeatured } from "@/components/home/HomeFeatured";
+import { HomeHeadCutout } from "@/components/home/HomeHeadCutout";
 import { uiText } from "@/content/ui-text";
 import { getFeaturedArticle, getRecentArticles } from "@/lib/data/articles";
 import { HOME_RECENT_LIMIT } from "@/lib/constants";
@@ -16,20 +17,28 @@ export default async function HomePage() {
   const recent = await getRecentArticles(HOME_RECENT_LIMIT, featured?.id);
   const articles = [...(featured ? [featured] : []), ...recent].slice(0, HOME_RECENT_LIMIT);
 
+  // Dos fotos según el ancho: en móvil la completa, en escritorio la que no lleva la cabeza de la
+  // jirafa (esa va aparte, sobre la cabecera). Ver scripts/prepare-home.mjs.
+  const common = { alt: "", fill: true, sizes: "(min-width: 64rem) 75vw, 100vw", className: "object-cover" } as const;
+  const {
+    props: { srcSet: desktopSrcSet },
+  } = getImageProps({ ...common, src: "/home/hero-home-desktop.webp" });
+  const { props: mobileProps } = getImageProps({ ...common, src: "/home/hero-home.webp", priority: true });
+
   return (
-    <main lang={uiText.meta.locale} className="home-page panel-page panel-page-footer flex min-h-0 flex-1 flex-col">
+    <main
+      lang={uiText.meta.locale}
+      className="home-page panel-page panel-page-footer relative flex min-h-0 flex-1 flex-col"
+    >
       <PageMarker />
+      <HomeHeadCutout />
       <div className="panel-scroll flex-1">
         <section aria-labelledby="home-hero-title" className="home-banner bg-bg">
           <div className="home-banner-art">
-            <Image
-              src="/home/hero-home.webp"
-              alt=""
-              fill
-              sizes="(min-width: 64rem) 62vw, 100vw"
-              className="object-cover"
-              priority
-            />
+            <picture>
+              <source media="(min-width: 64rem)" srcSet={desktopSrcSet} sizes={common.sizes} />
+              <img {...mobileProps} alt="" />
+            </picture>
           </div>
           <div className="home-banner-copy">
             <h1
