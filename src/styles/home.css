@@ -56,7 +56,8 @@
 }
 
 /* Banner de la Home: texto y botones sobre el color de la página; la foto entra desde la derecha y
-   se funde con ese color por el borde izquierdo (arriba en móvil). Las clases `home-hero*` de
+   se funde con ese color por el borde izquierdo (por abajo en móvil, donde el título se sube sobre
+   la parte difuminada). Las clases `home-hero*` de
    arriba las sigue usando About. */
 .home-banner {
   position: relative;
@@ -65,18 +66,21 @@
 }
 
 .home-banner-copy {
-  padding: calc(var(--space-8) * 0.75) var(--space-4) calc(var(--space-8) * 1.5);
+  position: relative;
+  z-index: 1;
+  margin-top: calc(var(--home-banner-title-overlap) * -1);
+  padding: 0 var(--space-4) calc(var(--space-8) * 1.25);
 }
 
 .home-banner-art {
   position: relative;
   width: 100%;
   aspect-ratio: var(--home-banner-ratio);
-  mask-image: linear-gradient(to bottom, transparent, var(--color-text) 30%);
+  mask-image: linear-gradient(to bottom, var(--color-text) 55%, transparent);
 }
 
 .home-featured {
-  padding: calc(var(--space-8) * 1.25) var(--space-4) calc(var(--space-8) * 2);
+  padding: var(--space-8) var(--space-4) calc(var(--space-8) * 2);
 }
 
 /* Cada artículo: texto a la izquierda y portada cuadrada a la derecha. La portada fija el alto de
@@ -92,7 +96,7 @@
 /* Línea dorada entre artículos apilados (móvil); desde lg es vertical. */
 .home-featured-item + .home-featured-item {
   border-top: 1px solid var(--color-gold);
-  padding-top: var(--space-8);
+  padding-top: calc(var(--space-8) * 1.25);
 }
 
 .home-featured-text {
@@ -122,6 +126,7 @@
   .home-banner-copy {
     position: relative;
     z-index: 1;
+    margin-top: 0;
     max-width: var(--home-banner-copy-width);
     padding: calc(var(--space-8) * 2) 0 calc(var(--space-8) * 2) var(--home-hero-side-padding);
     box-sizing: content-box;
