@@ -89,6 +89,12 @@
   align-items: stretch;
 }
 
+/* Línea dorada entre artículos apilados (móvil); desde lg es vertical. */
+.home-featured-item + .home-featured-item {
+  border-top: 1px solid var(--color-gold);
+  padding-top: calc(var(--space-8) * 0.75);
+}
+
 .home-featured-text {
   height: 0;
   min-height: 100%;
@@ -140,6 +146,8 @@
 
   /* Línea dorada entre artículos, como separador. */
   .home-featured-item + .home-featured-item {
+    border-top: 0;
+    padding-top: 0;
     border-left: 1px solid var(--color-gold);
     padding-left: var(--home-featured-gap);
   }

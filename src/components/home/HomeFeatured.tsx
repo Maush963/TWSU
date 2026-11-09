@@ -17,7 +17,7 @@ export function HomeFeatured({ articles }: { articles: readonly ArticleSummary[]
       {articles.length === 0 ? (
         <p className="font-body">{uiText.home.empty}</p>
       ) : (
-        <ul className="grid grid-cols-1 gap-y-12 lg:grid-cols-3 lg:gap-x-8">
+        <ul className="grid grid-cols-1 gap-y-6 lg:grid-cols-3 lg:gap-x-8">
           {articles.map((article) => (
             <li
               key={article.id}
