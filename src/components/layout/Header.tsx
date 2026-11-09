@@ -14,8 +14,9 @@ export function Header() {
   return (
     <header className="relative z-50 flex items-center justify-between gap-4 bg-surface px-4 pb-5 pt-6 lg:px-8 lg:py-[0.92rem]">
       <Logo />
-      <div className="header-nav hidden flex-1 items-center lg:flex lg:justify-between lg:pl-24">
-        <nav aria-label={uiText.nav.label}>
+      <div className="header-nav hidden flex-1 items-center lg:flex lg:justify-end">
+        {/* Centrada respecto a toda la cabecera, haya o no botón a la derecha. */}
+        <nav aria-label={uiText.nav.label} className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           <ul className="flex gap-16 font-ui text-lg uppercase tracking-caps">
             {LINKS.map((link) => (
               <li key={link.href}>
