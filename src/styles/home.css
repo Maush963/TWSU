@@ -157,3 +157,9 @@
     padding-left: var(--home-featured-gap);
   }
 }
+
+/* En la Home el menú móvil no lleva "Explore the atlas": el banner ya trae el botón. En las demás
+   páginas sigue. Solo cuenta la Home visible (`:not([data-hidden])`, ver PageMarker). */
+body:has(.home-page:not([data-hidden])) li.explore-atlas-link {
+  display: none;
+}
