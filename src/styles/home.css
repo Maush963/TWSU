@@ -181,7 +181,7 @@ body:has(.home-page:not([data-hidden])) li.explore-atlas-link {
     right: calc(var(--home-banner-height) * var(--home-photo-ratio) * var(--home-cutout-right-share));
     z-index: 60;
     width: calc(var(--home-banner-height) * var(--home-photo-ratio) * var(--home-cutout-width-share));
-    transform: translateY(calc(-100% - var(--home-scroll, 0px)));
+    transform: translateY(-100%);
     pointer-events: none;
   }
 
