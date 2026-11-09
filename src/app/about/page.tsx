@@ -1,3 +1,4 @@
+import { PageMarker } from "@/components/layout/PageMarker";
 import type { Metadata } from "next";
 import { AboutIntro } from "@/components/about/AboutIntro";
 import { CouncilOfFive } from "@/components/about/CouncilOfFive";
@@ -10,6 +11,7 @@ export const metadata: Metadata = { title: uiText.about.title };
 export default function AboutPage() {
   return (
     <main lang={uiText.meta.locale} className="panel-page panel-page-footer flex min-h-0 flex-1 flex-col">
+      <PageMarker />
       <div className="panel-scroll about-scroll flex-1">
         <AboutIntro />
         <CouncilOfFive />

@@ -67,6 +67,12 @@
   }
 }
 
+html {
+  /* Reserva el hueco de la barra de desplazamiento en todas las páginas: unas se desplazan por el
+     cuerpo (Home) y otras por paneles internos, y sin esto la cabecera cambia de ancho al navegar. */
+  scrollbar-gutter: stable;
+}
+
 body {
   background: var(--color-bg);
   color: var(--color-text);

@@ -1,3 +1,4 @@
+import { PageMarker } from "@/components/layout/PageMarker";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ArticleBody } from "@/components/articles/ArticleBody";
@@ -36,6 +37,7 @@ export default async function ArticlePage({ params }: PageProps<"/perspectives/[
 
   return (
     <main lang={uiText.meta.locale} className="panel-page flex min-h-0 flex-1 flex-col">
+      <PageMarker />
       <div className="panel-layout article-layout">
         <article className="panel-scroll flex flex-col gap-8 p-4 lg:px-8">
           <ArticleHeader article={article} />

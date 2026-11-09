@@ -1,3 +1,4 @@
+import { PageMarker } from "@/components/layout/PageMarker";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
@@ -80,6 +81,7 @@ async function AtlasContent({ searchParams }: { searchParams: PageProps<"/atlas"
 export default function AtlasPage({ searchParams }: PageProps<"/atlas">) {
   return (
     <main className="atlas-page flex min-h-0 flex-1 flex-col lg:px-8 lg:pb-4">
+      <PageMarker />
       <Suspense>
         <AtlasContent searchParams={searchParams} />
       </Suspense>

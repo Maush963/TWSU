@@ -1,3 +1,4 @@
+import { PageMarker } from "@/components/layout/PageMarker";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
@@ -77,6 +78,7 @@ async function PerspectivesContent({ searchParams }: { searchParams: PageProps<"
 export default function PerspectivesPage({ searchParams }: PageProps<"/perspectives">) {
   return (
     <main lang={uiText.meta.locale} className="panel-page flex min-h-0 flex-1 flex-col">
+      <PageMarker />
       <Suspense>
         <PerspectivesContent searchParams={searchParams} />
       </Suspense>

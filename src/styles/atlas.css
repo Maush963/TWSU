@@ -18,7 +18,7 @@
 }
 
 @media (min-width: 64rem) {
-  body:has(.atlas-page) {
+  body:has(.atlas-page:not([data-hidden])) {
     height: 100dvh;
   }
 
@@ -88,20 +88,20 @@
 
 /* En el Atlas móvil no hay pie de página: la pantalla es la lista y el globo (ver el diseño). */
 @media (max-width: 63.999rem) {
-  body:has(.atlas-page) footer {
+  body:has(.atlas-page:not([data-hidden])) footer {
     display: none;
   }
 }
 
 /* El botón "Explore the Atlas" de la cabecera no tiene sentido dentro del propio Atlas. */
 /* Se oculta con visibility (no display) para conservar su espacio y que la navegación no cambie de lugar entre páginas. */
-body:has(.atlas-page) .header-nav .explore-atlas-link {
+body:has(.atlas-page:not([data-hidden])) .header-nav .explore-atlas-link {
   visibility: hidden;
   pointer-events: none;
 }
 
 /* En el menú móvil sí se quita, ahí no hay distribución que preservar. */
-body:has(.atlas-page) li.explore-atlas-link {
+body:has(.atlas-page:not([data-hidden])) li.explore-atlas-link {
   display: none;
 }
 
