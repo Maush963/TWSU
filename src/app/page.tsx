@@ -39,7 +39,7 @@ export default async function HomePage() {
               {uiText.home.bannerTitle}
             </h1>
             <p className="font-ui leading-tight">{uiText.home.heroDescription}</p>
-            <div className="mt-8 flex flex-col items-start gap-6">
+            <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-4 sm:gap-x-8">
               {/* En escritorio el acceso al Atlas está en la cabecera; en móvil no hay botón ahí. */}
               <Link
                 href="/atlas"
@@ -48,7 +48,7 @@ export default async function HomePage() {
                 {uiText.nav.exploreAtlas}
                 <ArrowRightIcon className="size-4" />
               </Link>
-              <Link href="/about" className="border-b border-gold py-1 font-ui text-xs uppercase tracking-caps hover:text-accent sm:text-base">
+              <Link href="/about" className="border-b border-gold py-1 font-ui text-xs uppercase tracking-caps hover:text-accent lg:text-base">
                 {uiText.home.learnMore}
               </Link>
             </div>
