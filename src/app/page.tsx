@@ -1,52 +1,56 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
+import { HomeFeatured } from "@/components/home/HomeFeatured";
+import { ArrowRightIcon } from "@/components/ui/icons";
 import { uiText } from "@/content/ui-text";
+import { getFeaturedArticle, getRecentArticles } from "@/lib/data/articles";
+import { HOME_RECENT_LIMIT } from "@/lib/constants";
 
 export const metadata: Metadata = { title: uiText.home.title };
 
-export default function HomePage() {
+export default async function HomePage() {
+  // El destacado va primero y los más recientes completan la fila, sin repetirlo.
+  const featured = await getFeaturedArticle();
+  const recent = await getRecentArticles(HOME_RECENT_LIMIT, featured?.id);
+  const articles = [...(featured ? [featured] : []), ...recent].slice(0, HOME_RECENT_LIMIT);
+
   return (
     <main lang={uiText.meta.locale} className="flex-1">
-      <section
-        aria-labelledby="home-hero-title"
-        className="home-hero bg-bg"
-      >
-        <div className="home-hero-image">
+      <section aria-labelledby="home-hero-title" className="home-banner bg-bg">
+        <div className="home-banner-art">
           <Image
-            src="/about/hero-personajes.webp"
+            src="/home/hero-home.webp"
             alt=""
             fill
-            sizes="(max-width: 48rem) 100vw, 62vw"
-            className="object-contain object-right-bottom"
+            sizes="(min-width: 64rem) 62vw, 100vw"
+            className="object-cover"
             priority
           />
         </div>
-        <div className="home-hero-copy">
+        <div className="home-banner-copy">
           <h1
             id="home-hero-title"
-            className="mb-2 font-body text-4xl uppercase leading-tight text-accent"
+            className="mb-4 font-display text-2xl uppercase leading-none text-accent lg:text-3xl"
           >
-            {uiText.home.heroTitle}
+            {uiText.home.bannerTitle}
           </h1>
           <p className="font-ui leading-tight">{uiText.home.heroDescription}</p>
-          <p className="mt-4 font-ui leading-tight">{uiText.home.heroBelief}</p>
+          <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
+            <Link
+              href="/atlas"
+              className="flex items-center gap-3 bg-accent px-5 py-3 font-ui uppercase tracking-caps text-surface hover:bg-pin"
+            >
+              {uiText.nav.exploreAtlas}
+              <ArrowRightIcon className="size-4" />
+            </Link>
+            <Link href="/about" className="border-b border-gold py-1 font-ui uppercase tracking-caps hover:text-accent">
+              {uiText.home.learnMore}
+            </Link>
+          </div>
         </div>
       </section>
-      <section
-        aria-label="Who we are, what we do, why and how"
-        className="home-overview bg-surface"
-      >
-        <dl className="grid grid-cols-1 gap-y-8 sm:grid-cols-2 sm:gap-x-8 lg:grid-cols-4 lg:gap-x-12">
-          {uiText.home.values.map((value) => (
-            <div key={value.title} className="border-l border-gold pl-5">
-              <dt className="mb-2 font-body text-3xl uppercase leading-none text-accent">
-                {value.title}
-              </dt>
-              <dd className="font-ui leading-tight">{value.description}</dd>
-            </div>
-          ))}
-        </dl>
-      </section>
+      <HomeFeatured articles={articles} />
     </main>
   );
 }

@@ -68,6 +68,13 @@
   --home-hero-side-padding: 9vw;
   --home-overview-side-padding: 6.7vw;
 
+  --home-banner-ratio: 2.334;
+  --home-banner-height: 26rem;
+  --home-banner-art-width: 62%;
+  --home-banner-copy-width: 34rem;
+  --home-banner-fade: 40%;
+  --home-featured-gap: 2rem;
+
   /* about */
   --about-card-ratio: 1.067;
   --about-card-gap: 1.5rem;

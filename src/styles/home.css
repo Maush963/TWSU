@@ -54,3 +54,69 @@
     padding: calc(var(--space-8) * 3) var(--home-overview-side-padding);
   }
 }
+
+/* Banner de la Home: texto y botones sobre el color de la página; la foto entra desde la derecha y
+   se funde con ese color por el borde izquierdo (arriba en móvil). Las clases `home-hero*` de
+   arriba las sigue usando About. */
+.home-banner {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.home-banner-copy {
+  padding: calc(var(--space-8) * 1.5) var(--space-4);
+}
+
+.home-banner-art {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--home-banner-ratio);
+  mask-image: linear-gradient(to bottom, transparent, var(--color-text) 30%);
+}
+
+.home-featured {
+  padding: calc(var(--space-8) * 2) var(--space-4);
+}
+
+@media (min-width: 40rem) {
+  .home-banner-copy,
+  .home-featured {
+    padding-inline: var(--space-8);
+  }
+}
+
+@media (min-width: 64rem) {
+  .home-banner {
+    display: flex;
+    align-items: center;
+    min-height: var(--home-banner-height);
+  }
+
+  .home-banner-copy {
+    position: relative;
+    z-index: 1;
+    max-width: var(--home-banner-copy-width);
+    padding: calc(var(--space-8) * 2) 0 calc(var(--space-8) * 2) var(--home-hero-side-padding);
+    box-sizing: content-box;
+  }
+
+  .home-banner-art {
+    position: absolute;
+    inset: 0 0 0 auto;
+    z-index: -1;
+    width: var(--home-banner-art-width);
+    aspect-ratio: auto;
+    mask-image: linear-gradient(to right, transparent, var(--color-text) var(--home-banner-fade));
+  }
+
+  .home-featured {
+    padding: calc(var(--space-8) * 2) var(--home-hero-side-padding);
+  }
+
+  /* Línea dorada entre artículos, como separador. */
+  .home-featured-item + .home-featured-item {
+    border-left: 1px solid var(--color-gold);
+    padding-left: var(--home-featured-gap);
+  }
+}

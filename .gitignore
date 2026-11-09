@@ -50,3 +50,6 @@ next-env.d.ts
 
 # originales de About, pesan mucho; ver npm run prepare:about
 /scripts/data/about-source/
+
+# original de la Home, pesa mucho; ver npm run prepare:home
+/scripts/data/home-source/

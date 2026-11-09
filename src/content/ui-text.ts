@@ -75,8 +75,10 @@ export const uiText = {
           "We research, evaluate and recognize tourism through independent standards designed to spotlight meaningful work and measurable impact.",
       },
     ],
-    featured: "Destacado",
-    recent: "Recientes",
+    bannerTitle: "Creativity travels further",
+    learnMore: "Learn more",
+    featured: "Featured",
+    readArticle: "Read the article",
     empty: "Todavía no hay artículos.",
   },
   atlas: {
