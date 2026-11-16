@@ -75,7 +75,8 @@ export const uiText = {
           "We research, evaluate and recognize tourism through independent standards designed to spotlight meaningful work and measurable impact.",
       },
     ],
-    bannerTitle: "Creativity travels further",
+    // Dos líneas fijas, como en el diseño (también en móvil).
+    bannerTitle: ["Creativity", "Travels further"],
     learnMore: "Learn more",
     featured: "Featured",
     readArticle: "Read the article",

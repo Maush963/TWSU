@@ -11,7 +11,7 @@ import type { ArticleSummary } from "@/lib/sanity/types";
 export function HomeFeatured({ articles }: { articles: readonly ArticleSummary[] }) {
   return (
     <section aria-labelledby="home-featured-title" className="home-featured bg-surface">
-      <h2 id="home-featured-title" className="mb-8 font-ui text-base uppercase tracking-caps-wide lg:text-lg">
+      <h2 id="home-featured-title" className="mb-8 font-ui text-base uppercase tracking-caps-wide lg:mb-4 lg:text-lg">
         {uiText.home.featured}
       </h2>
       {articles.length === 0 ? (

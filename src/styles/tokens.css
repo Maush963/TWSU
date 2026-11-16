@@ -74,7 +74,8 @@
   --home-cutout-width-share: 0.1044;
   --home-cutout-right-share: 0.572;
   --home-banner-title-overlap: 1.5rem;
-  --home-banner-height: 26rem;
+  --home-banner-mobile-zoom: 118%;
+  --home-banner-height: 24rem;
   --home-banner-copy-width: 34rem;
   --home-banner-fade: 40%;
   --home-featured-gap: 2rem;

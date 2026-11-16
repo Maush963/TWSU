@@ -69,18 +69,21 @@
   position: relative;
   z-index: 1;
   margin-top: calc(var(--home-banner-title-overlap) * -1);
-  padding: 0 var(--space-4) calc(var(--space-8) * 1.25);
+  padding: 0 var(--space-8) calc(var(--space-8) * 1.25);
 }
 
+/* En móvil la foto es más ancha que la pantalla y va centrada: se recortan un poco los lados,
+   sin perder a ningún personaje. */
 .home-banner-art {
   position: relative;
-  width: 100%;
+  width: var(--home-banner-mobile-zoom);
+  margin-inline: calc((100% - var(--home-banner-mobile-zoom)) / 2);
   aspect-ratio: var(--home-banner-ratio);
   mask-image: linear-gradient(to bottom, var(--color-text) 55%, transparent);
 }
 
 .home-featured {
-  padding: var(--space-8) var(--space-4) calc(var(--space-8) * 2);
+  padding: var(--space-8) var(--space-8) calc(var(--space-8) * 2);
 }
 
 /* Cada artículo: texto a la izquierda y portada cuadrada a la derecha. La portada fija el alto de
@@ -128,7 +131,7 @@
     z-index: 1;
     margin-top: 0;
     max-width: var(--home-banner-copy-width);
-    padding: calc(var(--space-8) * 2) 0 calc(var(--space-8) * 2) var(--home-hero-side-padding);
+    padding: var(--space-8) 0 var(--space-4) var(--home-hero-side-padding);
     box-sizing: content-box;
   }
 
@@ -139,12 +142,13 @@
     inset: 0 0 0 auto;
     z-index: -1;
     width: auto;
+    margin-inline: 0;
     aspect-ratio: var(--home-photo-ratio);
     mask-image: linear-gradient(to right, transparent, var(--color-text) var(--home-banner-fade));
   }
 
   .home-featured {
-    padding: calc(var(--space-8) * 2) var(--home-hero-side-padding);
+    padding: var(--space-4) var(--home-hero-side-padding) var(--space-4);
   }
 
   .home-featured-item {
@@ -189,5 +193,9 @@ body:has(.home-page:not([data-hidden])) li.explore-atlas-link {
      cabeza caiga en su sitio. Se sigue desplazando con rueda, teclado y táctil. */
   .home-page .panel-scroll {
     scrollbar-width: none;
+    /* Sin difuminado ni relleno al pie: el contenido llega hasta el pie de página. Solo se
+       desplaza si la ventana es demasiado baja. */
+    mask-image: none;
+    padding-bottom: 0;
   }
 }

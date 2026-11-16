@@ -45,10 +45,14 @@ export default async function HomePage() {
               id="home-hero-title"
               className="mb-4 font-display text-2xl uppercase leading-none text-accent lg:text-3xl"
             >
-              {uiText.home.bannerTitle}
+              {uiText.home.bannerTitle.map((line) => (
+                <span key={line} className="block">
+                  {line}
+                </span>
+              ))}
             </h1>
             <p className="font-ui leading-tight">{uiText.home.heroDescription}</p>
-            <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-4 sm:gap-x-8">
+            <div className="mt-8 lg:mt-6 flex flex-wrap items-center gap-x-10 gap-y-4">
               {/* En escritorio el acceso al Atlas está en la cabecera; en móvil no hay botón ahí. */}
               <Link
                 href="/atlas"
