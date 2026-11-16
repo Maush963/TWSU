@@ -69,13 +69,16 @@
   --home-hero-side-padding: 9vw;
   --home-overview-side-padding: 6.7vw;
 
-  --home-banner-ratio: 1.8;
+  --home-banner-ratio: 1.913; /* móvil: la foto sin cabeza (2.485) recortada a los lados */
+  --home-cutout-left-share: 0.3236; /* borde izquierdo de la cabeza sobre el ancho de la foto */
+  --home-side-padding: 5.5vw;
+  --color-home-banner: #f3e9dd; /* fondo del banner de la Home, un poco más cálido que el de featured y cabecera */
   --home-photo-ratio: 2.485;
   --home-cutout-width-share: 0.1044;
   --home-cutout-right-share: 0.572;
   --home-banner-title-overlap: 1.5rem;
   --home-banner-mobile-zoom: 118%;
-  --home-banner-height: 24rem;
+  --home-banner-height: 22rem;
   --home-banner-copy-width: 34rem;
   --home-banner-fade: 40%;
   --home-featured-gap: 2rem;

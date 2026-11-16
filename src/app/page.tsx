@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getImageProps } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import { PageMarker } from "@/components/layout/PageMarker";
 import { ArrowRightIcon } from "@/components/ui/icons";
@@ -17,13 +18,16 @@ export default async function HomePage() {
   const recent = await getRecentArticles(HOME_RECENT_LIMIT, featured?.id);
   const articles = [...(featured ? [featured] : []), ...recent].slice(0, HOME_RECENT_LIMIT);
 
-  // Dos fotos según el ancho: en móvil la completa, en escritorio la que no lleva la cabeza de la
-  // jirafa (esa va aparte, sobre la cabecera). Ver scripts/prepare-home.mjs.
-  const common = { alt: "", fill: true, sizes: "(min-width: 64rem) 75vw, 100vw", className: "object-cover" } as const;
-  const {
-    props: { srcSet: desktopSrcSet },
-  } = getImageProps({ ...common, src: "/home/hero-home-desktop.webp" });
-  const { props: mobileProps } = getImageProps({ ...common, src: "/home/hero-home.webp", priority: true });
+  // La misma foto, sin la cabeza de la jirafa, en móvil y en escritorio: la cabeza va aparte y sobresale
+  // sobre la cabecera. Ver scripts/prepare-home.mjs.
+  const { props: photoProps } = getImageProps({
+    alt: "",
+    fill: true,
+    sizes: "(min-width: 64rem) 75vw, 120vw",
+    className: "object-cover",
+    src: "/home/hero-home-desktop.webp",
+    priority: true,
+  });
 
   return (
     <main
@@ -33,17 +37,26 @@ export default async function HomePage() {
       <PageMarker />
       <HomeHeadCutout />
       <div className="panel-scroll flex-1">
-        <section aria-labelledby="home-hero-title" className="home-banner bg-bg">
-          <div className="home-banner-art">
-            <picture>
-              <source media="(min-width: 64rem)" srcSet={desktopSrcSet} sizes={common.sizes} />
-              <img {...mobileProps} alt="" />
-            </picture>
+        <section aria-labelledby="home-hero-title" className="home-banner">
+          <div className="home-banner-media">
+            <div className="home-banner-art">
+              <img {...photoProps} alt="" />
+            </div>
+            {/* Cabeza de la jirafa en móvil; en escritorio la dibuja HomeHeadCutout. */}
+            <Image
+              src="/home/jirafa-cabeza.webp"
+              alt=""
+              aria-hidden="true"
+              width={200}
+              height={130}
+              sizes="20vw"
+              className="home-cutout-mobile h-auto"
+            />
           </div>
           <div className="home-banner-copy">
             <h1
               id="home-hero-title"
-              className="mb-4 font-display text-2xl uppercase leading-none text-accent lg:text-3xl"
+              className="mb-4 font-display text-[2.75rem] uppercase leading-none text-accent lg:text-3xl"
             >
               {uiText.home.bannerTitle.map((line) => (
                 <span key={line} className="block">

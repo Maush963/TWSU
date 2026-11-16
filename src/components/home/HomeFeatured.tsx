@@ -11,28 +11,28 @@ import type { ArticleSummary } from "@/lib/sanity/types";
 export function HomeFeatured({ articles }: { articles: readonly ArticleSummary[] }) {
   return (
     <section aria-labelledby="home-featured-title" className="home-featured bg-surface">
-      <h2 id="home-featured-title" className="mb-8 font-ui text-base uppercase tracking-caps-wide lg:mb-4 lg:text-lg">
+      <h2 id="home-featured-title" className="mb-8 font-ui text-base uppercase tracking-caps lg:mb-4 lg:text-lg">
         {uiText.home.featured}
       </h2>
       {articles.length === 0 ? (
         <p className="font-body">{uiText.home.empty}</p>
       ) : (
-        <ul className="grid grid-cols-1 gap-y-10 lg:grid-cols-3 lg:gap-x-8">
+        <ul className="home-featured-list">
           {articles.map((article) => (
             <li
               key={article.id}
               className="home-featured-item relative focus-within:outline-2 focus-within:outline-accent"
             >
               <div className="home-featured-text flex flex-col gap-2">
-                <h3 className="shrink-0 font-display text-title uppercase leading-none text-accent">
+                <h3 className="shrink-0 font-display text-title uppercase leading-none text-accent lg:text-[clamp(1.5rem,2.2vw,2.75rem)]">
                   <Link href={`/perspectives/${article.slug}`} className="outline-none after:absolute after:inset-0">
                     {article.title}
                   </Link>
                 </h3>
-                <p className="line-clamp-3 min-h-0 overflow-hidden font-body text-sm lg:text-base">{article.excerpt}</p>
+                <p className="line-clamp-3 min-h-0 overflow-hidden font-body text-sm lg:text-[clamp(1rem,1.15vw,1.375rem)]">{article.excerpt}</p>
                 <span className="mt-auto flex shrink-0 items-center gap-2 self-start border-b border-gold text-accent" aria-hidden>
                   {uiText.home.readArticle}
-                  <ArrowRightIcon className="size-4" />
+                  <ArrowRightIcon className="size-4 text-gold" />
                 </span>
               </div>
               <Image
@@ -40,7 +40,7 @@ export function HomeFeatured({ articles }: { articles: readonly ArticleSummary[]
                 alt={article.cover.alt}
                 width={640}
                 height={640}
-                sizes="(min-width: 64rem) 16vw, 45vw"
+                sizes="(min-width: 64rem) 20vw, 45vw"
                 className="home-featured-image aspect-square w-full object-cover"
               />
             </li>
