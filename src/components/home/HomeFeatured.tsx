@@ -11,7 +11,7 @@ import type { ArticleSummary } from "@/lib/sanity/types";
 export function HomeFeatured({ articles }: { articles: readonly ArticleSummary[] }) {
   return (
     <section aria-labelledby="home-featured-title" className="home-featured bg-surface">
-      <h2 id="home-featured-title" className="mb-8 font-ui text-base uppercase tracking-caps lg:mb-4 lg:text-lg">
+      <h2 id="home-featured-title" className="mb-8 font-ui text-base uppercase tracking-caps lg:mb-4 lg:tracking-caps-wide lg:text-lg">
         {uiText.home.featured}
       </h2>
       {articles.length === 0 ? (
@@ -24,15 +24,15 @@ export function HomeFeatured({ articles }: { articles: readonly ArticleSummary[]
               className="home-featured-item relative focus-within:outline-2 focus-within:outline-accent"
             >
               <div className="home-featured-text flex flex-col gap-2">
-                <h3 className="shrink-0 font-display text-title uppercase leading-none text-accent lg:text-[clamp(1.5rem,2.2vw,2.75rem)]">
+                <h3 className="shrink-0 font-display text-title uppercase leading-none text-accent">
                   <Link href={`/perspectives/${article.slug}`} className="outline-none after:absolute after:inset-0">
                     {article.title}
                   </Link>
                 </h3>
-                <p className="line-clamp-3 min-h-0 overflow-hidden font-body text-sm lg:text-[clamp(1rem,1.15vw,1.375rem)]">{article.excerpt}</p>
+                <p className="line-clamp-3 min-h-0 overflow-hidden font-body text-sm lg:text-base">{article.excerpt}</p>
                 <span className="mt-auto flex shrink-0 items-center gap-2 self-start border-b border-gold text-accent" aria-hidden>
                   {uiText.home.readArticle}
-                  <ArrowRightIcon className="size-4 text-gold" />
+                  <ArrowRightIcon className="size-4 text-gold lg:text-accent" />
                 </span>
               </div>
               <Image
@@ -40,7 +40,7 @@ export function HomeFeatured({ articles }: { articles: readonly ArticleSummary[]
                 alt={article.cover.alt}
                 width={640}
                 height={640}
-                sizes="(min-width: 64rem) 20vw, 45vw"
+                sizes="(min-width: 64rem) 16vw, 45vw"
                 className="home-featured-image aspect-square w-full object-cover"
               />
             </li>

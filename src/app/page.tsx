@@ -56,10 +56,10 @@ export default async function HomePage() {
           <div className="home-banner-copy">
             <h1
               id="home-hero-title"
-              className="mb-4 font-display text-[2.75rem] uppercase leading-none text-accent lg:text-3xl"
+              className="home-banner-title mb-4 font-display uppercase leading-none text-accent"
             >
               {uiText.home.bannerTitle.map((line) => (
-                <span key={line} className="block">
+                <span key={line} className="block whitespace-nowrap">
                   {line}
                 </span>
               ))}

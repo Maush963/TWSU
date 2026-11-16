@@ -160,7 +160,7 @@
     z-index: 1;
     margin-top: 0;
     max-width: var(--home-banner-copy-width);
-    padding: var(--space-8) 0 var(--space-4) var(--home-side-padding);
+    padding: calc(var(--space-8) * 2) 0 calc(var(--space-8) * 2) var(--home-hero-side-padding);
     box-sizing: content-box;
   }
 
@@ -179,29 +179,22 @@
     display: none;
   }
 
+  .home-banner {
+    background: var(--color-bg);
+  }
+
   .home-banner-art {
     mask-image: linear-gradient(to right, transparent, var(--color-text) var(--home-banner-fade));
   }
 
   .home-featured {
-    padding: calc(var(--space-8) * 1.25) 0 var(--space-4) var(--home-side-padding);
+    padding: calc(var(--space-8) * 1.25) var(--home-hero-side-padding) var(--space-4);
   }
 
-  /* Carrusel: dos artículos y medio a la vista, el resto con desplazamiento horizontal. El ancho
-     sale del ancho de la ventana, así se adapta (pantalla completa o no). */
+  /* Tres columnas. */
   .home-featured-list {
-    grid-auto-flow: column;
-    grid-auto-columns: calc((100% - 2 * var(--home-featured-gap)) / 2.5);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     column-gap: var(--home-featured-gap);
-    overflow-x: auto;
-    scroll-snap-type: x proximity;
-    scrollbar-width: thin;
-    scrollbar-color: var(--color-gold) transparent;
-    padding-bottom: var(--space-2);
-  }
-
-  .home-featured-item {
-    scroll-snap-align: start;
   }
 
   .home-featured-item {
@@ -254,13 +247,26 @@ body:has(.home-page:not([data-hidden])) li.explore-atlas-link {
 
 }
 
-/* Featured llena el alto que sobra, así su fondo claro llega hasta el pie; el pie lleva el mismo
-   tono. */
-.home-page .panel-scroll {
-  display: flex;
-  flex-direction: column;
+/* Móvil: featured llena el alto que sobra, así su fondo claro llega hasta el pie; el pie lleva el
+   mismo tono. */
+@media not (min-width: 64rem) {
+  .home-page .panel-scroll {
+    display: flex;
+    flex-direction: column;
+  }
+
+  body:has(.home-page:not([data-hidden])) > footer {
+    background: var(--color-surface);
+  }
 }
 
-body:has(.home-page:not([data-hidden])) > footer {
-  background: var(--color-surface);
+/* Título del banner: en móvil cabe "Travels further" en una línea, en cualquier ancho. */
+.home-banner-title {
+  font-size: min(2.75rem, calc((100vw - 4rem) / 8));
+}
+
+@media (min-width: 64rem) {
+  .home-banner-title {
+    font-size: var(--text-3xl);
+  }
 }
