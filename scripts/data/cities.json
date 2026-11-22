@@ -1,0 +1,4502 @@
+[
+  {
+    "id": "place-city-abu-dhabi-ae",
+    "countryCode": "AE",
+    "name": "Abu Dhabi",
+    "continent": "asia",
+    "lat": 24.4512,
+    "lng": 54.397,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-dubai-ae",
+    "countryCode": "AE",
+    "name": "Dubai",
+    "continent": "asia",
+    "lat": 25.0772,
+    "lng": 55.3093,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-sharjah-ae",
+    "countryCode": "AE",
+    "name": "Sharjah",
+    "continent": "asia",
+    "lat": 25.3342,
+    "lng": 55.4122,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kabul-af",
+    "countryCode": "AF",
+    "name": "Kabul",
+    "continent": "asia",
+    "lat": 34.5281,
+    "lng": 69.1723,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-tirana-al",
+    "countryCode": "AL",
+    "name": "Tirana",
+    "continent": "europa",
+    "lat": 41.3274,
+    "lng": 19.8187,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-yerevan-am",
+    "countryCode": "AM",
+    "name": "Yerevan",
+    "continent": "asia",
+    "lat": 40.1776,
+    "lng": 44.5126,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-luanda-ao",
+    "countryCode": "AO",
+    "name": "Luanda",
+    "continent": "africa",
+    "lat": -8.8368,
+    "lng": 13.2343,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-cordoba-ar",
+    "countryCode": "AR",
+    "name": "Córdoba",
+    "continent": "america",
+    "lat": -31.4065,
+    "lng": -64.1885,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-mendoza-ar",
+    "countryCode": "AR",
+    "name": "Mendoza",
+    "continent": "america",
+    "lat": -32.8895,
+    "lng": -68.8458,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-rosario-ar",
+    "countryCode": "AR",
+    "name": "Rosario",
+    "continent": "america",
+    "lat": -32.9468,
+    "lng": -60.6393,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-salta-ar",
+    "countryCode": "AR",
+    "name": "Salta",
+    "continent": "america",
+    "lat": -24.8065,
+    "lng": -65.42,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-san-carlos-de-bariloche-ar",
+    "countryCode": "AR",
+    "name": "San Carlos de Bariloche",
+    "continent": "america",
+    "lat": -41.1456,
+    "lng": -71.3082,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-ushuaia-ar",
+    "countryCode": "AR",
+    "name": "Ushuaia",
+    "continent": "america",
+    "lat": -54.8108,
+    "lng": -68.3159,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-innsbruck-at",
+    "countryCode": "AT",
+    "name": "Innsbruck",
+    "continent": "europa",
+    "lat": 47.2627,
+    "lng": 11.3945,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-salzburg-at",
+    "countryCode": "AT",
+    "name": "Salzburg",
+    "continent": "europa",
+    "lat": 47.7994,
+    "lng": 13.044,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-vienna-at",
+    "countryCode": "AT",
+    "name": "Vienna",
+    "continent": "europa",
+    "lat": 48.2085,
+    "lng": 16.3721,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-adelaide-au",
+    "countryCode": "AU",
+    "name": "Adelaide",
+    "continent": "oceania",
+    "lat": -34.9287,
+    "lng": 138.5986,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-alice-springs-au",
+    "countryCode": "AU",
+    "name": "Alice Springs",
+    "continent": "oceania",
+    "lat": -23.6975,
+    "lng": 133.8836,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-brisbane-au",
+    "countryCode": "AU",
+    "name": "Brisbane",
+    "continent": "oceania",
+    "lat": -27.4679,
+    "lng": 153.0281,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-cairns-au",
+    "countryCode": "AU",
+    "name": "Cairns",
+    "continent": "oceania",
+    "lat": -16.9237,
+    "lng": 145.7661,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-darwin-au",
+    "countryCode": "AU",
+    "name": "Darwin",
+    "continent": "oceania",
+    "lat": -12.4611,
+    "lng": 130.8418,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-gold-coast-au",
+    "countryCode": "AU",
+    "name": "Gold Coast",
+    "continent": "oceania",
+    "lat": -28.0003,
+    "lng": 153.4309,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-hobart-au",
+    "countryCode": "AU",
+    "name": "Hobart",
+    "continent": "oceania",
+    "lat": -42.8794,
+    "lng": 147.3294,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-melbourne-au",
+    "countryCode": "AU",
+    "name": "Melbourne",
+    "continent": "oceania",
+    "lat": -37.814,
+    "lng": 144.9633,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-perth-au",
+    "countryCode": "AU",
+    "name": "Perth",
+    "continent": "oceania",
+    "lat": -31.9522,
+    "lng": 115.8614,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-baku-az",
+    "countryCode": "AZ",
+    "name": "Baku",
+    "continent": "asia",
+    "lat": 40.3777,
+    "lng": 49.892,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-bridgetown-bb",
+    "countryCode": "BB",
+    "name": "Bridgetown",
+    "continent": "america",
+    "lat": 13.1073,
+    "lng": -59.6202,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-chattogram-bd",
+    "countryCode": "BD",
+    "name": "Chattogram",
+    "continent": "asia",
+    "lat": 22.3384,
+    "lng": 91.8317,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-dhaka-bd",
+    "countryCode": "BD",
+    "name": "Dhaka",
+    "continent": "asia",
+    "lat": 23.7104,
+    "lng": 90.4074,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-gazipur-bd",
+    "countryCode": "BD",
+    "name": "Gazipur",
+    "continent": "asia",
+    "lat": 23.9984,
+    "lng": 90.4223,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-khulna-bd",
+    "countryCode": "BD",
+    "name": "Khulna",
+    "continent": "asia",
+    "lat": 22.8098,
+    "lng": 89.5644,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-rangpur-bd",
+    "countryCode": "BD",
+    "name": "Rangpur",
+    "continent": "asia",
+    "lat": 25.7466,
+    "lng": 89.2517,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-brugge-be",
+    "countryCode": "BE",
+    "name": "Brugge",
+    "continent": "europa",
+    "lat": 51.2089,
+    "lng": 3.2242,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-brussels-be",
+    "countryCode": "BE",
+    "name": "Brussels",
+    "continent": "europa",
+    "lat": 50.8505,
+    "lng": 4.3488,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-ouagadougou-bf",
+    "countryCode": "BF",
+    "name": "Ouagadougou",
+    "continent": "africa",
+    "lat": 12.3657,
+    "lng": -1.5339,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-sofia-bg",
+    "countryCode": "BG",
+    "name": "Sofia",
+    "continent": "europa",
+    "lat": 42.6975,
+    "lng": 23.3241,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-manama-bh",
+    "countryCode": "BH",
+    "name": "Manama",
+    "continent": "asia",
+    "lat": 26.2279,
+    "lng": 50.5857,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-la-paz-bo",
+    "countryCode": "BO",
+    "name": "La Paz",
+    "continent": "america",
+    "lat": -16.5,
+    "lng": -68.15,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-santa-cruz-de-la-sierra-bo",
+    "countryCode": "BO",
+    "name": "Santa Cruz de la Sierra",
+    "continent": "america",
+    "lat": -17.7863,
+    "lng": -63.1812,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-belo-horizonte-br",
+    "countryCode": "BR",
+    "name": "Belo Horizonte",
+    "continent": "america",
+    "lat": -19.9208,
+    "lng": -43.9378,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-belem-br",
+    "countryCode": "BR",
+    "name": "Belém",
+    "continent": "america",
+    "lat": -1.4558,
+    "lng": -48.5044,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-brasilia-br",
+    "countryCode": "BR",
+    "name": "Brasília",
+    "continent": "america",
+    "lat": -15.7797,
+    "lng": -47.9297,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-curitiba-br",
+    "countryCode": "BR",
+    "name": "Curitiba",
+    "continent": "america",
+    "lat": -25.4278,
+    "lng": -49.2731,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-florianopolis-br",
+    "countryCode": "BR",
+    "name": "Florianópolis",
+    "continent": "america",
+    "lat": -27.5967,
+    "lng": -48.5492,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-fortaleza-br",
+    "countryCode": "BR",
+    "name": "Fortaleza",
+    "continent": "america",
+    "lat": -3.7172,
+    "lng": -38.5431,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-foz-do-iguacu-br",
+    "countryCode": "BR",
+    "name": "Foz do Iguaçu",
+    "continent": "america",
+    "lat": -25.5478,
+    "lng": -54.5881,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-goiania-br",
+    "countryCode": "BR",
+    "name": "Goiânia",
+    "continent": "america",
+    "lat": -16.6786,
+    "lng": -49.2539,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-manaus-br",
+    "countryCode": "BR",
+    "name": "Manaus",
+    "continent": "america",
+    "lat": -3.1019,
+    "lng": -60.025,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-recife-br",
+    "countryCode": "BR",
+    "name": "Recife",
+    "continent": "america",
+    "lat": -8.0539,
+    "lng": -34.8811,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-rio-de-janeiro-br",
+    "countryCode": "BR",
+    "name": "Rio de Janeiro",
+    "continent": "america",
+    "lat": -22.9064,
+    "lng": -43.1822,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-salvador-br",
+    "countryCode": "BR",
+    "name": "Salvador",
+    "continent": "america",
+    "lat": -12.9756,
+    "lng": -38.491,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-nassau-bs",
+    "countryCode": "BS",
+    "name": "Nassau",
+    "continent": "america",
+    "lat": 25.0582,
+    "lng": -77.3431,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-thimphu-bt",
+    "countryCode": "BT",
+    "name": "Thimphu",
+    "continent": "asia",
+    "lat": 27.4661,
+    "lng": 89.6419,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-maun-bw",
+    "countryCode": "BW",
+    "name": "Maun",
+    "continent": "africa",
+    "lat": -19.9833,
+    "lng": 23.4167,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-minsk-by",
+    "countryCode": "BY",
+    "name": "Minsk",
+    "continent": "europa",
+    "lat": 53.9002,
+    "lng": 27.5665,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-banff-ca",
+    "countryCode": "CA",
+    "name": "Banff",
+    "continent": "america",
+    "lat": 51.1784,
+    "lng": -115.5708,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-calgary-ca",
+    "countryCode": "CA",
+    "name": "Calgary",
+    "continent": "america",
+    "lat": 51.0501,
+    "lng": -114.0853,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-edmonton-ca",
+    "countryCode": "CA",
+    "name": "Edmonton",
+    "continent": "america",
+    "lat": 53.5501,
+    "lng": -113.4687,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-montreal-ca",
+    "countryCode": "CA",
+    "name": "Montréal",
+    "continent": "america",
+    "lat": 45.5088,
+    "lng": -73.5878,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-ottawa-ca",
+    "countryCode": "CA",
+    "name": "Ottawa",
+    "continent": "america",
+    "lat": 45.4112,
+    "lng": -75.6981,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-quebec-ca",
+    "countryCode": "CA",
+    "name": "Québec",
+    "continent": "america",
+    "lat": 46.8123,
+    "lng": -71.2145,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-toronto-ca",
+    "countryCode": "CA",
+    "name": "Toronto",
+    "continent": "america",
+    "lat": 43.6533,
+    "lng": -79.3839,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-vancouver-ca",
+    "countryCode": "CA",
+    "name": "Vancouver",
+    "continent": "america",
+    "lat": 49.2497,
+    "lng": -123.1193,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kananga-cd",
+    "countryCode": "CD",
+    "name": "Kananga",
+    "continent": "africa",
+    "lat": -5.8962,
+    "lng": 22.4166,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kinshasa-cd",
+    "countryCode": "CD",
+    "name": "Kinshasa",
+    "continent": "africa",
+    "lat": -4.3276,
+    "lng": 15.3136,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kisangani-cd",
+    "countryCode": "CD",
+    "name": "Kisangani",
+    "continent": "africa",
+    "lat": 0.5153,
+    "lng": 25.191,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-lubumbashi-cd",
+    "countryCode": "CD",
+    "name": "Lubumbashi",
+    "continent": "africa",
+    "lat": -11.6609,
+    "lng": 27.4794,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-mbuji-mayi-cd",
+    "countryCode": "CD",
+    "name": "Mbuji-Mayi",
+    "continent": "africa",
+    "lat": -6.136,
+    "lng": 23.5898,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-brazzaville-cg",
+    "countryCode": "CG",
+    "name": "Brazzaville",
+    "continent": "africa",
+    "lat": -4.2661,
+    "lng": 15.2832,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-pointe-noire-cg",
+    "countryCode": "CG",
+    "name": "Pointe-Noire",
+    "continent": "africa",
+    "lat": -4.7761,
+    "lng": 11.8635,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-geneva-ch",
+    "countryCode": "CH",
+    "name": "Geneva",
+    "continent": "europa",
+    "lat": 46.2022,
+    "lng": 6.1457,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-interlaken-ch",
+    "countryCode": "CH",
+    "name": "Interlaken",
+    "continent": "europa",
+    "lat": 46.6863,
+    "lng": 7.8632,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-luzern-ch",
+    "countryCode": "CH",
+    "name": "Luzern",
+    "continent": "europa",
+    "lat": 47.0505,
+    "lng": 8.3064,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-zermatt-ch",
+    "countryCode": "CH",
+    "name": "Zermatt",
+    "continent": "europa",
+    "lat": 46.0207,
+    "lng": 7.7491,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-zuerich-ch",
+    "countryCode": "CH",
+    "name": "Zürich",
+    "continent": "europa",
+    "lat": 47.3667,
+    "lng": 8.55,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-abidjan-ci",
+    "countryCode": "CI",
+    "name": "Abidjan",
+    "continent": "africa",
+    "lat": 5.3544,
+    "lng": -4.0017,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-abobo-ci",
+    "countryCode": "CI",
+    "name": "Abobo",
+    "continent": "africa",
+    "lat": 5.4161,
+    "lng": -4.0159,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-punta-arenas-cl",
+    "countryCode": "CL",
+    "name": "Punta Arenas",
+    "continent": "america",
+    "lat": -53.1628,
+    "lng": -70.9092,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-santiago-cl",
+    "countryCode": "CL",
+    "name": "Santiago",
+    "continent": "america",
+    "lat": -33.4569,
+    "lng": -70.6483,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-valparaiso-cl",
+    "countryCode": "CL",
+    "name": "Valparaíso",
+    "continent": "america",
+    "lat": -33.036,
+    "lng": -71.6296,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-douala-cm",
+    "countryCode": "CM",
+    "name": "Douala",
+    "continent": "africa",
+    "lat": 4.0483,
+    "lng": 9.7043,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-yaounde-cm",
+    "countryCode": "CM",
+    "name": "Yaoundé",
+    "continent": "africa",
+    "lat": 3.8667,
+    "lng": 11.5167,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-beijing-cn",
+    "countryCode": "CN",
+    "name": "Beijing",
+    "continent": "asia",
+    "lat": 39.9075,
+    "lng": 116.3972,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-chengdu-cn",
+    "countryCode": "CN",
+    "name": "Chengdu",
+    "continent": "asia",
+    "lat": 30.6667,
+    "lng": 104.0667,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-chongqing-cn",
+    "countryCode": "CN",
+    "name": "Chongqing",
+    "continent": "asia",
+    "lat": 29.5603,
+    "lng": 106.5577,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-guangzhou-cn",
+    "countryCode": "CN",
+    "name": "Guangzhou",
+    "continent": "asia",
+    "lat": 23.1167,
+    "lng": 113.25,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-guilin-cn",
+    "countryCode": "CN",
+    "name": "Guilin",
+    "continent": "asia",
+    "lat": 25.2802,
+    "lng": 110.2964,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-hangzhou-cn",
+    "countryCode": "CN",
+    "name": "Hangzhou",
+    "continent": "asia",
+    "lat": 30.2936,
+    "lng": 120.1614,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-lhasa-cn",
+    "countryCode": "CN",
+    "name": "Lhasa",
+    "continent": "asia",
+    "lat": 29.65,
+    "lng": 91.1,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-lijiang-cn",
+    "countryCode": "CN",
+    "name": "Lijiang",
+    "continent": "asia",
+    "lat": 26.8688,
+    "lng": 100.2207,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-shanghai-cn",
+    "countryCode": "CN",
+    "name": "Shanghai",
+    "continent": "asia",
+    "lat": 31.2222,
+    "lng": 121.4581,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-shenzhen-cn",
+    "countryCode": "CN",
+    "name": "Shenzhen",
+    "continent": "asia",
+    "lat": 22.5455,
+    "lng": 114.0683,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-suzhou-cn",
+    "countryCode": "CN",
+    "name": "Suzhou",
+    "continent": "asia",
+    "lat": 31.3041,
+    "lng": 120.5954,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-xi-an-cn",
+    "countryCode": "CN",
+    "name": "Xi’an",
+    "continent": "asia",
+    "lat": 34.2583,
+    "lng": 108.9286,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-barranquilla-co",
+    "countryCode": "CO",
+    "name": "Barranquilla",
+    "continent": "america",
+    "lat": 10.9685,
+    "lng": -74.7813,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-bogota-co",
+    "countryCode": "CO",
+    "name": "Bogotá",
+    "continent": "america",
+    "lat": 4.6097,
+    "lng": -74.0817,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-cali-co",
+    "countryCode": "CO",
+    "name": "Cali",
+    "continent": "america",
+    "lat": 3.4305,
+    "lng": -76.5199,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-cartagena-co",
+    "countryCode": "CO",
+    "name": "Cartagena",
+    "continent": "america",
+    "lat": 10.3982,
+    "lng": -75.4933,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kennedy-co",
+    "countryCode": "CO",
+    "name": "Kennedy",
+    "continent": "america",
+    "lat": 4.6165,
+    "lng": -74.146,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-medellin-co",
+    "countryCode": "CO",
+    "name": "Medellín",
+    "continent": "america",
+    "lat": 6.245,
+    "lng": -75.5715,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-san-jose-cr",
+    "countryCode": "CR",
+    "name": "San José",
+    "continent": "america",
+    "lat": 9.9339,
+    "lng": -84.0849,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-havana-cu",
+    "countryCode": "CU",
+    "name": "Havana",
+    "continent": "america",
+    "lat": 23.133,
+    "lng": -82.383,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-varadero-cu",
+    "countryCode": "CU",
+    "name": "Varadero",
+    "continent": "america",
+    "lat": 23.1568,
+    "lng": -81.2444,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-prague-cz",
+    "countryCode": "CZ",
+    "name": "Prague",
+    "continent": "europa",
+    "lat": 50.088,
+    "lng": 14.4208,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-berlin-de",
+    "countryCode": "DE",
+    "name": "Berlin",
+    "continent": "europa",
+    "lat": 52.5244,
+    "lng": 13.4105,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-hamburg-de",
+    "countryCode": "DE",
+    "name": "Hamburg",
+    "continent": "europa",
+    "lat": 53.5507,
+    "lng": 9.993,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-heidelberg-de",
+    "countryCode": "DE",
+    "name": "Heidelberg",
+    "continent": "europa",
+    "lat": 49.4077,
+    "lng": 8.6908,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-koeln-de",
+    "countryCode": "DE",
+    "name": "Köln",
+    "continent": "europa",
+    "lat": 50.9333,
+    "lng": 6.95,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-munich-de",
+    "countryCode": "DE",
+    "name": "Munich",
+    "continent": "europa",
+    "lat": 48.1374,
+    "lng": 11.5755,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-copenhagen-dk",
+    "countryCode": "DK",
+    "name": "Copenhagen",
+    "continent": "europa",
+    "lat": 55.6759,
+    "lng": 12.5655,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-punta-cana-do",
+    "countryCode": "DO",
+    "name": "Punta Cana",
+    "continent": "america",
+    "lat": 18.5818,
+    "lng": -68.4043,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-santiago-de-los-caballeros-do",
+    "countryCode": "DO",
+    "name": "Santiago de los Caballeros",
+    "continent": "america",
+    "lat": 19.4504,
+    "lng": -70.6908,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-santo-domingo-do",
+    "countryCode": "DO",
+    "name": "Santo Domingo",
+    "continent": "america",
+    "lat": 18.4719,
+    "lng": -69.8923,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-algiers-dz",
+    "countryCode": "DZ",
+    "name": "Algiers",
+    "continent": "africa",
+    "lat": 36.7323,
+    "lng": 3.0875,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-cuenca-ec",
+    "countryCode": "EC",
+    "name": "Cuenca",
+    "continent": "america",
+    "lat": -2.8953,
+    "lng": -78.9963,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-guayaquil-ec",
+    "countryCode": "EC",
+    "name": "Guayaquil",
+    "continent": "america",
+    "lat": -2.1962,
+    "lng": -79.8862,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-quito-ec",
+    "countryCode": "EC",
+    "name": "Quito",
+    "continent": "america",
+    "lat": -0.2298,
+    "lng": -78.525,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-tallinn-ee",
+    "countryCode": "EE",
+    "name": "Tallinn",
+    "continent": "europa",
+    "lat": 59.437,
+    "lng": 24.7535,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-alexandria-eg",
+    "countryCode": "EG",
+    "name": "Alexandria",
+    "continent": "africa",
+    "lat": 31.2018,
+    "lng": 29.9158,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-aswan-eg",
+    "countryCode": "EG",
+    "name": "Aswān",
+    "continent": "africa",
+    "lat": 24.0908,
+    "lng": 32.8994,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-hurghada-eg",
+    "countryCode": "EG",
+    "name": "Hurghada",
+    "continent": "africa",
+    "lat": 27.2574,
+    "lng": 33.8129,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-luxor-eg",
+    "countryCode": "EG",
+    "name": "Luxor",
+    "continent": "africa",
+    "lat": 25.6989,
+    "lng": 32.6421,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-sharm-el-sheikh-eg",
+    "countryCode": "EG",
+    "name": "Sharm el-Sheikh",
+    "continent": "africa",
+    "lat": 27.9158,
+    "lng": 34.3299,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-barcelona-es",
+    "countryCode": "ES",
+    "name": "Barcelona",
+    "continent": "europa",
+    "lat": 41.3888,
+    "lng": 2.159,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-san-sebastian-es",
+    "countryCode": "ES",
+    "name": "Donostia / San Sebastián",
+    "continent": "europa",
+    "lat": 43.3128,
+    "lng": -1.975,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-granada-es",
+    "countryCode": "ES",
+    "name": "Granada",
+    "continent": "europa",
+    "lat": 37.1882,
+    "lng": -3.6067,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-ibiza-es",
+    "countryCode": "ES",
+    "name": "Ibiza",
+    "continent": "europa",
+    "lat": 38.9088,
+    "lng": 1.433,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-palma-es",
+    "countryCode": "ES",
+    "name": "Palma",
+    "continent": "europa",
+    "lat": 39.5694,
+    "lng": 2.6502,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-sevilla-es",
+    "countryCode": "ES",
+    "name": "Sevilla",
+    "continent": "europa",
+    "lat": 37.3828,
+    "lng": -5.9732,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-valencia-es",
+    "countryCode": "ES",
+    "name": "Valencia",
+    "continent": "europa",
+    "lat": 39.4739,
+    "lng": -0.3797,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-addis-ababa-et",
+    "countryCode": "ET",
+    "name": "Addis Ababa",
+    "continent": "africa",
+    "lat": 9.025,
+    "lng": 38.7469,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-lalibela-et",
+    "countryCode": "ET",
+    "name": "Lalibela",
+    "continent": "africa",
+    "lat": 12.0322,
+    "lng": 39.0476,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-helsinki-fi",
+    "countryCode": "FI",
+    "name": "Helsinki",
+    "continent": "europa",
+    "lat": 60.1695,
+    "lng": 24.9354,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-rovaniemi-fi",
+    "countryCode": "FI",
+    "name": "Rovaniemi",
+    "continent": "europa",
+    "lat": 66.499,
+    "lng": 25.6887,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-nadi-fj",
+    "countryCode": "FJ",
+    "name": "Nadi",
+    "continent": "oceania",
+    "lat": -17.8031,
+    "lng": 177.4162,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-suva-fj",
+    "countryCode": "FJ",
+    "name": "Suva",
+    "continent": "oceania",
+    "lat": -18.1368,
+    "lng": 178.4253,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-avignon-fr",
+    "countryCode": "FR",
+    "name": "Avignon",
+    "continent": "europa",
+    "lat": 43.9483,
+    "lng": 4.8089,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-bordeaux-fr",
+    "countryCode": "FR",
+    "name": "Bordeaux",
+    "continent": "europa",
+    "lat": 44.8412,
+    "lng": -0.5805,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-cannes-fr",
+    "countryCode": "FR",
+    "name": "Cannes",
+    "continent": "europa",
+    "lat": 43.5513,
+    "lng": 7.0127,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-lyon-fr",
+    "countryCode": "FR",
+    "name": "Lyon",
+    "continent": "europa",
+    "lat": 45.7491,
+    "lng": 4.8479,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-marseille-fr",
+    "countryCode": "FR",
+    "name": "Marseille",
+    "continent": "europa",
+    "lat": 43.297,
+    "lng": 5.3811,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-nice-fr",
+    "countryCode": "FR",
+    "name": "Nice",
+    "continent": "europa",
+    "lat": 43.7031,
+    "lng": 7.2661,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-strasbourg-fr",
+    "countryCode": "FR",
+    "name": "Strasbourg",
+    "continent": "europa",
+    "lat": 48.5839,
+    "lng": 7.7455,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-bath-gb",
+    "countryCode": "GB",
+    "name": "Bath",
+    "continent": "europa",
+    "lat": 51.3751,
+    "lng": -2.3617,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-birmingham-gb",
+    "countryCode": "GB",
+    "name": "Birmingham",
+    "continent": "europa",
+    "lat": 52.4814,
+    "lng": -1.8998,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-cambridge-gb",
+    "countryCode": "GB",
+    "name": "Cambridge",
+    "continent": "europa",
+    "lat": 52.2,
+    "lng": 0.1167,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-edinburgh-gb",
+    "countryCode": "GB",
+    "name": "Edinburgh",
+    "continent": "europa",
+    "lat": 55.9521,
+    "lng": -3.1965,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-london-gb",
+    "countryCode": "GB",
+    "name": "London",
+    "continent": "europa",
+    "lat": 51.5085,
+    "lng": -0.1257,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-oxford-gb",
+    "countryCode": "GB",
+    "name": "Oxford",
+    "continent": "europa",
+    "lat": 51.7522,
+    "lng": -1.256,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-york-gb",
+    "countryCode": "GB",
+    "name": "York",
+    "continent": "europa",
+    "lat": 53.9576,
+    "lng": -1.0827,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-tbilisi-ge",
+    "countryCode": "GE",
+    "name": "Tbilisi",
+    "continent": "asia",
+    "lat": 41.6914,
+    "lng": 44.8341,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-accra-gh",
+    "countryCode": "GH",
+    "name": "Accra",
+    "continent": "africa",
+    "lat": 5.556,
+    "lng": -0.1969,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kumasi-gh",
+    "countryCode": "GH",
+    "name": "Kumasi",
+    "continent": "africa",
+    "lat": 6.6885,
+    "lng": -1.6244,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-camayenne-gn",
+    "countryCode": "GN",
+    "name": "Camayenne",
+    "continent": "africa",
+    "lat": 9.535,
+    "lng": -13.6878,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-conakry-gn",
+    "countryCode": "GN",
+    "name": "Conakry",
+    "continent": "africa",
+    "lat": 9.538,
+    "lng": -13.6773,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-athens-gr",
+    "countryCode": "GR",
+    "name": "Athens",
+    "continent": "europa",
+    "lat": 37.9838,
+    "lng": 23.7278,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-irakleion-gr",
+    "countryCode": "GR",
+    "name": "Irákleion",
+    "continent": "europa",
+    "lat": 35.3279,
+    "lng": 25.1434,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-mykonos-gr",
+    "countryCode": "GR",
+    "name": "Mykonos",
+    "continent": "europa",
+    "lat": 37.4467,
+    "lng": 25.3289,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-santorini-gr",
+    "countryCode": "GR",
+    "name": "Santorini",
+    "continent": "europa",
+    "lat": 36.4166,
+    "lng": 25.432,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-thessaloniki-gr",
+    "countryCode": "GR",
+    "name": "Thessaloníki",
+    "continent": "europa",
+    "lat": 40.6407,
+    "lng": 22.9349,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-antigua-guatemala-gt",
+    "countryCode": "GT",
+    "name": "Antigua Guatemala",
+    "continent": "america",
+    "lat": 14.5564,
+    "lng": -90.7332,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-guatemala-city-gt",
+    "countryCode": "GT",
+    "name": "Guatemala City",
+    "continent": "america",
+    "lat": 14.6407,
+    "lng": -90.5133,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-hong-kong-hk",
+    "countryCode": "HK",
+    "name": "Hong Kong",
+    "continent": "asia",
+    "lat": 22.2783,
+    "lng": 114.1747,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-hong-kong-island-hk",
+    "countryCode": "HK",
+    "name": "Hong Kong Island",
+    "continent": "asia",
+    "lat": 22.263,
+    "lng": 114.1842,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kowloon-hk",
+    "countryCode": "HK",
+    "name": "Kowloon",
+    "continent": "asia",
+    "lat": 22.3167,
+    "lng": 114.1833,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-new-territories-hk",
+    "countryCode": "HK",
+    "name": "New Territories",
+    "continent": "asia",
+    "lat": 22.4244,
+    "lng": 114.111,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-victoria-hk",
+    "countryCode": "HK",
+    "name": "Victoria",
+    "continent": "asia",
+    "lat": 22.2875,
+    "lng": 114.1442,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-dubrovnik-hr",
+    "countryCode": "HR",
+    "name": "Dubrovnik",
+    "continent": "europa",
+    "lat": 42.6412,
+    "lng": 18.1091,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-split-hr",
+    "countryCode": "HR",
+    "name": "Split",
+    "continent": "europa",
+    "lat": 43.5089,
+    "lng": 16.4392,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-port-au-prince-ht",
+    "countryCode": "HT",
+    "name": "Port-au-Prince",
+    "continent": "america",
+    "lat": 18.5435,
+    "lng": -72.3388,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-budapest-hu",
+    "countryCode": "HU",
+    "name": "Budapest",
+    "continent": "europa",
+    "lat": 47.4984,
+    "lng": 19.0404,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-pest-hu",
+    "countryCode": "HU",
+    "name": "Pest",
+    "continent": "europa",
+    "lat": 47.5,
+    "lng": 19.0833,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-bandung-id",
+    "countryCode": "ID",
+    "name": "Bandung",
+    "continent": "asia",
+    "lat": -6.9222,
+    "lng": 107.6069,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-bekasi-id",
+    "countryCode": "ID",
+    "name": "Bekasi",
+    "continent": "asia",
+    "lat": -6.2349,
+    "lng": 106.9896,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-denpasar-id",
+    "countryCode": "ID",
+    "name": "Denpasar",
+    "continent": "asia",
+    "lat": -8.65,
+    "lng": 115.2167,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-depok-id",
+    "countryCode": "ID",
+    "name": "Depok",
+    "continent": "asia",
+    "lat": -6.4,
+    "lng": 106.8186,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-jakarta-id",
+    "countryCode": "ID",
+    "name": "Jakarta",
+    "continent": "asia",
+    "lat": -6.2146,
+    "lng": 106.8451,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-medan-id",
+    "countryCode": "ID",
+    "name": "Medan",
+    "continent": "asia",
+    "lat": 3.5833,
+    "lng": 98.6667,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-palembang-id",
+    "countryCode": "ID",
+    "name": "Palembang",
+    "continent": "asia",
+    "lat": -2.9167,
+    "lng": 104.7458,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-semarang-id",
+    "countryCode": "ID",
+    "name": "Semarang",
+    "continent": "asia",
+    "lat": -6.9931,
+    "lng": 110.4208,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-surabaya-id",
+    "countryCode": "ID",
+    "name": "Surabaya",
+    "continent": "asia",
+    "lat": -7.2492,
+    "lng": 112.7508,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-tangerang-id",
+    "countryCode": "ID",
+    "name": "Tangerang",
+    "continent": "asia",
+    "lat": -6.1781,
+    "lng": 106.63,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-ubud-id",
+    "countryCode": "ID",
+    "name": "Ubud",
+    "continent": "asia",
+    "lat": -8.5098,
+    "lng": 115.2654,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-yogyakarta-id",
+    "countryCode": "ID",
+    "name": "Yogyakarta",
+    "continent": "asia",
+    "lat": -7.8014,
+    "lng": 110.3647,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-dublin-ie",
+    "countryCode": "IE",
+    "name": "Dublin",
+    "continent": "europa",
+    "lat": 53.3331,
+    "lng": -6.2489,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-galway-ie",
+    "countryCode": "IE",
+    "name": "Galway",
+    "continent": "europa",
+    "lat": 53.2724,
+    "lng": -9.051,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-jerusalem-il",
+    "countryCode": "IL",
+    "name": "Jerusalem",
+    "continent": "asia",
+    "lat": 31.769,
+    "lng": 35.2163,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-tel-aviv-il",
+    "countryCode": "IL",
+    "name": "Tel Aviv",
+    "continent": "asia",
+    "lat": 32.0809,
+    "lng": 34.7806,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-agra-in",
+    "countryCode": "IN",
+    "name": "Agra",
+    "continent": "asia",
+    "lat": 27.1833,
+    "lng": 78.0167,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-amritsar-in",
+    "countryCode": "IN",
+    "name": "Amritsar",
+    "continent": "asia",
+    "lat": 31.6223,
+    "lng": 74.8753,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-jaipur-in",
+    "countryCode": "IN",
+    "name": "Jaipur",
+    "continent": "asia",
+    "lat": 26.9196,
+    "lng": 75.7878,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-jodhpur-in",
+    "countryCode": "IN",
+    "name": "Jodhpur",
+    "continent": "asia",
+    "lat": 26.2684,
+    "lng": 73.0059,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kochi-in",
+    "countryCode": "IN",
+    "name": "Kochi",
+    "continent": "asia",
+    "lat": 9.9399,
+    "lng": 76.2602,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-leh-in",
+    "countryCode": "IN",
+    "name": "Leh",
+    "continent": "asia",
+    "lat": 34.165,
+    "lng": 77.584,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-mormugao-in",
+    "countryCode": "IN",
+    "name": "Mormugao",
+    "continent": "asia",
+    "lat": 15.3891,
+    "lng": 73.8149,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-mumbai-in",
+    "countryCode": "IN",
+    "name": "Mumbai",
+    "continent": "asia",
+    "lat": 19.0728,
+    "lng": 72.8826,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-panjim-in",
+    "countryCode": "IN",
+    "name": "Panjim",
+    "continent": "asia",
+    "lat": 15.4957,
+    "lng": 73.8262,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-rishikesh-in",
+    "countryCode": "IN",
+    "name": "Rishīkesh",
+    "continent": "asia",
+    "lat": 30.1078,
+    "lng": 78.2926,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-udaipur-in",
+    "countryCode": "IN",
+    "name": "Udaipur",
+    "continent": "asia",
+    "lat": 24.5858,
+    "lng": 73.7135,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-varanasi-in",
+    "countryCode": "IN",
+    "name": "Varanasi",
+    "continent": "asia",
+    "lat": 25.3167,
+    "lng": 83.0104,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-al-mawsil-al-jadidah-iq",
+    "countryCode": "IQ",
+    "name": "Al Mawşil al Jadīdah",
+    "continent": "asia",
+    "lat": 36.3327,
+    "lng": 43.1056,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-baghdad-iq",
+    "countryCode": "IQ",
+    "name": "Baghdad",
+    "continent": "asia",
+    "lat": 33.3406,
+    "lng": 44.4009,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-basrah-iq",
+    "countryCode": "IQ",
+    "name": "Basrah",
+    "continent": "asia",
+    "lat": 30.5085,
+    "lng": 47.7804,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-erbil-iq",
+    "countryCode": "IQ",
+    "name": "Erbil",
+    "continent": "asia",
+    "lat": 36.1912,
+    "lng": 44.0094,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-karbala-iq",
+    "countryCode": "IQ",
+    "name": "Karbala",
+    "continent": "asia",
+    "lat": 32.616,
+    "lng": 44.0249,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kirkuk-iq",
+    "countryCode": "IQ",
+    "name": "Kirkuk",
+    "continent": "asia",
+    "lat": 35.4681,
+    "lng": 44.3922,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-mosul-iq",
+    "countryCode": "IQ",
+    "name": "Mosul",
+    "continent": "asia",
+    "lat": 36.335,
+    "lng": 43.1189,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-sadr-city-iq",
+    "countryCode": "IQ",
+    "name": "Sadr City",
+    "continent": "asia",
+    "lat": 33.3889,
+    "lng": 44.4583,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-isfahan-ir",
+    "countryCode": "IR",
+    "name": "Isfahan",
+    "continent": "asia",
+    "lat": 32.6525,
+    "lng": 51.6746,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-karaj-ir",
+    "countryCode": "IR",
+    "name": "Karaj",
+    "continent": "asia",
+    "lat": 35.8327,
+    "lng": 50.9915,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-mashhad-ir",
+    "countryCode": "IR",
+    "name": "Mashhad",
+    "continent": "asia",
+    "lat": 36.2981,
+    "lng": 59.6057,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-shiraz-ir",
+    "countryCode": "IR",
+    "name": "Shiraz",
+    "continent": "asia",
+    "lat": 29.6103,
+    "lng": 52.5311,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-tabriz-ir",
+    "countryCode": "IR",
+    "name": "Tabriz",
+    "continent": "asia",
+    "lat": 38.08,
+    "lng": 46.2919,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-tehran-ir",
+    "countryCode": "IR",
+    "name": "Tehran",
+    "continent": "asia",
+    "lat": 35.6944,
+    "lng": 51.4215,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-reykjavik-is",
+    "countryCode": "IS",
+    "name": "Reykjavík",
+    "continent": "europa",
+    "lat": 64.1355,
+    "lng": -21.8954,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-bologna-it",
+    "countryCode": "IT",
+    "name": "Bologna",
+    "continent": "europa",
+    "lat": 44.4938,
+    "lng": 11.3387,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-cagliari-it",
+    "countryCode": "IT",
+    "name": "Cagliari",
+    "continent": "europa",
+    "lat": 39.2305,
+    "lng": 9.1192,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-florence-it",
+    "countryCode": "IT",
+    "name": "Florence",
+    "continent": "europa",
+    "lat": 43.7792,
+    "lng": 11.2463,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-milan-it",
+    "countryCode": "IT",
+    "name": "Milan",
+    "continent": "europa",
+    "lat": 45.4643,
+    "lng": 9.1895,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-naples-it",
+    "countryCode": "IT",
+    "name": "Naples",
+    "continent": "europa",
+    "lat": 40.8522,
+    "lng": 14.2681,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-palermo-it",
+    "countryCode": "IT",
+    "name": "Palermo",
+    "continent": "europa",
+    "lat": 38.1166,
+    "lng": 13.3636,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-rome-it",
+    "countryCode": "IT",
+    "name": "Rome",
+    "continent": "europa",
+    "lat": 41.8919,
+    "lng": 12.5113,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-siena-it",
+    "countryCode": "IT",
+    "name": "Siena",
+    "continent": "europa",
+    "lat": 43.3182,
+    "lng": 11.3306,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-sorrento-it",
+    "countryCode": "IT",
+    "name": "Sorrento",
+    "continent": "europa",
+    "lat": 40.6263,
+    "lng": 14.3758,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-venice-it",
+    "countryCode": "IT",
+    "name": "Venice",
+    "continent": "europa",
+    "lat": 45.4371,
+    "lng": 12.3326,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-verona-it",
+    "countryCode": "IT",
+    "name": "Verona",
+    "continent": "europa",
+    "lat": 45.4385,
+    "lng": 10.9938,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kingston-jm",
+    "countryCode": "JM",
+    "name": "Kingston",
+    "continent": "america",
+    "lat": 17.997,
+    "lng": -76.7936,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-amman-jo",
+    "countryCode": "JO",
+    "name": "Amman",
+    "continent": "asia",
+    "lat": 31.9552,
+    "lng": 35.945,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-aqaba-jo",
+    "countryCode": "JO",
+    "name": "Aqaba",
+    "continent": "asia",
+    "lat": 29.5267,
+    "lng": 35.0078,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-petra-jo",
+    "countryCode": "JO",
+    "name": "Petra",
+    "continent": "asia",
+    "lat": 30.3285,
+    "lng": 35.4444,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-chiba-jp",
+    "countryCode": "JP",
+    "name": "Chiba",
+    "continent": "asia",
+    "lat": 35.6,
+    "lng": 140.1167,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-fukuoka-jp",
+    "countryCode": "JP",
+    "name": "Fukuoka",
+    "continent": "asia",
+    "lat": 33.6,
+    "lng": 130.4167,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-hiroshima-jp",
+    "countryCode": "JP",
+    "name": "Hiroshima",
+    "continent": "asia",
+    "lat": 34.4,
+    "lng": 132.45,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kanazawa-jp",
+    "countryCode": "JP",
+    "name": "Kanazawa",
+    "continent": "asia",
+    "lat": 36.6,
+    "lng": 136.6167,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kobe-jp",
+    "countryCode": "JP",
+    "name": "Kobe",
+    "continent": "asia",
+    "lat": 34.6913,
+    "lng": 135.183,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kyoto-jp",
+    "countryCode": "JP",
+    "name": "Kyoto",
+    "continent": "asia",
+    "lat": 35.0211,
+    "lng": 135.7538,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-nagoya-jp",
+    "countryCode": "JP",
+    "name": "Nagoya",
+    "continent": "asia",
+    "lat": 35.1815,
+    "lng": 136.9064,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-naha-jp",
+    "countryCode": "JP",
+    "name": "Naha",
+    "continent": "asia",
+    "lat": 26.213,
+    "lng": 127.6785,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-nara-shi-jp",
+    "countryCode": "JP",
+    "name": "Nara-shi",
+    "continent": "asia",
+    "lat": 34.685,
+    "lng": 135.8048,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-osaka-jp",
+    "countryCode": "JP",
+    "name": "Osaka",
+    "continent": "asia",
+    "lat": 34.6938,
+    "lng": 135.5011,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-sapporo-jp",
+    "countryCode": "JP",
+    "name": "Sapporo",
+    "continent": "asia",
+    "lat": 43.0667,
+    "lng": 141.35,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-sendai-jp",
+    "countryCode": "JP",
+    "name": "Sendai",
+    "continent": "asia",
+    "lat": 38.2667,
+    "lng": 140.8667,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kakamega-ke",
+    "countryCode": "KE",
+    "name": "Kakamega",
+    "continent": "africa",
+    "lat": 0.2842,
+    "lng": 34.7523,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-mombasa-ke",
+    "countryCode": "KE",
+    "name": "Mombasa",
+    "continent": "africa",
+    "lat": -4.0547,
+    "lng": 39.6636,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-nairobi-ke",
+    "countryCode": "KE",
+    "name": "Nairobi",
+    "continent": "africa",
+    "lat": -1.2833,
+    "lng": 36.8167,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-bishkek-kg",
+    "countryCode": "KG",
+    "name": "Bishkek",
+    "continent": "asia",
+    "lat": 42.87,
+    "lng": 74.59,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-phnom-penh-kh",
+    "countryCode": "KH",
+    "name": "Phnom Penh",
+    "continent": "asia",
+    "lat": 11.5625,
+    "lng": 104.916,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-siem-reap-kh",
+    "countryCode": "KH",
+    "name": "Siem Reap",
+    "continent": "asia",
+    "lat": 13.3618,
+    "lng": 103.8606,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-pyongyang-kp",
+    "countryCode": "KP",
+    "name": "Pyongyang",
+    "continent": "asia",
+    "lat": 39.0339,
+    "lng": 125.7543,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-busan-kr",
+    "countryCode": "KR",
+    "name": "Busan",
+    "continent": "asia",
+    "lat": 35.1017,
+    "lng": 129.03,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-changwon-kr",
+    "countryCode": "KR",
+    "name": "Changwon",
+    "continent": "asia",
+    "lat": 35.2281,
+    "lng": 128.6811,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-daegu-kr",
+    "countryCode": "KR",
+    "name": "Daegu",
+    "continent": "asia",
+    "lat": 35.871,
+    "lng": 128.6012,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-daejeon-kr",
+    "countryCode": "KR",
+    "name": "Daejeon",
+    "continent": "asia",
+    "lat": 36.3502,
+    "lng": 127.3848,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-goyang-si-kr",
+    "countryCode": "KR",
+    "name": "Goyang-si",
+    "continent": "asia",
+    "lat": 37.6564,
+    "lng": 126.835,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-gwangju-kr",
+    "countryCode": "KR",
+    "name": "Gwangju",
+    "continent": "asia",
+    "lat": 35.1547,
+    "lng": 126.9156,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-incheon-kr",
+    "countryCode": "KR",
+    "name": "Incheon",
+    "continent": "asia",
+    "lat": 37.4565,
+    "lng": 126.7052,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-jeju-city-kr",
+    "countryCode": "KR",
+    "name": "Jeju City",
+    "continent": "asia",
+    "lat": 33.5097,
+    "lng": 126.5219,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-seongnam-si-kr",
+    "countryCode": "KR",
+    "name": "Seongnam-si",
+    "continent": "asia",
+    "lat": 37.4386,
+    "lng": 127.1378,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-seoul-kr",
+    "countryCode": "KR",
+    "name": "Seoul",
+    "continent": "asia",
+    "lat": 37.566,
+    "lng": 126.9784,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-suwon-kr",
+    "countryCode": "KR",
+    "name": "Suwon",
+    "continent": "asia",
+    "lat": 37.2782,
+    "lng": 127.0316,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-ulsan-kr",
+    "countryCode": "KR",
+    "name": "Ulsan",
+    "continent": "asia",
+    "lat": 35.5392,
+    "lng": 129.3124,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kuwait-city-kw",
+    "countryCode": "KW",
+    "name": "Kuwait City",
+    "continent": "asia",
+    "lat": 29.367,
+    "lng": 47.9743,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-almaty-kz",
+    "countryCode": "KZ",
+    "name": "Almaty",
+    "continent": "asia",
+    "lat": 43.2525,
+    "lng": 76.9115,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-astana-kz",
+    "countryCode": "KZ",
+    "name": "Astana",
+    "continent": "asia",
+    "lat": 51.1801,
+    "lng": 71.446,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-shymkent-kz",
+    "countryCode": "KZ",
+    "name": "Shymkent",
+    "continent": "asia",
+    "lat": 42.3099,
+    "lng": 69.6004,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-luang-prabang-la",
+    "countryCode": "LA",
+    "name": "Luang Prabang",
+    "continent": "asia",
+    "lat": 19.8933,
+    "lng": 102.1525,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-vientiane-la",
+    "countryCode": "LA",
+    "name": "Vientiane",
+    "continent": "asia",
+    "lat": 17.9667,
+    "lng": 102.6,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-beirut-lb",
+    "countryCode": "LB",
+    "name": "Beirut",
+    "continent": "asia",
+    "lat": 33.8933,
+    "lng": 35.5016,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-ra-s-bayrut-lb",
+    "countryCode": "LB",
+    "name": "Ra’s Bayrūt",
+    "continent": "asia",
+    "lat": 33.9,
+    "lng": 35.4833,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-colombo-lk",
+    "countryCode": "LK",
+    "name": "Colombo",
+    "continent": "asia",
+    "lat": 6.9355,
+    "lng": 79.8487,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-galle-lk",
+    "countryCode": "LK",
+    "name": "Galle",
+    "continent": "asia",
+    "lat": 6.0461,
+    "lng": 80.2103,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kandy-lk",
+    "countryCode": "LK",
+    "name": "Kandy",
+    "continent": "asia",
+    "lat": 7.2906,
+    "lng": 80.6336,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-monrovia-lr",
+    "countryCode": "LR",
+    "name": "Monrovia",
+    "continent": "africa",
+    "lat": 6.3005,
+    "lng": -10.7969,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-vilnius-lt",
+    "countryCode": "LT",
+    "name": "Vilnius",
+    "continent": "europa",
+    "lat": 54.6892,
+    "lng": 25.2798,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-luxembourg-lu",
+    "countryCode": "LU",
+    "name": "Luxembourg",
+    "continent": "europa",
+    "lat": 49.6098,
+    "lng": 6.1327,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-riga-lv",
+    "countryCode": "LV",
+    "name": "Riga",
+    "continent": "europa",
+    "lat": 56.946,
+    "lng": 24.1059,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-tripoli-ly",
+    "countryCode": "LY",
+    "name": "Tripoli",
+    "continent": "africa",
+    "lat": 32.8874,
+    "lng": 13.1873,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-casablanca-ma",
+    "countryCode": "MA",
+    "name": "Casablanca",
+    "continent": "africa",
+    "lat": 33.5883,
+    "lng": -7.6114,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-chefchaouen-ma",
+    "countryCode": "MA",
+    "name": "Chefchaouen",
+    "continent": "africa",
+    "lat": 35.1688,
+    "lng": -5.2636,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-essaouira-ma",
+    "countryCode": "MA",
+    "name": "Essaouira",
+    "continent": "africa",
+    "lat": 31.5125,
+    "lng": -9.77,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-fes-ma",
+    "countryCode": "MA",
+    "name": "Fes",
+    "continent": "africa",
+    "lat": 34.0331,
+    "lng": -5.0003,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-marrakesh-ma",
+    "countryCode": "MA",
+    "name": "Marrakesh",
+    "continent": "africa",
+    "lat": 31.6342,
+    "lng": -7.9999,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-rabat-ma",
+    "countryCode": "MA",
+    "name": "Rabat",
+    "continent": "africa",
+    "lat": 34.0132,
+    "lng": -6.8326,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-sale-ma",
+    "countryCode": "MA",
+    "name": "Salé",
+    "continent": "africa",
+    "lat": 34.0531,
+    "lng": -6.7985,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-tangier-ma",
+    "countryCode": "MA",
+    "name": "Tangier",
+    "continent": "africa",
+    "lat": 35.7673,
+    "lng": -5.7998,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kotor-me",
+    "countryCode": "ME",
+    "name": "Kotor",
+    "continent": "europa",
+    "lat": 42.4247,
+    "lng": 18.7712,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-antananarivo-mg",
+    "countryCode": "MG",
+    "name": "Antananarivo",
+    "continent": "africa",
+    "lat": -18.9137,
+    "lng": 47.5361,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-bamako-ml",
+    "countryCode": "ML",
+    "name": "Bamako",
+    "continent": "africa",
+    "lat": 12.6091,
+    "lng": -7.9752,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-bagan-mm",
+    "countryCode": "MM",
+    "name": "Bagan",
+    "continent": "asia",
+    "lat": 21.1717,
+    "lng": 94.8585,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-mandalay-mm",
+    "countryCode": "MM",
+    "name": "Mandalay",
+    "continent": "asia",
+    "lat": 21.9747,
+    "lng": 96.0836,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-nay-pyi-taw-mm",
+    "countryCode": "MM",
+    "name": "Nay Pyi Taw",
+    "continent": "asia",
+    "lat": 19.745,
+    "lng": 96.1297,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-yangon-mm",
+    "countryCode": "MM",
+    "name": "Yangon",
+    "continent": "asia",
+    "lat": 16.8053,
+    "lng": 96.1561,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-ulan-bator-mn",
+    "countryCode": "MN",
+    "name": "Ulan Bator",
+    "continent": "asia",
+    "lat": 47.9077,
+    "lng": 106.8832,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-macau-mo",
+    "countryCode": "MO",
+    "name": "Macau",
+    "continent": "asia",
+    "lat": 22.2006,
+    "lng": 113.5461,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-nouakchott-mr",
+    "countryCode": "MR",
+    "name": "Nouakchott",
+    "continent": "africa",
+    "lat": 18.0858,
+    "lng": -15.9785,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-valletta-mt",
+    "countryCode": "MT",
+    "name": "Valletta",
+    "continent": "europa",
+    "lat": 35.8997,
+    "lng": 14.5148,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-port-louis-mu",
+    "countryCode": "MU",
+    "name": "Port Louis",
+    "continent": "africa",
+    "lat": -20.1619,
+    "lng": 57.4989,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-male-mv",
+    "countryCode": "MV",
+    "name": "Male",
+    "continent": "asia",
+    "lat": 4.1752,
+    "lng": 73.5092,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-lilongwe-mw",
+    "countryCode": "MW",
+    "name": "Lilongwe",
+    "continent": "africa",
+    "lat": -13.9669,
+    "lng": 33.7873,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-cancun-mx",
+    "countryCode": "MX",
+    "name": "Cancún",
+    "continent": "america",
+    "lat": 21.1743,
+    "lng": -86.8466,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-guanajuato-mx",
+    "countryCode": "MX",
+    "name": "Guanajuato",
+    "continent": "america",
+    "lat": 21.0186,
+    "lng": -101.2591,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-los-cabos-mx",
+    "countryCode": "MX",
+    "name": "Los Cabos",
+    "continent": "america",
+    "lat": 22.8905,
+    "lng": -109.9167,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-merida-mx",
+    "countryCode": "MX",
+    "name": "Mérida",
+    "continent": "america",
+    "lat": 20.967,
+    "lng": -89.6232,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-oaxaca-mx",
+    "countryCode": "MX",
+    "name": "Oaxaca",
+    "continent": "america",
+    "lat": 17.0602,
+    "lng": -96.7254,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-playa-del-carmen-mx",
+    "countryCode": "MX",
+    "name": "Playa del Carmen",
+    "continent": "america",
+    "lat": 20.6274,
+    "lng": -87.0799,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-puebla-mx",
+    "countryCode": "MX",
+    "name": "Puebla",
+    "continent": "america",
+    "lat": 19.0478,
+    "lng": -98.2072,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-puerto-vallarta-mx",
+    "countryCode": "MX",
+    "name": "Puerto Vallarta",
+    "continent": "america",
+    "lat": 20.617,
+    "lng": -105.2302,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-san-miguel-de-allende-mx",
+    "countryCode": "MX",
+    "name": "San Miguel de Allende",
+    "continent": "america",
+    "lat": 20.9153,
+    "lng": -100.7439,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-santiago-de-queretaro-mx",
+    "countryCode": "MX",
+    "name": "Santiago de Querétaro",
+    "continent": "america",
+    "lat": 20.5881,
+    "lng": -100.3881,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-tijuana-mx",
+    "countryCode": "MX",
+    "name": "Tijuana",
+    "continent": "america",
+    "lat": 32.5027,
+    "lng": -117.0037,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-tulum-mx",
+    "countryCode": "MX",
+    "name": "Tulum",
+    "continent": "america",
+    "lat": 20.2117,
+    "lng": -87.4633,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-george-town-my",
+    "countryCode": "MY",
+    "name": "George Town",
+    "continent": "asia",
+    "lat": 5.4112,
+    "lng": 100.3354,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kota-kinabalu-my",
+    "countryCode": "MY",
+    "name": "Kota Kinabalu",
+    "continent": "asia",
+    "lat": 5.9749,
+    "lng": 116.0724,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kuala-lumpur-my",
+    "countryCode": "MY",
+    "name": "Kuala Lumpur",
+    "continent": "asia",
+    "lat": 3.1412,
+    "lng": 101.6865,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-malacca-my",
+    "countryCode": "MY",
+    "name": "Malacca",
+    "continent": "asia",
+    "lat": 2.196,
+    "lng": 102.2405,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-maputo-mz",
+    "countryCode": "MZ",
+    "name": "Maputo",
+    "continent": "africa",
+    "lat": -25.9655,
+    "lng": 32.5832,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-matola-mz",
+    "countryCode": "MZ",
+    "name": "Matola",
+    "continent": "africa",
+    "lat": -25.9622,
+    "lng": 32.4589,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-swakopmund-na",
+    "countryCode": "NA",
+    "name": "Swakopmund",
+    "continent": "africa",
+    "lat": -22.6784,
+    "lng": 14.5266,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-windhoek-na",
+    "countryCode": "NA",
+    "name": "Windhoek",
+    "continent": "africa",
+    "lat": -22.5594,
+    "lng": 17.0832,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-noumea-nc",
+    "countryCode": "NC",
+    "name": "Nouméa",
+    "continent": "oceania",
+    "lat": -22.2741,
+    "lng": 166.4488,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-niamey-ne",
+    "countryCode": "NE",
+    "name": "Niamey",
+    "continent": "africa",
+    "lat": 13.5137,
+    "lng": 2.1098,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-aba-ng",
+    "countryCode": "NG",
+    "name": "Aba",
+    "continent": "africa",
+    "lat": 5.1066,
+    "lng": 7.3667,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-abuja-ng",
+    "countryCode": "NG",
+    "name": "Abuja",
+    "continent": "africa",
+    "lat": 9.0579,
+    "lng": 7.4951,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-benin-city-ng",
+    "countryCode": "NG",
+    "name": "Benin City",
+    "continent": "africa",
+    "lat": 6.3381,
+    "lng": 5.6258,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-ibadan-ng",
+    "countryCode": "NG",
+    "name": "Ibadan",
+    "continent": "africa",
+    "lat": 7.3776,
+    "lng": 3.9059,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-ilorin-ng",
+    "countryCode": "NG",
+    "name": "Ilorin",
+    "continent": "africa",
+    "lat": 8.4966,
+    "lng": 4.5421,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kaduna-ng",
+    "countryCode": "NG",
+    "name": "Kaduna",
+    "continent": "africa",
+    "lat": 10.5264,
+    "lng": 7.4388,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kano-ng",
+    "countryCode": "NG",
+    "name": "Kano",
+    "continent": "africa",
+    "lat": 12.0001,
+    "lng": 8.5167,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-lagos-ng",
+    "countryCode": "NG",
+    "name": "Lagos",
+    "continent": "africa",
+    "lat": 6.4541,
+    "lng": 3.3947,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-maiduguri-ng",
+    "countryCode": "NG",
+    "name": "Maiduguri",
+    "continent": "africa",
+    "lat": 11.8469,
+    "lng": 13.1571,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-onitsha-ng",
+    "countryCode": "NG",
+    "name": "Onitsha",
+    "continent": "africa",
+    "lat": 6.1498,
+    "lng": 6.7857,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-port-harcourt-ng",
+    "countryCode": "NG",
+    "name": "Port Harcourt",
+    "continent": "africa",
+    "lat": 4.7774,
+    "lng": 7.0134,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-sokoto-ng",
+    "countryCode": "NG",
+    "name": "Sokoto",
+    "continent": "africa",
+    "lat": 13.0627,
+    "lng": 5.2432,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-granada-ni",
+    "countryCode": "NI",
+    "name": "Granada",
+    "continent": "america",
+    "lat": 11.9306,
+    "lng": -85.9537,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-managua-ni",
+    "countryCode": "NI",
+    "name": "Managua",
+    "continent": "america",
+    "lat": 12.1328,
+    "lng": -86.2504,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-amsterdam-nl",
+    "countryCode": "NL",
+    "name": "Amsterdam",
+    "continent": "europa",
+    "lat": 52.374,
+    "lng": 4.8897,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-bergen-no",
+    "countryCode": "NO",
+    "name": "Bergen",
+    "continent": "europa",
+    "lat": 60.393,
+    "lng": 5.3242,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-oslo-no",
+    "countryCode": "NO",
+    "name": "Oslo",
+    "continent": "europa",
+    "lat": 59.9127,
+    "lng": 10.7461,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-tromso-no",
+    "countryCode": "NO",
+    "name": "Tromsø",
+    "continent": "europa",
+    "lat": 69.6489,
+    "lng": 18.9551,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kathmandu-np",
+    "countryCode": "NP",
+    "name": "Kathmandu",
+    "continent": "asia",
+    "lat": 27.7017,
+    "lng": 85.3206,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-pokhara-np",
+    "countryCode": "NP",
+    "name": "Pokhara",
+    "continent": "asia",
+    "lat": 28.2669,
+    "lng": 83.9685,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-auckland-nz",
+    "countryCode": "NZ",
+    "name": "Auckland",
+    "continent": "oceania",
+    "lat": -36.8485,
+    "lng": 174.7635,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-christchurch-nz",
+    "countryCode": "NZ",
+    "name": "Christchurch",
+    "continent": "oceania",
+    "lat": -43.5333,
+    "lng": 172.6333,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-queenstown-nz",
+    "countryCode": "NZ",
+    "name": "Queenstown",
+    "continent": "oceania",
+    "lat": -45.0312,
+    "lng": 168.6626,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-rotorua-nz",
+    "countryCode": "NZ",
+    "name": "Rotorua",
+    "continent": "oceania",
+    "lat": -38.1387,
+    "lng": 176.2452,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-wellington-nz",
+    "countryCode": "NZ",
+    "name": "Wellington",
+    "continent": "oceania",
+    "lat": -41.2866,
+    "lng": 174.7756,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-muscat-om",
+    "countryCode": "OM",
+    "name": "Muscat",
+    "continent": "asia",
+    "lat": 23.5841,
+    "lng": 58.4078,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-panama-city-pa",
+    "countryCode": "PA",
+    "name": "Panama City",
+    "continent": "america",
+    "lat": 8.9936,
+    "lng": -79.5197,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-arequipa-pe",
+    "countryCode": "PE",
+    "name": "Arequipa",
+    "continent": "america",
+    "lat": -16.399,
+    "lng": -71.5375,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-callao-pe",
+    "countryCode": "PE",
+    "name": "Callao",
+    "continent": "america",
+    "lat": -12.0516,
+    "lng": -77.1345,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-cusco-pe",
+    "countryCode": "PE",
+    "name": "Cusco",
+    "continent": "america",
+    "lat": -13.5319,
+    "lng": -71.967,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-lima-pe",
+    "countryCode": "PE",
+    "name": "Lima",
+    "continent": "america",
+    "lat": -12.0432,
+    "lng": -77.0282,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-trujillo-pe",
+    "countryCode": "PE",
+    "name": "Trujillo",
+    "continent": "america",
+    "lat": -8.116,
+    "lng": -79.03,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-papeete-pf",
+    "countryCode": "PF",
+    "name": "Papeete",
+    "continent": "oceania",
+    "lat": -17.5347,
+    "lng": -149.5684,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-antipolo-ph",
+    "countryCode": "PH",
+    "name": "Antipolo",
+    "continent": "asia",
+    "lat": 14.6258,
+    "lng": 121.1225,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-budta-ph",
+    "countryCode": "PH",
+    "name": "Budta",
+    "continent": "asia",
+    "lat": 7.2042,
+    "lng": 124.4397,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-caloocan-ph",
+    "countryCode": "PH",
+    "name": "Caloocan",
+    "continent": "asia",
+    "lat": 14.6495,
+    "lng": 120.9679,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-cebu-city-ph",
+    "countryCode": "PH",
+    "name": "Cebu City",
+    "continent": "asia",
+    "lat": 10.3167,
+    "lng": 123.8907,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-davao-ph",
+    "countryCode": "PH",
+    "name": "Davao",
+    "continent": "asia",
+    "lat": 7.0731,
+    "lng": 125.6128,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-malingao-ph",
+    "countryCode": "PH",
+    "name": "Malingao",
+    "continent": "asia",
+    "lat": 7.1608,
+    "lng": 124.475,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-manila-ph",
+    "countryCode": "PH",
+    "name": "Manila",
+    "continent": "asia",
+    "lat": 14.6042,
+    "lng": 120.9822,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-puerto-princesa-ph",
+    "countryCode": "PH",
+    "name": "Puerto Princesa",
+    "continent": "asia",
+    "lat": 9.7392,
+    "lng": 118.7353,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-quezon-city-ph",
+    "countryCode": "PH",
+    "name": "Quezon City",
+    "continent": "asia",
+    "lat": 14.6488,
+    "lng": 121.0509,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-taguig-ph",
+    "countryCode": "PH",
+    "name": "Taguig",
+    "continent": "asia",
+    "lat": 14.5243,
+    "lng": 121.0792,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-zamboanga-ph",
+    "countryCode": "PH",
+    "name": "Zamboanga",
+    "continent": "asia",
+    "lat": 6.9103,
+    "lng": 122.0739,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-bannu-pk",
+    "countryCode": "PK",
+    "name": "Bannu",
+    "continent": "asia",
+    "lat": 32.9853,
+    "lng": 70.604,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-faisalabad-pk",
+    "countryCode": "PK",
+    "name": "Faisalabad",
+    "continent": "asia",
+    "lat": 31.4155,
+    "lng": 73.0897,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-gujranwala-pk",
+    "countryCode": "PK",
+    "name": "Gujranwala",
+    "continent": "asia",
+    "lat": 32.1557,
+    "lng": 74.187,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-hyderabad-pk",
+    "countryCode": "PK",
+    "name": "Hyderabad",
+    "continent": "asia",
+    "lat": 25.3969,
+    "lng": 68.3772,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-karachi-pk",
+    "countryCode": "PK",
+    "name": "Karachi",
+    "continent": "asia",
+    "lat": 24.8608,
+    "lng": 67.0104,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-lahore-pk",
+    "countryCode": "PK",
+    "name": "Lahore",
+    "continent": "asia",
+    "lat": 31.558,
+    "lng": 74.3507,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-multan-pk",
+    "countryCode": "PK",
+    "name": "Multan",
+    "continent": "asia",
+    "lat": 30.1968,
+    "lng": 71.4782,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-peshawar-pk",
+    "countryCode": "PK",
+    "name": "Peshawar",
+    "continent": "asia",
+    "lat": 34.008,
+    "lng": 71.5785,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-quetta-pk",
+    "countryCode": "PK",
+    "name": "Quetta",
+    "continent": "asia",
+    "lat": 30.1841,
+    "lng": 67.0014,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-rawalpindi-pk",
+    "countryCode": "PK",
+    "name": "Rawalpindi",
+    "continent": "asia",
+    "lat": 33.5973,
+    "lng": 73.0479,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-sargodha-pk",
+    "countryCode": "PK",
+    "name": "Sargodha",
+    "continent": "asia",
+    "lat": 32.0859,
+    "lng": 72.6742,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-krakow-pl",
+    "countryCode": "PL",
+    "name": "Kraków",
+    "continent": "europa",
+    "lat": 50.0614,
+    "lng": 19.9366,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-warsaw-pl",
+    "countryCode": "PL",
+    "name": "Warsaw",
+    "continent": "europa",
+    "lat": 52.2298,
+    "lng": 21.0118,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-san-juan-pr",
+    "countryCode": "PR",
+    "name": "San Juan",
+    "continent": "america",
+    "lat": 18.4663,
+    "lng": -66.1057,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-faro-pt",
+    "countryCode": "PT",
+    "name": "Faro",
+    "continent": "europa",
+    "lat": 37.0187,
+    "lng": -7.9272,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-funchal-pt",
+    "countryCode": "PT",
+    "name": "Funchal",
+    "continent": "europa",
+    "lat": 32.6657,
+    "lng": -16.9255,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-lisbon-pt",
+    "countryCode": "PT",
+    "name": "Lisbon",
+    "continent": "europa",
+    "lat": 38.7251,
+    "lng": -9.1498,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-porto-pt",
+    "countryCode": "PT",
+    "name": "Porto",
+    "continent": "europa",
+    "lat": 41.1485,
+    "lng": -8.611,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-asuncion-py",
+    "countryCode": "PY",
+    "name": "Asunción",
+    "continent": "america",
+    "lat": -25.2865,
+    "lng": -57.647,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-doha-qa",
+    "countryCode": "QA",
+    "name": "Doha",
+    "continent": "asia",
+    "lat": 25.2855,
+    "lng": 51.531,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-bucharest-ro",
+    "countryCode": "RO",
+    "name": "Bucharest",
+    "continent": "europa",
+    "lat": 44.4323,
+    "lng": 26.1063,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-belgrade-rs",
+    "countryCode": "RS",
+    "name": "Belgrade",
+    "continent": "europa",
+    "lat": 44.804,
+    "lng": 20.4651,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-chelyabinsk-ru",
+    "countryCode": "RU",
+    "name": "Chelyabinsk",
+    "continent": "europa",
+    "lat": 55.1611,
+    "lng": 61.4288,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kazan-ru",
+    "countryCode": "RU",
+    "name": "Kazan",
+    "continent": "europa",
+    "lat": 55.7887,
+    "lng": 49.1221,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-moscow-ru",
+    "countryCode": "RU",
+    "name": "Moscow",
+    "continent": "europa",
+    "lat": 55.752,
+    "lng": 37.6178,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-nizhniy-novgorod-ru",
+    "countryCode": "RU",
+    "name": "Nizhniy Novgorod",
+    "continent": "europa",
+    "lat": 56.3287,
+    "lng": 44.002,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-novosibirsk-ru",
+    "countryCode": "RU",
+    "name": "Novosibirsk",
+    "continent": "europa",
+    "lat": 55.0226,
+    "lng": 82.9317,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-omsk-ru",
+    "countryCode": "RU",
+    "name": "Omsk",
+    "continent": "europa",
+    "lat": 54.9924,
+    "lng": 73.3686,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-rostov-on-don-ru",
+    "countryCode": "RU",
+    "name": "Rostov-on-Don",
+    "continent": "europa",
+    "lat": 47.22,
+    "lng": 39.7077,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-saint-petersburg-ru",
+    "countryCode": "RU",
+    "name": "Saint Petersburg",
+    "continent": "europa",
+    "lat": 59.9386,
+    "lng": 30.3141,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-samara-ru",
+    "countryCode": "RU",
+    "name": "Samara",
+    "continent": "europa",
+    "lat": 53.2077,
+    "lng": 50.1355,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-sochi-ru",
+    "countryCode": "RU",
+    "name": "Sochi",
+    "continent": "europa",
+    "lat": 43.597,
+    "lng": 39.7248,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-ufa-ru",
+    "countryCode": "RU",
+    "name": "Ufa",
+    "continent": "europa",
+    "lat": 54.7431,
+    "lng": 55.9678,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-yekaterinburg-ru",
+    "countryCode": "RU",
+    "name": "Yekaterinburg",
+    "continent": "europa",
+    "lat": 56.8573,
+    "lng": 60.6153,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kigali-rw",
+    "countryCode": "RW",
+    "name": "Kigali",
+    "continent": "africa",
+    "lat": -1.95,
+    "lng": 30.0588,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-dammam-sa",
+    "countryCode": "SA",
+    "name": "Dammam",
+    "continent": "asia",
+    "lat": 26.4344,
+    "lng": 50.1033,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-jeddah-sa",
+    "countryCode": "SA",
+    "name": "Jeddah",
+    "continent": "asia",
+    "lat": 21.4901,
+    "lng": 39.1862,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-madinah-sa",
+    "countryCode": "SA",
+    "name": "Madinah",
+    "continent": "asia",
+    "lat": 24.4686,
+    "lng": 39.6142,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-makkah-sa",
+    "countryCode": "SA",
+    "name": "Makkah",
+    "continent": "asia",
+    "lat": 21.4266,
+    "lng": 39.8256,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-riyadh-sa",
+    "countryCode": "SA",
+    "name": "Riyadh",
+    "continent": "asia",
+    "lat": 24.6877,
+    "lng": 46.7219,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-sultanah-sa",
+    "countryCode": "SA",
+    "name": "Sulţānah",
+    "continent": "asia",
+    "lat": 24.4926,
+    "lng": 39.5857,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-victoria-sc",
+    "countryCode": "SC",
+    "name": "Victoria",
+    "continent": "africa",
+    "lat": -4.62,
+    "lng": 55.455,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-khartoum-sd",
+    "countryCode": "SD",
+    "name": "Khartoum",
+    "continent": "africa",
+    "lat": 15.5518,
+    "lng": 32.5324,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-khartoum-north-sd",
+    "countryCode": "SD",
+    "name": "Khartoum North",
+    "continent": "africa",
+    "lat": 15.6493,
+    "lng": 32.5346,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-omdurman-sd",
+    "countryCode": "SD",
+    "name": "Omdurman",
+    "continent": "africa",
+    "lat": 15.6445,
+    "lng": 32.4777,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-stockholm-se",
+    "countryCode": "SE",
+    "name": "Stockholm",
+    "continent": "europa",
+    "lat": 59.3294,
+    "lng": 18.0687,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-singapore-sg",
+    "countryCode": "SG",
+    "name": "Singapore",
+    "continent": "asia",
+    "lat": 1.2897,
+    "lng": 103.8501,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-ljubljana-si",
+    "countryCode": "SI",
+    "name": "Ljubljana",
+    "continent": "europa",
+    "lat": 46.0511,
+    "lng": 14.5051,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-bratislava-sk",
+    "countryCode": "SK",
+    "name": "Bratislava",
+    "continent": "europa",
+    "lat": 48.1482,
+    "lng": 17.1067,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-dakar-sn",
+    "countryCode": "SN",
+    "name": "Dakar",
+    "continent": "africa",
+    "lat": 14.6937,
+    "lng": -17.4441,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-pikine-sn",
+    "countryCode": "SN",
+    "name": "Pikine",
+    "continent": "africa",
+    "lat": 14.7646,
+    "lng": -17.3907,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-touba-sn",
+    "countryCode": "SN",
+    "name": "Touba",
+    "continent": "africa",
+    "lat": 14.8623,
+    "lng": -15.8753,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-mogadishu-so",
+    "countryCode": "SO",
+    "name": "Mogadishu",
+    "continent": "africa",
+    "lat": 2.0371,
+    "lng": 45.3438,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-aleppo-sy",
+    "countryCode": "SY",
+    "name": "Aleppo",
+    "continent": "asia",
+    "lat": 36.2012,
+    "lng": 37.1612,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-damascus-sy",
+    "countryCode": "SY",
+    "name": "Damascus",
+    "continent": "asia",
+    "lat": 33.5102,
+    "lng": 36.2913,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-n-djamena-td",
+    "countryCode": "TD",
+    "name": "N'Djamena",
+    "continent": "africa",
+    "lat": 12.1067,
+    "lng": 15.0444,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-lome-tg",
+    "countryCode": "TG",
+    "name": "Lomé",
+    "continent": "africa",
+    "lat": 6.1287,
+    "lng": 1.2215,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-bangkok-th",
+    "countryCode": "TH",
+    "name": "Bangkok",
+    "continent": "asia",
+    "lat": 13.754,
+    "lng": 100.5014,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-chiang-mai-th",
+    "countryCode": "TH",
+    "name": "Chiang Mai",
+    "continent": "asia",
+    "lat": 18.7904,
+    "lng": 98.9847,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-ko-samui-th",
+    "countryCode": "TH",
+    "name": "Ko Samui",
+    "continent": "asia",
+    "lat": 9.5357,
+    "lng": 99.9357,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-krabi-th",
+    "countryCode": "TH",
+    "name": "Krabi",
+    "continent": "asia",
+    "lat": 8.0726,
+    "lng": 98.9105,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-pattaya-th",
+    "countryCode": "TH",
+    "name": "Pattaya",
+    "continent": "asia",
+    "lat": 12.9333,
+    "lng": 100.8833,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-phuket-th",
+    "countryCode": "TH",
+    "name": "Phuket",
+    "continent": "asia",
+    "lat": 7.8906,
+    "lng": 98.3981,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-ashgabat-tm",
+    "countryCode": "TM",
+    "name": "Ashgabat",
+    "continent": "asia",
+    "lat": 37.95,
+    "lng": 58.3833,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-tunis-tn",
+    "countryCode": "TN",
+    "name": "Tunis",
+    "continent": "africa",
+    "lat": 36.819,
+    "lng": 10.1658,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-adana-tr",
+    "countryCode": "TR",
+    "name": "Adana",
+    "continent": "asia",
+    "lat": 36.9862,
+    "lng": 35.3253,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-ankara-tr",
+    "countryCode": "TR",
+    "name": "Ankara",
+    "continent": "asia",
+    "lat": 39.9199,
+    "lng": 32.8543,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-antalya-tr",
+    "countryCode": "TR",
+    "name": "Antalya",
+    "continent": "asia",
+    "lat": 36.9081,
+    "lng": 30.6956,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-bodrum-tr",
+    "countryCode": "TR",
+    "name": "Bodrum",
+    "continent": "asia",
+    "lat": 37.0383,
+    "lng": 27.4292,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-bursa-tr",
+    "countryCode": "TR",
+    "name": "Bursa",
+    "continent": "asia",
+    "lat": 40.1956,
+    "lng": 29.0601,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-diyarbakir-tr",
+    "countryCode": "TR",
+    "name": "Diyarbakır",
+    "continent": "asia",
+    "lat": 37.9136,
+    "lng": 40.2172,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-esenyurt-tr",
+    "countryCode": "TR",
+    "name": "Esenyurt",
+    "continent": "asia",
+    "lat": 41.027,
+    "lng": 28.6773,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-gaziantep-tr",
+    "countryCode": "TR",
+    "name": "Gaziantep",
+    "continent": "asia",
+    "lat": 37.0594,
+    "lng": 37.3825,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-goreme-tr",
+    "countryCode": "TR",
+    "name": "Goreme",
+    "continent": "asia",
+    "lat": 38.6431,
+    "lng": 34.8287,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kayseri-tr",
+    "countryCode": "TR",
+    "name": "Kayseri",
+    "continent": "asia",
+    "lat": 38.7322,
+    "lng": 35.4853,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-konya-tr",
+    "countryCode": "TR",
+    "name": "Konya",
+    "continent": "asia",
+    "lat": 37.8713,
+    "lng": 32.4846,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-izmir-tr",
+    "countryCode": "TR",
+    "name": "İzmir",
+    "continent": "asia",
+    "lat": 38.4127,
+    "lng": 27.1384,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kaohsiung-tw",
+    "countryCode": "TW",
+    "name": "Kaohsiung",
+    "continent": "asia",
+    "lat": 22.6163,
+    "lng": 120.3133,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-new-taipei-city-tw",
+    "countryCode": "TW",
+    "name": "New Taipei City",
+    "continent": "asia",
+    "lat": 25.062,
+    "lng": 121.457,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-taichung-tw",
+    "countryCode": "TW",
+    "name": "Taichung",
+    "continent": "asia",
+    "lat": 24.1469,
+    "lng": 120.6839,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-tainan-tw",
+    "countryCode": "TW",
+    "name": "Tainan",
+    "continent": "asia",
+    "lat": 22.9926,
+    "lng": 120.2051,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-taipei-tw",
+    "countryCode": "TW",
+    "name": "Taipei",
+    "continent": "asia",
+    "lat": 25.0531,
+    "lng": 121.5264,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-arusha-tz",
+    "countryCode": "TZ",
+    "name": "Arusha",
+    "continent": "africa",
+    "lat": -3.3667,
+    "lng": 36.6833,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-dar-es-salaam-tz",
+    "countryCode": "TZ",
+    "name": "Dar es Salaam",
+    "continent": "africa",
+    "lat": -6.8235,
+    "lng": 39.2695,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-mwanza-tz",
+    "countryCode": "TZ",
+    "name": "Mwanza",
+    "continent": "africa",
+    "lat": -2.5167,
+    "lng": 32.9,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-zanzibar-tz",
+    "countryCode": "TZ",
+    "name": "Zanzibar",
+    "continent": "africa",
+    "lat": -6.1639,
+    "lng": 39.1979,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-dnipro-ua",
+    "countryCode": "UA",
+    "name": "Dnipro",
+    "continent": "europa",
+    "lat": 48.4666,
+    "lng": 35.0407,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kharkiv-ua",
+    "countryCode": "UA",
+    "name": "Kharkiv",
+    "continent": "europa",
+    "lat": 49.9818,
+    "lng": 36.2548,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kyiv-ua",
+    "countryCode": "UA",
+    "name": "Kyiv",
+    "continent": "europa",
+    "lat": 50.4547,
+    "lng": 30.5238,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-lviv-ua",
+    "countryCode": "UA",
+    "name": "Lviv",
+    "continent": "europa",
+    "lat": 49.8383,
+    "lng": 24.0232,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-kampala-ug",
+    "countryCode": "UG",
+    "name": "Kampala",
+    "continent": "africa",
+    "lat": 0.3163,
+    "lng": 32.5822,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-boston-us",
+    "countryCode": "US",
+    "name": "Boston",
+    "continent": "america",
+    "lat": 42.3584,
+    "lng": -71.0598,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-chicago-us",
+    "countryCode": "US",
+    "name": "Chicago",
+    "continent": "america",
+    "lat": 41.85,
+    "lng": -87.65,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-honolulu-us",
+    "countryCode": "US",
+    "name": "Honolulu",
+    "continent": "america",
+    "lat": 21.3069,
+    "lng": -157.8583,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-las-vegas-us",
+    "countryCode": "US",
+    "name": "Las Vegas",
+    "continent": "america",
+    "lat": 36.175,
+    "lng": -115.1372,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-los-angeles-us",
+    "countryCode": "US",
+    "name": "Los Angeles",
+    "continent": "america",
+    "lat": 34.0522,
+    "lng": -118.2437,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-miami-us",
+    "countryCode": "US",
+    "name": "Miami",
+    "continent": "america",
+    "lat": 25.7743,
+    "lng": -80.1937,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-new-orleans-us",
+    "countryCode": "US",
+    "name": "New Orleans",
+    "continent": "america",
+    "lat": 29.9547,
+    "lng": -90.0751,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-orlando-us",
+    "countryCode": "US",
+    "name": "Orlando",
+    "continent": "america",
+    "lat": 28.5383,
+    "lng": -81.3792,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-san-francisco-us",
+    "countryCode": "US",
+    "name": "San Francisco",
+    "continent": "america",
+    "lat": 37.7749,
+    "lng": -122.4194,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-santa-fe-us",
+    "countryCode": "US",
+    "name": "Santa Fe",
+    "continent": "america",
+    "lat": 35.687,
+    "lng": -105.9378,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-savannah-us",
+    "countryCode": "US",
+    "name": "Savannah",
+    "continent": "america",
+    "lat": 32.0835,
+    "lng": -81.0998,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-seattle-us",
+    "countryCode": "US",
+    "name": "Seattle",
+    "continent": "america",
+    "lat": 47.6062,
+    "lng": -122.3321,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-montevideo-uy",
+    "countryCode": "UY",
+    "name": "Montevideo",
+    "continent": "america",
+    "lat": -34.9033,
+    "lng": -56.1882,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-bukhara-uz",
+    "countryCode": "UZ",
+    "name": "Bukhara",
+    "continent": "asia",
+    "lat": 39.7703,
+    "lng": 64.4307,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-samarkand-uz",
+    "countryCode": "UZ",
+    "name": "Samarkand",
+    "continent": "asia",
+    "lat": 39.6546,
+    "lng": 66.9644,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-tashkent-uz",
+    "countryCode": "UZ",
+    "name": "Tashkent",
+    "continent": "asia",
+    "lat": 41.2647,
+    "lng": 69.2163,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-barquisimeto-ve",
+    "countryCode": "VE",
+    "name": "Barquisimeto",
+    "continent": "america",
+    "lat": 10.0647,
+    "lng": -69.357,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-caracas-ve",
+    "countryCode": "VE",
+    "name": "Caracas",
+    "continent": "america",
+    "lat": 10.488,
+    "lng": -66.8792,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-ciudad-guayana-ve",
+    "countryCode": "VE",
+    "name": "Ciudad Guayana",
+    "continent": "america",
+    "lat": 8.3512,
+    "lng": -62.641,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-maracaibo-ve",
+    "countryCode": "VE",
+    "name": "Maracaibo",
+    "continent": "america",
+    "lat": 10.6423,
+    "lng": -71.6109,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-valencia-ve",
+    "countryCode": "VE",
+    "name": "Valencia",
+    "continent": "america",
+    "lat": 10.1615,
+    "lng": -68.0004,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-bien-hoa-vn",
+    "countryCode": "VN",
+    "name": "Biên Hòa",
+    "continent": "asia",
+    "lat": 10.9447,
+    "lng": 106.8243,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-can-tho-vn",
+    "countryCode": "VN",
+    "name": "Cần Thơ",
+    "continent": "asia",
+    "lat": 10.0371,
+    "lng": 105.7883,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-da-nang-vn",
+    "countryCode": "VN",
+    "name": "Da Nang",
+    "continent": "asia",
+    "lat": 16.0678,
+    "lng": 108.2208,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-haiphong-vn",
+    "countryCode": "VN",
+    "name": "Haiphong",
+    "continent": "asia",
+    "lat": 20.8648,
+    "lng": 106.6834,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-hanoi-vn",
+    "countryCode": "VN",
+    "name": "Hanoi",
+    "continent": "asia",
+    "lat": 21.0245,
+    "lng": 105.8412,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-ho-chi-minh-city-vn",
+    "countryCode": "VN",
+    "name": "Ho Chi Minh City",
+    "continent": "asia",
+    "lat": 10.823,
+    "lng": 106.6296,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-hoi-an-vn",
+    "countryCode": "VN",
+    "name": "Hoi An",
+    "continent": "asia",
+    "lat": 15.8794,
+    "lng": 108.335,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-hue-vn",
+    "countryCode": "VN",
+    "name": "Huế",
+    "continent": "asia",
+    "lat": 16.4619,
+    "lng": 107.5955,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-port-vila-vu",
+    "countryCode": "VU",
+    "name": "Port-Vila",
+    "continent": "oceania",
+    "lat": -17.7365,
+    "lng": 168.3137,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-apia-ws",
+    "countryCode": "WS",
+    "name": "Apia",
+    "continent": "oceania",
+    "lat": -13.8333,
+    "lng": -171.7667,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-aden-ye",
+    "countryCode": "YE",
+    "name": "Aden",
+    "continent": "asia",
+    "lat": 12.7796,
+    "lng": 45.0385,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-sanaa-ye",
+    "countryCode": "YE",
+    "name": "Sanaa",
+    "continent": "asia",
+    "lat": 15.3545,
+    "lng": 44.2065,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-taiz-ye",
+    "countryCode": "YE",
+    "name": "Taiz",
+    "continent": "asia",
+    "lat": 13.5795,
+    "lng": 44.0209,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-cape-town-za",
+    "countryCode": "ZA",
+    "name": "Cape Town",
+    "continent": "africa",
+    "lat": -33.9258,
+    "lng": 18.4232,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-durban-za",
+    "countryCode": "ZA",
+    "name": "Durban",
+    "continent": "africa",
+    "lat": -29.8579,
+    "lng": 31.0292,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-gqeberha-za",
+    "countryCode": "ZA",
+    "name": "Gqeberha",
+    "continent": "africa",
+    "lat": -33.9611,
+    "lng": 25.6149,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-johannesburg-za",
+    "countryCode": "ZA",
+    "name": "Johannesburg",
+    "continent": "africa",
+    "lat": -26.2023,
+    "lng": 28.0436,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-pretoria-za",
+    "countryCode": "ZA",
+    "name": "Pretoria",
+    "continent": "africa",
+    "lat": -25.7449,
+    "lng": 28.1878,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-soweto-za",
+    "countryCode": "ZA",
+    "name": "Soweto",
+    "continent": "africa",
+    "lat": -26.2678,
+    "lng": 27.8585,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-stellenbosch-za",
+    "countryCode": "ZA",
+    "name": "Stellenbosch",
+    "continent": "africa",
+    "lat": -33.9346,
+    "lng": 18.8668,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-livingstone-zm",
+    "countryCode": "ZM",
+    "name": "Livingstone",
+    "continent": "africa",
+    "lat": -17.8419,
+    "lng": 25.8543,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-lusaka-zm",
+    "countryCode": "ZM",
+    "name": "Lusaka",
+    "continent": "africa",
+    "lat": -15.4067,
+    "lng": 28.2871,
+    "kind": "city"
+  },
+  {
+    "id": "place-city-harare-zw",
+    "countryCode": "ZW",
+    "name": "Harare",
+    "continent": "africa",
+    "lat": -17.8277,
+    "lng": 31.0534,
+    "kind": "city"
+  }
+]

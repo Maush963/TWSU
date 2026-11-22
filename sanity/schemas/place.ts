@@ -61,12 +61,21 @@ export const place = defineType({
   ],
   orderings: [{ name: "byName", title: "Nombre", by: [{ field: "name", direction: "asc" }] }],
   preview: {
-    select: { title: "name", continent: "continent", kind: "kind" },
-    prepare: ({ title, continent, kind }) => ({
-      title,
-      subtitle: [kind === "city" ? "Ciudad" : "País", CONTINENTS.find((item) => item.value === continent)?.title]
-        .filter(Boolean)
-        .join(" · "),
-    }),
+    select: { name: "name", continent: "continent", kind: "kind", countryCode: "countryCode" },
+    prepare: ({ name, continent, kind, countryCode }) => {
+      // En las ciudades el país va junto al nombre, para distinguir homónimos (Santiago, Córdoba).
+      let country: string | undefined;
+      try {
+        country = countryCode ? new Intl.DisplayNames(["es"], { type: "region" }).of(countryCode) : undefined;
+      } catch {
+        country = countryCode;
+      }
+      return {
+        title: kind === "city" && country ? `${name}, ${country}` : name,
+        subtitle: [kind === "city" ? "Ciudad" : "País", CONTINENTS.find((item) => item.value === continent)?.title]
+          .filter(Boolean)
+          .join(" · "),
+      };
+    },
   },
 });
