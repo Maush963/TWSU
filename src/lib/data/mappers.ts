@@ -16,6 +16,19 @@ type RawSummary = RECENT_ARTICLES_QUERY_RESULT[number];
 type RawArticle = NonNullable<ARTICLE_BY_SLUG_QUERY_RESULT>;
 type RawPin = ATLAS_PINS_QUERY_RESULT[number];
 
+const FALLBACK_EXCERPT_LENGTH = 200;
+
+/** La descripción del artículo; si no tiene, el inicio de su texto, cortado en una palabra completa. */
+export function toExcerpt(raw: { excerpt: string | null; bodyText?: string | null }): string {
+  const excerpt = raw.excerpt?.trim();
+  if (excerpt) return excerpt;
+  const text = (raw.bodyText ?? "").replace(/\s+/g, " ").trim();
+  if (text.length <= FALLBACK_EXCERPT_LENGTH) return text;
+  const cut = text.slice(0, FALLBACK_EXCERPT_LENGTH);
+  const lastSpace = cut.lastIndexOf(" ");
+  return `${(lastSpace > FALLBACK_EXCERPT_LENGTH / 2 ? cut.slice(0, lastSpace) : cut).replace(/[\s,.;:–—-]+$/, "")}…`;
+}
+
 export function toCategories(values: readonly string[] | null): Category[] {
   return (values ?? []).filter(isCategory);
 }
@@ -43,7 +56,7 @@ export function toArticleSummary(raw: RawSummary): ArticleSummary | null {
     id: raw._id,
     slug: raw.slug,
     title: raw.title,
-    excerpt: raw.excerpt ?? "",
+    excerpt: toExcerpt(raw),
     publishedAt: raw.publishedAt,
     year: raw.year,
     categories: toCategories(raw.categories),
@@ -74,7 +87,7 @@ export function toAtlasPin(raw: RawPin): AtlasPinData | null {
     id: raw._id,
     slug: raw.slug,
     title: raw.title,
-    excerpt: raw.excerpt ?? "",
+    excerpt: toExcerpt(raw),
     placeName: raw.placeName,
     continent,
     categories: toCategories(raw.categories),

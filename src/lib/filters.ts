@@ -4,6 +4,8 @@ import type { ArticleFilterParams, AtlasFilterParams } from "@/lib/sanity/types"
 export type RawSearchParams = Record<string, string | string[] | undefined>;
 
 const MIN_YEAR = 2000;
+/** Valor de `category` en la URL del atlas para pedir todas las categorías. */
+export const ALL_CATEGORIES = "all";
 
 // Si el parámetro viene repetido, se usa el primero. Un valor vacío cuenta como ausente.
 function first(searchParams: RawSearchParams, key: string): string | undefined {
@@ -32,6 +34,7 @@ export function parseAtlasFilters(
 
   const category = parseCategory(searchParams);
   if (category) filters.category = category;
+  else if (first(searchParams, "category") === ALL_CATEGORIES) filters.allCategories = true;
 
   const region = first(searchParams, "region");
   if (region !== undefined && isContinent(region)) filters.region = region;
@@ -57,6 +60,7 @@ export function parsePerspectivesFilters(searchParams: RawSearchParams): Article
 export function toSearchParams(filters: Partial<AtlasFilterParams & ArticleFilterParams>): URLSearchParams {
   const params = new URLSearchParams();
   if (filters.category) params.set("category", filters.category);
+  else if (filters.allCategories) params.set("category", ALL_CATEGORIES);
   if (filters.region) params.set("region", filters.region);
   if (filters.year !== undefined) params.set("year", String(filters.year));
   if (filters.page !== undefined && filters.page > 1) params.set("page", String(filters.page));

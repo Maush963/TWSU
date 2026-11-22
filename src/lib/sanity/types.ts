@@ -52,6 +52,8 @@ export interface ArticleFilterParams {
 
 export interface AtlasFilterParams {
   category?: Category;
+  /** Pedido explícito de "All" en el atlas, que por defecto abre la primera categoría. */
+  allCategories?: boolean;
   region?: Continent;
   year?: number;
 }

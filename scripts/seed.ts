@@ -2,7 +2,7 @@ import { createReadStream } from "node:fs";
 import { join } from "node:path";
 import { getCliClient } from "sanity/cli";
 import type { IdentifiedSanityDocumentStub } from "@sanity/client";
-import { CATEGORIES, CONTINENTS, type Category, type Continent } from "../src/lib/constants";
+import { ATLAS_SLOTS_PER_CATEGORY, CATEGORIES, CONTINENTS, type Category, type Continent } from "../src/lib/constants";
 import places from "./data/places.json";
 
 type Place = (typeof places)[number];
@@ -102,7 +102,7 @@ function makeArticle(options: ArticleOptions) {
 }
 
 // Pares de llaves de los 8 artículos que ocupan dos lugares. Con los 34 de una sola llave
-// que siguen, cada llave suma exactamente 10 lugares en el año actual.
+// que siguen, cada llave suma exactamente ATLAS_SLOTS_PER_CATEGORY lugares en el año actual.
 const DOUBLE_PAIRS = [
   [0, 1],
   [1, 2],
@@ -120,7 +120,7 @@ function singleKeys(): number[] {
     used[first] = (used[first] ?? 0) + 1;
     used[second] = (used[second] ?? 0) + 1;
   }
-  return categories.flatMap((_, key) => new Array<number>(10 - (used[key] ?? 0)).fill(key));
+  return categories.flatMap((_, key) => new Array<number>(ATLAS_SLOTS_PER_CATEGORY - (used[key] ?? 0)).fill(key));
 }
 
 function buildArticles(assetIds: string[]): ReturnType<typeof makeArticle>[] {
@@ -129,7 +129,7 @@ function buildArticles(assetIds: string[]): ReturnType<typeof makeArticle>[] {
   const cover = () => assetIds[number % assetIds.length] as string;
   const category = (key: number) => categories[key] as Category;
 
-  // Año actual en el atlas: 34 artículos de una llave y 8 de dos = 50 lugares, 42 puntos.
+  // Año actual en el atlas: artículos de una llave y 8 de dos, hasta llenar los lugares de cada llave.
   // Los puntos 5 y 10 repiten el país del punto 0 para probar puntos encimados.
   const keys = singleKeys();
   const total = keys.length + DOUBLE_PAIRS.length;

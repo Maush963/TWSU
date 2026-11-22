@@ -4,6 +4,15 @@ import type { AtlasFilterParams } from "@/lib/sanity/types";
 
 export const ATLAS_PATH = "/atlas";
 
+/** Categoría con la que abre el atlas cuando la URL no trae ninguna ni pide "All". */
+export const DEFAULT_ATLAS_CATEGORY: Category = CATEGORIES[0].value;
+
+/** Sin categoría en la URL el atlas abre en la primera; `category=all` muestra todas. */
+export function withDefaultCategory(filters: AtlasFilterParams): AtlasFilterParams {
+  if (filters.category || filters.allCategories) return filters;
+  return { ...filters, category: DEFAULT_ATLAS_CATEGORY };
+}
+
 export interface FilterLink<T> {
   value: T;
   title: string;
@@ -46,12 +55,14 @@ function toggled<K extends keyof AtlasFilterParams>(
   key: K,
   value: NonNullable<AtlasFilterParams[K]>,
 ): AtlasFilterParams {
-  const { [key]: previous, ...others } = current;
+  const { [key]: previous, ...rest } = current;
+  const others: AtlasFilterParams = rest;
+  if (key === "category") delete others.allCategories;
   return previous === value ? others : { ...others, [key]: value };
 }
 
 function withoutCategory(filters: AtlasFilterParams): AtlasFilterParams {
-  const copy = { ...filters };
+  const copy = { ...filters, allCategories: true };
   delete copy.category;
   return copy;
 }
@@ -65,6 +76,7 @@ export function buildAtlasFilterLinks(
   // A partir de aquí se trabaja con el año ya resuelto.
   const resolved: AtlasFilterParams = {
     ...(current.category ? { category: current.category } : {}),
+    ...(current.allCategories && !current.category ? { allCategories: true } : {}),
     ...(current.region ? { region: current.region } : {}),
     ...(year !== undefined ? { year } : {}),
   };
@@ -90,6 +102,10 @@ export function buildAtlasFilterLinks(
       active: year === value,
     })),
     clearHref: ATLAS_PATH,
-    hasActiveFilters: Boolean(resolved.category || resolved.region || (year !== undefined && year !== defaultYear)),
+    hasActiveFilters: Boolean(
+      (resolved.category && resolved.category !== DEFAULT_ATLAS_CATEGORY) ||
+        resolved.allCategories ||
+        resolved.region || (year !== undefined && year !== defaultYear),
+    ),
   };
 }

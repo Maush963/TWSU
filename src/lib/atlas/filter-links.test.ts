@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildAtlasFilterLinks, resolveAtlasYear } from "./filter-links";
+import { buildAtlasFilterLinks, DEFAULT_ATLAS_CATEGORY, resolveAtlasYear, withDefaultCategory } from "./filter-links";
 
 const YEARS = [2026, 2025];
 
@@ -90,5 +90,24 @@ describe("buildAtlasFilterLinks", () => {
     expect(links.categories).toHaveLength(5);
     expect(links.regions).toHaveLength(5);
     expect(find(links.regions, "america").title).toBe("Americas");
+  });
+});
+
+describe("categoría por defecto del atlas", () => {
+  it("sin categoría abre la primera", () => {
+    expect(withDefaultCategory({})).toEqual({ category: DEFAULT_ATLAS_CATEGORY });
+    expect(DEFAULT_ATLAS_CATEGORY).toBe("storytelling");
+  });
+
+  it("respeta la categoría de la URL y el pedido explícito de All", () => {
+    expect(withDefaultCategory({ category: "branding" })).toEqual({ category: "branding" });
+    expect(withDefaultCategory({ allCategories: true })).toEqual({ allCategories: true });
+  });
+
+  it("el enlace de All usa category=all y la categoría por defecto no cuenta como filtro", () => {
+    const links = buildAtlasFilterLinks({ category: DEFAULT_ATLAS_CATEGORY }, YEARS);
+    expect(links.allCategoriesHref).toBe("/atlas?category=all");
+    expect(links.hasActiveFilters).toBe(false);
+    expect(buildAtlasFilterLinks({ allCategories: true }, YEARS).hasActiveFilters).toBe(true);
   });
 });

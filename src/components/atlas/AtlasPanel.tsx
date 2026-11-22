@@ -48,9 +48,9 @@ export function AtlasPanel({ pin }: { pin: AtlasPinData }) {
         {uiText.atlas.readMore}
         <ArrowRightIcon className="size-4" />
       </Link>
-      <div className="mt-auto flex items-center gap-3 border-t border-gold-soft pt-3">
+      <div className="mt-auto flex h-key-box shrink-0 items-center gap-3 border-t border-gold-soft box-content pt-3">
         <CategoryKeys states={keys} />
-        <p className="text-xs uppercase tracking-caps text-muted">
+        <p className="line-clamp-3 min-w-0 flex-1 text-xs uppercase leading-tight tracking-normal text-muted">
           {active.map((key) => key.title).join(" · ")}
         </p>
       </div>

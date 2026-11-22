@@ -16,6 +16,7 @@
     "prepare:brand": "node scripts/prepare-brand.mjs",
     "seed": "sanity exec scripts/seed.ts --with-user-token",
     "seed:clean": "sanity exec scripts/seed-clean.ts --with-user-token",
+    "trim:atlas": "sanity exec scripts/trim-atlas.ts --with-user-token",
     "typegen": "sanity schema extract --force --path sanity-schema.json && sanity typegen generate"
   },
   "dependencies": {

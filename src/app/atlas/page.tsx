@@ -7,7 +7,7 @@ import { AtlasMobileList } from "@/components/atlas/AtlasMobileList";
 import { AtlasMap } from "@/components/atlas/AtlasMap";
 import { AtlasMobileFilters } from "@/components/atlas/AtlasMobileFilters";
 import { CategorySelect } from "@/components/ui/CategorySelect";
-import { resolveAtlasYear } from "@/lib/atlas/filter-links";
+import { resolveAtlasYear, withDefaultCategory } from "@/lib/atlas/filter-links";
 import { buildAtlasView } from "@/lib/atlas/view-model";
 import { getAtlasPins, getAtlasYears } from "@/lib/data/atlas";
 import { parseAtlasFilters } from "@/lib/filters";
@@ -18,7 +18,7 @@ async function AtlasContent({ searchParams }: { searchParams: PageProps<"/atlas"
   const parsed = parseAtlasFilters(await searchParams);
   const years = await getAtlasYears();
   const year = resolveAtlasYear(parsed.year, years);
-  const filters = { ...parsed, ...(year !== undefined ? { year } : {}) };
+  const filters = withDefaultCategory({ ...parsed, ...(year !== undefined ? { year } : {}) });
   const view = buildAtlasView(await getAtlasPins(filters), filters, years);
   const { links } = view;
   const activeRegion = parsed.region ?? view.byRegion[0]?.continent;

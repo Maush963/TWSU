@@ -97,3 +97,11 @@ describe("toSearchParams", () => {
     expect(parsePerspectivesFilters(Object.fromEntries(toSearchParams(perspectives)))).toEqual(perspectives);
   });
 });
+
+describe("category=all en el atlas", () => {
+  it("se lee como allCategories y se vuelve a escribir igual", () => {
+    const filters = parseAtlasFilters({ category: "all" }, NOW);
+    expect(filters).toEqual({ allCategories: true });
+    expect(toSearchParams(filters).toString()).toBe("category=all");
+  });
+});
