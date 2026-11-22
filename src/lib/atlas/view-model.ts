@@ -29,7 +29,7 @@ export interface AtlasView {
 
 function compareTitles(a: AtlasPinData, b: AtlasPinData): number {
   return (
-    a.title.localeCompare(b.title, "es") ||
+    a.title.localeCompare(b.title, "en") ||
     (a.slug === b.slug ? 0 : a.slug < b.slug ? -1 : 1) ||
     (a.id === b.id ? 0 : a.id < b.id ? -1 : 1)
   );

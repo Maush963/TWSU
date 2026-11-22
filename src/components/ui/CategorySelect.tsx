@@ -1,77 +1,49 @@
-"use client";
-
-import { useRouter } from "next/navigation";
-import { ChevronDownIcon } from "@/components/ui/icons";
+import { Dropdown, type DropdownOption } from "@/components/ui/Dropdown";
 import type { Category } from "@/lib/constants";
 
 interface CategorySelectProps {
-  /** Ruta del formulario sin JavaScript y base del `id` del campo. */
-  action: string;
   id: string;
   label: string;
   allLabel: string;
-  applyLabel: string;
   /** Cada opción trae el enlace que ya conserva los demás filtros. */
   options: { value: Category; title: string; href: string }[];
   allHref: string;
   selected: Category | undefined;
-  /** Filtros que el formulario sin JavaScript debe conservar (región y año). */
-  hiddenFields: Record<string, string>;
+  /** Pone "All" al final de la lista en vez de al principio. */
+  allLast?: boolean;
   /** Etiqueta encima del selector, como en móvil. */
   stacked?: boolean;
   className?: string;
 }
 
-// Con JavaScript navega al elegir; sin él, el formulario GET con su botón hace lo mismo.
 export function CategorySelect({
-  action,
   id,
   label,
   allLabel,
-  applyLabel,
   options,
   allHref,
   selected,
-  hiddenFields,
+  allLast = false,
   stacked = false,
   className = "",
 }: CategorySelectProps) {
-  const router = useRouter();
+  const all: DropdownOption = { value: "", title: allLabel, href: allHref };
+  const items: DropdownOption[] = allLast ? [...options, all] : [all, ...options];
 
   return (
-    <form action={action} method="get" className={`flex ${stacked ? "flex-col items-start gap-1" : "items-center gap-4"} ${className}`}>
-      <label htmlFor={id} className={`font-ui uppercase tracking-caps-wide ${stacked ? "text-xs" : "text-sm"}`}>
+    <div className={`flex ${stacked ? "flex-col items-start gap-1" : "items-center gap-4"} ${className}`}>
+      <span id={`${id}-label`} className={`font-ui uppercase tracking-caps-wide ${stacked ? "text-xs" : "text-sm"}`}>
         {label}
-      </label>
-      <div className="relative">
-        <select
-          id={id}
-          name="category"
-          value={selected ?? ""}
-          onChange={(event) => {
-            const value = event.target.value;
-            const href = value === "" ? allHref : options.find((option) => option.value === value)?.href;
-            if (href) router.push(href, { scroll: false });
-          }}
-          className={`${stacked ? "min-w-36" : "min-w-48"} appearance-none border border-gold bg-bg py-1 pl-4 pr-8 font-body text-base`}
-        >
-          <option value="">{allLabel}</option>
-          {options.map((option) => (
-            <option key={option.value} value={option.value}>
-              {option.title}
-            </option>
-          ))}
-        </select>
-        <ChevronDownIcon className="pointer-events-none absolute right-2 top-1/2 size-4 -translate-y-1/2 text-gold" />
-      </div>
-      {Object.entries(hiddenFields).map(([name, value]) => (
-        <input key={name} type="hidden" name={name} value={value} />
-      ))}
-      <noscript>
-        <button type="submit" className="border border-gold px-4 py-2">
-          {applyLabel}
-        </button>
-      </noscript>
-    </form>
+      </span>
+      <Dropdown
+        id={id}
+        labelId={`${id}-label`}
+        options={items}
+        selected={selected ?? ""}
+        className={stacked ? "min-w-36" : "min-w-48"}
+        buttonClassName="py-1 pl-4 pr-8 text-base"
+        optionClassName="text-base"
+      />
+    </div>
   );
 }

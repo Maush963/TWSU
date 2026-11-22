@@ -10,7 +10,7 @@ export function CategoryKeys({ states }: { states: KeyState[] }) {
   return (
     <ul
       aria-label={uiText.atlas.keys.label}
-      className="flex shrink-0 items-center px-8"
+      className="flex shrink-0 items-center"
     >
       {states.map((state) => {
         const image = KEY_IMAGES[state.category];

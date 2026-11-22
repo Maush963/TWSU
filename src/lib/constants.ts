@@ -2,24 +2,24 @@
 
 export const CATEGORIES = [
   { value: "storytelling", title: "Storytelling" },
-  { value: "plataformas", title: "Plataformas" },
-  { value: "campanas", title: "Campañas" },
+  { value: "plataformas", title: "Platforms" },
+  { value: "campanas", title: "Campaigns" },
   { value: "branding", title: "Branding" },
   { value: "social-media", title: "Social media" },
 ] as const;
 
 export const CONTINENTS = [
-  { value: "america", title: "América" },
-  { value: "europa", title: "Europa" },
+  { value: "america", title: "Americas" },
+  { value: "europa", title: "Europe" },
   { value: "asia", title: "Asia" },
-  { value: "africa", title: "África" },
-  { value: "oceania", title: "Oceanía" },
+  { value: "africa", title: "Africa" },
+  { value: "oceania", title: "Oceania" },
 ] as const;
 
 export type Category = (typeof CATEGORIES)[number]["value"];
 export type Continent = (typeof CONTINENTS)[number]["value"];
 
-export const ATLAS_SLOTS_PER_CATEGORY = 10;
+export const ATLAS_SLOTS_PER_CATEGORY = 5;
 export const PERSPECTIVES_PAGE_SIZE = 9;
 export const RELATED_ARTICLES_LIMIT = 3;
 export const HOME_RECENT_LIMIT = 3;

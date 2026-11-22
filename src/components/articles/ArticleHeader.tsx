@@ -12,7 +12,7 @@ export function ArticleHeader({ article }: { article: ArticleSummary }) {
         {uiText.article.author}
         {date && ` . ${date}`}
       </p>
-      <h1 className="font-display text-2xl uppercase leading-none text-accent lg:text-3xl">{article.title}</h1>
+      <h1 className="text-balance break-words hyphens-auto font-display text-2xl uppercase leading-tight text-accent lg:text-3xl">{article.title}</h1>
       <Image
         src={urlFor(article.cover).width(2000).height(833).fit("crop").url()}
         alt={article.cover.alt}

@@ -9,7 +9,6 @@ import { CategorySelect } from "@/components/ui/CategorySelect";
 import { uiText } from "@/content/ui-text";
 import { getFeaturedArticle, listArticles } from "@/lib/data/articles";
 import { parsePerspectivesFilters } from "@/lib/filters";
-import { PERSPECTIVES_PATH } from "@/lib/perspectives/filter-links";
 import { buildPerspectivesView } from "@/lib/perspectives/view-model";
 
 export const metadata: Metadata = { title: uiText.perspectives.title };
@@ -22,14 +21,11 @@ async function PerspectivesContent({ searchParams }: { searchParams: PageProps<"
   const { links, items, pagination, isEmpty } = buildPerspectivesView(featured, result, filters);
 
   const selectProps = {
-    action: PERSPECTIVES_PATH,
     label: uiText.perspectives.exploreBy,
     allLabel: uiText.perspectives.allTopics,
-    applyLabel: uiText.perspectives.applyFilter,
     options: links.categories.map(({ value, title, href }) => ({ value, title, href })),
     allHref: links.allHref,
     selected: filters.category,
-    hiddenFields: {},
   };
 
   return (

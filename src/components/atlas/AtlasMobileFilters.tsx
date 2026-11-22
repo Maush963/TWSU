@@ -1,8 +1,5 @@
-"use client";
-
-import { useRouter } from "next/navigation";
 import { uiText } from "@/content/ui-text";
-import { ChevronDownIcon } from "@/components/ui/icons";
+import { Dropdown } from "@/components/ui/Dropdown";
 import type { FilterLink } from "@/lib/atlas/filter-links";
 import type { Category, Continent } from "@/lib/constants";
 
@@ -12,88 +9,46 @@ interface AtlasMobileFiltersProps {
   categories: FilterLink<Category>[];
   allCategoriesHref: string;
   selectedCategory: Category | undefined;
-  /** Filtros que el formulario sin JavaScript debe conservar (el año). */
-  hiddenFields: Record<string, string>;
 }
 
-const SELECT_CLASS = "w-full appearance-none border border-gold bg-bg py-1 pl-2 pr-5 font-body text-xs";
 const LABEL_CLASS = "justify-self-end whitespace-nowrap text-right font-body text-[10px] uppercase";
-const CHEVRON_CLASS = "pointer-events-none absolute right-1 top-1/2 size-4 -translate-y-1/2 text-gold";
+const BUTTON_CLASS = "py-1 pl-2 pr-6 text-xs";
 
-// Dos selectores apilados: región y categoría. Cada opción trae el enlace que ya conserva los
-// demás filtros. Sin JavaScript, el formulario GET con su botón hace lo mismo.
+// Dos selectores apilados: región y categoría. Usan el mismo menú propio que escritorio, así
+// se ven igual en todos los dispositivos. "All" va al final de la lista de categorías.
 export function AtlasMobileFilters({
   regions,
   activeRegion,
   categories,
   allCategoriesHref,
   selectedCategory,
-  hiddenFields,
 }: AtlasMobileFiltersProps) {
-  const router = useRouter();
-  const go = (href: string | undefined) => {
-    if (href) router.push(href, { scroll: false });
-  };
-
   return (
-    <form action="/atlas" method="get" className="grid flex-none grid-cols-[auto_auto] items-center gap-x-4 gap-y-2 lg:hidden">
-      <div className="contents">
-        <label htmlFor="atlas-region" className={LABEL_CLASS}>
-          {uiText.atlas.mobile.explore}
-        </label>
-        <div className="relative w-28">
-          <select
-            id="atlas-region"
-            name="region"
-            value={activeRegion ?? ""}
-            onChange={(event) => go(regions.find((region) => region.value === event.target.value)?.href)}
-            className={SELECT_CLASS}
-          >
-            {regions.map((region) => (
-              <option key={region.value} value={region.value}>
-                {region.title}
-              </option>
-            ))}
-          </select>
-          <ChevronDownIcon className={CHEVRON_CLASS} />
-        </div>
-      </div>
-      <div className="contents">
-        <label htmlFor="atlas-category-mobile" className={LABEL_CLASS}>
-          {uiText.atlas.mobile.byBest}
-        </label>
-        <div className="relative w-28">
-          <select
-            id="atlas-category-mobile"
-            name="category"
-            value={selectedCategory ?? ""}
-            onChange={(event) =>
-              go(
-                event.target.value === ""
-                  ? allCategoriesHref
-                  : categories.find((category) => category.value === event.target.value)?.href,
-              )
-            }
-            className={SELECT_CLASS}
-          >
-            <option value="">{uiText.atlas.allCategories}</option>
-            {categories.map((category) => (
-              <option key={category.value} value={category.value}>
-                {category.title}
-              </option>
-            ))}
-          </select>
-          <ChevronDownIcon className={CHEVRON_CLASS} />
-        </div>
-      </div>
-      {Object.entries(hiddenFields).map(([name, value]) => (
-        <input key={name} type="hidden" name={name} value={value} />
-      ))}
-      <noscript>
-        <button type="submit" className="border border-gold px-4 py-2">
-          {uiText.atlas.applyFilter}
-        </button>
-      </noscript>
-    </form>
+    <div className="grid flex-none grid-cols-[auto_auto] items-center gap-x-4 gap-y-2 lg:hidden">
+      <span id="atlas-region-label" className={LABEL_CLASS}>
+        {uiText.atlas.mobile.explore}
+      </span>
+      <Dropdown
+        id="atlas-region"
+        labelId="atlas-region-label"
+        options={regions}
+        selected={activeRegion}
+        className="w-28"
+        buttonClassName={BUTTON_CLASS}
+        optionClassName="text-xs"
+      />
+      <span id="atlas-category-mobile-label" className={LABEL_CLASS}>
+        {uiText.atlas.mobile.byBest}
+      </span>
+      <Dropdown
+        id="atlas-category-mobile"
+        labelId="atlas-category-mobile-label"
+        options={[...categories, { value: "", title: uiText.atlas.allCategories, href: allCategoriesHref }]}
+        selected={selectedCategory ?? ""}
+        className="w-28"
+        buttonClassName={BUTTON_CLASS}
+        optionClassName="text-xs"
+      />
+    </div>
   );
 }

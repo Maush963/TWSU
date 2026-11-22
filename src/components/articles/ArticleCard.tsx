@@ -24,7 +24,7 @@ export function ArticleCard({ article, sizes }: ArticleCardProps) {
         className="aspect-video w-full object-cover"
       />
       <div className="flex flex-1 flex-col gap-2 p-2 lg:gap-4 lg:p-4">
-        <h3 className="font-display text-base leading-tight text-accent lg:text-xl">
+        <h3 className="line-clamp-3 text-balance break-words hyphens-auto font-display text-base leading-tight text-accent lg:text-xl">
           <Link href={`/perspectives/${article.slug}`} className="outline-none after:absolute after:inset-0">
             {article.title}
           </Link>

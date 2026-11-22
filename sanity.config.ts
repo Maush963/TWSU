@@ -11,8 +11,4 @@ export default defineConfig({
   dataset,
   plugins: [structureTool(), visionTool()],
   schema: { types: schemaTypes },
-  document: {
-    // Los editores no crean lugares; los agrega el equipo con el seed.
-    newDocumentOptions: (prev) => prev.filter((option) => option.templateId !== "place"),
-  },
 });

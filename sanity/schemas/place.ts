@@ -9,6 +9,7 @@ export const place = defineType({
     defineField({
       name: "name",
       title: "Nombre",
+      description: "País o ciudad, como se mostrará en el atlas.",
       type: "string",
       validation: (rule) => rule.required(),
     }),
@@ -32,12 +33,14 @@ export const place = defineType({
     defineField({
       name: "lat",
       title: "Latitud",
+      description: "Grados decimales reales (como en Google Maps), de -90 a 90. Ejemplo: 19.4326",
       type: "number",
       validation: (rule) => rule.required().min(-90).max(90),
     }),
     defineField({
       name: "lng",
       title: "Longitud",
+      description: "Grados decimales reales (como en Google Maps), de -180 a 180. Oeste es negativo. Ejemplo: -99.1332",
       type: "number",
       validation: (rule) => rule.required().min(-180).max(180),
     }),
@@ -56,11 +59,14 @@ export const place = defineType({
       validation: (rule) => rule.required(),
     }),
   ],
+  orderings: [{ name: "byName", title: "Nombre", by: [{ field: "name", direction: "asc" }] }],
   preview: {
-    select: { title: "name", continent: "continent" },
-    prepare: ({ title, continent }) => ({
+    select: { title: "name", continent: "continent", kind: "kind" },
+    prepare: ({ title, continent, kind }) => ({
       title,
-      subtitle: CONTINENTS.find((item) => item.value === continent)?.title,
+      subtitle: [kind === "city" ? "Ciudad" : "País", CONTINENTS.find((item) => item.value === continent)?.title]
+        .filter(Boolean)
+        .join(" · "),
     }),
   },
 });

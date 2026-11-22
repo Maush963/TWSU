@@ -23,11 +23,6 @@ async function AtlasContent({ searchParams }: { searchParams: PageProps<"/atlas"
   const { links } = view;
   const activeRegion = parsed.region ?? view.byRegion[0]?.continent;
 
-  // Región y año no tienen control en el diseño, pero siguen funcionando desde la URL.
-  const hiddenFields: Record<string, string> = {};
-  if (parsed.region) hiddenFields.region = parsed.region;
-  if (year !== undefined && year !== years[0]) hiddenFields.year = String(year);
-
   // En móvil el "&" abre la segunda línea del subtítulo.
   const [taglineBefore, taglineAfter] = uiText.atlas.tagline.split(" & ");
 
@@ -44,18 +39,15 @@ async function AtlasContent({ searchParams }: { searchParams: PageProps<"/atlas"
           categories={links.categories}
           allCategoriesHref={links.allCategoriesHref}
           selectedCategory={filters.category}
-          hiddenFields={hiddenFields}
         />
         <CategorySelect
-          action="/atlas"
           id="atlas-category"
           label={uiText.atlas.exploreBy}
           allLabel={uiText.atlas.allCategories}
-          applyLabel={uiText.atlas.applyFilter}
           options={links.categories.map(({ value, title, href }) => ({ value, title, href }))}
           allHref={links.allCategoriesHref}
           selected={filters.category}
-          hiddenFields={hiddenFields}
+          allLast
           className="max-lg:hidden"
         />
       </div>

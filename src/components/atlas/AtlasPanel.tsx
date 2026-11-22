@@ -24,7 +24,7 @@ export function AtlasPanel({ pin }: { pin: AtlasPinData }) {
         <p className="font-body text-xs uppercase tracking-caps text-muted">
           {pin.placeName} {formatCoordinates(pin.lat, pin.lng)}
         </p>
-        <h2 className="mt-2 line-clamp-2 font-display text-2xl uppercase leading-none text-accent">
+        <h2 className="mt-2 line-clamp-3 text-balance break-words hyphens-auto font-display text-2xl uppercase leading-tight text-accent">
           {pin.title}
         </h2>
       </div>
@@ -48,7 +48,7 @@ export function AtlasPanel({ pin }: { pin: AtlasPinData }) {
         {uiText.atlas.readMore}
         <ArrowRightIcon className="size-4" />
       </Link>
-      <div className="mt-auto flex items-center gap-4 border-t border-gold-soft pt-4">
+      <div className="mt-auto flex items-center gap-3 border-t border-gold-soft pt-3">
         <CategoryKeys states={keys} />
         <p className="text-xs uppercase tracking-caps text-muted">
           {active.map((key) => key.title).join(" · ")}

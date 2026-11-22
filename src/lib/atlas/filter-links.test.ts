@@ -89,6 +89,6 @@ describe("buildAtlasFilterLinks", () => {
     const links = buildAtlasFilterLinks({}, YEARS);
     expect(links.categories).toHaveLength(5);
     expect(links.regions).toHaveLength(5);
-    expect(find(links.regions, "america").title).toBe("América");
+    expect(find(links.regions, "america").title).toBe("Americas");
   });
 });
