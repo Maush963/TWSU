@@ -40,3 +40,6 @@ export const EMAIL_MAX_LENGTH = 254;
 
 // Correo (Fase 3): tiempo máximo de espera al proveedor.
 export const MAIL_TIMEOUT_MS = 8000;
+
+/** Largo máximo del título de un artículo. Con él cabe completo en todos los lugares (máximo 3-4 líneas). */
+export const TITLE_MAX_LENGTH = 50;

@@ -42,7 +42,7 @@ export function AtlasMobileList({ groups, activeRegion }: AtlasMobileListProps) 
                     )}
                   </span>
                   <span className="fit-column fit-column-list flex min-w-0 flex-1 flex-col gap-1 pt-3">
-                    <span className={`fit-clamp [--fit-lines:2] shrink-0 font-display uppercase leading-tight text-accent text-xl`}>{pin.title}</span>
+                    <span className={`fit-clamp [--fit-lines:4] shrink-0 font-display uppercase leading-tight text-accent text-base`}>{pin.title}</span>
                     <span className="fit-clamp fit-clamp-text shrink-0 font-body">{pin.excerpt}</span>
                     <span className="mt-auto flex shrink-0 items-center gap-2 self-end border-b border-gold text-sm text-accent">
                       {uiText.atlas.readMore}

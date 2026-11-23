@@ -1,6 +1,6 @@
 import { defineArrayMember, defineField, defineType } from "sanity";
 import { parseVideoUrl } from "../../src/lib/articles/video";
-import { ATLAS_SLOTS_PER_CATEGORY, CATEGORIES } from "../../src/lib/constants";
+import { ATLAS_SLOTS_PER_CATEGORY, CATEGORIES, TITLE_MAX_LENGTH } from "../../src/lib/constants";
 
 const categoryOptions = {
   list: CATEGORIES.map(({ value, title }) => ({ value, title })),
@@ -30,7 +30,8 @@ export const article = defineType({
       name: "title",
       title: "Título",
       type: "string",
-      validation: (rule) => rule.required(),
+      description: `Máximo ${TITLE_MAX_LENGTH} caracteres, para que se vea completo en el Atlas, Home y Perspectives.`,
+      validation: (rule) => rule.required().max(TITLE_MAX_LENGTH),
     }),
     defineField({
       name: "slug",

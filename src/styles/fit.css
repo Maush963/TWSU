@@ -27,6 +27,15 @@
   container-type: size;
 }
 
+.atlas-panel-title {
+  --fit-lines: 3;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 80rem) {
+  .atlas-panel-title { font-size: 1.75rem; }
+}
+
 .atlas-panel-cover {
   flex: 0 1 auto;
   min-height: 7rem;
@@ -37,22 +46,22 @@
   flex-shrink: 0;
 }
 
-@container (min-height: 25.25rem) {
+@container (min-height: 26.25rem) {
   .atlas-panel .fit-clamp-text { --fit-lines: 1; }
 }
-@container (min-height: 26.75rem) {
+@container (min-height: 27.75rem) {
   .atlas-panel .fit-clamp-text { --fit-lines: 2; }
 }
-@container (min-height: 28.25rem) {
+@container (min-height: 29.25rem) {
   .atlas-panel .fit-clamp-text { --fit-lines: 3; }
 }
-@container (min-height: 29.75rem) {
+@container (min-height: 30.75rem) {
   .atlas-panel .fit-clamp-text { --fit-lines: 4; }
 }
 
-@container (max-height: 25.24rem) {
+@container (max-height: 26.24rem) {
   .atlas-panel .fit-clamp-text { display: none; }
-  .atlas-panel-cover { min-height: 5rem; }
+  .atlas-panel-cover { min-height: 6.00rem; }
 }
 
 /* Columna de texto con el alto de la portada (Home y lista del Atlas móvil). Al ser un contenedor
@@ -70,16 +79,16 @@
 
 /* Home: título de hasta 2 líneas, enlace y espacios. */
 .fit-column-home .fit-clamp-text { --fit-lines: 1; }
-@container (min-height: 7.6rem) { .fit-column-home .fit-clamp-text { --fit-lines: 1; } }
-@container (min-height: 9.1rem) { .fit-column-home .fit-clamp-text { --fit-lines: 2; } }
-@container (min-height: 10.6rem) { .fit-column-home .fit-clamp-text { --fit-lines: 3; } }
-@container (min-height: 12.1rem) { .fit-column-home .fit-clamp-text { --fit-lines: 4; } }
-@container (max-height: 7.59rem) { .fit-column-home .fit-clamp-text { display: none; } }
+@container (min-height: 9.30rem) { .fit-column-home .fit-clamp-text { --fit-lines: 1; } }
+@container (min-height: 10.80rem) { .fit-column-home .fit-clamp-text { --fit-lines: 2; } }
+@container (min-height: 12.30rem) { .fit-column-home .fit-clamp-text { --fit-lines: 3; } }
+@container (min-height: 13.80rem) { .fit-column-home .fit-clamp-text { --fit-lines: 4; } }
+@container (max-height: 9.29rem) { .fit-column-home .fit-clamp-text { display: none; } }
 
-/* Lista del Atlas móvil: título de hasta 2 líneas (45 px), enlace y espacios. */
+/* Lista del Atlas móvil: título de hasta 4 líneas, enlace y espacios. */
 .fit-column-list .fit-clamp-text { --fit-lines: 1; }
-@container (min-height: 6.3rem) { .fit-column-list .fit-clamp-text { --fit-lines: 1; } }
-@container (min-height: 7.8rem) { .fit-column-list .fit-clamp-text { --fit-lines: 2; } }
-@container (min-height: 9.3rem) { .fit-column-list .fit-clamp-text { --fit-lines: 3; } }
-@container (min-height: 10.8rem) { .fit-column-list .fit-clamp-text { --fit-lines: 4; } }
-@container (max-height: 6.29rem) { .fit-column-list .fit-clamp-text { display: none; } }
+@container (min-height: 7.55rem) { .fit-column-list .fit-clamp-text { --fit-lines: 1; } }
+@container (min-height: 9.05rem) { .fit-column-list .fit-clamp-text { --fit-lines: 2; } }
+@container (min-height: 10.55rem) { .fit-column-list .fit-clamp-text { --fit-lines: 3; } }
+@container (min-height: 12.05rem) { .fit-column-list .fit-clamp-text { --fit-lines: 4; } }
+@container (max-height: 7.54rem) { .fit-column-list .fit-clamp-text { display: none; } }

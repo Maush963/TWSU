@@ -24,7 +24,7 @@ export function AtlasPanel({ pin }: { pin: AtlasPinData }) {
         <p className="fit-clamp text-pretty font-body text-xs uppercase leading-normal tracking-caps text-muted">
           {pin.placeName} {formatCoordinates(pin.lat, pin.lng)}
         </p>
-        <h2 className={`fit-clamp mt-2 font-display uppercase leading-tight text-accent text-xl xl:text-2xl`}>
+        <h2 className={`atlas-panel-title fit-clamp mt-2 font-display uppercase leading-tight text-accent`}>
           {pin.title}
         </h2>
       </div>

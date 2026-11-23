@@ -24,7 +24,7 @@ function Card({ article, large }: { article: ArticleSummary; large: boolean }) {
         className="home-card-image w-full object-cover"
       />
       <div className="home-card-body">
-        <h3 className="home-card-title fit-clamp [--fit-lines:2] font-display leading-tight text-accent">
+        <h3 className="home-card-title fit-clamp font-display leading-tight text-accent">
           <Link href={`/perspectives/${article.slug}`} className="outline-none after:absolute after:inset-0">
             {article.title}
           </Link>

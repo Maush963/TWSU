@@ -131,8 +131,10 @@
   padding: var(--space-4) var(--space-4) var(--space-4) var(--space-8);
 }
 
+/* Los títulos tienen un máximo de 50 caracteres (TITLE_MAX_LENGTH) y 3 líneas, así que caben completos. */
 .home-card-large .home-card-title {
-  font-size: var(--text-2xl);
+  --fit-lines: 3;
+  font-size: var(--text-xl);
 }
 
 .home-card-large .home-card-excerpt {
@@ -151,6 +153,7 @@
 }
 
 .home-card-small .home-card-title {
+  --fit-lines: 3;
   font-size: var(--text-title);
 }
 
@@ -255,6 +258,10 @@
   .home-featured-large {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: calc(var(--space-8) * 2);
+  }
+
+  .home-card-large .home-card-title {
+    font-size: var(--text-2xl);
   }
 
   .home-featured-small {
