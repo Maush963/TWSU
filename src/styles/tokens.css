@@ -81,9 +81,9 @@
   --home-banner-height: 26rem;
   --home-banner-copy-width: 34rem;
   --home-banner-fade: 40%;
-  --home-featured-gap: 2rem;
-  --home-featured-image-width: 50%;
-  --home-featured-image-width-mobile: 45%;
+  --home-featured-gap: 1.5rem;
+  --home-envoy-frame: 1.5rem; /* ancho del marco del boletín; el trozo de la imagen es envoy-marco.webp */
+  --home-envoy-slice: 29;
 
   /* about */
   --about-card-ratio: 1.067;

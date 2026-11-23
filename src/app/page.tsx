@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { PageMarker } from "@/components/layout/PageMarker";
 import { ArrowRightIcon } from "@/components/ui/icons";
+import { HomeEnvoy } from "@/components/home/HomeEnvoy";
 import { HomeFeatured } from "@/components/home/HomeFeatured";
 import { HomeHeadCutout } from "@/components/home/HomeHeadCutout";
 import { uiText } from "@/content/ui-text";
@@ -81,6 +82,7 @@ export default async function HomePage() {
           </div>
         </section>
         <HomeFeatured articles={articles} />
+        <HomeEnvoy />
       </div>
     </main>
   );

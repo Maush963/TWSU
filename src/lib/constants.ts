@@ -22,7 +22,7 @@ export type Continent = (typeof CONTINENTS)[number]["value"];
 export const ATLAS_SLOTS_PER_CATEGORY = 5;
 export const PERSPECTIVES_PAGE_SIZE = 9;
 export const RELATED_ARTICLES_LIMIT = 3;
-export const HOME_RECENT_LIMIT = 3;
+export const HOME_RECENT_LIMIT = 6;
 
 export function isCategory(value: string): value is Category {
   return CATEGORIES.some((category) => category.value === value);

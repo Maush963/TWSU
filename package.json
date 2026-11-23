@@ -13,6 +13,7 @@
     "calibrate:atlas": "node scripts/calibrate-atlas.mjs",
     "prepare:about": "node scripts/prepare-about.mjs",
     "prepare:home": "node scripts/prepare-home.mjs",
+    "prepare:envoy": "node scripts/prepare-envoy.mjs",
     "prepare:brand": "node scripts/prepare-brand.mjs",
     "seed": "sanity exec scripts/seed.ts --with-user-token",
     "seed:clean": "sanity exec scripts/seed-clean.ts --with-user-token",

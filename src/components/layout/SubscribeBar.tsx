@@ -1,40 +1,12 @@
 "use client";
 
-import { useEffect, useRef, useState, type FormEvent } from "react";
 import { uiText } from "@/content/ui-text";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
-
-type Status = "idle" | "sending" | "success" | "error";
+import { useSubscribe } from "./useSubscribe";
 
 export function SubscribeBar() {
-  const [status, setStatus] = useState<Status>("idle");
-  // Momento en que se mostró el formulario, para detectar envíos demasiado rápidos.
-  const startedAt = useRef(0);
-
-  useEffect(() => {
-    startedAt.current = Date.now();
-  }, []);
-
-  async function onSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    setStatus("sending");
-    try {
-      const response = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: data.get("email"),
-          website: data.get("website"),
-          startedAt: startedAt.current,
-        }),
-      });
-      setStatus(response.ok ? "success" : "error");
-    } catch {
-      setStatus("error");
-    }
-  }
+  const { status, onSubmit } = useSubscribe();
 
   return (
     <section aria-labelledby="subscribe-title" className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 lg:justify-start lg:gap-y-1">

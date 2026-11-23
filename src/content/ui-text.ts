@@ -80,6 +80,17 @@ export const uiText = {
     learnMore: "Learn more",
     featured: "Featured",
     readArticle: "Read the article",
+    readMore: "Read more",
+    envoy: {
+      title: "The Envoy",
+      description:
+        "Our newsletter: the ideas, projects and people in creative tourism worth knowing about, straight to your inbox. Join the saving and become part of the conversation.",
+      note: "Intriguing, never pushy. Leave whenever you like.",
+      label: "Subscribe",
+      emailPlaceholder: "you@email.com",
+      submit: "Subscribe",
+      illustrationAlt: "Los cinco personajes de Tourism Will Save Us, dibujados a tinta",
+    },
     empty: "There are no articles yet.",
   },
   atlas: {
