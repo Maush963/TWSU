@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import { getImageProps } from "next/image";
-import Image from "next/image";
 import Link from "next/link";
 import { PageMarker } from "@/components/layout/PageMarker";
 import { ArrowRightIcon } from "@/components/ui/icons";
 import { HomeEnvoy } from "@/components/home/HomeEnvoy";
 import { HomeFeatured } from "@/components/home/HomeFeatured";
-import { HomeHeadCutout } from "@/components/home/HomeHeadCutout";
 import { uiText } from "@/content/ui-text";
 import { getFeaturedArticle, getRecentArticles } from "@/lib/data/articles";
 import { HOME_RECENT_LIMIT } from "@/lib/constants";
@@ -19,14 +17,13 @@ export default async function HomePage() {
   const recent = await getRecentArticles(HOME_RECENT_LIMIT, featured?.id);
   const articles = [...(featured ? [featured] : []), ...recent].slice(0, HOME_RECENT_LIMIT);
 
-  // La misma foto, sin la cabeza de la jirafa, en móvil y en escritorio: la cabeza va aparte y sobresale
-  // sobre la cabecera. Ver scripts/prepare-home.mjs.
+  // La foto completa del banner, la misma en móvil y en escritorio.
   const { props: photoProps } = getImageProps({
     alt: "",
     fill: true,
     sizes: "(min-width: 64rem) 75vw, 120vw",
     className: "object-cover",
-    src: "/home/hero-home-desktop.webp",
+    src: "/home/hero-home.webp",
     priority: true,
   });
 
@@ -36,23 +33,12 @@ export default async function HomePage() {
       className="home-page panel-page panel-page-footer relative flex min-h-0 flex-1 flex-col"
     >
       <PageMarker />
-      <HomeHeadCutout />
       <div className="panel-scroll flex-1">
         <section aria-labelledby="home-hero-title" className="home-banner">
           <div className="home-banner-media">
             <div className="home-banner-art">
               <img {...photoProps} alt="" />
             </div>
-            {/* Cabeza de la jirafa en móvil; en escritorio la dibuja HomeHeadCutout. */}
-            <Image
-              src="/home/jirafa-cabeza.webp"
-              alt=""
-              aria-hidden="true"
-              width={200}
-              height={130}
-              sizes="20vw"
-              className="home-cutout-mobile h-auto"
-            />
           </div>
           <div className="home-banner-copy">
             <h1

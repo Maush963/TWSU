@@ -89,20 +89,6 @@
   mask-image: linear-gradient(to bottom, var(--color-text) 55%, transparent);
 }
 
-/* Cabeza de la jirafa en móvil: su base queda en el borde de arriba de la foto y sale hacia la
-   cabecera. Posición y ancho salen de la proporción de la foto y de la del recorte. */
-.home-cutout-mobile {
-  position: absolute;
-  bottom: 100%;
-  z-index: 60;
-  left: calc(
-    (var(--home-cutout-left-share) * var(--home-photo-ratio) - (var(--home-photo-ratio) - var(--home-banner-ratio)) / 2) /
-      var(--home-banner-ratio) * 100%
-  );
-  width: calc(var(--home-cutout-width-share) * var(--home-photo-ratio) / var(--home-banner-ratio) * 100%);
-  pointer-events: none;
-}
-
 .home-featured {
   flex: none;
   padding: var(--space-8) var(--space-8) 0;
@@ -254,10 +240,6 @@
     aspect-ratio: var(--home-photo-ratio);
   }
 
-  .home-cutout-mobile {
-    display: none;
-  }
-
   .home-banner {
     background: var(--color-bg);
   }
@@ -315,27 +297,9 @@ body:has(.home-page:not([data-hidden])) li.explore-atlas-link {
   display: none;
 }
 
-/* Cabeza de la jirafa sobre la cabecera (escritorio). Su ancho y su distancia al borde derecho
-   salen del tamaño de la foto: alto del banner por proporción de la foto, por la parte que ocupa
-   la cabeza (ver scripts/prepare-home.mjs). Su base queda en el borde de arriba del banner. */
-.home-cutout {
-  display: none;
-}
-
 @media (min-width: 64rem) {
-  .home-cutout {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: calc(var(--home-banner-height) * var(--home-photo-ratio) * var(--home-cutout-right-share));
-    z-index: 60;
-    width: calc(var(--home-banner-height) * var(--home-photo-ratio) * var(--home-cutout-width-share));
-    transform: translateY(-100%);
-    pointer-events: none;
-  }
-
   /* Sin barra de desplazamiento visible, para que el ancho del banner sea el de la página y la
-     cabeza caiga en su sitio. Se sigue desplazando con rueda, teclado y táctil. */
+     foto quede siempre pegada a la derecha. Se sigue desplazando con rueda, teclado y táctil. */
   .home-page .panel-scroll {
     scrollbar-width: none;
     /* Sin difuminado ni relleno al pie: el contenido llega hasta el pie de página. Solo se
