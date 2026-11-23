@@ -4,6 +4,7 @@
 @import "../styles/home.css";
 @import "../styles/about.css";
 @import "../styles/perspectives.css";
+@import "../styles/fit.css";
 
 /* Tailwind lee los tokens de tokens.css; los valores no se repiten aquí. */
 @theme inline {

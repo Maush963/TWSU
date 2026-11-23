@@ -1,0 +1,85 @@
+/* Títulos y descripciones que se ajustan a su caja. Cada pieza tiene un máximo de líneas y,
+   donde el alto lo manda la caja (panel del Atlas, lista del Atlas móvil, Home), el número de
+   líneas de la descripción sube o baja por escalones según el alto disponible. Así nunca se
+   corta una línea a la mitad: o cabe entera o no se muestra. Los escalones salen de sumar lo
+   que ocupan el título (máximo de líneas), el enlace y los espacios, más 1.5rem por línea. */
+
+.fit-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--fit-lines, 2);
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+  text-wrap: balance;
+}
+
+/* La descripción no hace balance de texto y su altura de línea es fija, que es lo que
+   suponen los escalones. */
+.fit-clamp-text {
+  text-wrap: wrap;
+  line-height: 1.5;
+}
+
+/* Panel del Atlas (escritorio). El panel mide el alto que deja la ventana. La portada se encoge
+   primero (mínimo 7rem) y la descripción sube de 1 a 4 líneas cuando sobra alto. */
+.atlas-panel {
+  container-type: size;
+}
+
+.atlas-panel-cover {
+  flex: 0 1 auto;
+  min-height: 7rem;
+}
+
+.atlas-panel .fit-clamp-text {
+  --fit-lines: 1;
+  flex-shrink: 0;
+}
+
+@container (min-height: 25.25rem) {
+  .atlas-panel .fit-clamp-text { --fit-lines: 1; }
+}
+@container (min-height: 26.75rem) {
+  .atlas-panel .fit-clamp-text { --fit-lines: 2; }
+}
+@container (min-height: 28.25rem) {
+  .atlas-panel .fit-clamp-text { --fit-lines: 3; }
+}
+@container (min-height: 29.75rem) {
+  .atlas-panel .fit-clamp-text { --fit-lines: 4; }
+}
+
+@container (max-height: 25.24rem) {
+  .atlas-panel .fit-clamp-text { display: none; }
+  .atlas-panel-cover { min-height: 5rem; }
+}
+
+/* Columna de texto con el alto de la portada (Home y lista del Atlas móvil). Al ser un contenedor
+   de tamaño no aporta alto: la fila mide lo que la portada y la columna se estira a eso. El alto no depende
+   del texto: si no cabe, la descripción baja de líneas o se quita, y el enlace se queda. */
+.fit-column {
+  container-type: size;
+  overflow: hidden;
+}
+
+/* El enlace nunca se parte en dos líneas; en columnas angostas baja de tamaño. */
+@container (max-width: 11rem) {
+  .fit-column .fit-link { font-size: var(--text-sm); gap: 0.25rem; }
+}
+
+/* Home: título de hasta 3 líneas (125 px), enlace y espacios. */
+.fit-column-home .fit-clamp-text { --fit-lines: 1; }
+@container (min-height: 9.3rem) { .fit-column-home .fit-clamp-text { --fit-lines: 1; } }
+@container (min-height: 10.8rem) { .fit-column-home .fit-clamp-text { --fit-lines: 2; } }
+@container (min-height: 12.3rem) { .fit-column-home .fit-clamp-text { --fit-lines: 3; } }
+@container (min-height: 13.8rem) { .fit-column-home .fit-clamp-text { --fit-lines: 4; } }
+@container (max-height: 9.29rem) { .fit-column-home .fit-clamp-text { display: none; } }
+
+/* Lista del Atlas móvil: título de hasta 2 líneas (45 px), enlace y espacios. */
+.fit-column-list .fit-clamp-text { --fit-lines: 1; }
+@container (min-height: 6.3rem) { .fit-column-list .fit-clamp-text { --fit-lines: 1; } }
+@container (min-height: 7.8rem) { .fit-column-list .fit-clamp-text { --fit-lines: 2; } }
+@container (min-height: 9.3rem) { .fit-column-list .fit-clamp-text { --fit-lines: 3; } }
+@container (min-height: 10.8rem) { .fit-column-list .fit-clamp-text { --fit-lines: 4; } }
+@container (max-height: 6.29rem) { .fit-column-list .fit-clamp-text { display: none; } }

@@ -2198,7 +2198,7 @@
   {
     "id": "place-city-ciudad-de-mexico",
     "countryCode": "MX",
-    "name": "Ciudad de México",
+    "name": "Mexico City",
     "continent": "america",
     "lat": 19.4326,
     "lng": -99.1332,
@@ -2207,7 +2207,7 @@
   {
     "id": "place-city-nueva-york",
     "countryCode": "US",
-    "name": "Nueva York",
+    "name": "New York",
     "continent": "america",
     "lat": 40.7128,
     "lng": -74.006,
@@ -2243,7 +2243,7 @@
   {
     "id": "place-city-paris",
     "countryCode": "FR",
-    "name": "París",
+    "name": "Paris",
     "continent": "europa",
     "lat": 48.8566,
     "lng": 2.3522,
@@ -2252,7 +2252,7 @@
   {
     "id": "place-city-estambul",
     "countryCode": "TR",
-    "name": "Estambul",
+    "name": "Istanbul",
     "continent": "asia",
     "lat": 41.0082,
     "lng": 28.9784,
@@ -2261,7 +2261,7 @@
   {
     "id": "place-city-tokio",
     "countryCode": "JP",
-    "name": "Tokio",
+    "name": "Tokyo",
     "continent": "asia",
     "lat": 35.6762,
     "lng": 139.6503,
@@ -2270,7 +2270,7 @@
   {
     "id": "place-city-el-cairo",
     "countryCode": "EG",
-    "name": "El Cairo",
+    "name": "Cairo",
     "continent": "africa",
     "lat": 30.0444,
     "lng": 31.2357,
@@ -2279,7 +2279,7 @@
   {
     "id": "place-city-sidney",
     "countryCode": "AU",
-    "name": "Sídney",
+    "name": "Sydney",
     "continent": "oceania",
     "lat": -33.8688,
     "lng": 151.2093,
