@@ -266,10 +266,6 @@
     padding-right: var(--space-8);
   }
 
-  .home-card-small .home-card-body {
-    padding-inline: var(--space-8) 0;
-  }
-
   .home-envoy {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
     gap: calc(var(--space-8) * 2);
