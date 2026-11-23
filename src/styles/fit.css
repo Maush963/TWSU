@@ -68,13 +68,13 @@
   .fit-column .fit-link { font-size: var(--text-sm); gap: 0.25rem; }
 }
 
-/* Home: título de hasta 3 líneas (125 px), enlace y espacios. */
+/* Home: título de hasta 2 líneas, enlace y espacios. */
 .fit-column-home .fit-clamp-text { --fit-lines: 1; }
-@container (min-height: 9.3rem) { .fit-column-home .fit-clamp-text { --fit-lines: 1; } }
-@container (min-height: 10.8rem) { .fit-column-home .fit-clamp-text { --fit-lines: 2; } }
-@container (min-height: 12.3rem) { .fit-column-home .fit-clamp-text { --fit-lines: 3; } }
-@container (min-height: 13.8rem) { .fit-column-home .fit-clamp-text { --fit-lines: 4; } }
-@container (max-height: 9.29rem) { .fit-column-home .fit-clamp-text { display: none; } }
+@container (min-height: 7.6rem) { .fit-column-home .fit-clamp-text { --fit-lines: 1; } }
+@container (min-height: 9.1rem) { .fit-column-home .fit-clamp-text { --fit-lines: 2; } }
+@container (min-height: 10.6rem) { .fit-column-home .fit-clamp-text { --fit-lines: 3; } }
+@container (min-height: 12.1rem) { .fit-column-home .fit-clamp-text { --fit-lines: 4; } }
+@container (max-height: 7.59rem) { .fit-column-home .fit-clamp-text { display: none; } }
 
 /* Lista del Atlas móvil: título de hasta 2 líneas (45 px), enlace y espacios. */
 .fit-column-list .fit-clamp-text { --fit-lines: 1; }

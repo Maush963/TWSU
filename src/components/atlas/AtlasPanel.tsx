@@ -6,15 +6,7 @@ import { formatCoordinates } from "@/lib/atlas/coordinates";
 import { getKeyStates } from "@/lib/atlas/keys";
 import { urlFor } from "@/lib/sanity/image";
 import type { AtlasPinData } from "@/lib/sanity/types";
-import { titleSize, type TitleLength } from "@/lib/articles/title";
 import { CategoryKeys } from "./CategoryKeys";
-
-// Tamaño del título según su largo. Siempre cabe en 2 líneas; lo que sobre se corta con puntos suspensivos.
-const TITLE_SIZES: Record<TitleLength, string> = {
-  short: "text-2xl",
-  medium: "text-xl",
-  long: "text-lg",
-};
 
 // Panel derecho del Atlas: muestra el caso del punto seleccionado (reemplaza al tooltip flotante).
 // `aria-live` anuncia el cambio cuando se elige otro punto.
@@ -32,7 +24,7 @@ export function AtlasPanel({ pin }: { pin: AtlasPinData }) {
         <p className="fit-clamp text-pretty font-body text-xs uppercase leading-normal tracking-caps text-muted">
           {pin.placeName} {formatCoordinates(pin.lat, pin.lng)}
         </p>
-        <h2 className={`fit-clamp mt-2 font-display uppercase leading-tight text-accent ${titleSize(pin.title, TITLE_SIZES)}`}>
+        <h2 className={`fit-clamp mt-2 font-display uppercase leading-tight text-accent text-xl xl:text-2xl`}>
           {pin.title}
         </h2>
       </div>

@@ -2,23 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon } from "@/components/ui/icons";
 import { uiText } from "@/content/ui-text";
-import { titleSize, type TitleLength } from "@/lib/articles/title";
 import { urlFor } from "@/lib/sanity/image";
 import type { ArticleSummary } from "@/lib/sanity/types";
 
 // Un solo enlace: el del título se estira sobre todo el bloque.
-// Tamaño del título según su largo, hasta 4 líneas.
-const TITLE_SIZES: Record<TitleLength, string> = {
-  short: "text-2xl lg:text-3xl",
-  medium: "text-xl lg:text-2xl",
-  long: "text-lg lg:text-xl",
-};
-
 export function FeaturedArticle({ article }: { article: ArticleSummary }) {
   return (
     <article className="relative flex flex-col gap-4 focus-within:outline-2 focus-within:outline-accent">
       <p className="font-ui text-xs uppercase tracking-caps-wide max-lg:hidden">{uiText.perspectives.latest}</p>
-      <h2 className={`fit-clamp [--fit-lines:4] font-display uppercase leading-tight text-accent ${titleSize(article.title, TITLE_SIZES)}`}>
+      <h2 className={`fit-clamp [--fit-lines:3] font-display uppercase leading-tight text-accent text-2xl lg:text-3xl`}>
         <Link href={`/perspectives/${article.slug}`} className="outline-none after:absolute after:inset-0">
           {article.title}
         </Link>

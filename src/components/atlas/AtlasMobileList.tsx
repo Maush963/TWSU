@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { titleSize, type TitleLength } from "@/lib/articles/title";
 import { uiText } from "@/content/ui-text";
 import { ArrowRightIcon } from "@/components/ui/icons";
 import { urlFor } from "@/lib/sanity/image";
@@ -12,13 +11,6 @@ interface AtlasMobileListProps {
   groups: AtlasRegionGroup[];
   activeRegion: Continent | undefined;
 }
-
-// Tamaño del título según su largo. Hasta 2 líneas; el alto de la fila lo manda la portada.
-const TITLE_SIZES: Record<TitleLength, string> = {
-  short: "text-lg",
-  medium: "text-base",
-  long: "text-base",
-};
 
 // En pantallas chicas el mapa se sustituye por la lista de casos de la región elegida, sobre el
 // panel con rejilla, y el globo de la región al pie. Cada caso enlaza al artículo.
@@ -50,7 +42,7 @@ export function AtlasMobileList({ groups, activeRegion }: AtlasMobileListProps) 
                     )}
                   </span>
                   <span className="fit-column fit-column-list flex min-w-0 flex-1 flex-col gap-1 pt-3">
-                    <span className={`fit-clamp [--fit-lines:2] shrink-0 font-display uppercase leading-tight text-accent ${titleSize(pin.title, TITLE_SIZES)}`}>{pin.title}</span>
+                    <span className={`fit-clamp [--fit-lines:2] shrink-0 font-display uppercase leading-tight text-accent text-xl`}>{pin.title}</span>
                     <span className="fit-clamp fit-clamp-text shrink-0 font-body">{pin.excerpt}</span>
                     <span className="mt-auto flex shrink-0 items-center gap-2 self-end border-b border-gold text-sm text-accent">
                       {uiText.atlas.readMore}

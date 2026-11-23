@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon } from "@/components/ui/icons";
-import { titleSize, type TitleLength } from "@/lib/articles/title";
 import { uiText } from "@/content/ui-text";
 import { urlFor } from "@/lib/sanity/image";
 import type { ArticleSummary } from "@/lib/sanity/types";
@@ -9,13 +8,6 @@ import type { ArticleSummary } from "@/lib/sanity/types";
 // Bloque "Featured" de la Home: el destacado y los recientes (tres columnas desde `lg`).
 // Cada uno lleva título y texto a la izquierda y la portada cuadrada a la derecha. Un solo enlace
 // por artículo: el del título se estira sobre todo el bloque.
-// Tamaño del título según su largo; el máximo de líneas lo pone `fit-clamp`.
-const HOME_TITLE_SIZES: Record<TitleLength, string> = {
-  short: "text-title",
-  medium: "text-lg",
-  long: "text-base",
-};
-
 export function HomeFeatured({ articles }: { articles: readonly ArticleSummary[] }) {
   return (
     <section aria-labelledby="home-featured-title" className="home-featured bg-surface">
@@ -32,7 +24,7 @@ export function HomeFeatured({ articles }: { articles: readonly ArticleSummary[]
               className="home-featured-item relative focus-within:outline-2 focus-within:outline-accent"
             >
               <div className="home-featured-text fit-column fit-column-home flex flex-col gap-2">
-                <h3 className={`fit-clamp shrink-0 [--fit-lines:3] font-display uppercase leading-tight text-accent ${titleSize(article.title, HOME_TITLE_SIZES)}`}>
+                <h3 className={`fit-clamp shrink-0 [--fit-lines:2] font-display uppercase leading-tight text-accent text-title`}>
                   <Link href={`/perspectives/${article.slug}`} className="outline-none after:absolute after:inset-0">
                     {article.title}
                   </Link>
