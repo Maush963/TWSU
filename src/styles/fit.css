@@ -28,7 +28,7 @@
 }
 
 .atlas-panel-title {
-  --fit-lines: 3;
+  --fit-lines: 2;
   font-size: 1.5rem;
 }
 
@@ -46,22 +46,22 @@
   flex-shrink: 0;
 }
 
-@container (min-height: 26.25rem) {
+@container (min-height: 25.25rem) {
   .atlas-panel .fit-clamp-text { --fit-lines: 1; }
 }
-@container (min-height: 27.75rem) {
+@container (min-height: 26.75rem) {
   .atlas-panel .fit-clamp-text { --fit-lines: 2; }
 }
-@container (min-height: 29.25rem) {
+@container (min-height: 28.25rem) {
   .atlas-panel .fit-clamp-text { --fit-lines: 3; }
 }
-@container (min-height: 30.75rem) {
+@container (min-height: 29.75rem) {
   .atlas-panel .fit-clamp-text { --fit-lines: 4; }
 }
 
-@container (max-height: 26.24rem) {
+@container (max-height: 25.24rem) {
   .atlas-panel .fit-clamp-text { display: none; }
-  .atlas-panel-cover { min-height: 6.00rem; }
+  .atlas-panel-cover { min-height: 5.00rem; }
 }
 
 /* Columna de texto con el alto de la portada (Home y lista del Atlas móvil). Al ser un contenedor
