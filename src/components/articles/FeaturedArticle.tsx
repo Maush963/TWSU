@@ -10,7 +10,7 @@ export function FeaturedArticle({ article }: { article: ArticleSummary }) {
   return (
     <article className="relative flex flex-col gap-4 focus-within:outline-2 focus-within:outline-accent">
       <p className="font-ui text-xs uppercase tracking-caps-wide max-lg:hidden">{uiText.perspectives.latest}</p>
-      <h2 className={`fit-clamp [--fit-lines:3] font-display uppercase leading-tight text-accent text-2xl lg:text-3xl`}>
+      <h2 className={`fit-clamp [--fit-lines:3] font-display uppercase leading-none text-accent text-2xl lg:text-3xl`}>
         <Link href={`/perspectives/${article.slug}`} className="outline-none after:absolute after:inset-0">
           {article.title}
         </Link>

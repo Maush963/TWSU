@@ -2,7 +2,7 @@
    donde el alto lo manda la caja (panel del Atlas, lista del Atlas móvil, Home), el número de
    líneas de la descripción sube o baja por escalones según el alto disponible. Así nunca se
    corta una línea a la mitad: o cabe entera o no se muestra. Los escalones salen de sumar lo
-   que ocupan el título (máximo de líneas), el enlace y los espacios, más 1.5rem por línea. */
+   que ocupan el título (máximo de líneas), el enlace y los espacios, más 1.5rem por línea. (El pie con las llaves ocupa 0.5rem más que antes: los escalones del panel del Atlas ya lo cuentan.) */
 
 .fit-clamp {
   display: -webkit-box;
@@ -46,20 +46,20 @@
   flex-shrink: 0;
 }
 
-@container (min-height: 25.25rem) {
+@container (min-height: 25.75rem) {
   .atlas-panel .fit-clamp-text { --fit-lines: 1; }
 }
-@container (min-height: 26.75rem) {
+@container (min-height: 27.25rem) {
   .atlas-panel .fit-clamp-text { --fit-lines: 2; }
 }
-@container (min-height: 28.25rem) {
+@container (min-height: 28.75rem) {
   .atlas-panel .fit-clamp-text { --fit-lines: 3; }
 }
-@container (min-height: 29.75rem) {
+@container (min-height: 30.25rem) {
   .atlas-panel .fit-clamp-text { --fit-lines: 4; }
 }
 
-@container (max-height: 25.24rem) {
+@container (max-height: 25.74rem) {
   .atlas-panel .fit-clamp-text { display: none; }
   .atlas-panel-cover { min-height: 5.00rem; }
 }

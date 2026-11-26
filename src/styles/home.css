@@ -180,6 +180,7 @@
   width: min(100%, 28rem);
   height: auto;
   margin-inline: auto;
+  opacity: 0.75;
 }
 
 .home-envoy-card {
@@ -277,6 +278,12 @@
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
     gap: calc(var(--space-8) * 2);
     padding: calc(var(--space-8) * 2.5) var(--home-hero-side-padding) calc(var(--space-8) * 2);
+  }
+
+  /* La ilustración crece ~16% a los lados y hacia abajo, casi nada hacia arriba. */
+  .home-envoy-art {
+    transform: scale(1.16);
+    transform-origin: 50% 12%;
   }
 
   .home-envoy-card {
