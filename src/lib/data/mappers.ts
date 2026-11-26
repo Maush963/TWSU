@@ -1,6 +1,6 @@
 import "server-only";
 import type { PortableTextBlock } from "@portabletext/types";
-import { isCategory, isContinent, type Category, type Continent } from "@/lib/constants";
+import { isCategory, isContinent, isHomeFeatured, type Category, type Continent } from "@/lib/constants";
 import { project } from "@/lib/atlas/project";
 import type {
   ARTICLE_BY_SLUG_QUERY_RESULT,
@@ -37,19 +37,20 @@ function toContinent(value: string | null): Continent | undefined {
   return value && isContinent(value) ? value : undefined;
 }
 
-function toCover(cover: RawSummary["cover"]): CoverImage | null {
+/** Sin texto alternativo en Studio, la portada usa el título del artículo. */
+function toCover(cover: RawSummary["cover"], title: string | null): CoverImage | null {
   const ref = cover?.asset?._ref;
   if (!cover || !ref) return null;
   return {
     asset: { _ref: ref, _type: "reference" },
-    alt: cover.alt ?? "",
+    alt: cover.alt?.trim() || title || "",
     ...(cover.crop ? { crop: cover.crop } : {}),
     ...(cover.hotspot ? { hotspot: cover.hotspot } : {}),
   };
 }
 
 export function toArticleSummary(raw: RawSummary): ArticleSummary | null {
-  const cover = toCover(raw.cover);
+  const cover = toCover(raw.cover, raw.title);
   if (!raw.title || !raw.slug || !raw.publishedAt || raw.year === null || !cover) return null;
   const continent = toContinent(raw.continent);
   return {
@@ -71,7 +72,8 @@ export function toArticle(raw: RawArticle): Article | null {
   if (!summary) return null;
   return {
     ...summary,
-    featured: raw.featured ?? false,
+    ...(isHomeFeatured(raw.homeFeatured) ? { homeFeatured: raw.homeFeatured } : {}),
+    perspectivesFeatured: raw.perspectivesFeatured ?? false,
     inAtlas: raw.inAtlas ?? false,
     body: (raw.body ?? []) as PortableTextBlock[],
   };
@@ -82,7 +84,7 @@ export function toAtlasPin(raw: RawPin): AtlasPinData | null {
   if (!raw.title || !raw.slug || !raw.placeName || !continent) return null;
   if (typeof raw.lat !== "number" || typeof raw.lng !== "number") return null;
   const { x, y } = project(raw.lat, raw.lng);
-  const cover = toCover(raw.cover);
+  const cover = toCover(raw.cover, raw.title);
   return {
     id: raw._id,
     slug: raw.slug,

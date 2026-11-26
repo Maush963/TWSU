@@ -6,16 +6,13 @@ import { ArrowRightIcon } from "@/components/ui/icons";
 import { HomeEnvoy } from "@/components/home/HomeEnvoy";
 import { HomeFeatured } from "@/components/home/HomeFeatured";
 import { uiText } from "@/content/ui-text";
-import { getFeaturedArticle, getRecentArticles } from "@/lib/data/articles";
-import { HOME_RECENT_LIMIT } from "@/lib/constants";
+import { getHomeArticles } from "@/lib/data/articles";
 
 export const metadata: Metadata = { title: uiText.home.title };
 
 export default async function HomePage() {
-  // El destacado va primero y los más recientes completan la fila, sin repetirlo.
-  const featured = await getFeaturedArticle();
-  const recent = await getRecentArticles(HOME_RECENT_LIMIT, featured?.id);
-  const articles = [...(featured ? [featured] : []), ...recent].slice(0, HOME_RECENT_LIMIT);
+  // Los 2 grandes y los 4 pequeños salen de lo marcado en Studio ("Destacado en"); si faltan, completan los más recientes.
+  const articles = await getHomeArticles();
 
   // La foto completa del banner, la misma en móvil y en escritorio.
   const { props: photoProps } = getImageProps({

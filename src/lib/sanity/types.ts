@@ -1,5 +1,5 @@
 import type { PortableTextBlock } from "@portabletext/types";
-import type { Category, Continent } from "@/lib/constants";
+import type { Category, Continent, HomeFeatured } from "@/lib/constants";
 
 // Tipos de dominio que usa la app. No dependen de la forma de las consultas GROQ.
 
@@ -24,7 +24,8 @@ export interface ArticleSummary {
 }
 
 export interface Article extends ArticleSummary {
-  featured: boolean;
+  homeFeatured?: HomeFeatured;
+  perspectivesFeatured: boolean;
   inAtlas: boolean;
   body: PortableTextBlock[];
 }

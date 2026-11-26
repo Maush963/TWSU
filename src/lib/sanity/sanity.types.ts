@@ -85,7 +85,8 @@ export type Article = {
   categories?: Array<string>;
   inAtlas?: boolean;
   year?: number;
-  featured?: boolean;
+  homeFeatured?: "none" | "large" | "small";
+  perspectivesFeatured?: boolean;
   publishedAt?: string;
   isSeed?: boolean;
 };
@@ -242,7 +243,7 @@ export type AllSanitySchemaTypes =
 
 // Source: src/lib/sanity/queries.ts
 // Variable: FEATURED_ARTICLE_QUERY
-// Query: *[_type == "article" && publishedAt <= now()  && (($category == null && featured == true) || ($category != null && $category in categories))]  | order(featured desc, publishedAt desc)[0]{    _id, title, "slug": slug.current, excerpt,    "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories, featured, inAtlas,    "cover": cover{ alt, asset, crop, hotspot },    "placeName": place->name,    "continent": place->continent,    body  }
+// Query: *[_type == "article" && publishedAt <= now()  && (($category == null && perspectivesFeatured == true) || ($category != null && $category in categories))]  | order(coalesce(perspectivesFeatured, false) desc, publishedAt desc)[0]{    _id, title, "slug": slug.current, excerpt,    "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories, homeFeatured, perspectivesFeatured, inAtlas,    "cover": cover{ alt, asset, crop, hotspot },    "placeName": place->name,    "continent": place->continent,    body  }
 export type FEATURED_ARTICLE_QUERY_RESULT = {
   _id: string;
   title: string | null;
@@ -252,7 +253,8 @@ export type FEATURED_ARTICLE_QUERY_RESULT = {
   publishedAt: string | null;
   year: number | null;
   categories: Array<string> | null;
-  featured: boolean | null;
+  homeFeatured: "large" | "none" | "small" | null;
+  perspectivesFeatured: boolean | null;
   inAtlas: boolean | null;
   cover: {
     alt: string | null;
@@ -300,8 +302,30 @@ export type FEATURED_ARTICLE_QUERY_RESULT = {
 } | null;
 
 // Source: src/lib/sanity/queries.ts
+// Variable: HOME_FEATURED_QUERY
+// Query: *[_type == "article" && publishedAt <= now() && homeFeatured == $placement && !(_id in $excludeIds)]  | order(publishedAt desc)[0...$limit]{    _id, title, "slug": slug.current, excerpt,    "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories,    "cover": cover{ alt, asset, crop, hotspot },    "placeName": place->name,    "continent": place->continent  }
+export type HOME_FEATURED_QUERY_RESULT = Array<{
+  _id: string;
+  title: string | null;
+  slug: string | null;
+  excerpt: string | null;
+  bodyText: null | string;
+  publishedAt: string | null;
+  year: number | null;
+  categories: Array<string> | null;
+  cover: {
+    alt: string | null;
+    asset: SanityImageAssetReference | null;
+    crop: SanityImageCrop | null;
+    hotspot: SanityImageHotspot | null;
+  } | null;
+  placeName: string | null;
+  continent: "africa" | "america" | "asia" | "europa" | "oceania" | null;
+}>;
+
+// Source: src/lib/sanity/queries.ts
 // Variable: RECENT_ARTICLES_QUERY
-// Query: *[_type == "article" && publishedAt <= now() && ($excludeId == null || _id != $excludeId)]  | order(publishedAt desc)[0...$limit]{    _id, title, "slug": slug.current, excerpt,    "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories,    "cover": cover{ alt, asset, crop, hotspot },    "placeName": place->name,    "continent": place->continent  }
+// Query: *[_type == "article" && publishedAt <= now() && !(_id in $excludeIds)]  | order(publishedAt desc)[0...$limit]{    _id, title, "slug": slug.current, excerpt,    "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories,    "cover": cover{ alt, asset, crop, hotspot },    "placeName": place->name,    "continent": place->continent  }
 export type RECENT_ARTICLES_QUERY_RESULT = Array<{
   _id: string;
   title: string | null;
@@ -323,7 +347,7 @@ export type RECENT_ARTICLES_QUERY_RESULT = Array<{
 
 // Source: src/lib/sanity/queries.ts
 // Variable: ARTICLE_BY_SLUG_QUERY
-// Query: *[_type == "article" && slug.current == $slug && publishedAt <= now()][0]{  _id, title, "slug": slug.current, excerpt,    "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories, featured, inAtlas,  "cover": cover{ alt, asset, crop, hotspot },  "placeName": place->name,  "continent": place->continent,  body}
+// Query: *[_type == "article" && slug.current == $slug && publishedAt <= now()][0]{  _id, title, "slug": slug.current, excerpt,    "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories, homeFeatured, perspectivesFeatured, inAtlas,  "cover": cover{ alt, asset, crop, hotspot },  "placeName": place->name,  "continent": place->continent,  body}
 export type ARTICLE_BY_SLUG_QUERY_RESULT = {
   _id: string;
   title: string | null;
@@ -333,7 +357,8 @@ export type ARTICLE_BY_SLUG_QUERY_RESULT = {
   publishedAt: string | null;
   year: number | null;
   categories: Array<string> | null;
-  featured: boolean | null;
+  homeFeatured: "large" | "none" | "small" | null;
+  perspectivesFeatured: boolean | null;
   inAtlas: boolean | null;
   cover: {
     alt: string | null;
@@ -463,9 +488,10 @@ export type ATLAS_PINS_QUERY_RESULT = Array<{
 // Query TypeMap
 declare global {
   interface SanityQueries {
-    '\n*[_type == "article" && publishedAt <= now()\n  && (($category == null && featured == true) || ($category != null && $category in categories))]\n  | order(featured desc, publishedAt desc)[0]{\n    _id, title, "slug": slug.current, excerpt,\n    "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories, featured, inAtlas,\n    "cover": cover{ alt, asset, crop, hotspot },\n    "placeName": place->name,\n    "continent": place->continent,\n    body\n  }\n': FEATURED_ARTICLE_QUERY_RESULT;
-    '\n*[_type == "article" && publishedAt <= now() && ($excludeId == null || _id != $excludeId)]\n  | order(publishedAt desc)[0...$limit]{\n    _id, title, "slug": slug.current, excerpt,\n    "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories,\n    "cover": cover{ alt, asset, crop, hotspot },\n    "placeName": place->name,\n    "continent": place->continent\n  }\n': RECENT_ARTICLES_QUERY_RESULT;
-    '\n*[_type == "article" && slug.current == $slug && publishedAt <= now()][0]{\n  _id, title, "slug": slug.current, excerpt,\n    "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories, featured, inAtlas,\n  "cover": cover{ alt, asset, crop, hotspot },\n  "placeName": place->name,\n  "continent": place->continent,\n  body\n}\n': ARTICLE_BY_SLUG_QUERY_RESULT;
+    '\n*[_type == "article" && publishedAt <= now()\n  && (($category == null && perspectivesFeatured == true) || ($category != null && $category in categories))]\n  | order(coalesce(perspectivesFeatured, false) desc, publishedAt desc)[0]{\n    _id, title, "slug": slug.current, excerpt,\n    "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories, homeFeatured, perspectivesFeatured, inAtlas,\n    "cover": cover{ alt, asset, crop, hotspot },\n    "placeName": place->name,\n    "continent": place->continent,\n    body\n  }\n': FEATURED_ARTICLE_QUERY_RESULT;
+    '\n*[_type == "article" && publishedAt <= now() && homeFeatured == $placement && !(_id in $excludeIds)]\n  | order(publishedAt desc)[0...$limit]{\n    _id, title, "slug": slug.current, excerpt,\n    "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories,\n    "cover": cover{ alt, asset, crop, hotspot },\n    "placeName": place->name,\n    "continent": place->continent\n  }\n': HOME_FEATURED_QUERY_RESULT;
+    '\n*[_type == "article" && publishedAt <= now() && !(_id in $excludeIds)]\n  | order(publishedAt desc)[0...$limit]{\n    _id, title, "slug": slug.current, excerpt,\n    "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories,\n    "cover": cover{ alt, asset, crop, hotspot },\n    "placeName": place->name,\n    "continent": place->continent\n  }\n': RECENT_ARTICLES_QUERY_RESULT;
+    '\n*[_type == "article" && slug.current == $slug && publishedAt <= now()][0]{\n  _id, title, "slug": slug.current, excerpt,\n    "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories, homeFeatured, perspectivesFeatured, inAtlas,\n  "cover": cover{ alt, asset, crop, hotspot },\n  "placeName": place->name,\n  "continent": place->continent,\n  body\n}\n': ARTICLE_BY_SLUG_QUERY_RESULT;
     '\n*[_type == "article" && defined(slug.current) && publishedAt <= now()].slug.current\n': ARTICLE_SLUGS_QUERY_RESULT;
     '\n*[_type == "article" && _id != $id && publishedAt <= now()]{\n  _id, title, "slug": slug.current, excerpt,\n    "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories,\n  "cover": cover{ alt, asset, crop, hotspot },\n  "placeName": place->name,\n  "continent": place->continent,\n  "shared": count(categories[@ in $categories])\n} | order(shared desc, publishedAt desc)[0...$limit]\n': RELATED_ARTICLES_QUERY_RESULT;
     '\n{\n  "items": *[_type == "article" && publishedAt <= now() && ($category == null || $category in categories) && ($excludeId == null || _id != $excludeId)]\n    | order(publishedAt desc)[$from...$to]{\n      _id, title, "slug": slug.current, excerpt,\n    "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories,\n      "cover": cover{ alt, asset, crop, hotspot },\n      "placeName": place->name,\n      "continent": place->continent\n    },\n  "total": count(*[_type == "article" && publishedAt <= now() && ($category == null || $category in categories) && ($excludeId == null || _id != $excludeId)])\n}\n': ARTICLES_PAGE_QUERY_RESULT;

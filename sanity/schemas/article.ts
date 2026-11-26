@@ -1,6 +1,6 @@
 import { defineArrayMember, defineField, defineType } from "sanity";
 import { parseVideoUrl } from "../../src/lib/articles/video";
-import { ATLAS_SLOTS_PER_CATEGORY, CATEGORIES, TITLE_MAX_LENGTH } from "../../src/lib/constants";
+import { ATLAS_SLOTS_PER_CATEGORY, CATEGORIES, HOME_FEATURED_OPTIONS, TITLE_MAX_LENGTH } from "../../src/lib/constants";
 
 const categoryOptions = {
   list: CATEGORIES.map(({ value, title }) => ({ value, title })),
@@ -30,7 +30,7 @@ export const article = defineType({
       name: "title",
       title: "Título",
       type: "string",
-      description: `Máximo ${TITLE_MAX_LENGTH} caracteres, para que se vea completo en el Atlas, Home y Perspectives.`,
+      description: `Máximo ${TITLE_MAX_LENGTH} caracteres.`,
       validation: (rule) => rule.required().max(TITLE_MAX_LENGTH),
     }),
     defineField({
@@ -38,14 +38,17 @@ export const article = defineType({
       title: "Slug",
       type: "slug",
       options: { source: "title", maxLength: 96 },
-      validation: (rule) => rule.required(),
+      // Se genera sola a partir del título al publicar (ver `sanity/actions.ts`).
+      hidden: true,
+      readOnly: true,
     }),
     defineField({
       name: "cover",
       title: "Portada",
       type: "image",
       options: { hotspot: true },
-      fields: [altField],
+      // El texto alternativo ya no se pide: la app usa el título del artículo.
+      fields: [defineField({ name: "alt", title: "Texto alternativo", type: "string", hidden: true })],
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -148,10 +151,18 @@ export const article = defineType({
       validation: (rule) => rule.required().integer().min(2000),
     }),
     defineField({
-      name: "featured",
-      title: "Destacado",
+      name: "homeFeatured",
+      title: "Destacado en la Home",
+      type: "string",
+      options: { list: HOME_FEATURED_OPTIONS.map(({ value, title }) => ({ value, title })), layout: "radio" },
+      description: "Uno solo: grande o pequeño. Si hay más marcados que lugares, entran los de publicación más reciente.",
+      initialValue: "none",
+    }),
+    defineField({
+      name: "perspectivesFeatured",
+      title: "Destacado en Perspectives",
       type: "boolean",
-      description: "Si hay varios, gana el de publicación más reciente.",
+      description: "Sale arriba en Perspectives. Si hay varios, gana el de publicación más reciente.",
       initialValue: false,
     }),
     defineField({

@@ -4,14 +4,14 @@ import { defineQuery } from "next-sanity";
 // `bodyText` solo trae el texto cuando el artículo no tiene descripción: sirve de descripción de respaldo.
 // Las proyecciones se repiten a propósito: TypeGen necesita consultas sin interpolar.
 
-// Sin categoría, el de `featured` más reciente. Con categoría, el de `featured` más reciente de
-// esa categoría y, si ninguno lo está, el más reciente de ella (el panel nunca queda vacío).
+// Sin categoría, el más reciente marcado como destacado en "perspectives". Con categoría, el más
+// reciente marcado de esa categoría y, si ninguno lo está, el más reciente de ella.
 export const FEATURED_ARTICLE_QUERY = defineQuery(`
 *[_type == "article" && publishedAt <= now()
-  && (($category == null && featured == true) || ($category != null && $category in categories))]
-  | order(featured desc, publishedAt desc)[0]{
+  && (($category == null && perspectivesFeatured == true) || ($category != null && $category in categories))]
+  | order(coalesce(perspectivesFeatured, false) desc, publishedAt desc)[0]{
     _id, title, "slug": slug.current, excerpt,
-    "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories, featured, inAtlas,
+    "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories, homeFeatured, perspectivesFeatured, inAtlas,
     "cover": cover{ alt, asset, crop, hotspot },
     "placeName": place->name,
     "continent": place->continent,
@@ -19,8 +19,20 @@ export const FEATURED_ARTICLE_QUERY = defineQuery(`
   }
 `);
 
+// Los artículos marcados para un lugar de la Home ($placement: "large" o "small").
+export const HOME_FEATURED_QUERY = defineQuery(`
+*[_type == "article" && publishedAt <= now() && homeFeatured == $placement && !(_id in $excludeIds)]
+  | order(publishedAt desc)[0...$limit]{
+    _id, title, "slug": slug.current, excerpt,
+    "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories,
+    "cover": cover{ alt, asset, crop, hotspot },
+    "placeName": place->name,
+    "continent": place->continent
+  }
+`);
+
 export const RECENT_ARTICLES_QUERY = defineQuery(`
-*[_type == "article" && publishedAt <= now() && ($excludeId == null || _id != $excludeId)]
+*[_type == "article" && publishedAt <= now() && !(_id in $excludeIds)]
   | order(publishedAt desc)[0...$limit]{
     _id, title, "slug": slug.current, excerpt,
     "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories,
@@ -33,7 +45,7 @@ export const RECENT_ARTICLES_QUERY = defineQuery(`
 export const ARTICLE_BY_SLUG_QUERY = defineQuery(`
 *[_type == "article" && slug.current == $slug && publishedAt <= now()][0]{
   _id, title, "slug": slug.current, excerpt,
-    "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories, featured, inAtlas,
+    "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories, homeFeatured, perspectivesFeatured, inAtlas,
   "cover": cover{ alt, asset, crop, hotspot },
   "placeName": place->name,
   "continent": place->continent,
