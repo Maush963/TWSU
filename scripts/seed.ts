@@ -95,7 +95,7 @@ function makeArticle(options: ArticleOptions) {
     categories: categoryValues,
     inAtlas,
     year,
-    ...(featured ? { homeFeatured: "large", perspectivesFeatured: true } : {}),
+    ...(number === 1 ? { homeLarge1: true, perspectivesFeatured: true } : {}),
     publishedAt,
     isSeed: true,
   };

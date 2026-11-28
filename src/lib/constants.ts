@@ -26,19 +26,6 @@ export const HOME_LARGE_COUNT = 2;
 export const HOME_SMALL_COUNT = 4;
 export const HOME_RECENT_LIMIT = HOME_LARGE_COUNT + HOME_SMALL_COUNT;
 
-/** Lugar del artículo en la Home: uno solo (grande o pequeño) o ninguno. Es independiente del atlas y de Perspectives. */
-export const HOME_FEATURED_OPTIONS = [
-  { value: "none", title: "No destacado en la Home" },
-  { value: "large", title: "Grande (los 2 de arriba)" },
-  { value: "small", title: "Pequeño (los 4 de abajo)" },
-] as const;
-
-export type HomeFeatured = Exclude<(typeof HOME_FEATURED_OPTIONS)[number]["value"], "none">;
-
-export function isHomeFeatured(value: string | null | undefined): value is HomeFeatured {
-  return value === "large" || value === "small";
-}
-
 export function isCategory(value: string): value is Category {
   return CATEGORIES.some((category) => category.value === value);
 }

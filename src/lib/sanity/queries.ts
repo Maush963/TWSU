@@ -11,7 +11,7 @@ export const FEATURED_ARTICLE_QUERY = defineQuery(`
   && (($category == null && perspectivesFeatured == true) || ($category != null && $category in categories))]
   | order(coalesce(perspectivesFeatured, false) desc, publishedAt desc)[0]{
     _id, title, "slug": slug.current, excerpt,
-    "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories, homeFeatured, perspectivesFeatured, inAtlas,
+    "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories, perspectivesFeatured, inAtlas,
     "cover": cover{ alt, asset, crop, hotspot },
     "placeName": place->name,
     "continent": place->continent,
@@ -19,9 +19,29 @@ export const FEATURED_ARTICLE_QUERY = defineQuery(`
   }
 `);
 
-// Los artículos marcados para un lugar de la Home ($placement: "large" o "small").
-export const HOME_FEATURED_QUERY = defineQuery(`
-*[_type == "article" && publishedAt <= now() && homeFeatured == $placement && !(_id in $excludeIds)]
+// Los dos grandes de la Home: el marcado en cada interruptor (el más reciente si hubiera varios).
+export const HOME_LARGE_QUERY = defineQuery(`
+{
+  "first": *[_type == "article" && publishedAt <= now() && homeLarge1 == true] | order(publishedAt desc)[0]{
+    _id, title, "slug": slug.current, excerpt,
+    "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories,
+    "cover": cover{ alt, asset, crop, hotspot },
+    "placeName": place->name,
+    "continent": place->continent
+  },
+  "second": *[_type == "article" && publishedAt <= now() && homeLarge2 == true] | order(publishedAt desc)[0]{
+    _id, title, "slug": slug.current, excerpt,
+    "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories,
+    "cover": cover{ alt, asset, crop, hotspot },
+    "placeName": place->name,
+    "continent": place->continent
+  }
+}
+`);
+
+// Los pequeños de la Home: los marcados, del más reciente al más antiguo, sin los grandes.
+export const HOME_SMALL_QUERY = defineQuery(`
+*[_type == "article" && publishedAt <= now() && homeSmall == true && !(_id in $excludeIds)]
   | order(publishedAt desc)[0...$limit]{
     _id, title, "slug": slug.current, excerpt,
     "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories,
@@ -45,7 +65,7 @@ export const RECENT_ARTICLES_QUERY = defineQuery(`
 export const ARTICLE_BY_SLUG_QUERY = defineQuery(`
 *[_type == "article" && slug.current == $slug && publishedAt <= now()][0]{
   _id, title, "slug": slug.current, excerpt,
-    "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories, homeFeatured, perspectivesFeatured, inAtlas,
+    "bodyText": select(defined(excerpt) && excerpt != "" => null, pt::text(body)), publishedAt, year, categories, perspectivesFeatured, inAtlas,
   "cover": cover{ alt, asset, crop, hotspot },
   "placeName": place->name,
   "continent": place->continent,

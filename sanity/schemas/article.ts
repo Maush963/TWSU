@@ -1,6 +1,6 @@
 import { defineArrayMember, defineField, defineType } from "sanity";
 import { parseVideoUrl } from "../../src/lib/articles/video";
-import { ATLAS_SLOTS_PER_CATEGORY, CATEGORIES, HOME_FEATURED_OPTIONS, TITLE_MAX_LENGTH } from "../../src/lib/constants";
+import { ATLAS_SLOTS_PER_CATEGORY, CATEGORIES, TITLE_MAX_LENGTH } from "../../src/lib/constants";
 
 const categoryOptions = {
   list: CATEGORIES.map(({ value, title }) => ({ value, title })),
@@ -25,6 +25,15 @@ export const article = defineType({
   name: "article",
   title: "Artículo",
   type: "document",
+  fieldsets: [
+    {
+      name: "featured",
+      title: "Destacados",
+      description:
+        "Grande 1, grande 2 y Perspectives: un solo artículo a la vez; al publicar, se apaga en el que lo tenía. Pequeño: puedes marcar varios y salen los 4 más recientes de los marcados.",
+      options: { columns: 4 },
+    },
+  ],
   fields: [
     defineField({
       name: "title",
@@ -151,18 +160,31 @@ export const article = defineType({
       validation: (rule) => rule.required().integer().min(2000),
     }),
     defineField({
-      name: "homeFeatured",
-      title: "Destacado en la Home",
-      type: "string",
-      options: { list: HOME_FEATURED_OPTIONS.map(({ value, title }) => ({ value, title })), layout: "radio" },
-      description: "Uno solo: grande o pequeño. Si hay más marcados que lugares, entran los de publicación más reciente.",
-      initialValue: "none",
+      name: "homeLarge1",
+      title: "Home: grande 1 (izquierda)",
+      type: "boolean",
+      fieldset: "featured",
+      initialValue: false,
+    }),
+    defineField({
+      name: "homeLarge2",
+      title: "Home: grande 2 (derecha)",
+      type: "boolean",
+      fieldset: "featured",
+      initialValue: false,
+    }),
+    defineField({
+      name: "homeSmall",
+      title: "Home: pequeño (fila de 4)",
+      type: "boolean",
+      fieldset: "featured",
+      initialValue: false,
     }),
     defineField({
       name: "perspectivesFeatured",
-      title: "Destacado en Perspectives",
+      title: "Perspectives: destacado",
       type: "boolean",
-      description: "Sale arriba en Perspectives. Si hay varios, gana el de publicación más reciente.",
+      fieldset: "featured",
       initialValue: false,
     }),
     defineField({

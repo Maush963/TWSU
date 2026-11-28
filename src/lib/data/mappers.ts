@@ -1,6 +1,6 @@
 import "server-only";
 import type { PortableTextBlock } from "@portabletext/types";
-import { isCategory, isContinent, isHomeFeatured, type Category, type Continent } from "@/lib/constants";
+import { isCategory, isContinent, type Category, type Continent } from "@/lib/constants";
 import { project } from "@/lib/atlas/project";
 import type {
   ARTICLE_BY_SLUG_QUERY_RESULT,
@@ -72,7 +72,6 @@ export function toArticle(raw: RawArticle): Article | null {
   if (!summary) return null;
   return {
     ...summary,
-    ...(isHomeFeatured(raw.homeFeatured) ? { homeFeatured: raw.homeFeatured } : {}),
     perspectivesFeatured: raw.perspectivesFeatured ?? false,
     inAtlas: raw.inAtlas ?? false,
     body: (raw.body ?? []) as PortableTextBlock[],
